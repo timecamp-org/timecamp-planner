@@ -12587,10 +12587,10 @@ pngjs@^3.0.0, pngjs@^3.2.0, pngjs@^3.3.3:
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.4.0.tgz#99ca7d725965fb655814eaf65f38f12bbdbf555f"
   integrity sha512-NCrCHhWmnQklfH4MtJMRjZ2a8c80qXeMlQMv2uVp9ISJMTt562SbGd6n2oq0PaPgKm7Z6pL9E2UlLIhC+SHL3w==
 
-pnpm@^8.8.0:
-  version "8.13.1"
-  resolved "https://registry.yarnpkg.com/pnpm/-/pnpm-8.13.1.tgz#90f9b2bb3ed58632bcb7b13c3902d6873ee9501c"
-  integrity sha512-dYvrxpictkYsUTgSmEAZOxDCWN3NsKtD7g753Yd4S8IY1uQctb7qw2K4zjPx+LCAJbWZkzwLzoIFCpo2uEdNQw==
+pnpm@^10.27.0:
+  version "10.27.0"
+  resolved "https://registry.yarnpkg.com/pnpm/-/pnpm-10.27.0.tgz#7220f3ec270b9e3b3b56cd149ad8d88bdf1b8823"
+  integrity sha512-ctaZ2haxF5wUup5k3HHJpAmIy9xlwmTLDkidt96RfyDc9NZNhyNiXylpulLUt+KhFwaC2awqXcrqq3MrfhbwSg==
 
 polished@^3.3.1:
   version "3.7.2"
