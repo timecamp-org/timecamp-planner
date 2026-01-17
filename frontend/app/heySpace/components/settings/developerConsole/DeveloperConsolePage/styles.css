@@ -1,0 +1,13 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: defaultFontFamily;
+  color: blackColor;
+  overflow-y: hidden;  
+  align-items: flex-start;
+  flex: 1 1 auto;
+}

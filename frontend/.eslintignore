@@ -1,0 +1,4 @@
+node_modules/
+HeySpaceMobile
+*.stories.tsx
+*.test.ts

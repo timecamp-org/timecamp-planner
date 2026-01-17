@@ -1,0 +1,106 @@
+@import 'colors.css';
+@import 'common.css';
+
+.container {
+  border: 1px solid transparent;
+  overflow: hidden;
+  width: 100%;
+}
+
+.containerActive {
+  composes: container;
+  border-color: var(--color-gray-200);
+  border-radius: 5px;
+}
+
+.containerNotActive {
+  composes: container;
+  cursor: pointer;
+  border-bottom-color: var(--color-gray-200);
+  font-size: var(--fontSize-xs);
+  line-height: 150%;
+}
+
+.containerNotActive:hover {
+  border-bottom-color: var(--color-primary-500);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  height: calc(6 * gridCellSize);
+  background-color: whiteColor;
+  border-bottom: 1px solid whiteColor;
+}
+
+.leftButtons {
+  display: flex;
+}
+
+.tabSwitcher {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 calc(2 * gridCellSize);
+  color: blueyGreyColor;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  cursor: pointer;
+}
+
+.tabSwitcherActive {
+  background-color: whiteTwoColor;
+}
+
+.toolbar {
+  display: flex;
+}
+
+.toolbarSection {
+  display: flex;
+  align-items: center;
+  height: calc(4 * gridCellSize);
+  margin-top: gridCellSize;
+  margin-left: calc(2 * gridCellSize);
+  margin-right: gridCellSize;
+  border-radius: defaultBorderRadius;
+  background-color: whiteTwoColor;
+}
+
+.toolbarButton {
+  margin: 0 gridCellSize;
+  transition: color 0.1s ease-in-out;
+  color: blackColor;
+  cursor: pointer;
+}
+
+.toolbarButton:hover {
+  color: dodgerBlueTwoColor;
+}
+
+.editorContent {
+  min-height: 200px;
+}
+
+.descriptionTextarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  resize: none;
+  font-size: var(--fontSize-sm);
+  line-height: var(--lineHeight-normal);
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.8rem;
+}
+
+.renderedDescription {
+  padding: 0.5rem;
+}
+
+.emptyDescriptionPlaceholder {
+  color: var(--color-gray-500);
+}

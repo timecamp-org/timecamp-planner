@@ -1,0 +1,11 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+
+}
+
+.title {
+  margin-left: calc(2 * gridCellSize);
+  color: cloudyBlueColor;
+}

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EnhanceSignUpGoogleButton> render 1`] = `
+<EnhancedComponent
+  onClick={[Function]}
+  onSignUpWithGoogleAccount={[Function]}
+/>
+`;

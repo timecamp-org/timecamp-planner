@@ -1,0 +1,68 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  height: 100%;
+  display: flex;
+  position: relative;
+  min-height: calc(82 * gridCellSize);
+  color: blueGreyColor;
+  background-color: whiteTwoColor;
+  overflow-y: auto;
+}
+
+.left {
+  width: min-content;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: calc(-4 * gridCellSize);
+  position: relative;
+  min-height: calc(150 * gridCellSize);
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .left {
+    display: none;
+  }
+}
+
+@media (min-width: largeDesktop) {
+  .left {
+    width: calc(120 * gridCellSize);
+  }
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand {
+  width: calc(20 * gridCellSize);
+  padding: 0 gridCellSize;
+}
+
+.footer {
+  height: calc(20 * gridCellSize);
+  margin: calc(5 * gridCellSize) 0;
+}
+
+.footerHeader {
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  text-align: center;
+  margin-bottom: calc(5 * gridCellSize);
+}
+
+.footerContent {
+  margin: 0px calc(11 * gridCellSize);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(12 * gridCellSize);
+}

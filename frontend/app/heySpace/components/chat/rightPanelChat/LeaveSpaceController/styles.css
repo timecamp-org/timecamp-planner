@@ -1,0 +1,7 @@
+@import 'common.css';
+@import 'colors.css';
+
+.modalBody {
+  composes: modalBody from 'commonComponents/UniversalModal/styles.css';
+  width: calc(80 * gridCellSize);
+}

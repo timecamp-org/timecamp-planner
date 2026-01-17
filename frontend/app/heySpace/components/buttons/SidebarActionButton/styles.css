@@ -1,0 +1,53 @@
+@import 'common.css';
+
+.wrapper {
+  padding: 0.1rem 1rem;
+}
+
+.collapsedWrapper {
+  width: 4.8rem;
+}
+
+.button {
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize-sm);
+  font-weight: var(--fontWeight-regular);
+  cursor: pointer;
+  border: none;
+  color: var(--color-black);
+  white-space: nowrap;
+  padding: 0.5rem;
+  padding-left: 0;
+  width: 100%;
+  text-decoration: none;
+  background-color: transparent;
+  transition:
+    color defaultTransitionAnimation,
+    text-decoration defaultTransitionAnimation;
+
+  &:hover {
+    background-color: var(--color-gray-100);
+  }
+}
+
+.disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.active {
+  background-color: var(--color-gray-200);
+
+  &:hover {
+    background-color: var(--color-gray-200);
+  }
+}
+
+.collapsed {
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--borderRadius-xs);
+}

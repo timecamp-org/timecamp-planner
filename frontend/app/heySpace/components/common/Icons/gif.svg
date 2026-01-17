@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="18" viewBox="0 0 29 18">
+    <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+        <text fill="currentColor" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="11">
+            <tspan x="3.101" y="11">GIF</tspan>
+        </text>
+        <rect width="25" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" rx="2"/>
+    </g>
+</svg>

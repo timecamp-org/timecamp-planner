@@ -1,0 +1,25 @@
+@import 'common.css';
+@import 'colors.css';
+
+.innerModalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  background: whiteTwoColor;
+  padding: calc(6 * gridCellSize) calc(7 * gridCellSize);
+  width: calc(124 * gridCellSize);
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.paragraph {
+  font-size: mediumFontSize;
+  color: darkTwoColor;
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.saveButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  padding: calc(2 * gridCellSize) calc(8 * gridCellSize);
+}

@@ -1,0 +1,53 @@
+name: Deploy to backend staging EC2 (staging)
+
+on:
+  push:
+    branches:
+      - planner-labs
+
+jobs:
+  deploy:
+    name: Deploy to backend staging EC2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the files
+        uses: actions/checkout@v3
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache node modules
+        id: cache-yarn
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: $ {{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - if: ${{ steps.cache-yarn.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: yarn list
+      - name: Set up NodeJS environment
+        uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - name: Install project dependencies
+        run: yarn install --frozen-lockfile
+      - name: Building artifacts
+        run: yarn build
+      - name: Upload to EC2
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -rlptvz --exclude="/dist/, /node_modules/, *config.js"
+          path: build/
+          remote_path: ${{ vars.STAGING_BACKEND_TARGET_DIR }}
+          remote_host: ${{ secrets.EC2_STAGING_BACKEND_HOST_DNS }}
+          remote_user: ${{ secrets.EC2_STAGING_BACKEND_USERNAME }}
+          remote_key: ${{ secrets.EC2_STAGING_BACKEND_SSH_KEY }}

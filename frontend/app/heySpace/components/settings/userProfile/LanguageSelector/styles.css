@@ -1,0 +1,5 @@
+.languageOption {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  position: relative;
+}

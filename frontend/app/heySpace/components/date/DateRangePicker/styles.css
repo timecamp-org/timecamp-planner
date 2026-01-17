@@ -1,0 +1,105 @@
+@import 'common.css';
+@import 'colors.css';
+@import 'reactDayPickerDefaultStyles.css';
+
+.datePicker {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-width: calc(53 * gridCellSize);
+}
+
+.leftButton {
+  float: left;
+}
+
+.rightButton {
+  float: right;
+}
+
+.leftButton,
+.rightButton {
+  background: transparent;
+  height: calc(5 * gridCellSize);
+  width: calc(5 * gridCellSize);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: defaultBorderRadius;
+}
+
+.leftButton:hover,
+.rightButton:hover {
+  color: emerald;
+}
+
+.divider {
+  opacity: 0;
+}
+
+.customNavBar {
+  position: absolute;
+  width: 100%;
+}
+
+.prevIcon {
+  height: calc(3 * gridCellSize);
+  width: calc(3 * gridCellSize);
+  position: absolute;
+  left: calc(2 * gridCellSize);
+  cursor: pointer;
+}
+
+.nextIcon {
+  height: calc(3 * gridCellSize);
+  width: calc(3 * gridCellSize);
+  position: absolute;
+  right: calc(2 * gridCellSize);
+  cursor: pointer;
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.buttonClear {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 50%;
+}
+
+/* React Day Picker Styles */
+
+.wrapper {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.day {
+}
+
+.day:hover {
+  background: black05Color;
+}
+
+.outside {
+  color: black40Color;
+}
+
+.prevIcon,
+.nextIcon {
+  color: var(--color-gray-600);
+}
+
+.caption {
+  font-weight: var(--fontWeight-semibold);
+  font-size: var(--fontSize-lg);
+}
+
+.weekday {
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+}

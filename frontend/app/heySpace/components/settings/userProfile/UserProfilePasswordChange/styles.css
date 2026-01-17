@@ -1,0 +1,28 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+}
+
+.form {
+  width: calc(47 * gridCellSize);
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding-top: calc(2 * gridCellSize);
+  & > input {
+    border: 1px solid var(--color-gray-200);
+  }
+}
+
+.saveButton,
+.saveButtonLoading {
+  width: calc(23 * gridCellSize);
+  margin-top: calc(2 * gridCellSize);
+}
+
+.saveButtonLoading {
+  cursor: default !important;
+}

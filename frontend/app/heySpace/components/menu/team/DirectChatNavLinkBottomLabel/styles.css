@@ -1,0 +1,23 @@
+@import 'common.css';
+@import 'colors.css';
+
+.userHint {
+  color: var(--color-gray-500);
+  font-size: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-regular);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.resendInvitationButton {
+  composes: userHint;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease-in-out;
+}
+
+.icon {
+  height: calc(3 * gridCellSize);
+  margin-right: gridCellSize;
+}

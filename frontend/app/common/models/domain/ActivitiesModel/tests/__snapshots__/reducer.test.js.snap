@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`models/domain/ActivitiesModel/reducer initialState 1`] = `
+Immutable.Map {
+  "activitiesData": Immutable.Map {},
+  "activitiesChangedProps": Immutable.Map {},
+  "objectActivities": Immutable.Map {},
+  "fatalError": null,
+}
+`;

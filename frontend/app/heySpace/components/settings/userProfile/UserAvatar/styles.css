@@ -1,0 +1,25 @@
+@import "common.css";
+
+.Component {
+  overflow: hidden;
+}
+
+.avatarImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.initialsCircle {
+  composes: avatarImage;
+  background-color: blueGreyColor;
+}
+
+.initials {
+  font-size: 33px;
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  color: whiteTwoColor;
+}

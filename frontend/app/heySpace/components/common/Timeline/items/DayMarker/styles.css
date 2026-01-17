@@ -1,0 +1,24 @@
+@import 'common.css';
+
+.marker {
+  position: fixed;
+  cursor: cell;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: smallFontSize;
+  font-weight: mediumFontWeight;
+  z-index: -1;
+  width: 100%;
+}
+
+.newItemIndicator {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  min-width: 0px;
+  height: 100%;
+  background-color: blueGreyColor;
+  border-radius: defaultBorderRadius;
+  opacity: 0.5;
+}

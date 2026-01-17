@@ -1,0 +1,175 @@
+@import 'colors.css';
+@import 'common.css';
+
+.spaceGroup {
+  padding-bottom: gridCellSize;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  transition: height defaultTransitionAnimation;
+}
+
+.spaceGroupDraggingOver {
+  composes: spaceGroup;
+  border: dashed 1px blueGreyColor;
+  border-radius: largeBorderRadius;
+}
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-xs);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0.2rem 0;
+  margin-right: 1rem;
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: unset;
+
+  &:hover {
+    color: var(--color-gray-900);
+  }
+}
+
+.expandIcon {
+  margin-right: 1.4rem;
+}
+
+.groupName {
+  height: calc(gridCellSize * 5);
+  line-height: calc(gridCellSize * 5);
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unreadMessagesGroupName {
+  composes: groupName;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  position: relative;
+  width: min-content;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent-500);
+  }
+}
+
+.spaceLinks {
+  width: 100%;
+  padding-left: 2.8rem;
+}
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  margin-left: auto;
+  color: blackColor;
+  z-index: 200;
+  position: absolute;
+  right: gridCellSize;
+}
+
+.draggableRow {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+.hoverableRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.moveIcon {
+  color: var(--color-gray-500);
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -1rem;
+  padding-right: 1rem;
+}
+
+.draggableRow:hover .moveIcon,
+.draggableRow:active .moveIcon {
+  visibility: visible;
+}
+
+.groupOptionsButtonWrapper {
+  margin-left: auto;
+  z-index: 100;
+  display: none;
+  margin-right: 3px;
+  position: absolute;
+  right: gridCellSize;
+}
+
+.groupOptionsButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  padding: 0;
+  width: 13px;
+  height: 13px;
+}
+
+.draggableRow:hover .groupOptionsButtonWrapper,
+.draggableRow:active .groupOptionsButtonWrapper,
+.active {
+  display: flex;
+}
+
+.row {
+  composes: row from 'components/menu/spaces/SpaceNavLink/styles.css';
+  margin-left: 1rem;
+}
+
+.groupOptions {
+  display: flex;
+  flex-flow: column;
+}
+
+.popoverButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  padding: gridCellSize;
+  width: 100%;
+  justify-content: flex-start;
+
+  &:hover {
+    background: var(--color-primary-50);
+  }
+
+  &:focus {
+    background: var(--color-primary-100);
+  }
+
+  &:active,
+  &.active {
+    background: slateThreeColor;
+  }
+}
+
+.popoverIcon {
+  width: calc(gridCellSize * 5);
+  padding-right: calc(gridCellSize * 2);
+}
+
+.input {
+  background-color: transparent;
+  color: blueGreyColor;
+  border-color: blueGreyFourColor;
+  margin-bottom: calc(gridCellSize * 2);
+  margin-left: calc(gridCellSize * 6);
+  width: calc(100% - gridCellSize * 4);
+}

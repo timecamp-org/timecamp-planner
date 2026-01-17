@@ -1,0 +1,246 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  cursor: pointer;
+  padding: gridCellSize;
+  margin: gridCellSize 0;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.outerScroll {
+  height: 100%;
+  background: var(--color-gray-50);
+  display: flex;
+  flex-direction: column;
+}
+
+.innerScroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: calc(gridCellSize * 3);
+  border-radius: defaultBorderRadius;
+}
+
+.focused {
+  padding: gridCellSize;
+}
+
+.cancelIcon {
+  position: absolute;
+  width: calc(3 * gridCellSize);
+  height: calc(6 * gridCellSize);
+  stroke: cloudyBlueColor;
+  margin-right: gridCellSize;
+  right: calc(3 * gridCellSize);
+  color: cloudyBlueColor;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.fileSearch {
+  composes: Component from 'components/tasks/taskFilters/TaskSearch/styles.css';
+  max-width: calc(60 * gridCellSize);
+  margin-top: calc(-2 * gridCellSize);
+}
+
+.searchNameInput {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  border: none;
+  color: blackColor;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: translateZ(0);
+}
+
+.fileSearchInput {
+  height: calc(8 * gridCellSize);
+  font-size: smallFontSize;
+  border: 3px solid whiteColor;
+  border-radius: calc(5 * gridCellSize);
+  background-color: whiteTwoColor;
+  color: slateColor;
+  padding-left: calc(3 * gridCellSize);
+  padding-right: calc(6 * gridCellSize);
+}
+.fileSearchInput:focus {
+  border: 3px solid cloudyBlueColor !important;
+}
+.searchNameInputInner {
+  border: none;
+  background-color: transparent;
+}
+.header {
+  background: var(--color-white);
+  color: var(--color-gray-900);
+  font-weight: 100;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 98%;
+    height: 0.1rem;
+    background: var(--color-primary-500);
+  }
+}
+
+.tableRow {
+  background-color: var(--color-white);
+}
+
+.tableRowUnderlined {
+  composes: tableRow;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 98%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 0.1rem;
+    background: var(--color-gray-200);
+  }
+}
+
+.nameCell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.nameCell:hover {
+  background-color: ;
+}
+
+.nameCell > * {
+  margin-left: gridCellSize;
+}
+
+.nameLink {
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.actionsCell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
+
+.actionsCell > * {
+  margin-left: gridCellSize;
+}
+
+.uploadedByCell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.label {
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-md);
+  font-weight: var(--fontWeight-semibold);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.image {
+  height: calc(6 * gridCellSize);
+  width: calc(6 * gridCellSize);
+  object-fit: contain;
+}
+.imagePlacegolder {
+  background-color: cloudyBlueColor;
+  border-radius: defaultBorderRadius;
+  overflow: hidden;
+}
+.tinyImage {
+  cursor: pointer;
+  opacity: 0;
+  filter: blur(gridCellSize);
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.image {
+  cursor: pointer;
+  image-rendering: pixelated;
+  background: var(--color-gray-100);
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.fileName {
+  margin-left: gridCellSize;
+}
+
+.userIcon {
+  margin-right: calc(2 * gridCellSize);
+}
+
+.ellipsized {
+  @mixin EllipsizeTextOverflow;
+}
+
+.taskName {
+  color: inherit;
+}
+
+.skeletonWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  padding: calc(gridCellSize * 3);
+}
+
+.actionIcon {
+  color: var(--color-gray-900);
+  &:hover {
+    color: var(--color-primary-500);
+  }
+  &:active {
+    color: var(--color-primary-500);
+  }
+}
+
+.emptyListPlaceholderSubtitle {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dropzoneWrapper {
+  height: 100%;
+}

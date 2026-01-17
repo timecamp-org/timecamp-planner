@@ -1,0 +1,19 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  margin-bottom: calc(3 * gridCellSize);
+  display: flex;
+  cursor: pointer;
+}
+
+.termsAndConditionsLabel {
+  font-family: fontFamilyTwo;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.humanMessage {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  font-size: smallFontSize;
+  color: paleRedColor;
+}

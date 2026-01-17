@@ -1,0 +1,14 @@
+@import "colors.css";
+@import "common.css";
+
+.component {
+  position: relative;
+  font-family: fontFamilyTwo;
+}
+
+.component:hover > .tooltip {
+  animation-name: tooltipAnimation;
+  animation-duration: 0.2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}

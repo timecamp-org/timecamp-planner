@@ -1,0 +1,50 @@
+@import 'common.css';
+@import 'colors.css';
+
+.component {
+  width: 100%;
+  background-color: var(--color-gray-50);
+  font-family: fontFamilyThree;
+  display: flex;
+  flex-flow: column;
+}
+
+.container {
+  position: relative;
+  min-height: 0;
+  height: 100%;
+  margin: calc(gridCellSize * 4);
+  overflow-y: auto;
+}
+
+.overwatchTiles {
+  overflow-y: auto;
+  height: 100%;
+  padding: calc(2 * gridCellSize);
+}
+
+.filtersPanel {
+  composes: Component from 'components/tasks/taskFilters/TaskFilters/styles.css';
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  overflow-y: auto;
+  background-color: porcelainColor;
+  padding: calc(gridCellSize * 3);
+  width: calc(gridCellSize * 62);
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
+}
+
+.skeletonWrapper {
+  padding: calc(gridCellSize * 3);
+}
+
+.addCardButton {
+  composes: Component from 'components/tasks/AddCardButton/styles.css';
+  margin: calc(gridCellSize * 3);
+}

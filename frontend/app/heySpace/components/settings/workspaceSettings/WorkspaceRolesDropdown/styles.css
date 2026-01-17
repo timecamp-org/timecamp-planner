@@ -1,0 +1,63 @@
+@import 'common.css';
+@import 'colors.css';
+
+
+.dropdownContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  padding: 0;
+}
+
+.dropdownHeader {
+  color: cloudyBlueColor;
+  border-bottom: 1px solid cloudyBlueColor;
+  padding: gridCellSize calc(gridCellSize * 3);
+  white-space: nowrap;
+}
+
+.dropdown {
+  composes: Component from 'commonComponents/Dropdown/styles.css';
+  position: relative;
+}
+
+.dropdownOpen {
+  composes: dropdown;
+  padding: calc(2 * gridCellSize);
+  border-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+  height: calc(gridCellSize * 18);
+}
+
+.dropdownButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  color: blueGreyColor;
+  display: flex;
+  align-content: center;
+  padding-left: 0;
+}
+
+.dropdownButtonIcon {
+  margin-right: gridCellSize;
+}
+
+.registrationStatus {
+  color: cloudyBlueColor;
+  white-space: nowrap;
+}
+
+.currentRole {
+  color: blueGreyColor;
+  white-space: nowrap;
+  font-weight: boldFontWeight;
+}
+
+.dropdownItems {
+  margin-top: gridCellSize;
+  padding: gridCellSize;
+}
+
+.dropdownItem {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: flex-start;
+}

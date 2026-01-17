@@ -1,0 +1,32 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+}
+
+.clientDataForm {
+  composes: Component from 'components/subscription/ClientDataForm/styles.css';
+  width: 100%;
+  @mixin WhiteBox;
+}
+
+.paymentSummaryPanel {
+  composes: Component from 'components/subscription/PaymentSummaryPanel/styles.css';
+  @mixin WhiteBox;
+  padding: 0;
+}
+
+.buttonContinue {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-right: auto;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(gridCellSize * 3);
+}
+
+.clientFormWithSummary {
+  display: flex;
+}

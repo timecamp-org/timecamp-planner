@@ -1,0 +1,16 @@
+@import 'common.css';
+
+.backdrop {
+  composes: backdrop from 'commonComponents/UniversalModal/styles.css';
+  filter: blur(gridCellSize);
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 1000;
+}
+
+.icon {
+  margin-right: calc(2 * gridCellSize);
+}

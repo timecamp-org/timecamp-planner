@@ -1,0 +1,73 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-direction: column;
+  color: blueGreyColor;
+}
+
+.statusOption {
+  display: flex;
+  flex: 1;
+  padding: calc(2 * gridCellSize);
+  cursor: pointer;
+  align-items: center;
+  border-radius: calc(2 * gridCellSize);
+  margin: 2px;
+  border: 0px;
+  white-space: nowrap;
+
+  &:hover {
+    background: lightGreyColor;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.label {
+  margin-left: gridCellSize;
+}
+
+.selected {
+  background-color: emerald;
+  color: whiteTwoColor;
+}
+
+.popperContent {
+  border-radius: calc(2 * gridCellSize);
+  background: whiteTwoColor;
+  box-shadow: 0 5px 10px 0 black25Color;
+}
+
+.popperArrowFillClassName {
+  z-index: -1;
+}
+
+.popperArrowShadowClassName {
+  box-shadow: 0 5px 10px 0 black25Color !important;
+}
+
+.icon {
+  padding: gridCellSize;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  border-radius: calc(2 * gridCellSize);
+  border: none;
+  position: relative;
+  background: lightGreyColor;
+  color: cloudyBlueColor;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: whiteColor;
+  }
+
+  &:active {
+    background: whiteColor;
+  }
+}

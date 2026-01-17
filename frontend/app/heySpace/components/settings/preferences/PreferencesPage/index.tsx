@@ -1,0 +1,5 @@
+import Component from './component'
+
+import RedirectToSignInPageIfCurrentUserIsDeauthenticated from 'enhancers/auth/RedirectToSignInPageIfCurrentUserIsDeauthenticated'
+
+export default RedirectToSignInPageIfCurrentUserIsDeauthenticated(Component)

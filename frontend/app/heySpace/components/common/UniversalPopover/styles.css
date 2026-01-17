@@ -1,0 +1,141 @@
+@import 'colors.css';
+@import 'common.css';
+
+.popover {
+  transition-timing-function: ease-in-out;
+  z-index: 17011000 !important;
+}
+
+.popoverContent {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  padding: calc(2 * gridCellSize);
+  border-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+  opacity: 1 !important;
+}
+
+.popoverContentDark {
+  composes: popoverContent;
+  color: whiteFourColor;
+  background: darkTwoColor;
+}
+
+.popover .popoverArrow {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  z-index: -1;
+  background-color: transparent;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    transform: rotate(45deg);
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+  }
+}
+
+.arrowOverflow {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-width: 8px;
+}
+
+.popover .popoverArrow.popoverArrowFill {
+  background: transparent;
+}
+
+.popoverArrowFillDark {
+  composes: popoverArrowFill;
+}
+
+.popover .popoverArrow.popoverArrowFillDark {
+  background: transparent;
+}
+
+.popover[data-popper-placement^='top'] .popoverArrow {
+  bottom: -6px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:after {
+    box-shadow: -1px 1px 10px black10Color;
+  }
+}
+
+.popover[data-popper-placement^='top'] .arrowOverflow {
+  border-top-color: whiteTwoColor;
+  bottom: -16px;
+}
+
+.popover[data-popper-placement^='top'] .arrowOverflow.overflowDark {
+  border-top-color: darkTwoColor;
+}
+
+.popover[data-popper-placement^='bottom'] .popoverArrow {
+  top: -6px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:after {
+    box-shadow: -1px -1px 10px black10Color;
+  }
+}
+
+.popover[data-popper-placement^='bottom'] .arrowOverflow {
+  border-bottom-color: whiteTwoColor;
+  top: -16px;
+}
+
+.popover[data-popper-placement^='bottom'] .arrowOverflow.overflowDark {
+  border-bottom-color: darkTwoColor;
+}
+
+.popover[data-popper-placement^='right'] .popoverArrow {
+  left: -6px;
+  margin-left: 0;
+  margin-right: 0;
+
+  &:after {
+    box-shadow: -1px 1px 10px black10Color;
+  }
+}
+
+.popover[data-popper-placement^='right'] .arrowOverflow {
+  border-right-color: whiteTwoColor;
+  left: -16px;
+}
+
+.popover[data-popper-placement^='right'] .arrowOverflow.overflowDark {
+  border-right-color: darkTwoColor;
+}
+
+.popover[data-popper-placement^='left'] .popoverArrow {
+  right: -6px;
+  margin-left: 0;
+  margin-right: 0;
+
+  &:after {
+    box-shadow: 1px 1px 10px black10Color;
+  }
+}
+
+.popover[data-popper-placement^='left'] .arrowOverflow {
+  border-left-color: whiteTwoColor;
+  right: -16px;
+}
+
+.popover[data-popper-placement^='left'] .arrowOverflow.overflowDark {
+  border-left-color: darkTwoColor;
+}

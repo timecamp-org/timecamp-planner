@@ -1,0 +1,23 @@
+@import 'common.css';
+
+.contentTop {
+  height: calc(8 * gridCellSize);
+  padding: gridCellSize calc(6 * gridCellSize);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kanban {
+  composes: kanban from 'components/chat/rightPanelChat/TaskListRightPanelChat/styles.css';
+  max-height: calc(gridCellSize * 100);
+}
+
+.horizontal {
+  composes: horizontal from 'components/taskList/SectionList/styles.css';
+  max-height: calc(gridCellSize * 80);
+}
+
+.section {
+  composes: section from 'components/chat/rightPanelChat/TaskListRightPanelChat/styles.css';
+}

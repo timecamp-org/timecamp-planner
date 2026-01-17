@@ -1,0 +1,14 @@
+@import 'colors.css';
+@import 'common.css';
+
+.personName {
+  font-weight: var(--fontWeight-semibold);
+  font-size: var(--fontSize-sm);
+  color: var(--color-gray-900);
+  cursor: pointer;
+}
+
+.personName:hover,
+.popupOpened {
+  text-decoration: underline;
+}

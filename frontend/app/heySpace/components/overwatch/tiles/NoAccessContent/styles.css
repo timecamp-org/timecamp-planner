@@ -1,0 +1,39 @@
+@import 'common.css';
+@import 'colors.css';
+
+.noAccessContent {
+  height: calc(gridCellSize * 40);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-family: fontFamilyThree;
+}
+
+.noAccessTitle {
+  color: mediumPinkTwo;
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+}
+
+.noAccessTitle::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: calc(gridCellSize * 2);
+  top: 0;
+  left: 0;
+  background-color: mediumPinkTwo;
+}
+
+.contactInfo {
+  margin: calc(gridCellSize * 3) 0 calc(gridCellSize * 3);
+  color: midnightColor;
+}
+
+.closeButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  position: absolute;
+  top: calc(gridCellSize * 3);
+  right: calc(gridCellSize * 3);
+}

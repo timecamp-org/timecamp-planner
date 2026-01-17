@@ -1,0 +1,172 @@
+@import 'colors.css';
+@import 'common.css';
+
+$textAreaLeftMargin: calc(gridCellSize * 3);
+$textAreaRightMargin: calc(gridCellSize * 2);
+$textAreaMargins: calc($textAreaLeftMargin + $textAreaRightMargin);
+
+@value messageMinHeight: 33px;
+@value emptyContinuationMessageMinHeight: calc(2 * gridCellSize);
+@value emptyFreshMessageMinHeight: calc(8 * gridCellSize);
+
+.Component {
+  position: relative;
+  padding: 0 calc(2 * gridCellSize);
+  min-height: messageMinHeight;
+  padding-bottom: 3px;
+  font-family: defaultFontFamily;
+}
+
+.Component:hover:not(.isBeingEdited) {
+  border-top-right-radius: 0;
+}
+
+.Component:hover,
+.isBeingEdited,
+.Component.active {
+  background: var(--color-gray-100);
+}
+
+.Component:hover .actionButtons,
+.Component.active .actionButtons {
+  display: flex;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  margin-left: calc(4 * gridCellSize);
+}
+
+.messageContinuationRight {
+  composes: right;
+  margin-left: 5rem;
+}
+
+.notSuccessfullySent {
+  opacity: 0.6;
+}
+
+.freshMessage {
+  position: relative;
+  padding: calc(2 * gridCellSize) 0 gridCellSize 0;
+}
+
+.freshMessage,
+.messageBeingEdited {
+  font-family: defaultFontFamily;
+  display: flex;
+  flex-direction: row;
+  min-height: emptyFreshMessageMinHeight;
+}
+
+.messageContinuation {
+  display: flex;
+  position: relative;
+  padding: gridCellSize 0;
+  min-height: emptyContinuationMessageMinHeight;
+}
+
+.Component:hover .messageContinuationAddTime {
+  opacity: 1;
+}
+
+.Component:hover .messageContinuation,
+.Component:hover .freshMessage {
+  z-index: 20;
+}
+
+.messageInfo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: gridCellSize;
+}
+
+.messageAddTime {
+  margin-left: 1rem;
+  font-size: var(--fontSize-xxs);
+  line-height: 16px;
+  color: var(--color-gray-500);
+  font-weight: var(--fontWeight-regular);
+}
+
+.messageContinuationAddTime {
+  position: absolute;
+  top: 2px;
+  font-size: smallFontSize;
+  color: cloudyBlueColor;
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  opacity: 0;
+}
+
+.messageEditorToolbar {
+  composes: toolbar from 'components/chat/MessageEditorToolbar/styles.css';
+  top: calc(3 * gridCellSize);
+  right: calc(3 * gridCellSize);
+}
+
+.messageContent {
+  font-size: normalFontSize;
+  color: darkGreyBlueColor;
+  cursor: text;
+}
+
+.messageBeingEdited {
+}
+
+.messageBeingEditedButtons {
+  display: flex;
+  margin-left: calc(gridCellSize * 2);
+  margin-top: gridCellSize;
+}
+
+.confirmEditButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: calc(2 * gridCellSize);
+}
+
+.messageEditedInfo {
+  font-size: smallFontSize;
+  opacity: 0.6;
+}
+
+.messageEditor {
+  width: 100%;
+  background: whiteTwoColor;
+  color: black;
+  height: calc(30 * gridCellSize);
+}
+
+.quillWrapper {
+  position: relative;
+  background: whiteTwoColor;
+  border-radius: calc(2 * gridCellSize);
+  margin-bottom: calc(2 * gridCellSize);
+}
+
+.error {
+  font-size: smallFontSize;
+  color: paleRedColor;
+  margin-top: calc(2 * gridCellSize);
+  display: flex;
+  align-items: center;
+}
+
+.errorIcon {
+  width: smallFontSize;
+  height: smallFontSize;
+  margin-right: gridCellSize;
+}
+
+.userStatusEmoji {
+  composes: Component from 'commonComponents/UserStatusEmoji/styles.css';
+  margin-left: gridCellSize;
+  cursor: pointer;
+}
+
+.continuationActionButtons {
+  composes: actionButtons from 'components/chat/MessageActionButtons/styles.css';
+}

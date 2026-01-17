@@ -1,0 +1,27 @@
+{
+  "name": "Personal Goals",
+  "description": "Revitalize your personal goal-setting with our comprehensive template. Seamlessly navigate through key life domains, fostering a holistic approach to self-improvement and fulfillment. Organize and prioritize your aspirations effortlessly, streamlining your journey toward personal success.",
+  "order": 5,
+  "taskListTemplates": [
+    {
+      "name": "Growth",
+      "order": 1
+    },
+    {
+      "name": "Health",
+      "order": 2
+    },
+    {
+      "name": "Work",
+      "order": 3
+    },
+    {
+      "name": "Finance",
+      "order": 4
+    },
+    {
+      "name": "Traveling",
+      "order": 5
+    }
+  ]
+}

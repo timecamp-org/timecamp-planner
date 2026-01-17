@@ -1,0 +1,91 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  align-items: center;
+  height: calc(9 * gridCellSize);
+  border-radius: largeBorderRadius;
+  position: relative;
+  width: 100%;
+  padding: 0px gridCellSize;
+  cursor: pointer;
+  position: relative;
+}
+
+.Component:hover {
+  background: lightGreyColor;
+  .moreButton {
+    display: flex;
+  }
+}
+
+.memberDetails {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.moreButton {
+  align-items: center;
+  justify-content: center;
+  width: calc(6 * gridCellSize);
+  height: calc(6 * gridCellSize);
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: calc(gridCellSize * 2);
+  right: gridCellSize;
+
+  &:hover {
+    background: whiteColor;
+  }
+
+  &:active {
+    background: whiteColor;
+    opacity: 0.8;
+  }
+}
+
+.personIcon {
+  composes: Component from 'components/person/PersonIcon/styles.css';
+  margin-right: calc(2 * gridCellSize);
+}
+
+.popoverContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  padding: gridCellSize;
+}
+
+.popoverButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.trashIcon {
+  width: calc(4 * gridCellSize);
+  height: calc(4 * gridCellSize);
+  stroke-width: 4px;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.personNameWithRole {
+  display: flex;
+  flex-flow: column;
+  width: 75%;
+}
+
+.role {
+  color: cloudyBlueColor;
+  font-size: smallFontSize;
+}
+
+.memberName {
+  composes: personFullName from 'components/person/PersonFullName/styles.css';
+  @mixin EllipsizeTextOverflow;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

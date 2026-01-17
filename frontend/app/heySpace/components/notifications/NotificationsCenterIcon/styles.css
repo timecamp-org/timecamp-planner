@@ -1,0 +1,50 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+}
+
+.ComponentVertical {
+  margin-left: 0;
+}
+
+.iconWrapper {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.bellWithBadge {
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  position: absolute;
+  top: calc(-1 * gridCellSize);
+  right: calc(-2 * gridCellSize);
+  color: veryLightPinkColor;
+  background-color: tomatoColor;
+}
+
+.popperContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  padding-bottom: 1rem;
+}
+
+.notificationList {
+  composes: Component from 'components/notifications/NewNotifications/styles.css';
+  width: calc(93 * gridCellSize);
+  padding: 0;
+  margin-top: -5rem;
+}
+
+.archiveAllModal {
+  composes: Component from 'commonComponents/UniversalModal/styles.css';
+  z-index: 2000;
+}
+
+.title {
+  font-size: var(--fontSize-sm);
+}

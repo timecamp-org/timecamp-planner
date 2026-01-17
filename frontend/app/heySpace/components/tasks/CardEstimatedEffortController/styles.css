@@ -1,0 +1,19 @@
+@import 'colors.css';
+@import 'common.css';
+
+.editor {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+}
+
+.popoverContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  max-width: calc(32 * gridCellSize);
+}
+
+.buttonClear {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-top: calc(2 * gridCellSize);
+}

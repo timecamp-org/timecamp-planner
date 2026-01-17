@@ -1,0 +1,27 @@
+@import 'colors.css';
+@import 'common.css';
+
+.timelineHeaderItem {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fontSize-xs);
+  overflow: hidden;
+}
+
+.topLabel {
+  color: var(--color-gray-900);
+  margin-bottom: 0.5rem;
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-semibold);
+}
+
+.bottomLabel {
+  color: var(--color-gray-500);
+}
+
+.today {
+  color: var(--color-primary-500);
+}

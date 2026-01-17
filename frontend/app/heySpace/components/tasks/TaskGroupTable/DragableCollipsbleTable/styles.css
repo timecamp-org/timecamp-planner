@@ -1,0 +1,38 @@
+.row {
+  background-color: var(--color-white);
+
+  &:first-of-type {
+    border: none;
+  }
+
+  &:nth-child(2n) {
+    background-color: var(--color-white);
+  }
+
+  &:hover {
+    background-color: var(--color-gray-100);
+  }
+}
+
+.cell {
+  border: none;
+  padding: 0;
+  max-width: 10rem;
+  min-width: 5rem;
+  overflow: hidden;
+}
+
+.headerRow {
+  color: var(--color-gray-900);
+  font-weight: 100;
+  position: relative;
+  border: none;
+  border-bottom: 1px solid var(--color-primary-500);
+}
+
+.table {
+  box-shadow: none;
+  border-radius: none;
+  margin-bottom: 0.8rem;
+  table-layout: fixed;
+}

@@ -1,0 +1,81 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: calc(72 * gridCellSize);
+  margin: 0 auto calc(24 * gridCellSize);
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .Component {
+    width: calc(100% - (gridCellSize * 4));
+  }
+}
+
+.header {
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  font-family: defaultFontFamily;
+  margin-top: calc(11 * gridCellSize);
+  margin-bottom: calc(4 * gridCellSize);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.form {
+}
+
+.horizontalSeparator {
+  height: calc(2 * gridCellSize);
+  display: flex;
+  align-items: center;
+  margin-top: calc(6 * gridCellSize);
+  margin-bottom: calc(6 * gridCellSize);
+}
+
+.submitButton,
+.submitButtonLoading {
+  composes: ButtonFull from 'commonComponents/SubmitButton/styles.css';
+  margin-bottom: calc(2 * gridCellSize);
+  width: 100%;
+}
+
+.submitButtonLoading {
+  opacity: 0.6;
+}
+
+.googleError {
+  font-size: smallFontSize;
+  margin-top: gridCellSize;
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  color: paleRedColor;
+  width: calc(72 * gridCellSize);
+  white-space: nowrap;
+}
+
+.avatar {
+  display: flex;
+  flex: 0 0 auto;
+  width: calc(8 * gridCellSize);
+  height: calc(8 * gridCellSize);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.hint {
+  font-family: fontFamilyTwo;
+  color: cloudyBlueColor;
+  margin-bottom: calc(4 * gridCellSize);
+}
+
+.passwordUserInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  padding-bottom: calc(3 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}

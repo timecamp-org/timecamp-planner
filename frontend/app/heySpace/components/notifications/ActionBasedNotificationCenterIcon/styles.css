@@ -1,0 +1,35 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Icon {
+  stroke-width: 6px;
+  fill: darkTwoColor;
+  stroke: bermudaGreyColor;
+}
+
+.Icon:hover {
+  fill: paleCornflowerBlueColor;
+}
+
+.Icon:active {
+  fill: bermudaGreyColor;
+  stroke: bermudaGreyColor;
+}
+
+.IconUnread {
+  stroke-width: 6px;
+  fill: darkTwoColor;
+  stroke: whiteTwoColor;
+}
+
+.IconUnread:hover {
+  fill: paleCornflowerBlueColor;
+  stroke: whiteTwoColor;
+}
+
+.IconUnread:active {
+  fill: whiteTwoColor;
+  stroke: whiteTwoColor;
+}
+
+

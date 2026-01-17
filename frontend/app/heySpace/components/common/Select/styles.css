@@ -1,0 +1,8 @@
+.wrapper {
+  display: flex;
+}
+
+.label {
+  font-size: var(--fontSize-xxs);
+  margin-right: 1rem;
+}

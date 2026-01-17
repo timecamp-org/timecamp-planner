@@ -1,0 +1,33 @@
+@import 'common.css';
+@import 'colors.css';
+
+.iconWrapper {
+  position: absolute;
+  top: 1.2rem;
+  right: 0;
+  border: 0.1rem solid var(--color-gray-200);
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(50%);
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  position: absolute;
+  bottom: calc(gridCellSize * -1);
+  right: calc(gridCellSize * -1);
+  min-width: calc(gridCellSize * 2);
+  width: calc(gridCellSize * 2);
+  height: calc(gridCellSize * 2);
+}
+
+.collapsed {
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}

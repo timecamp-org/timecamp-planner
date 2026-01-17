@@ -1,0 +1,260 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: rightMenuWidth;
+  height: 100%;
+  background: lightGreyColor;
+  border-radius: calc(2 * gridCellSize) 0 0 calc(2 * gridCellSize);
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: calc(13 * gridCellSize);
+  padding: 0px calc(4 * gridCellSize);
+}
+
+.lists {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.list {
+  max-height: 50%;
+  margin: 0px calc(4 * gridCellSize);
+  padding: calc(2 * gridCellSize) gridCellSize;
+  background: whiteTwoColor;
+  border-radius: largeBorderRadius;
+  color: darkGreyBlueColor;
+  overflow-y: auto;
+  transform: translateZ(0);
+}
+
+.longList {
+  composes: list;
+  max-height: 70%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  color: darkGreyBlueColor;
+  margin: calc(2 * gridCellSize) gridCellSize;
+  padding: gridCellSize;
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+
+  &:hover {
+    background: whiteColor;
+  }
+
+  &:active {
+    background: whiteColor;
+    opacity: 0.8;
+  }
+}
+
+.inviteButton {
+}
+
+.personIcon {
+  margin-right: calc(2 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+}
+
+.loader {
+  width: calc(4 * gridCellSize);
+  height: calc(4 * gridCellSize);
+  background-size: calc(4 * gridCellSize);
+  background-image: url('styles/assets/loader.gif');
+}
+
+.plusButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border: 0px;
+  cursor: pointer;
+  height: 36px;
+  background: lightGreyColor;
+  border-radius: largeBorderRadius;
+  position: relative;
+
+  &:hover {
+    background: whiteColor;
+  }
+
+  &:active {
+    background: whiteColor;
+  }
+}
+
+.plusIcon {
+  fill: blueyGreyColor;
+  width: 18px;
+  height: 18px;
+}
+
+.rightActions {
+  display: flex;
+  align-items: center;
+  color: cloudyBlueColor;
+  margin-left: auto;
+}
+
+.leftActions {
+  width: 100%;
+}
+
+.moreIconWrapper {
+  width: calc(6 * gridCellSize);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.moreIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  color: darkGreyBlueColor;
+  margin: 0px gridCellSize;
+  padding: gridCellSize;
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+  height: calc(9 * gridCellSize);
+
+  &:hover {
+    background: lightGreyColor;
+    .searchRowLabel {
+      display: block;
+    }
+  }
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.searchRowPersonIcon {
+  composes: Component from 'components/person/PersonIcon/styles.css';
+  margin-right: calc(2 * gridCellSize);
+}
+
+.searchRowPersonName {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchRowLabel {
+  white-space: nowrap;
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  display: none;
+}
+
+.searchFooterWrapper {
+  margin: 0px 20px;
+  padding: gridCellSize;
+  padding-top: calc(2 * gridCellSize);
+  color: blueGreyColor;
+  background: whiteTwoColor;
+  margin-top: calc(-4 * gridCellSize);
+  border-radius: largeBorderRadius;
+  display: flex;
+  flex-flow: column;
+}
+
+.searchFooterWrapperEmptyList {
+  margin-top: calc(-6 * gridCellSize);
+}
+
+.searchFooter {
+  display: flex;
+  align-items: center;
+  height: calc(8 * gridCellSize);
+  padding: gridCellSize;
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+
+  &:hover {
+    background: lightGreyColor;
+  }
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.searchFooterValue {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchFooterLabel {
+  white-space: nowrap;
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  padding: gridCellSize;
+}
+
+.listSearch {
+  composes: header from 'commonComponents/ListSearch/styles.css';
+  height: calc(12 * gridCellSize);
+  margin-right: calc(3 * gridCellSize);
+}
+
+.guestsHeader {
+  composes: header;
+  padding-top: calc(gridCellSize * 6);
+  display: flex;
+  align-items: center;
+  padding-bottom: calc(gridCellSize * 3);
+}
+
+.guestsHeaderText {
+  display: flex;
+  align-items: center;
+  font-weight: boldFontWeight;
+  margin-left: calc(gridCellSize * 3);
+}
+
+.guestCheckbox {
+  display: flex;
+  align-items: center;
+  color: blueGreyColor;
+  padding: gridCellSize;
+  font-size: smallFontSize;
+  cursor: pointer;
+}
+
+.checkbox {
+  composes: Component from 'commonComponents/Checkbox/styles.css';
+  margin-right: calc(gridCellSize * 2);
+}
+
+.leaveSpaceRow {
+  composes: header;
+}

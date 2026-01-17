@@ -1,0 +1,123 @@
+@import 'common.css';
+@import 'colors.css';
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 0;
+  opacity: backdropOpacity;
+  background-color: black60Color;
+  transition: opacity modalTransitionDuration linear;
+}
+
+.backdrop--entering,
+.backdrop--exited,
+.backdrop--exiting {
+  opacity: 0;
+}
+
+.Component {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 0;
+  z-index: 1000;
+  transition: visibility 0s linear modalTransitionDuration;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: blackColor;
+}
+
+.MinimizedComponent {
+  composes: Component;
+  top: auto;
+  left: auto;
+  right: calc(gridCellSize * 3);
+  bottom: calc(gridCellSize * 3);
+}
+
+.modalDialog {
+  position: relative;
+  width: auto;
+  margin: auto;
+  z-index: 1001;
+}
+
+@media screen and (max-width: phoneBreakpointWidth) {
+  .modalDialog {
+    padding: 0;
+  }
+}
+
+.whiteModalBox {
+  background: whiteTwoColor;
+  position: relative;
+  flex-direction: column;
+  outline: 0;
+  margin: auto;
+  line-height: 1.14em;
+  font-weight: regularFontWeight;
+  opacity: 0;
+  transition: transform modalTransitionDuration ease-out, opacity modalTransitionDuration ease-out;
+  border-radius: largerBorderRadius;
+}
+
+.whiteModalBox--entered {
+  opacity: 1;
+}
+
+.whiteModalBox--entering,
+.whiteModalBox--exiting,
+.whiteModalBox--exited {
+  opacity: 0;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: var(--fontWeight-semibold);
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-base);
+  margin-bottom: 2.4rem;
+  padding: 2.4rem 0 0 2.4rem;
+}
+
+.closeButton {
+  position: absolute;
+  z-index: 1000;
+  right: 1.5rem;
+  top: 1.4rem;
+  height: min-content;
+  width: min-content;
+  border-radius: 0.5rem;
+  color: var(--color-gray-900);
+}
+
+.modalBody {
+  font-size: var(--fontSize-sm);
+  padding-bottom: 1.6rem;
+  padding: 0 2.4rem;
+}
+
+.windowControlButton {
+  composes: closeButton;
+  right: calc(gridCellSize * 10);
+}
+
+.modalFooter {
+  display: flex;
+  padding: 2.4rem;
+  margin-top: auto;
+  justify-content: flex-end;
+}
+
+.saveButton {
+  margin-left: auto;
+}

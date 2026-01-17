@@ -1,0 +1,271 @@
+@import 'colors.css';
+@import 'common.css';
+
+@value projectViewHeaderItemHeight: calc(8 * gridCellSize);
+
+.header {
+  position: relative;
+  background-color: whiteTwoColor;
+  flex: 0 0 auto;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  display: flex;
+  height: calc(headerHeight + 3 * gridCellSize);
+  border-bottom: 1px solid var(--color-gray-50);
+
+  @media only screen and (max-width: mobileBreakpoint) {
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+.chatHeader {
+  composes: header;
+  border-bottom: none;
+  height: 7rem;
+}
+
+.groupConversationName {
+  margin-left: 0.5rem;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-primary-500);
+  margin-right: auto;
+  max-width: calc(120 * gridCellSize);
+}
+
+.groupConversationName > div {
+  padding: 1rem;
+  border-radius: largeBorderRadius;
+  height: 4rem;
+
+  &:hover:not(:focus-within) {
+    background: warmGrey5Color;
+  }
+
+  &:active:not(:focus-within) {
+    background: mortarColor;
+  }
+}
+
+.projectName {
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  font-family: fontFamilyTwo;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: mediumFontSize;
+  max-width: 30rem;
+  text-transform: uppercase;
+}
+
+.directProjectName {
+  compose: projectName;
+  margin-left: 4rem;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  font-family: fontFamilyTwo;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: mediumFontSize;
+  max-width: 30rem;
+
+  text-transform: uppercase;
+}
+
+.description {
+  composes: Component from 'components/projects/ProjectDescription/styles.css';
+  margin-left: 1rem;
+  font-size: smallFontSize;
+  max-width: 30rem;
+}
+
+.conversationPartnerIcon {
+  width: 3rem;
+  height: 3rem;
+  font-size: var(--fontSize-regular);
+  z-index: 699;
+  position: fixed;
+}
+
+.navLink {
+  color: var(--color-primary-500);
+  text-decoration: none;
+  position: relative;
+}
+
+.navLinkActive {
+  compose: navLink;
+  & * {
+    color: var(--color-primary-500);
+  }
+}
+
+.navigation {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  z-index: 201;
+  position: fixed;
+  margin-top: 0.5rem;
+}
+
+.taskSearch {
+  position: relative;
+  max-width: 35rem;
+  border-radius: none;
+  height: 3rem;
+  padding: 0 !important;
+}
+
+.taskSearchInput {
+  height: 4rem;
+  font-size: smallFontSize;
+  background-color: var(--color-gray-50);
+  color: slateColor;
+  padding-left: 1.5rem;
+  padding-right: 3rem;
+  border: unset;
+  border-radius: none;
+}
+
+.taskNameInputClass {
+}
+
+.link {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border: 0px;
+  cursor: pointer;
+  border-radius: largeBorderRadius;
+  color: var(--color-gray-900);
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-right: 0.5rem;
+
+  &:active {
+    opacity: 0.8;
+  }
+  &:hover {
+    color: var(--color-primary-500);
+    & * {
+      color: var(--color-primary-500);
+    }
+  }
+}
+
+.linkContent {
+  color: var(--color-gray-900);
+  display: flex;
+  align-items: center;
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-semibold);
+}
+
+.membersIcon {
+  color: var(--color-gray-900);
+  & * {
+    color: var(--color-gray-900);
+  }
+}
+
+.membersIconActive {
+  color: var(--color-primary-500);
+  & * {
+    color: var(--color-primary-500);
+  }
+}
+
+.projectInfo {
+  display: flex;
+  overflow: hidden;
+  height: projectViewHeaderItemHeight;
+  margin-right: auto;
+}
+
+.descriptors {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  max-height: 2rem;
+}
+
+.userStatus {
+  composes: Component from 'commonComponents/UserStatus/styles.css';
+  margin-left: 1rem;
+  overflow: hidden;
+  flex: 1;
+}
+
+.clickable {
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+}
+
+.meetController {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-right: 0.5rem;
+  &:hover {
+    & * {
+      color: var(--color-primary-500);
+    }
+  }
+}
+
+.itemWithBadge {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  margin-right: 3rem;
+  margin-top: 0.5rem;
+
+  a {
+    margin: 0;
+  }
+}
+
+.badge {
+  margin-left: 0.5rem;
+  height: 16px;
+  margin-top: -3px;
+}
+
+.dotsVertical {
+  margin: 0px 1.5rem;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--color-gray-900);
+}
+
+.rightPanelLinksWrapper {
+  display: flex;
+  margin-left: auto;
+}
+
+.panelFlexWrapper {
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: phoneBreakpointWidth) {
+    display: none;
+  }
+}

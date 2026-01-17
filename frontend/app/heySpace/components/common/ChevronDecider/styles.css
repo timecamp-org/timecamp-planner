@@ -1,0 +1,11 @@
+.chevron {
+  color: var(--color-gray-900);
+}
+.chevronLeft {
+  composes: chevron;
+  transform: rotate(-90deg);
+}
+.chevronRight {
+  composes: chevron;
+  transform: rotate(90deg);
+}

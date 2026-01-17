@@ -1,0 +1,96 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  height: 100%;
+  display: flex;
+  position: relative;
+  min-height: calc(82 * gridCellSize);
+  color: blueGreyColor;
+  background-color: whiteTwoColor;
+}
+
+.left {
+  width: calc(91 * gridCellSize);
+  background-image: url('styles/assets/planets-background.png');
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+}
+
+.signUp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: blueGreyColor;
+  padding-top: calc(10 * gridCellSize);
+  padding-right: calc(9 * gridCellSize);
+}
+
+.signInPage {
+  width: 100%;
+  height: 100%;
+  background-color: whiteTwoColor;
+}
+
+.content {
+  width: auto;
+  flex: 1 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: calc(110 * gridCellSize);
+}
+
+.signUpButton {
+  border: solid defaultBorderWidth wisteriaColor;
+  color: wisteriaColor !important;
+  border-radius: largeBorderRadius;
+  height: 36px;
+  width: calc(21 * gridCellSize);
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  position: relative;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.character {
+  width: calc(32 * gridCellSize);
+}
+
+.messageWrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  margin-top: calc(4 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+  font-family: defaultFontFamily;
+}
+
+.message {
+  width: calc(60 * gridCellSize);
+}
+
+.link {
+  color: wisteriaColor;
+}

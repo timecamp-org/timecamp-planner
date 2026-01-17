@@ -1,0 +1,9 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+}
+
+.Component > button {
+  top: 2px;
+}

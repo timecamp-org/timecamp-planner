@@ -1,0 +1,108 @@
+@import 'common.css';
+@import 'colors.css';
+
+$dotSize: calc(2 * gridCellSize);
+
+.Component {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border-radius: 2px;
+  align-items: center;
+  cursor: pointer;
+  flex: 1 0 auto;
+  border-bottom: solid 1px var(--color-gray-200);
+}
+
+.hover {
+  background-color: whiteColor;
+}
+
+.unreadBackground {
+  background-color: var(--color-primary-50);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0.8rem 1.6rem;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  display: flex;
+  visibility: hidden;
+}
+
+.Component {
+  &:hover {
+    .right {
+      visibility: visible;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  padding: 0 0 0 calc(3 * gridCellSize);
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  padding: gridCellSize 0;
+  align-items: center;
+  height: calc(4.5 * gridCellSize);
+}
+
+.title {
+  font-size: mediumFontSize;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.dateWrapper {
+  display: flex;
+  color: var(--color-gray-500);
+  font-size: var(--fontSize-xxs);
+  padding: gridCellSize gridCellSize 0 0;
+  align-items: center;
+  width: calc(9 * gridCellSize);
+}
+
+.date {
+  display: flex;
+  padding-right: 3px;
+  white-space: nowrap;
+}
+
+.time {
+  composese: date;
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.dotContainer {
+  width: $dotSize;
+  height: $dotSize;
+  margin-right: gridCellSize;
+}
+
+.dot {
+  height: $dotSize;
+  width: $dotSize;
+  border-radius: $dotSize;
+}
+
+.notificationText {
+  composes: Component from 'components/notifications/NotificationText/styles.css';
+  font-size: var(--fontSize-xs);
+}

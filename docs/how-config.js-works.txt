@@ -1,0 +1,3 @@
+For development, config.js is served from root directory of this project (look at frontendMiddleware.js).
+
+For production a custom, production ready config must be copied to a directory where build results are.

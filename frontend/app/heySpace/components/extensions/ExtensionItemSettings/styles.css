@@ -1,0 +1,87 @@
+@import 'common.css';
+@import 'colors.css';
+
+.dropdown {
+  width: calc(41 * gridCellSize);
+  display: flex;
+  flex-flow: column;
+}
+
+.title {
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  color: cloudyBlueColor;
+  margin-left: calc(2 * gridCellSize);
+  margin-bottom: calc(2 * gridCellSize);
+  align-self: center;
+}
+
+.separator {
+  width: calc(100% - (4 * gridCellSize));
+  height: 1px;
+  background: cloudyBlueColor;
+  align-self: center;
+}
+
+.spacesListLabel {
+  color: cloudyBlueColor;
+  margin-left: gridCellSize;
+  margin-top: gridCellSize;
+}
+
+.spacesList {
+  max-height: calc(41 * gridCellSize);
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.spaceItem {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  cursor: pointer;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  align-items: center;
+  padding: gridCellSize;
+  width: 100%;
+  justify-content: flex-start;
+
+  &:hover {
+    opacity: 0.8;
+    background: whiteColor;
+    color: var(--color-primary-500);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 defaultOutlineWidth silverColor;
+    background: whiteColor;
+  }
+
+  &:active {
+    box-shadow: none;
+    opacity: 0.6;
+    background: lightGreyColor;
+  }
+}
+
+.radioItem {
+  composes: spaceItem;
+  margin: gridCellSize 0;
+}
+
+.radioOption {
+  composes: component from 'commonComponents/RadioButton/styles.css';
+  height: calc(4 * gridCellSize);
+  display: flex;
+  cursor: pointer;
+}
+
+.optionLabel {
+  padding-left: calc(2 * gridCellSize);
+}
+
+.spaceLabel {
+  padding-left: calc(4 * gridCellSize);
+}

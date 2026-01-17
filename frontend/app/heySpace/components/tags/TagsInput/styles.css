@@ -1,0 +1,74 @@
+@import 'common.css';
+
+.container {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+  flex: 1;
+  z-index: 9;
+  min-height: calc(gridCellSize * 11);
+
+  input {
+    font-size: normalFontSize;
+    width: 100%;
+    padding: 0 !important;
+  }
+}
+
+.suggestionsContainer {
+  @mixin DefaultBoxShadow;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: whiteTwoColor;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  max-height: calc(gridCellSize * 51);
+  overflow-y: auto;
+}
+
+.suggestionsList {
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  transform: translateZ(0);
+  list-style-type: none;
+  width: 100%;
+}
+
+.suggestion {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.suggestion:hover {
+  background-color: black10Color;
+}
+
+.suggestionsFooter {
+  display: flex;
+  align-items: center;
+  min-height: calc(6 * gridCellSize);
+}
+
+.query {
+  flex: 1;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.addButton {
+  color: cloudyBlueColor;
+  margin-right: calc(2 * gridCellSize);
+  cursor: pointer;
+  font-weight: boldFontWeight;
+}
+
+.addButton:hover {
+  color: wisteriaColor;
+}

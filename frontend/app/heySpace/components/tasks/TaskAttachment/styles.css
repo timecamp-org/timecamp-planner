@@ -1,0 +1,61 @@
+@import 'common.css';
+@import 'colors.css';
+
+.attachment {
+  margin-right: calc(3 * gridCellSize);
+  margin-top: calc(3 * gridCellSize);
+  padding: calc(2 * gridCellSize);
+  border-radius: largeBorderRadius;
+}
+
+.attachment:hover {
+  background: warmGrey5Color;
+
+  .deleteButton {
+    opacity: 1;
+  }
+}
+
+.image {
+  max-height: calc(19 * gridCellSize);
+  max-width: calc(34 * gridCellSize);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.fileName {
+  font-size: normalFontSize;
+  text-align: left;
+  font-weight: boldFontWeight;
+  color: blackColor;
+  text-decoration: none;
+}
+
+.username,
+.addTime {
+  font-size: normalFontSize;
+  text-align: left;
+  color: black60Color;
+}
+
+.deleteButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  right: -4px;
+  top: -4px;
+  background: whiteTwoColor;
+  border: solid 1px blueGreyColor;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0;
+}
+
+.deleteIcon {
+  width: 6px;
+  height: 6px;
+  color: blueGreyColor;
+}

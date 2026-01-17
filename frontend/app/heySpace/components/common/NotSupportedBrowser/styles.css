@@ -1,0 +1,40 @@
+@import 'common.css';
+@import 'colors.css';
+
+.component {
+  width: calc(64 * gridCellSize);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mascot {
+  background: url('commonAssets/emptyState/Empty_State_7.png') no-repeat center center;
+  background-size: contain;
+  height: 184px;
+  width: 150px;
+}
+
+.title {
+  padding: calc(3 * gridCellSize) calc(3 * gridCellSize) 0;
+  font-family: defaultFontFamily;
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  text-align: center;
+}
+
+.subTitle {
+  text-align: center;
+  padding: calc(3 * gridCellSize);
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: regularFontWeight;
+}
+
+.subTitleClickable {
+  composes: subTitle;
+  padding: gridCellSize;
+  text-decoration: underline;
+  cursor: pointer;
+}

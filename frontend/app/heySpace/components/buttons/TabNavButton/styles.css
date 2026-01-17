@@ -1,0 +1,41 @@
+@import 'colors.css';
+@import 'common.css';
+
+.navLinkButton {
+  background: transparent;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize-sm);
+  font-weight: var(--fontWeight-regular);
+  line-height: var(--lineHeight-normal);
+  vertical-align: middle;
+  font-style: normal;
+  cursor: pointer;
+  border: none;
+  color: var(--color-gray-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  transition: color defaultTransitionAnimation, text-decoration defaultTransitionAnimation;
+
+  &:hover {
+    color: var(--color-primary-500);
+    text-decoration: underline;
+  }
+
+  @media (max-width: tabletBreakpointWidth) {
+    padding: 0 0.5rem;
+  }
+}
+
+.disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.active:hover {
+  text-decoration: none;
+}

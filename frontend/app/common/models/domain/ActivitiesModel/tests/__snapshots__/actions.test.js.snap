@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`models/domain/ActivitiesModel/actions onBatchActivitiesData 1`] = `
+Object {
+  "error": undefined,
+  "meta": undefined,
+  "payload": Object {
+    "activitiesData": Immutable.Map {
+      "activity::001": Immutable.Record {
+        "id": "activity::001",
+        "actingUserId": "user::001",
+        "objectId": "project::001",
+        "objectType": "project",
+        "objectValue": "myProj",
+        "collectionName": undefined,
+        "containerId": "project::001",
+        "containerType": undefined,
+        "organizationId": undefined,
+        "type": undefined,
+        "timestamp": null,
+      },
+    },
+    "objectActivities": Immutable.Map {
+      "project::001": Immutable.List [
+        "activity::001",
+      ],
+    },
+  },
+  "type": "ActivitiesModel/onBatchActivtiesData",
+}
+`;

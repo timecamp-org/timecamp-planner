@@ -1,0 +1,15 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  min-height: max-content;
+  height: calc(100vh - (gridCellSize * 20));
+}
+
+.selectedDay {
+  background-color: var(--color-gray-100);
+}
+
+.weekend {
+  background-color: var(--color-gray-50);
+}

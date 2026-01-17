@@ -1,0 +1,82 @@
+@import 'colors.css';
+@import 'common.css';
+
+.row {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.personFullName {
+  composes: personFullName from 'components/person/PersonFullName/styles.css';
+  overflow: hidden;
+}
+
+.unreadMessages {
+  composes: personFullName;
+  font-weight: var(--fontWeight-semibold);
+  position: relative;
+  width: min-content;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent-500);
+  }
+}
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  right: gridCellSize;
+  margin-left: auto;
+}
+
+.hover:hover .iconWrapper {
+  opacity: 1;
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 50;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--color-gray-500);
+  background-color: var(--color-gray-50);
+  border-radius: var(--borderRadius-sm);
+}
+
+.iconWrapper > svg {
+  &:hover {
+    color: var(--color-primary-500);
+  }
+}
+
+.row:hover .badge {
+  position: absolute;
+  z-index: 100;
+}
+
+.conversationIcon {
+  composes: Component from 'components/projects/ProjectIcon/styles.css';
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.layout {
+  position: relative;
+  width: 100%;
+}

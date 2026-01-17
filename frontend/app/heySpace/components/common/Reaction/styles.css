@@ -1,0 +1,34 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  cursor: pointer;
+  border: 1px solid;
+  padding: 2px 3px;
+  border-radius: defaultBorderRadius;
+  display: flex;
+  align-items: center;
+  margin-right: gridCellSize;
+  color: darkGreyBlueColor;
+}
+
+.reactedUsers {
+  color: blackColor;
+}
+
+.noPointerEvents {
+  pointer-events: none;
+}
+
+.usersCount {
+  pointer-events: none;
+  font-size: mediumSmallFontSize;
+  color: black60Color;
+  padding: 0px 1px 0px 3px;
+  height: 16px;
+}
+
+.emoji {
+  margin-right: 2px;
+  display: flex;
+}

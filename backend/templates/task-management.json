@@ -1,0 +1,27 @@
+{
+  "name": "Task Management",
+  "description": "Embark on efficient project coordination with our Task Management Template. Navigate tasks seamlessly through distinct phases: To Do, Doing, On Hold, Review, and Done. Simplify your workflow, ensuring clarity and success from task initiation to completion.",
+  "order": 4,
+  "taskListTemplates": [
+    {
+      "name": "To do",
+      "order": 1
+    },
+    {
+      "name": "Doing",
+      "order": 2
+    },
+    {
+      "name": "On hold",
+      "order": 3
+    },
+    {
+      "name": "Review",
+      "order": 4
+    },
+    {
+      "name": "Done",
+      "order": 5
+    }
+  ]
+}

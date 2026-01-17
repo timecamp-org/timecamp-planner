@@ -1,0 +1,87 @@
+@import 'common.css';
+@import 'colors.css';
+
+$dropdownTop: calc(4 * gridCellSize);
+$dropdownHeight: 200px;
+
+.input {
+  padding: calc(2 * gridCellSize) 0;
+
+  & > input {
+    border: 1px solid var(--color-gray-200);
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(12 * gridCellSize);
+  left: 0;
+  width: 100%;
+  border-left: 1px solid whiteColor;
+  border-right: 1px solid whiteColor;
+  border-bottom: 1px solid whiteColor;
+  border-bottom-left-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  z-index: 10;
+  overflow-y: auto;
+  height: calc(gridCellSize * 50);
+}
+
+.dropdownItem {
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  margin: gridCellSize;
+  padding: gridCellSize;
+  padding-left: calc(2 * gridCellSize);
+  cursor: pointer;
+  border-radius: defaultBorderRadius;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  border: 0;
+  width: calc(100% - (2 * gridCellSize));
+
+  &:hover {
+    background: lightGreyColor;
+  }
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.required {
+  color: var(--color-primary-500);
+}
+
+.dropdownButton {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  height: calc(gridCellSize * 8);
+  display: flex;
+  align-items: center;
+  padding-left: calc(gridCellSize * 3);
+  border-radius: largeBorderRadius;
+  font-weight: boldFontWeight;
+  color: cloudyBlueColor;
+  border: 1px solid whiteColor;
+  margin: gridCellSize 0;
+
+  &:hover {
+    color: var(--color-primary-400) !important;
+  }
+}
+
+.dropdownButtonIcon {
+  position: absolute;
+  right: calc(3 * gridCellSize);
+}
+
+.countryInput,
+.provinceInput {
+  position: relative;
+  color: darkGreyBlueColor;
+}

@@ -1,0 +1,21 @@
+@import 'colors.css';
+@import 'common.css';
+
+.userAvatarEmailBadgeWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.userNameEmailWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.7rem;
+}
+
+.personFullName {
+  font-weight: var(--fontWeight-semibold);
+  font-size: var(--fontSize-base);
+}
+.email {
+  font-size: var(--fontSize-xs);
+}

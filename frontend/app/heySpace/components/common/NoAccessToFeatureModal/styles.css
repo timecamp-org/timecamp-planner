@@ -1,0 +1,40 @@
+@import 'colors.css';
+@import 'common.css';
+
+.noAccessModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whiteTwoColor;
+  padding: 0 calc(4 * gridCellSize) calc(4 * gridCellSize);
+  border-radius: largeBorderRadius;
+  text-align: center;
+}
+
+.mascot {
+  background: url('commonAssets/emptyState/Empty_State_23.png') no-repeat center center;
+  background-size: contain;
+  height: 227px;
+  width: 330px;
+  visibility: hidden;
+}
+
+.title {
+  margin-top: calc(3 * gridCellSize);
+  margin-bottom: calc(2 * gridCellSize);
+  color: blueGreyColor;
+  font-size: headingFontSize;
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+}
+
+.subtitle {
+  color: blueGreyColor;
+  font-size: mediumFontSize;
+  font-family: defaultFontFamily;
+}
+
+.link {
+  composes: subtitle;
+  color: darkSkyBlueColor;
+}

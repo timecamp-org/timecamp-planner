@@ -1,0 +1,87 @@
+@import 'common.css';
+@import 'colors.css';
+
+.component {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-weight: boldFontWeight;
+  color: cloudyBlueColor;
+  margin-bottom: calc(gridCellSize * 2);
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.workspaceThumbnail {
+  composes: Component from 'components/settings/workspaceSettings/WorkspaceThumbnail/styles.css';
+  height: 24px;
+  width: 24px;
+  flex: 0 1 auto;
+}
+
+.workspaceButton {
+  padding: calc(2 * gridCellSize);
+  padding-right: 0;
+  font-size: normalFontSize;
+  font-weight: var(--fontWeight-semibold);
+  cursor: pointer;
+  border: none;
+  position: relative;
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.icon {
+  margin-left: auto;
+  margin-right: calc(gridCellSize * 2);
+}
+
+.horizontalDivider {
+  composes: horizontalDivider from 'commonComponents/HorizontalDivider/styles.css';
+  margin-top: calc(2 * gridCellSize);
+  background-color: cloudyBlueColor;
+}
+
+.popperContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  width: calc(47 * gridCellSize);
+  padding: 0;
+  border-left: 1px solid whiteColor;
+  border-right: 1px solid whiteColor;
+  border-bottom: 1px solid whiteColor;
+  border-radius: defaultBorderRadius;
+  background: whiteTwoColor;
+}
+
+.workspaceSwitcherMenu {
+  composes: component from 'components/settings/workspaceSettings/WorkspaceSwitcherMenu/styles.css';
+  max-height: calc(gridCellSize * 60);
+}
+
+.switcher {
+  composes: Component from 'components/menu/OrganizationSwitcher/styles.css';
+  max-height: calc(gridCellSize * 60);
+}
+
+.workspaceName {
+  margin-left: calc(gridCellSize * 4);
+  margin-right: calc(gridCellSize * 2);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+  text-align: left;
+}

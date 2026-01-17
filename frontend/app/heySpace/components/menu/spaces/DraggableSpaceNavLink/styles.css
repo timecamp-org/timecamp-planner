@@ -1,0 +1,23 @@
+@import 'colors.css';
+@import 'common.css';
+
+.component {
+  position: relative;
+  padding-left: 2rem;
+  margin-left: -3.2rem;
+}
+
+.moveIcon {
+  height: 2rem;
+  position: absolute;
+  visibility: hidden;
+  color: var(--color-gray-500);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
+}
+
+.component:hover .moveIcon,
+.component:active .moveIcon {
+  visibility: visible;
+}

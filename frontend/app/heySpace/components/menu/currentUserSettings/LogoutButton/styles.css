@@ -1,0 +1,13 @@
+@import 'common.css';
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: flex-start;
+  font-family: inherit;
+}
+
+.icon {
+  width: 2.5rem;
+  margin-right: 1.2rem;
+}

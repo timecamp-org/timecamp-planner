@@ -1,0 +1,63 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  position: relative;
+}
+
+.personIconWrapper {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: blueGreyColor;
+  font-weight: boldFontWeight;
+  font-size: microFontSize;
+  color: whiteTwoColor;
+  position: relative;
+}
+
+.personIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.defaultSize {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.online {
+  border: 3px solid var(--color-success-300);
+}
+
+.initials {
+  user-select: none;
+}
+
+.botIcon {
+  /* background: url('commonComponents/Mascot/assets/character_14.png') no-repeat center center; */
+  background-size: contain;
+}
+
+.deactivated {
+  opacity: 0.15;
+}
+
+.guestIndicator {
+  position: absolute;
+  display: flex;
+  height: calc(gridCellSize * 2);
+  width: calc(gridCellSize * 2);
+  background: mangoColor;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  border: 1px solid whiteTwoColor;
+}

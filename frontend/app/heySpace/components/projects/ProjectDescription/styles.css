@@ -1,0 +1,10 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  @mixin EllipsizeTextOverflow;
+  color: var(--color-gray-500);
+  font-size: normalFontSize;
+  font-family: defaultFontFamily;
+  
+}

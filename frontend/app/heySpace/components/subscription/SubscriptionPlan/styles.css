@@ -1,0 +1,96 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  border-radius: largeBorderRadius;
+  padding: calc(2 * gridCellSize);
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 0;
+  padding: 0 0 calc(2 * gridCellSize) 0;
+  font-family: defaultFontFamily;
+  min-width: calc(gridCellSize * 53);
+  background-color: whiteTwoColor;
+  align-items: center;
+}
+
+.nameAndPrice {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(2 * gridCellSize);
+  margin-top: calc(3 * gridCellSize);
+}
+
+.name {
+  font-size: headingFontSize;
+  text-transform: uppercase;
+  font-family: fontFamilyTwo;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+}
+
+.recommendedAudience {
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  font-size: smallFontSize;
+  margin-top: calc(2 * gridCellSize);
+  min-height: calc(gridCellSize * 8);
+}
+
+.features {
+  composes: Component from '../SubscriptionFeatures/styles.css';
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  align-items: center;
+  padding: calc(2 * gridCellSize);
+  margin-top: calc(4 * gridCellSize);
+}
+
+.price {
+  color: var(--color-primary-500);
+  font-family: fontFamilyTwo;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  font-size: 54px;
+  font-weight: boldFontWeight;
+  line-height: calc(gridCellSize * 8);
+  margin: 0 auto;
+  padding-top: calc(gridCellSize * 4);
+}
+
+.currency {
+  padding-right: gridCellSize;
+  font-size: mediumFontSize;
+  vertical-align: top;
+  align-self: flex-start;
+  line-height: 16px;
+}
+
+.billingCycle {
+  padding-left: calc(gridCellSize / 2);
+  font-size: smallFontSize;
+  line-height: gridCellSize;
+  font-weight: bolder;
+  align-self: flex-end;
+}
+
+.horizontalDivider {
+  composes: horizontalDivider from 'commonComponents/HorizontalDivider/styles.css';
+  background-color: cloudyBlueColor;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.currentPlanBox {
+  width: calc(36 * gridCellSize);
+  border-radius: largeBorderRadius;
+  border: 2.5px solid var(--color-primary-500);
+  color: var(--color-primary-500);
+  text-align: center;
+  padding: gridCellSize;
+}

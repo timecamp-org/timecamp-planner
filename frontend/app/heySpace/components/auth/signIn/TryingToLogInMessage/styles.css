@@ -1,0 +1,25 @@
+@import "common.css";
+@import "credentials.css";
+
+.Component {
+  height: $CredentialsBoxHeight;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.icon {
+  width: calc(23.5 * gridCellSize);
+  height: calc(24 * gridCellSize);
+}
+
+.title {
+  font-size: largeFontSize;
+}
+
+.title, .message {
+  margin-top: calc(3 * gridCellSize);
+  opacity: 0.6;
+}

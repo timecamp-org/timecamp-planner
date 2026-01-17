@@ -1,0 +1,32 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  position: relative;
+}
+
+.icon {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(8 * gridCellSize);
+  height: calc(8 * gridCellSize);
+
+  &:hover * {
+    color: var(--color-primary-500);
+  }
+
+  &:active * {
+    color: var(--color-primary-500);
+  }
+}
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  z-index: 10;
+  color: whiteTwoColor;
+}

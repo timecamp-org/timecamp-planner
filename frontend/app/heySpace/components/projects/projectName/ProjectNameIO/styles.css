@@ -1,0 +1,29 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+
+}
+
+.projectNameWithDot {
+	display: flex;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;  
+}
+
+.projectName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.colorDot {
+  composes: ring from 'components/projects/ProjectColorDot/styles.css';
+  align-self: center;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.colorDotInputOpened {
+  composes: colorDot;
+  margin-right: calc(gridCellSize - 1px);
+}

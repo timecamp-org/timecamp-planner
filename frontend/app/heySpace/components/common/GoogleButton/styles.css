@@ -1,0 +1,37 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  composes: Component from 'commonComponents/Button/styles.css';
+  display: flex;
+  flex-direction: row;
+  height: 5.2rem;
+  width: 100%;
+  border: 1px solid var(--color-gray-200);
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 8px;
+}
+
+.disabled {
+  cursor: default;
+  pointer-events: none;
+  border-color: cloudyBlueColor;
+  color: cloudyBlueColor;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  width: 2.5rem;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  font-size: var(--fontSize-lg);
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-gray-800);
+}

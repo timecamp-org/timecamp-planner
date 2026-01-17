@@ -1,0 +1,12 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  display: flex;
+  align-items: center;
+  padding: calc(4 * gridCellSize);
+  background-color: darkTwoColor;
+  font-family: fontFamilyThree;
+  font-size: smallFontSize;
+  cursor: pointer;
+}

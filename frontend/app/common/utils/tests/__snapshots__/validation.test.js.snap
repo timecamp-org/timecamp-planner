@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/utils/validation isValidEmail withMessage 1`] = `
+Object {
+  "isValid": false,
+  "message": "Looks like you forget about email",
+}
+`;
+
+exports[`common/utils/validation isValidEmail withMessage 2`] = `
+Object {
+  "isValid": false,
+  "message": "An email address must contain a single @",
+}
+`;
+
+exports[`common/utils/validation isValidEmail withMessage 3`] = `
+Object {
+  "isValid": false,
+  "message": "The portion after the @ is invalid",
+}
+`;
+
+exports[`common/utils/validation isValidEmail withMessage 4`] = `
+Object {
+  "isValid": false,
+  "message": "Don't forget about password",
+}
+`;
+
+exports[`common/utils/validation isValidEmail withMessage 5`] = `
+Object {
+  "isValid": false,
+  "message": "Password must be at least 4 characters",
+}
+`;

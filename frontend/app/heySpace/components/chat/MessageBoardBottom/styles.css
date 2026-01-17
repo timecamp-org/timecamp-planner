@@ -1,0 +1,31 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(5 * gridCellSize);
+  margin-left: 4rem;
+  margin-right: auto;
+  color: slate60Color;
+  font-size: smallFontSize;
+}
+
+.ComponentRightPanelHidden {
+  composes: Component;
+}
+
+.bold {
+  font-weight: boldFontWeight;
+}
+
+.italic {
+  font-style: italic;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.strikethrough {
+  margin-left: calc(2 * gridCellSize);
+}

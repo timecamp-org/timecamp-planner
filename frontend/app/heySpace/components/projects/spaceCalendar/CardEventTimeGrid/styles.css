@@ -1,0 +1,88 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  font-family: defaultFontFamily;
+  font-size: smallFontSize;
+  transition: box-shadow defaultTransitionAnimation;
+  padding: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: largeBorderRadius;
+  height: 100%;
+}
+
+.allDay {
+  height: auto;
+}
+
+.header {
+  margin-bottom: gridCellSize;
+  margin-right: gridCellSize;
+  font-size: 80%;
+  color: var(--color-gray-900);
+}
+
+.cardAssignees {
+  margin-left: gridCellSize;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: smallerFontSize;
+  transition: color defaultTransitionAnimation, font-weight defaultTransitionAnimation;
+  width: 100%;
+  white-space: nowrap;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  gap: 0.5rem;
+  transition: height defaultTransitionAnimation, opacity defaultTransitionAnimation;
+}
+
+.Component:hover {
+  .footer {
+    margin-top: calc(gridCellSize * 2);
+    height: auto;
+    opacity: 1;
+    height: 3rem;
+  }
+}
+
+.cardColor {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.timeOutput {
+  color: var(--color-gray-900);
+}
+
+.taskProgress {
+  background-color: transparent;
+  transition: margin-left defaultTransitionAnimation;
+}
+
+.taskProgressButton {
+  background-color: transparent;
+  padding: 0;
+  margin-left: 1rem;
+
+  &:hover {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,153 @@
+@import 'common.css';
+@import 'colors.css';
+
+.container {
+  display: inline-block;
+  width: 100%;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 1rem 0;
+  display: flex;
+}
+
+.interactionDisabled {
+  cursor: default;
+}
+
+.months {
+}
+
+.month {
+  border-collapse: collapse;
+  border-spacing: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.navBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 0.8rem;
+  top: 1rem;
+}
+
+.navButtonPrev {
+  left: 1.6rem;
+}
+
+.navButtonNext {
+  right: 1.6rem;
+}
+
+.navButtonInteractionDisabled {
+  display: none;
+}
+
+.caption {
+  display: table-caption;
+  height: 2.4rem;
+  text-align: center;
+}
+
+.weekdays {
+  display: table-header-group;
+}
+
+.weekdaysRow {
+  display: table-row;
+}
+
+.weekday {
+  display: table-cell;
+  padding: 0.8rem;
+  font-size: 0.875em;
+  text-align: center;
+  color: #8b9898;
+}
+
+.body {
+  display: table-row-group;
+}
+
+.week {
+  display: table-row;
+}
+
+.weekNumber {
+  display: table-cell;
+  padding: 0.8rem;
+  text-align: right;
+  vertical-align: middle;
+  min-width: 1.6rem;
+  font-size: 0.75em;
+  cursor: pointer;
+  color: #8b9898;
+}
+
+.day {
+  width: calc(8 * gridCellSize);
+  height: calc(8 * gridCellSize);
+  display: table-cell;
+  padding: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background defaultTransitionAnimation;
+}
+
+.footer {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 0.8rem;
+}
+
+.todayButton {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: darkSkyBlueColor;
+  font-size: 0.875em;
+}
+
+.today {
+}
+
+.selected {
+  background-color: wisteriaColor;
+  color: whiteTwoColor;
+}
+
+.disabled {
+  color: cloudyBlueColor;
+  cursor: default;
+  background-color: lightGreyColor;
+}
+
+.outside {
+  color: whiteTwoColor;
+  background-color: whiteTwoColor;
+}

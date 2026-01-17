@@ -1,0 +1,217 @@
+@import 'common.css';
+@import 'colors.css';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.inputGroup {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+
+  & * {
+    color: var(--color-gray-900);
+  }
+}
+
+.inputGroup button:hover * {
+  color: var(--color-primary-500);
+}
+
+.inputGroup button:active * {
+  color: var(--color-primary-500);
+}
+
+.inputGroupOpen {
+  composes: inputGroup;
+  & * {
+    color: var(--color-primary-500);
+  }
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+}
+
+.dropdownButton {
+  position: relative;
+  width: calc(100%);
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 2.5rem;
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-500);
+  border: unset;
+  margin-top: 1rem;
+  background-color: var(--color-white);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    z-index: 1000;
+    background: var(--color-gray-500);
+    color: var(--color-gray-600);
+  }
+}
+
+.dropdownButtonOpen {
+  composes: dropdownButton;
+
+  &::after {
+    background: var(--color-primary-500);
+    color: var(--color-primary-500);
+  }
+}
+
+.dropdownButton:hover {
+  color: var(--color-primary-500);
+}
+
+.dropdownButton:active {
+  color: var(--color-primary-500) !important;
+}
+
+.dropdownButtonIcon {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.dropdownItem {
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: gridCellSize;
+  padding: gridCellSize;
+  cursor: pointer;
+  border-radius: defaultBorderRadius;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  border: 0;
+  width: calc(100% - (2 * gridCellSize));
+}
+
+.dropdownItem:hover {
+  background: lightGreyColor;
+}
+
+.dropdownItem:active {
+  background: lightGreyColor;
+  opacity: 0.8;
+}
+
+.saveButton {
+  composes: footerSaveButton from 'components/tasks/StartAndDueDateButtonPicker/styles.css';
+}
+
+.dropdownLabel {
+  margin-top: gridCellSize;
+  font-size: smallFontSize;
+  font-weight: var(--fontWeight-semibold);
+}
+
+.label {
+  composes: label from 'commonComponents/UserInput/styles.css';
+  composes: dropdownLabel;
+  padding-left: 0;
+}
+
+.placeholder {
+  color: cloudyBlueColor;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: calc(11 * gridCellSize);
+  width: calc(100% - (2 * gridCellSize));
+  max-height: calc(gridCellSize * 30);
+  border-left: 1px solid whiteColor;
+  border-right: 1px solid whiteColor;
+  border-bottom: 1px solid whiteColor;
+  border-bottom-left-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  z-index: 100;
+  overflow-y: auto;
+  color: var(--color-gray-500);
+
+  &:hover {
+    color: var(--color-primary-500) !important;
+  }
+}
+
+.row {
+  position: relative;
+}
+
+.datePicker {
+  composes: button from 'components/tasks/StartAndDueDateButtonPicker/styles.css';
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+  margin-top: 1rem;
+
+  &:active {
+    color: var(--color-primary-500) !important;
+  }
+}
+
+.datePickerOpen {
+  composes: datePicker;
+  color: var(--color-primary-500);
+}
+
+.assigneePickerWrapper {
+  display: flex;
+  width: min-content;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.assignPeople {
+  min-width: max-content;
+}
+
+.timePickerWrapper {
+  margin-top: 2.4rem;
+}
+
+.inputsWrapper {
+  padding: 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.selectionSection {
+  padding: 0 1.2rem;
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.buttonPickerSection {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}

@@ -1,0 +1,41 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  align-items: center;
+  display: flex;
+}
+
+.icon {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: calc(gridCellSize * 2);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-top: 1px;
+  margin-right: calc(2 * gridCellSize);
+  display: flex;
+  align-items: center;
+  margin-bottom: gridCellSize;
+}
+
+.title {
+  font-size: normalFontSize;
+  font-family: fontFamilyTwo;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: calc(5 * gridCellSize);
+}

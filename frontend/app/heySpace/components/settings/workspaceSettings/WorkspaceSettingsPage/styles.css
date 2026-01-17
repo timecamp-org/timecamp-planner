@@ -1,0 +1,69 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  color: blackColor;
+  font-family: defaultFontFamily;
+  margin-bottom: calc(2 * gridCellSize);
+  padding: gridCellSize;
+  width: 100%;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.settingsRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  flex-flow: column;
+  max-width: calc(47 * gridCellSize);
+  color: darkGreyBlueColor;
+  padding: 0.7rem 0;
+}
+.innerField {
+  padding: 1rem 1rem;
+  font-size: var(--fontSize-lg);
+}
+
+.settingsSection {
+  @mixin WhiteBox;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.workspaceMembersSettingsSection {
+  composes: settingsSection;
+
+  padding-left: unset;
+  padding-right: unset;
+}
+
+.workspaceThumbnail {
+  composes: Component from 'components/settings/workspaceSettings/WorkspaceThumbnail/styles.css';
+  width: calc(gridCellSize * 28);
+  height: calc(gridCellSize * 28);
+  border: 1px solid cloudyBlueColor;
+  margin-right: calc(gridCellSize * 5);
+}
+
+.title {
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  margin-bottom: calc(gridCellSize * 2);
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+}
+
+.workspaceLogoController {
+  composes: Component from 'components/settings/workspaceSettings/WorkspaceLogoController/styles.css';
+  margin-right: 1rem;
+}

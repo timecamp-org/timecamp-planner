@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EnhanceChecklistItem> should render 1`] = `
+<EnhancedComponent
+  checklistItemId="checklistItem::test"
+  isDone={false}
+  onAddNewChecklistItemBelow={[Function]}
+  onChangeChecklistItemData={[Function]}
+  onChangeChecklistItemText={[Function]}
+  onNewChecklistItemSeen={[Function]}
+  onRemoveItemFromChecklist={[Function]}
+  taskId="task::002"
+  text="test"
+  wasJustCreated={false}
+/>
+`;

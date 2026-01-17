@@ -1,0 +1,97 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: calc(118 * gridCellSize);
+}
+
+.searchResults {
+  margin-top: calc(2 * gridCellSize);
+  max-height: calc(90 * gridCellSize);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.subTitle {
+  margin: calc(2 * gridCellSize) 0;
+  font-weight: semiboldFontWeight;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  color: darkGreyBlueColor;
+  padding: 0.5rem 3.2rem;
+  cursor: pointer;
+  height: 5.6rem;
+  width: 100%;
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.searchRowSpaceName {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dateLabel {
+  white-space: nowrap;
+  font-family: defaultFontFamily;
+  font-size: smallFontSize;
+  color: blueGreyColor;
+}
+
+.projectIcon {
+  composes: Component from 'components/projects/ProjectIcon/styles.css';
+  flex-shrink: 0;
+  margin-right: 0;
+  width: calc(6 * gridCellSize);
+  height: calc(6 * gridCellSize);
+}
+
+.personIcon {
+  composes: personIconWrapper from 'components/person/PersonIcon/styles.css';
+  width: calc(6 * gridCellSize);
+  height: calc(6 * gridCellSize);
+}
+
+.highlightedItem {
+  background: lightGreyColor;
+}
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  color: var(--color-white);
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: var(--fontSize-xs);
+}
+
+.description {
+  margin-left: 1.6rem;
+  display: flex;
+}
+
+.rightSection {
+  margin-left: auto;
+  margin-right: calc(2 * gridCellSize);
+  color: whiteTwoColor;
+  min-width: calc(5 * gridCellSize);
+  height: calc(5 * gridCellSize);
+  font-size: mediumSmallFontSize;
+}
+
+.description {
+  margin-left: 1.6rem;
+}
+
+.rightSection {
+  margin-left: auto;
+}

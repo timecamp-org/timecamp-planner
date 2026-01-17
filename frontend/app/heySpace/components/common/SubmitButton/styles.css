@@ -1,0 +1,19 @@
+@import 'colors.css';
+@import 'common.css';
+
+.ButtonHollow {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  background: whiteColor;
+  justify-content: center;
+}
+
+.ButtonFull {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  color: whiteColor;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  margin-top: calc(gridCellSize / 2);
+}

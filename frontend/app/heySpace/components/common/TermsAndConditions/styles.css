@@ -1,0 +1,19 @@
+.wrapper {
+  color: var(--color-gray-500);
+  font-size: var(--fontSize-regular);
+}
+
+.link {
+  text-decoration: none;
+  padding: 0 0.2rem;
+  font-weight: var(--fontWeight-semibold);
+  color: var(--color-primary-500);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

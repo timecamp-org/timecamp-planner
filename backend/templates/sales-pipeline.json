@@ -1,0 +1,27 @@
+{
+  "name": "Sales pipeline",
+  "description": "New leads -> Initiate contact -> Booked a demo -> Negotiation -> Closed the deal -> Lost deal",
+  "order": 11,
+  "taskListTemplates": [
+    {
+      "name": "New leads",
+      "order": 1
+    },
+    {
+      "name": "Initiate contact",
+      "order": 2
+    },
+    {
+      "name": "Booked a demo",
+      "order": 3
+    },
+    {
+      "name": "Negotiation",
+      "order": 4
+    },
+    {
+      "name": " Closing the deal",
+      "order": 5
+    }
+  ]
+}

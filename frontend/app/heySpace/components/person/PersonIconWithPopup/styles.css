@@ -1,0 +1,12 @@
+@import 'colors.css';
+@import 'common.css';
+
+.personIcon {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+}
+
+.targetClassName {
+  height: min-content;
+}

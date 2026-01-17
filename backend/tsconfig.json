@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "alwaysStrict": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    //     50+ errors to fix:
+    //    "noImplicitReturns": true
+    //    "noImplicitAny": true
+    //     260+ errors to fix before turning it on:
+    //    "strictNullChecks": true
+    //    "strictPropertyInitialization": true,
+
+    // Required by inversify-js IoC/DI container
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "files": [
+    "./node_modules/@types/mocha/index.d.ts",
+    "./node_modules/@types/node/index.d.ts",
+    "./node_modules/@types/lodash/index.d.ts",
+    "./src/custom.d.ts"
+  ],
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "src/api/**/modules/payment/chargebee/**"]
+}

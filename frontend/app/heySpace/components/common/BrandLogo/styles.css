@@ -1,0 +1,20 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: fontFamilyTwo;
+  color: darkTwoColor;
+}
+
+.text {
+  padding-left: gridCellSize;
+  font-weight: boldFontWeight;
+}
+
+.icon {
+  width: calc(gridCellSize * 5);
+  height: calc(gridCellSize * 5);
+}

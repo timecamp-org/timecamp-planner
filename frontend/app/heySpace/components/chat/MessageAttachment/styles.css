@@ -1,0 +1,13 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  composes: Component from 'commonComponents/ProgressiveImage/styles.css';
+  padding: calc(2 * gridCellSize);
+  padding-left: 0;
+}
+
+.audioPlaceholder {
+  composes: placeholder from 'commonComponents/Player/styles.css';
+  height: calc(gridCellSize * 10);
+}

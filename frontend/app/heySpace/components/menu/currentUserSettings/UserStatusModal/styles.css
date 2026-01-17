@@ -1,0 +1,150 @@
+@import 'common.css';
+
+.inputIcon {
+  width: calc(gridCellSize * 5);
+  height: calc(gridCellSize * 5);
+}
+
+.modalContent {
+  display: flex;
+  flex-flow: column;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-right: 3rem;
+}
+
+.inner {
+  background-color: transparent;
+  border: none;
+  padding: 1.2rem 2.4rem;
+  color: var(--color-gray-900);
+  height: min-content;
+
+  &:focus {
+    border: none;
+  }
+
+  &::placeholder {
+    color: var(--color-gray-500);
+    font-size: var(--fontSize--regular);
+  }
+}
+
+.childrenWrapper {
+  padding-right: 2.4rem;
+}
+
+.emojiButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+}
+
+.statusProposals {
+  display: flex;
+  flex-flow: column;
+  padding: 0 2.4rem;
+}
+
+.proposal {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+  align-self: flex-start;
+  color: var(--color-gray-900);
+}
+
+.saveButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: calc(gridCellSize * 2);
+}
+
+.resetFormButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-right: auto;
+}
+
+.proposalTitle {
+  font-weight: var(--fontWeight-semibold);
+  margin-right: gridCellSize;
+}
+
+.proposalPeriod {
+  font-weight: var(--fontWeight-regular);
+  margin-right: calc(gridCellSize * 2);
+}
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(124 * gridCellSize);
+}
+
+.modalBody {
+  padding: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.4rem;
+}
+
+.resetAtController {
+  display: flex;
+  align-items: center;
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-900);
+  padding: 0 2.4rem;
+  margin-top: 2rem;
+
+  & > *:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  composes: Component from 'commonComponents/Checkbox/styles.css';
+  margin-right: calc(gridCellSize * 2);
+}
+
+.timeInput {
+  width: 9rem;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1rem;
+
+  & > input,
+  & > input:focus {
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+}
+
+.dateOutput {
+  margin-right: gridCellSize;
+}
+
+.chevron {
+  margin-left: gridCellSize;
+}
+
+.durationIcon {
+  margin-left: 0.8rem;
+}
+
+.setStatusButton {
+  margin-left: auto;
+}

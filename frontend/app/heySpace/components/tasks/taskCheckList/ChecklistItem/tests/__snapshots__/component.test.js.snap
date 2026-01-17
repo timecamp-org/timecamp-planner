@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChecklistItem /> should render 1`] = `
+<li
+  className="checklistItem"
+>
+  <Component
+    id="checklistItem::test--checkbox"
+    isChecked={false}
+    label=""
+    onChange={[Function]}
+  />
+  <TextareaAutosize
+    className="checklistItemText"
+    id="checklistItem::test--text"
+    inputRef={[Function]}
+    onChange={[Function]}
+    onHeightChange={[Function]}
+    onKeyDown={[Function]}
+    useCacheForDOMMeasurements={false}
+    value=""
+  />
+</li>
+`;

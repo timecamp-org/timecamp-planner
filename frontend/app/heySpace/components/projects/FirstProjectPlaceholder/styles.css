@@ -1,0 +1,62 @@
+@import 'common.css';
+@import 'colors.css';
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: blueGreyColor;
+  overflow-y: auto;
+  transform: translateZ(0);
+}
+
+.title {
+  padding: calc(3 * gridCellSize);
+  font-family: fontFamilyTwo;
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  text-align: center;
+}
+
+.subTitle {
+  text-align: center;
+  padding: calc(3 * gridCellSize);
+  font-size: normalFontSize;
+  font-weight: regularFontWeight;
+  width: calc(70 * gridCellSize);
+}
+
+.mascot {
+  /* background: url('commonComponents/Mascot/assets/character_1.png') no-repeat center center; */
+  background-size: contain;
+  height: 147px;
+}
+
+.modalDialogBigPadding {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  background: whiteTwoColor;
+  padding: calc(9 * gridCellSize) calc(10 * gridCellSize);
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  font-size: normalFontSize;
+  margin-bottom: calc(3 * gridCellSize);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.loadingDots {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10 * gridCellSize);
+  color: wisteriaColor;
+}

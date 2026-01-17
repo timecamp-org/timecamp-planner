@@ -1,0 +1,7 @@
+@import "colors.css";
+@import "common.css";
+
+.followingControllerInfoTooltipWrapperClassName {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+}

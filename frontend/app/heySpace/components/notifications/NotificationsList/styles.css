@@ -1,0 +1,61 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  position: relative;
+  height: 100%;
+}
+
+.notificationList {
+  padding: 0;
+  margin: 0;
+  transform: translateZ(0);
+}
+
+.line {
+  position: absolute;
+  top: 8px;
+  left: 103px;
+  width: 2px;
+  height: calc(100% - 12px);
+}
+
+.loading {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  z-index: 10;
+  height: calc(9 * gridCellSize);
+  background: whiteTwoColor;
+  color: cloudyBlueColor;
+}
+
+.list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  transform: translateZ(0);
+}
+
+.emptyNotifications {
+  composes: Component from 'components/notifications/EmptyNotificationsList/styles.css';
+  padding: calc(3 * gridCellSize) 0;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: wisteriaColor;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+}

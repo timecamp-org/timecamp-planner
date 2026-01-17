@@ -1,0 +1,71 @@
+@import 'colors.css';
+@import 'common.css';
+
+.extensions {
+  width: rightMenuWidth;
+  height: 100%;
+  padding-bottom: headerHeight;
+  background: lightGreyColor;
+  color: darkGreyBlueColor;
+}
+
+.container {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.panel {
+  margin: 0 calc(gridCellSize * 4) calc(gridCellSize * 4);
+}
+
+.header {
+  padding-top: calc(5 * gridCellSize);
+  padding-bottom: calc(4 * gridCellSize);
+  padding-left: calc(4 * gridCellSize);
+  font-family: fontFamilyTwo;
+  height: calc(13 * gridCellSize);
+}
+
+.navLink {
+  color: cloudyBlueColor;
+  text-decoration: none;
+  position: relative;
+}
+
+.link {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border: 0px;
+  cursor: pointer;
+  border-radius: largeBorderRadius;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: calc(2 * gridCellSize);
+  margin-right: gridCellSize;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.popperContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  padding: 0;
+}
+
+.extension {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: left;
+  font-size: smallFontSize;
+  height: calc(gridCellSize * 8);
+}
+
+.divider {
+  composes: horizontalDivider from 'commonComponents/HorizontalDivider/styles.css';
+  width: calc(100% - (2 * gridCellSize));
+  margin: gridCellSize;
+}

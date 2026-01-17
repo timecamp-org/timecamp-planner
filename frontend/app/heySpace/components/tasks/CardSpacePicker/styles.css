@@ -1,0 +1,97 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  max-width: 60%;
+  z-index: 20;
+  align-items: center;
+}
+
+.target {
+  min-width: 0;
+}
+
+.project {
+  position: relative;
+  max-width: 40%;
+}
+
+.button {
+  margin: 1rem 0.5rem 1rem 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0;
+  text-align: left;
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-xxs);
+}
+
+.projectName {
+  font-style: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-regular);
+}
+
+.picker {
+  cursor: default;
+  background: var(--color-white);
+  width: min-content;
+  min-width: 15rem;
+  max-width: 32rem;
+  width: 100vw;
+  z-index: 10;
+  border-radius: var(--borderRadius-md);
+  color: var(--color-gray-900);
+  box-shadow: defaultPopoverShadow;
+  text-align: center;
+}
+
+.line {
+  margin-top: calc(2 * gridCellSize);
+  margin-bottom: calc(2 * gridCellSize);
+  height: 1px;
+  background-color: cloudyBlueColor;
+}
+
+.pickerList {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(50 * gridCellSize);
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+.pickerTitle {
+  padding: 1rem;
+}
+
+.listItem {
+  padding: gridCellSize;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.listItemButton {
+  border: none;
+  text-align: left;
+  position: relative;
+  color: var(--color-gray-900);
+  font-size: var(--color-fontWeight-xs);
+  background-color: transparent;
+  padding: 0.5rem 0;
+  &:hover {
+    color: var(--color-primary-500);
+  }
+}
+
+.loadingDots {
+  font-size: calc(8 * gridCellSize);
+  margin-top: calc(-4 * gridCellSize);
+}

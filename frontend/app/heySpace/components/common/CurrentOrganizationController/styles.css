@@ -1,0 +1,38 @@
+@import 'colors.css';
+@import 'common.css';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(gridCellSize * 106);
+}
+
+.header {
+  font-size: mediumFontSize;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  margin-top: calc(gridCellSize * 2);
+  margin-bottom: gridCellSize;
+}
+
+.text {
+  font-size: normalFontSize;
+  color: blueGreyColor;
+  padding: calc(gridCellSize * 4);
+}
+
+.mascot {
+  /* background: url('commonComponents/Mascot/assets/character_31.png') no-repeat center center; */
+  background-size: contain;
+  height: 152.8px;
+  width: 108.3px;
+}
+
+.button {
+  width: 100%;
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+}

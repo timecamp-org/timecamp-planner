@@ -1,0 +1,24 @@
+@import 'common.css';
+@import 'colors.css';
+
+.modalFooter {
+  composes: modalFooter from 'commonComponents/UniversalModal/styles.css';
+  padding-top: 0;
+  margin-top: calc(7 * gridCellSize);
+}
+
+.modalText {
+  font-family: defaultFontFamily;
+  font-size: normalFontSize;
+  color: darkGreyBlueColor;
+}
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(90 * gridCellSize);
+}
+
+.buttonText {
+  font-size: smallFontSize;
+  margin-left: calc(2 * gridCellSize);
+}

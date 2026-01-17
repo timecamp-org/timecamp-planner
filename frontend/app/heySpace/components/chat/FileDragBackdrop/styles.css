@@ -1,0 +1,29 @@
+@import "colors.css";
+@import "common.css";
+
+.dragOver {
+  width: 100%;
+  height: 100%;
+  border-width: defaultBorderWidth;
+  border-style: solid;
+  border-radius: largerBorderRadius;
+  position: absolute;
+  background-color: lightGreyColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: defaultFontFamily;
+  color: blueGreyColor;
+  z-index: 1000;
+}
+
+.cloudIcon {
+  margin-bottom: calc(4 * gridCellSize);
+}
+
+.dragOverTitle {
+  font-size: headingFontSize;
+  font-weight: boldFontWeight;
+  margin-bottom: gridCellSize;
+}

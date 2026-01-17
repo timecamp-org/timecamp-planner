@@ -1,0 +1,31 @@
+@import 'colors.css';
+@import 'common.css';
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(124 * gridCellSize);
+}
+
+.confirmationDialogBody {
+  padding-top: gridCellSize;
+  color: darkGreyBlueColor;
+}
+
+.textarea {
+  background-color: whiteTwoColor;
+  padding: calc(gridCellSize - 1px);
+  width: 100%;
+  border: 1px solid whiteColor;
+  line-height: 16px;
+  resize: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.survey {
+  padding: calc(gridCellSize * 2) 0;
+}
+
+.text {
+  padding: gridCellSize 0;
+}

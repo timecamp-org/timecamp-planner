@@ -1,0 +1,29 @@
+@import "colors.css";
+@import "common.css";
+
+.component {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: whiteTwoColor;  
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: whiteTwoColor;
+  min-width: 0;
+}
+
+.chatWithMePage {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: whiteTwoColor;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-width: 0;
+  padding: calc(gridCellSize * 2) calc(gridCellSize * 18);
+}

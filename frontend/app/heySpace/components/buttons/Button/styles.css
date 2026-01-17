@@ -1,0 +1,61 @@
+@import "colors.css";
+@import "common.css";
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 calc(3 * gridCellSize);
+  min-height: calc(6 * gridCellSize);
+  min-width: calc(24 * gridCellSize);
+  font-family: fontFamilyThree;
+  font-size: normalFontSize;
+  border: none;
+  border-radius: gridCellSize;
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.default {
+  background-color: whiteTwoColor;
+  border: 1px solid whiteFiveColor;
+  color: warmGreyThreeColor;
+}
+
+.default:focus, .default--active {
+  background-color: whiteTwoColor;
+  border-color: whiteFiveColor;
+  color: blackColor;
+}
+
+.default:hover, default--active:hover {
+  background-color: whiteFiveColor;
+  color: blackColor;
+}
+
+.default:active, default--active:active {
+  background-color: whiteSevenColor;
+}
+
+.danger {
+  background-color: mediumPinkTwo;
+  border: 1px solid mediumPinkTwo;
+  color: veryLightPink;
+}
+
+.danger:hover {
+  background-color: darkPink;
+  border-color: darkPink;
+  color: whiteTwoColor;
+}
+
+.danger:active {
+  background-color: pigPink;
+  border-color: mediumPinkTwo;
+  color: whiteTwoColor;
+}

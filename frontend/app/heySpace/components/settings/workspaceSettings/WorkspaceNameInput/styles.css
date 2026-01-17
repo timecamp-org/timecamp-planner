@@ -1,0 +1,27 @@
+@import 'common.css';
+@import 'colors.css';
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 1000;
+}
+
+.underlinedInput {
+  display: flex;
+  padding: unset;
+  align-items: flex-end;
+  background: transparent;
+  &:hover svg {
+    opacity: 1;
+  }
+  &:focus-within svg {
+    opacity: 1;
+  }
+}
+
+.inputPen {
+  opacity: 0;
+  margin-bottom: 1.4rem;
+  margin-right: 1rem;
+}

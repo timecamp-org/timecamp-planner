@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectNameIO> render 1`] = `
+<div
+  className="Component"
+>
+  <div
+    className="projectNameWithDot"
+    onClick={[Function]}
+  >
+    <Memo(ConnectFunction)
+      className="projectName"
+      projectId="project::testRoot1"
+    />
+  </div>
+</div>
+`;

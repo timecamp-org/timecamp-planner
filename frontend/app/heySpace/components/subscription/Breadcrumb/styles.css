@@ -1,0 +1,39 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-flow: column;
+}
+
+.icon {
+  color: cloudyBlueColor;
+  height: calc(10 * gridCellSize);
+}
+
+.active {
+  opacity: 1;
+  color: blueGreyColor;
+}
+
+.checkmark {
+  position: absolute;
+  background-color: var(--color-primary-500);
+  color: whiteTwoColor;
+  border-radius: 50%;
+  padding: 2px;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+}
+
+.label {
+  padding-top: calc(2 * gridCellSize);
+  white-space: nowrap;
+  color: blueGreyColor;
+  font-size: smallFontSize;
+  font-weight: boldFontWeight;
+}

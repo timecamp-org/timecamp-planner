@@ -1,0 +1,278 @@
+@import 'common.css';
+@import 'colors.css';
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../styles/fonts/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min-device-pixel-ratio: 1.25),
+  only screen and (min-resolution: 200dpi),
+  only screen and (min-resolution: 1.25dppx) {
+  html {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+:global(html) {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+:global(body) {
+  height: 100%;
+  width: 100%;
+}
+
+:global(body) {
+  color: var(--color-gray-900);
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-sm);
+  text-decoration: none;
+}
+
+:global(svg) {
+  fill: none;
+}
+
+:global(p) {
+  margin: 0;
+  padding: 0;
+}
+
+:global(table) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:global(tr) {
+  border-top: 1px solid ghostColor;
+  background: whiteTwoColor;
+}
+
+:global(tr:nth-child(2n)) {
+  background: aquaHazeColor;
+}
+
+:global(th) {
+  padding: 6px 13px;
+  border: 1px solid ironColor;
+}
+
+:global(td) {
+  padding: 6px 13px;
+  border: 1px solid ironColor;
+}
+
+:global(ol) {
+  padding: 0;
+  margin: 0;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+:global(ul) {
+  padding: 0;
+  margin: 0;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+:global {
+  #description-editor .ql-container {
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: largeBorderRadius;
+  }
+
+  #description-editor:hover .ql-container,
+  #description-editor.active .ql-container {
+    border-color: whiteColor;
+  }
+
+  #description-editor .ql-editor {
+    height: auto;
+    min-height: calc(10 * gridCellSize);
+  }
+
+  #description-editor .ql-toolbar {
+    padding-bottom: 3px;
+    display: none;
+    border: 1px solid whiteColor;
+    border-radius: largeBorderRadius;
+  }
+
+  #description-editor.active .ql-toolbar {
+    display: block;
+    margin-top: calc(2 * gridCellSize);
+    margin-bottom: calc(2 * gridCellSize);
+  }
+
+  #description-editor .ql-formats {
+    margin: 0 gridCellSize gridCellSize 0;
+    border-radius: 3px;
+    border: 1px solid #e4e4e4;
+  }
+
+  #newMessageEditor .ql-editor.ql-blank::before {
+    font-style: normal;
+    color: slate60Color;
+    width: calc(100% - calc(30 * gridCellSize));
+    height: calc(4 * gridCellSize);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: calc(gridCellSize * 5);
+
+    @media only screen and (max-width: mobileBreakpoint) {
+      padding-left: 0;
+    }
+  }
+
+  #messageBeingEditedEditor .ql-editor {
+    padding-right: calc(6 * gridCellSize);
+  }
+
+  #newMessageEditor .ql-editor {
+    padding: calc(3 * gridCellSize) calc(26 * gridCellSize) calc(3 * gridCellSize) calc((8 * gridCellSize) + 2px);
+
+    @media only screen and (max-width: mobileBreakpoint) {
+      padding-left: 1.5rem;
+    }
+  }
+
+  #newMessageEditor .ql-editor,
+  #newMessageEditor .ql-container {
+    height: auto;
+    max-height: calc(60 * gridCellSize);
+    font-size: normalFontSize;
+  }
+
+  .timeline-day {
+    border-left: none !important;
+  }
+
+  .timeline-month {
+    border-left: none !important;
+  }
+
+  .rct-scroll {
+    overflow-x: hidden !important; /* Fix scrolling issue for react-calendar-timeline. See more: https://github.com/namespace-ee/react-calendar-timeline/issues/713#issuecomment-584507993 */
+  }
+
+  .rct-calendar-header {
+    border: none !important;
+  }
+
+  .rct-header-root {
+    border: none !important;
+    background: transparent !important;
+  }
+
+  body #ue_widget {
+    z-index: 500 !important;
+  }
+}
+
+input,
+textarea,
+select,
+button,
+p,
+label,
+a {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* react-day-picker https://github.com/gpbl/react-day-picker/issues/557 */
+abbr[title] {
+  text-decoration: none;
+}
+
+/* Remove outline on focus for all elements */
+textarea:focus,
+input:focus,
+*:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* for vertical scrollbars */
+  height: 6px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black20Color;
+  border-radius: 3px;
+}

@@ -1,0 +1,95 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.button {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: calc(7 * gridCellSize);
+  width: 100%;
+  padding: gridCellSize;
+  white-space: nowrap;
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+  color: whiteTwoColor;
+  z-index: 10;
+}
+
+.chevron {
+  margin-left: gridCellSize;
+  width: calc(2 * gridCellSize);
+  height: calc(2 * gridCellSize);
+}
+
+.avatarOptionsDropdown {
+  position: absolute;
+  background-color: lightGreyColor;
+  padding: gridCellSize;
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  width: 100%;
+  top: 100%;
+  margin: 0;
+  z-index: 1;
+}
+
+.gravatarIcon {
+  background: url('./gravatar.png') no-repeat center center;
+  width: 14px;
+  height: 14px;
+}
+
+.personIcon {
+  composes: personIconWrapper from 'components/person/PersonIcon/styles.css';
+  width: 14px;
+  height: 14px;
+  font-size: 6px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: gridCellSize calc(4 * gridCellSize);
+
+  width: 100%;
+  height: 36px;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  border-radius: calc(2 * gridCellSize);
+  border: none;
+  position: relative;
+  color: cloudyBlueColor;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: flex;
+
+  &:hover {
+    opacity: 0.8;
+    background: whiteColor;
+  }
+
+  &:focus {
+    box-shadow: defaultOutline;
+    background: whiteColor;
+  }
+
+  &:active {
+    box-shadow: none;
+    opacity: 0.6;
+    background: lightGreyColor;
+  }
+}
+
+.optionName {
+  padding-left: gridCellSize;
+}

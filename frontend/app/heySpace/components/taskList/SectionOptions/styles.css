@@ -1,0 +1,55 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  padding: gridCellSize;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.cardInput {
+  color: black;
+}
+
+.title {
+  flex: 1;
+}
+
+.dropdown {
+}
+
+.moreVerticalWrapper {
+  width: calc(6 * gridCellSize);
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: gridCellSize;
+  border-radius: largeBorderRadius;
+
+  &:hover {
+    background-color: silverColor;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.moreVertical {
+  width: 3px;
+  height: calc(3 * gridCellSize);
+}
+
+.popperContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  width: calc(65 * gridCellSize);
+  border-radius: calc(2 * gridCellSize);
+  background: whiteTwoColor;
+  box-shadow: 0 5px 10px 0 black25Color;
+  padding: gridCellSize;
+}

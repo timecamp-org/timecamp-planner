@@ -1,0 +1,32 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  position: relative;
+}
+
+$iconSize: 36px;
+
+.personIcon {
+  composes: personIconWrapper from 'components/person/PersonIcon/styles.css';
+  width: $iconSize;
+  height: $iconSize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: normalFontSize;
+}
+
+.botMascot {
+  /* background: url('commonComponents/Mascot/assets/character_33.png') no-repeat center center; */
+  background-size: contain;
+  width: $iconSize;
+  height: $iconSize;
+}
+
+.invitationMascot {
+  /* background: url('commonComponents/Mascot/assets/character_20.png') no-repeat center center; */
+  background-size: contain;
+  width: $iconSize;
+  height: $iconSize;
+}

@@ -1,0 +1,186 @@
+@import 'common.css';
+@import 'colors.css';
+
+:global {
+  .timeline-day {
+    border-left: none !important;
+  }
+
+  .react-calendar-timeline .rct-vertical-lines > .rct-vl.timeline-day {
+    background-color: var(--color-white);
+    background: var(--color-white);
+    border-right: 1px solid var(--color-gray-300) !important;
+    z-index: -1 !important;
+    height: 100% !important;
+  }
+
+  .rct-scroll {
+    z-index: 1 !important;
+    min-height: 100%;
+    user-select: none;
+  }
+
+  .rct-vl:first-of-type {
+    border-left: none !important;
+  }
+
+  .react-calendar-timeline .rct-vertical-lines > .rct-vl.rct-day-6.timeline-day,
+  .react-calendar-timeline .rct-vertical-lines > .rct-vl.rct-day-0.timeline-day {
+    background-color: var(--color-gray-50);
+    background: var(--color-gray-50);
+  }
+
+  .rct-sidebar-row.rct-sidebar-row-odd {
+    background-color: transparent !important;
+  }
+
+  .rct-sidebar {
+    min-height: 100% !important;
+  }
+
+  .rct-sidebar-row:last-of-type {
+    border-bottom: none !important;
+  }
+
+  .rct-horizontal-lines:last-of-type {
+    border-bottom: none !important;
+    height: 100%;
+  }
+
+  .rct-outer {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    flex-grow: 1;
+    border: 1px solid var(--color-gray-300);
+  }
+
+  .react-calendar-timeline {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.headersWrapper {
+  position: sticky;
+  top: 0;
+  background: whiteTwoColor !important;
+}
+
+.headerInnerWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.timeRangeSwitcherButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  width: calc(5 * gridCellSize);
+  height: calc(8 * gridCellSize);
+  border: 1px solid warmGreyThreeColor;
+  background-color: whiteTwoColor;
+  color: warmGreyThreeColor;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.timeRangeSwitcherButton:hover {
+  background-color: whiteFiveColor;
+  color: blackColor;
+  opacity: 1;
+}
+
+.timeRangeSwitcherButton:active {
+  background-color: whiteSevenColor;
+  color: blackColor;
+  opacity: 1;
+}
+
+.prevButton {
+  composes: timeRangeSwitcherButton;
+  left: 0;
+  transform: translateX(-100%);
+  border: none;
+  border-radius: var(--borderRadius-xs);
+}
+
+.nextButton {
+  composes: timeRangeSwitcherButton;
+  right: 0;
+  transform: translateX(100%);
+  border: none;
+  border-radius: var(--borderRadius-xs);
+}
+
+.arrowIcon {
+  height: 1.8rem;
+}
+
+.todayMarker {
+  background: var(--color-primary-500) !important;
+  width: 2px;
+  z-index: 5;
+}
+
+.tile {
+  border-radius: gridCellSize;
+  background-color: whiteTwoColor;
+  overflow: hidden;
+  box-shadow: 0 1px 10px 0 black15Color;
+}
+
+.item {
+  border: none !important;
+  background: none !important;
+  height: min-content !important;
+}
+
+.timeMarkerOffset {
+  transform: translateY(-5px);
+}
+
+.plannerItemOffset {
+  transform: translateY(-20px);
+}
+
+.groupItem {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem 0 0 0.8rem;
+}
+
+.groupItemDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: fit-content;
+  margin-left: gridCellSize;
+}
+
+.personName {
+  line-height: normal;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.groupBorder {
+  background-color: transparent !important;
+}
+.groupBorder:last-of-type {
+  border-bottom: none !important;
+  height: 100vh !important;
+}
+
+.groupCursor {
+  cursor: cell;
+}

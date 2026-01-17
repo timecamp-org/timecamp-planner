@@ -1,0 +1,61 @@
+@import 'colors.css';
+@import 'common.css';
+
+.messageBoard {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0; /* hack for firefox; without this firefox ignores flex and stretches messageList to it's 100% height causing messageBoard to overflow whole page */
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.dropzone {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newMessageEditor {
+  height: calc(14 * gridCellSize);
+  border-top: 1px solid blackColor;
+}
+
+.newMessageWrapperClassName {
+  composes: newMessage from 'components/chat/NewMessageEditor/styles.css';
+  flex: 0 0 auto;
+  border-top: 1px solid whiteColor;
+  padding: 25px calc(6 * gridCellSize) 0;
+}
+
+.toolbarClassName {
+  composes: toolbar from 'components/chat/MessageEditorToolbar/styles.css';
+  right: calc(9 * gridCellSize);
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid whiteColor;
+  min-height: 7rem;
+  background-color: var(--color-white);
+}
+
+.contentSelector {
+  padding: 0.8rem;
+}

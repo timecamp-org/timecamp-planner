@@ -1,0 +1,61 @@
+@import 'colors.css';
+@import 'common.css';
+
+@value dateLineMinHeight: calc(6 * gridCellSize);
+
+.dateLine {
+  position: relative;
+  text-align: center;
+  line-height: calc(3 * gridCellSize);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(6 * gridCellSize);
+  position: sticky;
+  top: calc(-2 * gridCellSize);
+  z-index: 200;
+  min-height: dateLineMinHeight;
+  background-color: var(--color-gray-50);
+}
+
+.date {
+  display: flex;
+}
+
+.text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15rem;
+  padding: 0 1rem;
+  white-space: nowrap;
+  border-radius: largeBorderRadius;
+  background-color: var(--color-gray-50);
+  height: calc(4 * gridCellSize);
+  color: var(--color-gray-500);
+}
+
+.text.today {
+  color: var(--color-primary-500);
+}
+
+.horizontalDivider {
+  left: calc(2 * gridCellSize);
+  right: 0;
+  border-top: 1px solid var(--color-gray-200);
+  top: calc(3 * gridCellSize);
+  position: absolute;
+}
+
+.horizontalDivider.today {
+  border-color: var(--color-primary-500);
+}
+
+.topBackground {
+  width: 100%;
+  height: calc(3 * gridCellSize);
+  height: calc(3 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}

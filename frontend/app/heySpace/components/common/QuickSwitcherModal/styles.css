@@ -1,0 +1,63 @@
+@import 'colors.css';
+@import 'common.css';
+
+.universalModal {
+  composes: Component from 'commonComponents/UniversalModal/styles.css';
+  z-index: 1010;
+}
+
+.innerModalDialogClassName {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  background: whiteTwoColor;
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  font-size: normalFontSize;
+  margin-bottom: calc(3 * gridCellSize);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.loadingDots {
+  width: calc(118 * gridCellSize);
+  height: calc(60 * gridCellSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10 * gridCellSize);
+  color: wisteriaColor;
+}
+
+.title {
+  margin-right: calc(3 * gridCellSize);
+}
+
+.divider {
+  color: cloudyBlueColor;
+  margin: 0 gridCellSize;
+}
+
+.tabSwitcher {
+  color: cloudyBlueColor;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.1s ease-in-out;
+}
+
+.tabSwitcher:hover {
+  color: var(--color-gray-200);
+}
+
+.selectedTabSwitcher {
+  color: wisteriaColor;
+}
+
+.input {
+  padding-left: 2.4rem;
+}
+
+.modalBody {
+  height: 55rem;
+}

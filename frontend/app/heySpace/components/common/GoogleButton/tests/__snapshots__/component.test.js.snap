@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GoogleButton> render 1`] = `
+<Button
+  className="
+          testClassName
+          undefined
+        "
+  innerRef={[Function]}
+  isDisabled={false}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  type="button"
+>
+  <test-file-stub
+    className="icon"
+  />
+  <div
+    className="text"
+  >
+    Login with Google
+  </div>
+</Button>
+`;

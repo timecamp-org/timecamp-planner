@@ -1,0 +1,109 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(8 * gridCellSize);
+  color: cloudyBlueColor;
+}
+
+.arrowLeftButton {
+  position: absolute;
+  left: 1.5rem;
+  width: calc(6 * gridCellSize);
+  height: calc(6 * gridCellSize);
+  cursor: pointer;
+  border: 0;
+  border-radius: largeBorderRadius;
+}
+
+.arrowLeft {
+  stroke: cloudyBlueColor;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+}
+
+.separator {
+  width: calc(100% - (4 * gridCellSize));
+  height: 1px;
+  background: cloudyBlueColor;
+}
+
+.followingSeparator {
+  composes: separator;
+  margin-left: 1rem;
+}
+
+.options {
+  font-family: fontFamilyTwo;
+  margin-top: gridCellSize;
+}
+
+.option {
+  text-align: left;
+}
+
+.optionIcon {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 1.5rem;
+}
+
+.optionButton {
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  border-radius: var(--borderRadius-sm);
+  border: none;
+  position: relative;
+  color: var(--color-gray-900);
+  width: 100%;
+  padding-left: 1.5rem;
+  min-height: calc(8 * gridCellSize);
+  background-color: var(--color-white);
+
+  &:hover {
+    background: var(--color-gray-100);
+    color: var(--color-gray-900);
+  }
+
+  &:active {
+    opacity: 0.8;
+    background: lightGreyColor;
+  }
+}
+
+.taskFollowingOption {
+  display: flex;
+  align-items: center;
+  margin: gridCellSize 1rem gridCellSize calc(2 * gridCellSize - 2px);
+  border-radius: largeBorderRadius;
+  height: calc(6 * gridCellSize);
+  padding: 0 1rem;
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  color: cloudyBlueColor;
+  cursor: initial;
+}
+
+.icon {
+  margin-right: 1rem;
+}
+
+.followingControllerInfoTooltipWrapperClassName {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+}

@@ -1,0 +1,36 @@
+@import 'colors.css';
+@import 'common.css';
+
+.component {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-xs);
+}
+
+.progressBarBackground {
+  position: relative;
+  width: calc(14 * gridCellSize);
+  height: 100%;
+  border-radius: calc(2 * gridCellSize);
+  overflow: hidden;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.progressBarIndicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom-right-radius: calc(2 * gridCellSize);
+  border-top-right-radius: calc(2 * gridCellSize);
+}
+
+.icon {
+  flex: 0 0 auto;
+  width: calc(3 * gridCellSize);
+  height: calc(3 * gridCellSize);
+  display: inline-block;
+  margin-right: calc(gridCellSize * 2);
+}

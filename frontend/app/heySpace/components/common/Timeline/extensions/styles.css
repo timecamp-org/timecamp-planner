@@ -1,0 +1,9 @@
+.newItemIndicator {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  min-width: 0px;
+  background-color: var(--color-primary-500);
+  border-radius: var(--borderRadius-xs);
+  opacity: 0.4;
+}

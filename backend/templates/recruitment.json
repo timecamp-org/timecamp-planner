@@ -1,0 +1,23 @@
+{
+  "name": "Recruitment",
+  "description": "Optimize your recruitment process with our streamlined template. Progress smoothly through these stages: Received CV ➔ Scheduled Meeting ➔ Rejected ➔ For Consideration ➔ Hired Efficiently manage candidate workflows, ensuring clarity and effectiveness from initial application to successful onboarding.",
+  "order": 17,
+  "taskListTemplates": [
+    {
+      "name": "Received CV",
+      "order": 1
+    },
+    {
+      "name": "Scheduled meeting",
+      "order": 2
+    },
+    {
+      "name": "Rejected",
+      "order": 3
+    },
+    {
+      "name": "Hired",
+      "order": 4
+    }
+  ]
+}

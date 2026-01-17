@@ -1,0 +1,9 @@
+@import 'common.css';
+
+.Component {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+}
+
+.title {
+  padding-left: calc(gridCellSize * 2);
+}

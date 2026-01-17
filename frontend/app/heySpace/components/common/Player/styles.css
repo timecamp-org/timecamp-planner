@@ -1,0 +1,14 @@
+@import "colors.css";
+@import "common.css";
+
+.player {
+  margin-top: calc(3 * gridCellSize);
+}
+
+.placeholder{
+  background: defaultGreyBrightness1;
+  background-color: cloudyBlueColor;
+  border-radius: defaultBorderRadius;
+  width: calc(72 * gridCellSize);
+  height: calc(40 * gridCellSize);
+}

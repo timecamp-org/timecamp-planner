@@ -1,0 +1,51 @@
+@import 'colors.css';
+@import 'common.css';
+
+.listWrapperLongKanban {
+  composes: childrenKanban from 'components/taskList/DraggableSectionListItem/styles.css';
+  max-height: calc(100% - (headerHeight));
+  background-color: var(--color-gray-100);
+}
+
+.kanbanColumn {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.listWrapperLong {
+  composes: children from 'components/taskList/DraggableSectionListItem/styles.css';
+}
+
+.cardInput,
+.firstCardInput {
+  composes: Component from 'components/tasks/CardInput/styles.css';
+  border-radius: largeBorderRadius;
+
+  &:hover {
+    background-color: silverColor;
+  }
+}
+
+.firstCardInput {
+  composes: Component from 'components/tasks/CardInput/styles.css';
+  margin-bottom: calc(2 * gridCellSize);
+  width: 100%;
+}
+
+.addLastCardButton {
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-700);
+  font-size: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-regular);
+  padding: 1rem;
+  vertical-align: middle;
+
+  & > svg {
+    margin-right: 0.5rem;
+  }
+}
+
+.lastCardInputWrapper {
+  padding: 0px 10px;
+}

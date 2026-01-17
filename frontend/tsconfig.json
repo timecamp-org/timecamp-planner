@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    "allowUmdGlobalAccess": true,
+    "baseUrl": "./",
+    "allowJs": true,
+    "checkJs": false,
+    "sourceMap": true,
+    "outDir": "dist",
+    "module": "CommonJS",
+    "target": "es6",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "types": ["gapi", "gapi.client", "node", "jest", "resize-observer-browser"],
+    "lib": ["es2017", "DOM"],
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "postCssOptions": {
+            "useConfig": true
+          },
+          "customMatcher": "\\.css$"
+        }
+      }
+    ],
+    "paths": {
+      "react": ["./node_modules/@types/react"],
+      "client": ["./packages/client"],
+      "client/*": ["./packages/client/*"],
+      "i18n": ["./app/common/i18n"],
+      "i18n/*": ["./app/common/i18n/*"],
+      "commonComponents/*": ["./app/heySpace/components/common/*"],
+      "components/*": ["./app/heySpace/components/*"],
+      "hooks/*": ["./app/heySpace/hooks/*"],
+      "commonEnhancers/*": ["./app/common/enhancers/*"],
+      "enhancers/*": ["./app/heySpace/enhancers/*"],
+      "models/*": ["./app/common/models/*"],
+      "common/*": ["./app/common/*"],
+      "styles/*": ["./app/heySpace/styles/*"],
+      "commonStyles/*": ["./app/common/commonStyles/*"],
+      "commonAssets/*": ["./app/common/commonAssets/*"],
+      "utils/*": ["./app/heySpace/utils/*"],
+      "immutable": ["./app/common/node_modules/immutable"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "build", "webpack.config.js", "app/HeySpaceMobile", "babel.config.js"],
+  "include": [
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "custom.d.ts",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "app/common/enhancers/chat/EnhanceWithChatItems/index.js",
+    "app/heySpace/components/chat/CardDetailsMessageBoard/component.ts",
+    "app/common/commonStyles/colors.js",
+    "app/heySpace/components/menu/WorkspacesPanel/index.js",
+    "react.d.ts"
+  ]
+}

@@ -1,0 +1,34 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  position: relative;
+  align-items: center;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.row {
+  display: flex;
+  margin: calc(4 * gridCellSize) 0px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: gridCellSize;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.sectionInput {
+  flex: 1;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.sectionInput input {
+  width: calc(100% - (2 * gridCellSize));
+  height: calc(8 * gridCellSize);
+}
+
+.sectionInput label {
+  color: cloudyBlueColor;
+}

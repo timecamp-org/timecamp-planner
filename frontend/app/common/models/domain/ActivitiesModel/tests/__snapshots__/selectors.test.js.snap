@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`models/domain/ActivitiesModel/selectors selectActivitiesDomain 1`] = `
+Immutable.Map {
+  "activitiesData": Immutable.Map {},
+  "objectActivities": Immutable.Map {},
+  "fatalError": null,
+}
+`;

@@ -1,0 +1,26 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Svg, Path } from 'react-native-svg'
+
+import { wisteriaColor } from 'common/commonStyles/colors'
+
+IconPrivate.propTypes = {
+  color: PropTypes.string,
+  style: PropTypes.object,
+}
+
+IconPrivate.defaultProps = {
+  color: wisteriaColor,
+  style: {
+    width: 16,
+    height: 13,
+  },
+}
+
+export default function IconPrivate(props) {
+  return (
+    <Svg style={props.style} viewBox="0 0 13 16">
+    	<Path d="M5.968 11.188v2.178c0 .227.2.412.432.412a.427.427 0 0 0 .432-.412v-2.178c.503-.173.863-.64.863-1.188 0-.695-.58-1.26-1.295-1.26S5.105 9.306 5.105 10c0 .548.36 1.015.863 1.188zm-4.14-4.67V4.445C1.829 1.989 3.876 0 6.4 0c2.52 0 4.571 1.99 4.571 4.444v2.075c1.012.002 1.829.8 1.829 1.783v2.957C12.8 13.872 10.617 16 7.924 16H4.876C2.186 16 0 13.877 0 11.26V8.301c0-.99.818-1.78 1.829-1.783zm2.354-.453h4.436V4.388c0-1.19-.996-2.157-2.218-2.157-1.225 0-2.218.963-2.218 2.157v1.677z" fill={props.color} fillRule="nonzero"/>
+    </Svg>
+  )
+}

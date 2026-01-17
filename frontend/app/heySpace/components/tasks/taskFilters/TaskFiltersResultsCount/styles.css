@@ -1,0 +1,9 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+	font-family: fontFamilyTwo;
+	color: blueyGrey60Color;
+  font-size: smallerFontSize;
+  margin-left: gridCellSize;
+}

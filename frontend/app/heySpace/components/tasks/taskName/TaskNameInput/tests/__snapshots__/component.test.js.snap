@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TaskNameInput> render 1`] = `
+<input
+  className="undefined"
+  id="task::0"
+  onBlur={[MockFunction]}
+  onChange={[MockFunction]}
+  onClick={[Function]}
+  onFocus={[MockFunction]}
+  onKeyDown={[MockFunction]}
+  onKeyUp={[MockFunction]}
+  spellCheck={false}
+  style={Object {}}
+  type="text"
+  value=""
+/>
+`;

@@ -1,0 +1,14 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  
+}
+
+.placeholder {
+  color: black60Color;
+}
+
+.ellipsized {
+  @mixin EllipsizeTextOverflow;
+}

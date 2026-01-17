@@ -1,0 +1,13 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 0 calc(gridCellSize * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(gridCellSize * 7);
+  cursor: pointer;
+}

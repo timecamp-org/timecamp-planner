@@ -1,0 +1,51 @@
+.contentWrapper {
+  background-color: var(--color-white);
+  border-radius: var(--borderRadius-lg);
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.17);
+}
+
+.popperArrow {
+  border-bottom-color: var(--color-gray-100) !important;
+}
+
+.timeInput {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 99rem;
+  max-width: 12rem;
+
+  & > input {
+    text-align: right;
+    padding-right: 1.6rem;
+    color: var(--color-gray-500);
+  }
+}
+
+.durationInput {
+  composes: timeInput;
+  max-width: 28.9rem;
+  flex-grow: 1;
+
+  & > input {
+    text-align: left;
+  }
+}
+
+.userAvatar {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.popoverArrow {
+  background: var(--color-gray-100) !important;
+
+  & > div {
+    border-bottom-color: var(--color-gray-100) !important;
+  }
+}
+
+.userName {
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-regular);
+}

@@ -1,0 +1,32 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  
+}
+
+.imagePlaceholder{
+  background: defaultGreyBrightness1;
+  background-color: blueGreyColor;
+  border-radius: defaultBorderRadius;
+  width: calc(14 * gridCellSize);
+  height: calc(14 * gridCellSize);
+}
+
+.image {
+  max-width: calc(14 * gridCellSize);
+  max-height: calc(14 * gridCellSize);
+  border-radius: defaultBorderRadius;
+}
+
+.initials {
+  composes: imagePlaceholder;
+  user-select: none;
+  color: cloudyBlueColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  font-size: mediumFontSize;
+}

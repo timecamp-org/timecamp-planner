@@ -1,0 +1,36 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  align-items: center;
+  padding-bottom: calc(gridCellSize * 6);
+  position: relative;
+}
+
+.currentDateWrapper {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: headingFontSize;
+  font-weight: boldFontWeight;
+}
+
+.todayButton {
+  margin-right: auto;
+}
+
+.viewsToolbar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.viewButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-left: gridCellSize;
+}

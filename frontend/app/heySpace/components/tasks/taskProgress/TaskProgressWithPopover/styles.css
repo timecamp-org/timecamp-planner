@@ -1,0 +1,56 @@
+@import 'colors.css';
+@import 'common.css';
+
+.taskProgress {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: cardDetailsHeight;
+  height: cardDetailsHeight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--borderRadius-sm);
+  margin-left: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--color-primary-500);
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-semibold);
+}
+
+.taskProgress::after {
+  border-radius: var(--borderRadius-sm);
+}
+
+.checkmarkWrapper {
+  border-radius: var(--borderRadius-sm);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+    background-color: var(--color-gray-200);
+    opacity: 0.8;
+  }
+}
+
+.empty {
+  min-width: calc(7 * gridCellSize);
+}
+
+.checkmark {
+  color: var(--color-success-500);
+}
+
+.progressWrapper {
+  display: flex;
+}
+
+.progressZero {
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-regular);
+}
+
+.taskProgress.active {
+  color: var(--color-primary-500);
+}

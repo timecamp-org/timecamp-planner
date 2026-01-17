@@ -1,0 +1,70 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  position: relative;
+  display: flex;
+  z-index: 10;
+  border-right: 0.1rem solid var(--color-gray-100);
+  height: 100vh;
+}
+
+.mainMenu {
+  z-index: 100;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-width: none;
+  flex-grow: 1;
+  min-height: 0;
+
+  & a {
+    text-decoration: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-gray-500);
+    width: 0.6rem;
+  }
+}
+
+.mainMenuWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  max-width: 25.5rem;
+  width: 100%;
+  position: relative;
+  padding: 1.6rem 0;
+}
+
+.mainMenu::-webkit-scrollbar-thumb {
+  background: var(--color-gray-500);
+  width: 0.6rem;
+}
+
+.createGroupButton {
+  composes: button from 'components/menu/spaces/CreateGroupButton/styles.css';
+  margin-left: calc(gridCellSize * 4);
+  margin-bottom: calc(gridCellSize * 4);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.skeletonWrapper {
+  margin: 0 calc(4 * gridCellSize);
+}
+
+.navigation {
+  margin-left: 2.4rem;
+}

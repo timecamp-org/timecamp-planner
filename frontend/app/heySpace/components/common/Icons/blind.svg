@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg version="1.1" id="Warstwa_1" x="0px" y="0px" viewBox="0 0 123.15185 123.24765" xml:space="preserve"
+  width="123.15185" height="123.24765" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs17" />
+  <style type="text/css" id="style2">
+    .st10 {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 10;
+      stroke-miterlimit: 10;
+    }
+
+    .st11 {
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <g id="g12" transform="translate(-61.424082,-30.626171)">
+    <g id="g6">
+      <path class="st10" d="m 68.2,94.5 c 61.6,80.8 111.4,0 111.4,0 -61.6,-80.8 -111.4,0 -111.4,0 z" id="path4" />
+    </g>
+    <circle class="st11" cx="124.1" cy="94.599998" r="23.9" id="circle8" fill="currentColor" />
+    <line class="st10" x1="63.900002" y1="33.099998" x2="182.10001" y2="151.39999" id="line10" />
+  </g>
+</svg>

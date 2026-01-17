@@ -1,0 +1,87 @@
+@import 'colors.css';
+@import 'common.css';
+
+.universalModal {
+  composes: Component from 'commonComponents/UniversalModal/styles.css';
+}
+
+.innerModalDialogClassName {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  border-radius: var(--borderRadius-sm);
+  overflow: hidden;
+  max-width: 55rem;
+  width: 100vw;
+  height: 65rem;
+}
+
+.modalBody {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.input {
+  padding-left: 2.4rem;
+  height: 100%;
+
+  & > input {
+    display: block;
+    height: 100%;
+  }
+}
+
+.modalHeader {
+  padding: 0;
+  margin: 0;
+}
+
+.inputWrapper {
+  height: 5.6rem;
+}
+
+.searchOptions {
+  display: flex;
+  align-items: center;
+  height: 3.2rem;
+  padding: 0 1.6rem;
+  font-size: var(--fontSize-xxs);
+}
+
+.results {
+  font-weight: var(--fontWeight-semibold);
+  color: var(--color-gray-500);
+}
+
+.options {
+  margin-left: auto;
+  display: flex;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1.6rem;
+}
+
+.searchBy {
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-gray-700);
+}
+
+.resultsContainer {
+  min-height: 0;
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.textSemibold {
+  font-size: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-semibold);
+  color: var(--color-gray-500);
+}
+
+.loading {
+  padding: 1rem;
+}

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*"],
+      "utils": ["common/utils/*"],
+      "styles/common": ["./styles/common"],
+      "Icons": ["./components/Icons"],
+      "common": ["../common"],
+      "BaseComponent": ["../common/enhancers/BaseComponent"],
+      "PureBaseComponent": ["../common/enhancers/PureBaseComponent"],
+    }
+  },
+  "exclude": [
+    "node_modules",
+  ],
+}

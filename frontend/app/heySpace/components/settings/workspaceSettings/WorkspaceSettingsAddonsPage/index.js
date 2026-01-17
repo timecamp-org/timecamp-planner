@@ -1,0 +1,6 @@
+import Component from './component'
+
+import RedirectToSignInPageIfCurrentUserIsDeauthenticated from 'enhancers/auth/RedirectToSignInPageIfCurrentUserIsDeauthenticated'
+import RedirectToSubscriptionSettingsIfMembersNotValid from 'enhancers/auth/RedirectToSubscriptionSettingsIfMembersNotValid'
+
+export default RedirectToSignInPageIfCurrentUserIsDeauthenticated(RedirectToSubscriptionSettingsIfMembersNotValid(Component))

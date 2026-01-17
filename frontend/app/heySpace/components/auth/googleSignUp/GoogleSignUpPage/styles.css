@@ -1,0 +1,79 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  height: 100%;
+  display: flex;
+  position: relative;
+  min-height: calc(82 * gridCellSize);
+  color: blueGreyColor;
+  background-color: whiteTwoColor;
+  overflow-y: auto;
+}
+
+.left {
+  width: calc(91 * gridCellSize);
+  background-image: url('styles/assets/planets-background.png');
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: calc(150 * gridCellSize);
+}
+
+.right {
+  flex: 1;
+  display: flex;
+}
+
+.signIn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: blueGreyColor;
+  padding-top: calc(10 * gridCellSize);
+  padding-right: calc(9 * gridCellSize);
+  margin-bottom: calc(6 * gridCellSize);
+}
+
+.signUpPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: whiteTwoColor;
+}
+
+.content {
+  width: auto;
+  flex: 1 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: calc(110 * gridCellSize);
+}
+
+.footer {
+  height: calc(20 * gridCellSize);
+}
+
+.link {
+}
+
+.signInButton {
+  border: solid defaultBorderWidth wisteriaColor;
+  color: wisteriaColor !important;
+  border-radius: largeBorderRadius;
+  height: 36px;
+  width: calc(21 * gridCellSize);
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  position: relative;
+  margin-left: calc(2 * gridCellSize);
+}

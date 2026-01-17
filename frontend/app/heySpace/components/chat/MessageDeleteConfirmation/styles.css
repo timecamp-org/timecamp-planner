@@ -1,0 +1,4 @@
+.backdrop {
+  composes: backdrop from 'commonComponents/UniversalModal/styles.css';
+  filter: blur(5px);
+}

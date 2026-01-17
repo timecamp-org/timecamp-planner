@@ -1,0 +1,23 @@
+{
+  "name": "Event plan",
+  "description": "Refine your event management strategy with our structured template. Progress smoothly through these crucial phases: Preparation ➔ Promotion ➔ At Event ➔ Post Event Efficiently guide your event from meticulous preparation through successful promotion, execution, and thoughtful post-event activities. Streamline your workflow for a seamless and impactful event experience.",
+  "order": 16,
+  "taskListTemplates": [
+    {
+      "name": "Preparation",
+      "order": 1
+    },
+    {
+      "name": "Promotion",
+      "order": 2
+    },
+    {
+      "name": "At event",
+      "order": 3
+    },
+    {
+      "name": "Post event",
+      "order": 4
+    }
+  ]
+}

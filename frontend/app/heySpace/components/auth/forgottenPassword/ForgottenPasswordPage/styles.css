@@ -1,0 +1,120 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  height: 100%;
+  display: flex;
+  position: relative;
+  min-height: calc(82 * gridCellSize);
+  color: blueGreyColor;
+  background-color: whiteTwoColor;
+  overflow: auto;
+}
+
+.left {
+  width: calc(91 * gridCellSize);
+  background-image: url('styles/assets/planets-background.png');
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: calc(150 * gridCellSize);
+}
+
+.right {
+  flex: 1;
+  display: flex;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 4.8rem 11rem;
+
+  @media (max-width: tabletBreakpointWidth) {
+    margin: 1.5rem 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.signUp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--color-gray-500);
+  margin-left: auto;
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .signUp {
+    padding-right: calc(2 * gridCellSize);
+  }
+}
+
+.link {
+  margin-left: 1.8rem;
+  text-decoration: none;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-medium);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.forgottenPasswordPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: whiteTwoColor;
+}
+
+.content {
+  width: auto;
+  flex: 1 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: calc(110 * gridCellSize);
+}
+
+.footer {
+  height: calc(20 * gridCellSize);
+}
+
+.link {
+}
+
+.footerHeader {
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  text-align: center;
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.footerContent {
+  margin: 0px calc(11 * gridCellSize);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tcBand,
+.rcBand {
+  width: calc(20 * gridCellSize);
+}
+
+.tcBand {
+  height: 27.4px;
+}
+
+.rcBand {
+  height: 18.7px;
+}

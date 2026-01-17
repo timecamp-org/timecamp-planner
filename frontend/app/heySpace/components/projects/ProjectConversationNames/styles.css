@@ -1,0 +1,6 @@
+@import 'common.css';
+@import 'colors.css';
+
+.textBreak {
+  overflow-wrap: break-word;
+}

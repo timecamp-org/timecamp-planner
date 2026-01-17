@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.json",
+  "exclude": ["node_modules", "dist", "build"],
+  "include": ["src/**/*.ts", "node_modules/lodash-es/**/*.js"]
+}

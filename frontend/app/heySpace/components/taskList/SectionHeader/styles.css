@@ -1,0 +1,54 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  padding-bottom: gridCellSize;
+  align-items: center;
+  padding: calc(2 * gridCellSize);
+}
+
+.followingIcon {
+  margin-left: calc(2 * gridCellSize);
+}
+
+.listEstimatedEffort {
+  font-size: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-regular);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
+
+  & > svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.2rem;
+  }
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 100;
+}
+
+.sectionName {
+  composes: Component from 'components/taskList/SectionNameIO/styles.css';
+  overflow: hidden;
+}
+
+.sectionNameIO {
+  composes: Component from 'components/taskList/SectionNameIO/styles.css';
+  width: 100%;
+}
+
+.projectIcon {
+  margin-right: gridCellSize;
+}
+
+.infoTooltipProjectName {
+  composes: infoTooltipMessage from 'commonComponents/InfoTooltip/styles.css';
+  margin-top: 0;
+}

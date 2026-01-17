@@ -1,0 +1,64 @@
+@import 'common.css';
+@import 'colors.css';
+
+$notificationTextPadding: 0 2px;
+
+.Component {
+  border-radius: defaultBorderRadius;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--fontSize-xxs);
+}
+
+.userName,
+.taskName,
+.projectName {
+  white-space: nowrap;
+  padding-left: 2px;
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+}
+
+.userName {
+  padding-right: 3px;
+}
+
+.projectName,
+.userName {
+  font-weight: var(--fontWeight-semibold);
+  font-size: var(--fontSize-xxs);
+}
+
+.notificationDetails {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.commentMessage {
+  white-space: pre-line;
+  background-color: inherit;
+  width: 100%;
+  font-size: var(--fontSize-xxs);
+}
+
+.change {
+  padding: $notificationTextPadding;
+}
+
+.textElement {
+  padding: $notificationTextPadding;
+  font-weight: regularFontWeight;
+}
+
+.text {
+  composes: textElement;
+}
+
+.textElementBold {
+  composes: textElement;
+  font-weight: boldFontWeight;
+}
+
+.comma {
+  padding-right: 2px;
+}

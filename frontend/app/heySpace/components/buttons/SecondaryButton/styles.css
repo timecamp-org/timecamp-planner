@@ -1,0 +1,32 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  padding: calc(2 * gridCellSize);
+  cursor: pointer;
+  border-radius: 0.4rem;
+  border: none;
+  position: relative;
+  background: transparent;
+  color: var(--color-gray-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.Component:hover {
+  background: var(--color-gray-100);
+  fill: var(--color-primary-500);
+  color: var(--color-primary-500);
+}
+
+.Component.darkButtonShade.active:after,
+.Component.darkButtonShade:active:after {
+  opacity: 0.02;
+}
+
+.disabled {
+  cursor: default;
+  pointer-events: none;
+}

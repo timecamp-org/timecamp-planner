@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 117.97 112.24"
+	 style="enable-background:new 0 0 117.97 112.24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6DC7DC;}
+	.st1{fill:#D8D8D8;}
+	.st2{fill:#B7B7B7;}
+</style>
+<switch>
+	<g>
+		
+			<ellipse transform="matrix(0.9125 -0.4091 0.4091 0.9125 3.0354 45.2908)" class="st0" cx="107.39" cy="15.55" rx="7.48" ry="13.1"/>
+		<polygon class="st1" points="27.43,39.07 100.96,1.19 113.83,29.91 36.63,59.6 		"/>
+		
+			<rect x="20.49" y="42.44" transform="matrix(0.9125 -0.4091 0.4091 0.9125 -18.9935 15.2128)" class="st1" width="11.15" height="19.14"/>
+		<polygon class="st1" points="17.26,64.31 24.69,64.91 15.52,44.45 11.02,50.39 		"/>
+		
+			<rect x="9.73" y="55.27" transform="matrix(0.9125 -0.4091 0.4091 0.9125 -22.9006 9.8781)" class="st1" width="3.82" height="6.41"/>
+		
+			<rect x="3.9" y="54.7" transform="matrix(0.9125 -0.4091 0.4091 0.9125 -24.2549 8.029)" class="st1" width="5.48" height="12.04"/>
+		<polygon class="st2" points="32.03,49.33 107.39,15.55 113.83,29.91 36.63,59.6 		"/>
+		
+			<rect x="22.45" y="51.59" transform="matrix(0.9125 -0.4091 0.4091 0.9125 -20.6084 16.3955)" class="st2" width="11.15" height="9.57"/>
+		<polygon class="st2" points="17.26,64.31 24.69,64.91 20.1,54.68 14.14,57.35 		"/>
+		
+			<rect x="10.39" y="58.33" transform="matrix(0.9125 -0.4091 0.4091 0.9125 -23.4412 10.2741)" class="st2" width="3.82" height="3.2"/>
+		
+			<rect x="5.13" y="60.45" transform="matrix(0.9125 -0.4091 0.4091 0.9125 -25.2706 8.7729)" class="st2" width="5.48" height="6.02"/>
+		<circle class="st2" cx="59.57" cy="51.85" r="5.5"/>
+		<polygon class="st2" points="26.89,110.73 23.53,110.73 54.79,56.59 57.31,58.05 		"/>
+		<polygon class="st2" points="98.66,110.73 95.25,110.73 62.96,57.48 65.45,55.97 		"/>
+		<polygon class="st1" points="69.75,110.73 66.81,110.73 59.54,58.16 62.42,57.76 		"/>
+	</g>
+</switch>
+</svg>

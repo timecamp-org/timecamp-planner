@@ -1,0 +1,7 @@
+@import "common.css";
+
+.component {
+  width: 100%;
+  margin: gridCellSize 0 0 0;
+  padding: 2px 0 0 0;
+}

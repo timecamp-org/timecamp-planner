@@ -1,0 +1,45 @@
+@import 'common.css';
+@import 'colors.css';
+
+.panel {
+  border-radius: calc(2 * gridCellSize);
+  background-color: whiteTwoColor;
+  padding: calc(3 * gridCellSize);
+  overflow: hidden;
+  min-width: calc(52 * gridCellSize);
+}
+
+.panelCollapsed {
+  height: calc(10 * gridCellSize);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(3 * gridCellSize);
+  position: relative;
+  font-family: fontFamilyTwo;
+  color: blueGreyColor;
+}
+
+.panelHeaderText {
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.chevron {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: calc(6 * 5px);
+  height: calc(5 * 5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: auto;
+}
+
+.description {
+  margin-top: gridCellSize;
+  color: blueGreyColor;
+}

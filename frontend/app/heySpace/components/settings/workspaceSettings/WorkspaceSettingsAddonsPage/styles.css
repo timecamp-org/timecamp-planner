@@ -1,0 +1,46 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  color: blackColor;
+  font-family: defaultFontFamily;
+  margin-bottom: calc(2*gridCellSize);
+  padding: gridCellSize;
+  width: 100%;
+  overflow: hidden;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.settingsRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field {
+	padding: calc(2 * gridCellSize) 0;
+	display: flex;
+  flex-flow: column;
+  max-width: calc(47 * gridCellSize);
+  color: darkGreyBlueColor;
+}
+
+.settingsSection {
+	@mixin WhiteBox;
+	flex-grow: 1;
+	display: flex;
+	flex-flow: column;
+}
+
+.title{
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+}
+
+.extensions {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}

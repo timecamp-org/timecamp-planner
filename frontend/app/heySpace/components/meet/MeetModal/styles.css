@@ -1,0 +1,66 @@
+@import 'colors.css';
+@import 'common.css';
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBody {
+  composes: modalBody from 'commonComponents/UniversalModal/styles.css';
+  width: 100%;
+  height: 100%;
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  height: calc(gridCellSize * 7);
+  background-color: darkGreyBlueColor;
+  margin-bottom: 0;
+  padding: calc(gridCellSize * 3);
+}
+
+.headerInner {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(100vw - (gridCellSize * 50));
+  font-family: fontFamilyThree;
+  font-size: normalFontSize;
+  color: whiteTwoColor;
+}
+
+.minimizedHeader {
+  composes: headerInner;
+  max-width: calc(gridCellSize * 40);
+}
+
+.wrapper {
+  width: calc(100vw - (gridCellSize * 20));
+  max-width: calc(gridCellSize * 230);
+  height: calc(100vw * (9 / 16));
+  max-height: calc(gridCellSize * 230 * (9 / 16) - (gridCellSize * 10));
+  overflow: hidden;
+}
+
+.miminizedWrapper {
+  width: calc(gridCellSize * 60);
+  height: calc(gridCellSize * 40);
+}
+
+.closeButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  position: absolute;
+  z-index: 1000;
+  right: gridCellSize;
+  top: gridCellSize;
+  padding: gridCellSize;
+}
+
+.windowControlButton {
+  composes: closeButton;
+  right: calc(gridCellSize * 8);
+}

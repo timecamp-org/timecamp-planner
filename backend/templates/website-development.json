@@ -1,0 +1,23 @@
+{
+  "name": "Website development",
+  "description": "Optimize your website development workflow with our dedicated template. Seamlessly transition through these essential phases: Backlog ➔ Design ➔ Coding ➔ Implemented Efficiently manage tasks and ensure smooth progression from conceptualization to the final implementation of your website.",
+  "order": 15,
+  "taskListTemplates": [
+    {
+      "name": "Backlog",
+      "order": 1
+    },
+    {
+      "name": "Design",
+      "order": 2
+    },
+    {
+      "name": "Coding",
+      "order": 3
+    },
+    {
+      "name": "Implemented",
+      "order": 4
+    }
+  ]
+}

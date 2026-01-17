@@ -1,0 +1,27 @@
+@import "common.css";
+@import "colors.css";
+
+.labelWrapper {
+  display: flex;
+  align-items: center;
+  margin-left: calc(7 * gridCellSize);
+}
+
+.labelText {
+  margin: 0 gridCellSize;
+}
+
+.arrowButton {
+  height: calc(2 * gridCellSize);
+  width: calc(2 * gridCellSize);
+  cursor: pointer;
+  color: warmGreyThreeColor;
+}
+
+.arrowButton:hover {
+  color: blackColor;
+}
+
+.arrowButton:active {
+  color: whiteFiveColor;
+}

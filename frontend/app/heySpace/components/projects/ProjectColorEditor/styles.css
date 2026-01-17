@@ -1,0 +1,47 @@
+@import "colors.css";
+@import "common.css";
+
+@value colorDotWidth: calc(5 * gridCellSize);
+@value selectedColorDotWidth: calc(9 * gridCellSize);
+
+.Component {
+	flex-grow: 1;
+}
+
+.colorOptions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.colorDot {
+  composes: ring from 'components/projects/ProjectColorDot/styles.css';
+	margin: calc(2 * gridCellSize);
+	width: colorDotWidth;
+	height: colorDotWidth;
+}
+
+.colorDot:hover {
+	cursor: pointer;
+	margin: calc(2 * gridCellSize);
+	width: colorDotWidth;
+	height: colorDotWidth;
+}
+
+.selectedColorDot {
+	composes: ring from 'components/projects/ProjectColorDot/styles.css';
+	margin: 0;
+	width: selectedColorDotWidth;
+	height: selectedColorDotWidth;
+}
+
+.innerDot {
+	composes: innerRing from 'components/projects/ProjectColorDot/styles.css';
+	width: colorDotWidth;
+	height: colorDotWidth;
+}
+
+.disabledColorDotWrapper {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,31 @@
+@import 'common.css';
+@import 'colors.css';
+
+.popoverContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  padding: gridCellSize;
+}
+
+.popoverButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+  &:hover {
+    color: var(--color-gray-900);
+  }
+  &:active {
+    color: var(--color-gray-900) !important;
+  }
+}
+
+.modalBody {
+  composes: modalBody from 'commonComponents/UniversalModal/styles.css';
+  width: calc(120 * gridCellSize);
+}
+
+.icon {
+  margin-right: calc(gridCellSize * 2);
+}

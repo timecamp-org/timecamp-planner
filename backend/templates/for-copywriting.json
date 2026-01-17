@@ -1,0 +1,31 @@
+{
+  "name": "For copywriting",
+  "description": "Elevate your copywriting process with our dedicated template. Uncover the journey from conceptualization to publication through key stages: Backlog, where ideas are born; Preparing Content, where they take form; To Review, for meticulous examination; To Publish, for imminent release; and finally, Published, marking the triumphant endpoint. Streamline your copywriting workflow for a seamless and successful content creation experience.",
+  "order": 9,
+  "taskListTemplates": [
+    {
+      "name": "Backlog",
+      "order": 1
+    },
+    {
+      "name": "Preparing content",
+      "order": 2
+    },
+    {
+      "name": "To review",
+      "order": 3
+    },
+    {
+      "name": "Review",
+      "order": 4
+    },
+    {
+      "name": "To publish",
+      "order": 5
+    },
+    {
+      "name": "Published",
+      "order": 6
+    }
+  ]
+}

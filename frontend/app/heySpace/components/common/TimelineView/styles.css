@@ -1,0 +1,81 @@
+@import 'colors.css';
+@import 'common.css';
+
+.spaceTimeline {
+  font-family: fontFamilyThree;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.timelineHeader {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr auto 1fr;
+  padding: 0.5rem 0;
+  color: midnightColor;
+  flex-wrap: wrap;
+  background-color: whiteTwoColor;
+  height: min-content;
+  flex-grow: 0;
+}
+
+.monthAndYear {
+  grid-column: 2 / 3;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  color: cloudyBlueColor;
+}
+
+.timelineContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-right: 2.5rem;
+  min-height: 0;
+}
+
+.leftOffset {
+  padding-left: 1.5rem;
+}
+
+.resizeHandler {
+  width: 7px !important;
+  cursor: ew-resize !important;
+}
+
+.goToTodayButton {
+  margin: 0;
+  max-height: 2.5rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  grid-row: 1;
+  grid-column: 3/4;
+  padding-right: 1.5rem;
+}
+
+.controls > *:not(:first-child) {
+  margin-left: 1.5rem;
+}
+
+.itemWithBadge {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  a {
+    margin: 0;
+  }
+}
+
+.badge {
+  margin-left: 0.5rem;
+  height: 16px;
+  margin-right: 3rem;
+  margin-top: -2rem;
+}

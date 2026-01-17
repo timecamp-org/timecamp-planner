@@ -1,0 +1,66 @@
+@import 'common.css';
+@import 'colors.css';
+
+@value headerItemsHeight: calc(8 * gridCellSize);
+
+.component {
+  padding: calc(2 * gridCellSize) calc(3 * gridCellSize);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #e9eaeb;
+}
+
+.headerLeft {
+  display: flex;
+  width: 40%;
+}
+
+.nameWithDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.headerRight {
+  display: flex;
+  flex: 1;
+}
+
+.spaceIcon {
+  composes: icon from 'commonComponents/ColoredProjectIcon/styles.css';
+  margin-right: calc(3 * gridCellSize);
+}
+
+.spaceName {
+  color: blueGreyColor;
+  font-size: headerFontSize;
+  font-weight: boldFontWeight;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.spaceDescription {
+  font-size: smallFontSize;
+  font-weight: lightFontWeight;
+  color: blueGreyColor;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.closeButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border-radius: gridCellSize;
+}
+
+.headerTabs {
+  display: flex;
+  flex-grow: 1;
+  max-width: calc(55 * gridCellSize);
+  justify-content: space-between;
+}

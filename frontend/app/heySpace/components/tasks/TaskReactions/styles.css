@@ -1,0 +1,52 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+.thumbButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  padding: gridCellSize;
+  position: relative;
+  background-color: warmGrey10Color;
+  border-radius: 0;
+  &:hover {
+    background-color: cloudyBlue50Color;
+  }
+}
+
+.thumbDownButton {
+  composes: thumbButton;
+  margin-right: 1px;
+  border-top-left-radius: largeBorderRadius;
+  border-bottom-left-radius: largeBorderRadius;
+  padding: gridCellSize calc(gridCellSize * 0.5);
+}
+
+.thumbUpButton {
+  composes: thumbButton;
+  border-top-right-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  padding: gridCellSize calc(gridCellSize * 0.5);
+}
+
+.votesCount {
+  position: absolute;
+  bottom: calc((-0.5) * gridCellSize);
+  color: blueGreyColor;
+  font-size: microFontSize;
+  font-weight: boldFontWeight;
+}
+
+.upvotesCount {
+  composes: votesCount;
+  right: calc((-0.5) * gridCellSize);
+}
+
+.downvotesCount {
+  composes: votesCount;
+  left: calc((-0.5) * gridCellSize);
+}

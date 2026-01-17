@@ -1,0 +1,17 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  color: var(--color-gray-900);
+  font-weight: 900;
+}
+
+.disabledIcon {
+  composes: icon;
+  opacity: 0.5;
+}

@@ -1,0 +1,31 @@
+@import 'colors.css';
+@import 'common.css';
+
+.recurringLabel {
+  padding-right: 1rem;
+}
+
+.icon {
+  margin-right: 1rem;
+}
+
+.targetButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  color: var(--color-gray-900);
+  border: none;
+  border-radius: var(--borderRadius-md);
+  background: var(--color-white);
+  padding: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-gray-900);
+    background: var(--color-gray-100);
+  }
+}

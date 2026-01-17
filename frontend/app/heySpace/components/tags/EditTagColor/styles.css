@@ -1,0 +1,50 @@
+@import 'colors.css';
+@import 'common.css';
+
+@value colorDotWidth: calc(4 * gridCellSize);
+@value selectedColorDotWidth: calc(6 * gridCellSize);
+
+.icon {
+  width: calc(3 * gridCellSize);
+  height: calc(3 * gridCellSize);
+  color: cloudyBlueColor;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.title {
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+}
+
+.colorPicker {
+  display: flex;
+  height: calc(8 * gridCellSize);
+  align-items: center;
+}
+
+.colorDot {
+  composes: ring from 'components/projects/ProjectColorDot/styles.css';
+  margin: calc(2 * gridCellSize);
+  width: colorDotWidth;
+  height: colorDotWidth;
+  cursor: pointer;
+}
+
+.selectedColorDot {
+  transform: scale(1.5);
+}
+
+.innerDot {
+  composes: innerRing from 'components/projects/ProjectColorDot/styles.css';
+  width: colorDotWidth;
+  height: colorDotWidth;
+}
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  padding: gridCellSize;
+  margin: 0;
+}

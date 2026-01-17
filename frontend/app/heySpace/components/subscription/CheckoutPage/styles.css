@@ -1,0 +1,98 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  font-family: defaultFontFamily;
+  color: blackColor;
+  background-color: lightGreyColor;
+  align-items: center;
+  padding: calc(4 * gridCellSize);
+}
+
+.container {
+  width: calc(147 * gridCellSize);
+}
+
+.planSelection {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 calc(2 * gridCellSize);
+  align-items: center;
+  width: 100%;
+}
+
+.subscriptionDetailsSection {
+  composes: Component from '../SubscriptionDetailsSection/styles.css';
+  width: 100%;
+  display: flex;
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .subscriptionDetailsSection {
+    flex-flow: column;
+  }
+}
+
+.stageBody {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: center;
+  padding-left: calc(2 * gridCellSize);
+  font-size: headingFontSize;
+  font-weight: mediumFontWeight;
+  z-index: 0;
+}
+
+.titleWithClose {
+  display: flex;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.closeIcon {
+  margin-left: gridCellSize;
+}
+
+.closeButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+  color: wisteriaColor;
+}

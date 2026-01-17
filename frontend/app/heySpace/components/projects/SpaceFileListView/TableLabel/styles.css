@@ -1,0 +1,32 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: greyishColor;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.chevronWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-left: gridCellSize;
+  margin-left: 2rem;
+}
+
+.chevron {
+  width: 7px;
+  height: 6px;
+  margin: 2px 0;
+}
+
+.activeChevron {
+  composes: chevron;
+  color: blackColor;
+}

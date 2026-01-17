@@ -1,0 +1,26 @@
+@import 'colors.css';
+@import 'common.css';
+
+.tag {
+  position: relative;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  max-width: 19.5rem;
+  padding: 0 1.5rem;
+  margin: calc(2 * gridCellSize) calc(2 * gridCellSize) calc(2 * gridCellSize) 0;
+  border-radius: largerBorderRadius;
+  font-size: var(--fontSize-xxs);
+  color: var(--color-decorative-fuchsia-800);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.removeIcon {
+  height: calc(2 * gridCellSize);
+  border-radius: gridCellSize;
+  position: absolute;
+  top: calc((100% / 2) - gridCellSize);
+  right: 3px;
+  cursor: pointer;
+}

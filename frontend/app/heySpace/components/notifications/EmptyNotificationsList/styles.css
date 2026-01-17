@@ -1,0 +1,28 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: largeFontSize;
+  color: black60Color;
+  padding: calc(3 * gridCellSize);
+}
+
+.message {
+  color: black60Color;
+}
+
+.mascot {
+  background: url('commonAssets/emptyState/Empty_State_2.png') no-repeat center center;
+  background-size: contain;
+  height: 185;
+  width: 100%;
+}

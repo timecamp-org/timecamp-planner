@@ -1,0 +1,24 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  min-height: calc(3 * gridCellSize);
+  padding: gridCellSize 0;
+  margin-bottom: calc(-2 * gridCellSize);
+}
+
+.error {
+  color: mediumCarmineColor;
+}
+
+.warning {
+  color: orangePeelColor;
+}
+
+.success {
+  color: greenHazeColor;
+}
+
+.link {
+  white-space: pre;
+}

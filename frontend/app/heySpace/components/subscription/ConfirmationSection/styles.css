@@ -1,0 +1,62 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  text-align: center;
+  font-family: defaultFontFamily;
+  font-size: normalFontSize;
+  position: relative;
+  height: 100%;
+  width: calc(gridCellSize * 100);
+}
+
+.summaryWrapper {
+  background-color: whiteTwoColor;
+  border-radius: largeBorderRadius;
+  padding: calc(gridCellSize * 4);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.header {
+  font-family: fontFamilyTwo;
+  font-size: largerFontSize;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+}
+
+.messageText, .subHeader {
+  font-family: fontFamilyTwo;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  padding: calc(8 * gridCellSize) 0 calc(2 * gridCellSize) 0;
+}
+
+.mail {
+  font-family: defaultFontFamily;
+  font-size: smallFontSize;
+  color: blueGreyColor;
+}
+
+.footer {
+  composes: subHeader;
+  margin-top: calc(gridCellSize * 4);
+}
+
+.mascot {
+  background-size: contain;
+  width: 193px;
+  height: 205px;
+}
+
+.billingSummary {
+  composes: Component from 'components/subscription/BillingSummary/styles.css';
+  width: calc(gridCellSize * 45)
+}
+
+.link {
+  padding-left: gridCellSize;
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,0 +1,9 @@
+@import "common.css";
+@import "colors.css";
+
+.component {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: calc(gridCellSize * 4) 10;
+}

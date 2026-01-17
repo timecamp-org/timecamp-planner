@@ -1,0 +1,191 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  color: blackColor;
+  font-family: defaultFontFamily;
+  margin-bottom: calc(2 * gridCellSize);
+  padding: gridCellSize;
+}
+
+.settingsRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .settingsRow {
+    flex-wrap: wrap;
+  }
+
+  .Component {
+    padding: 0;
+  }
+}
+
+.settingsSection {
+  @mixin WhiteBox;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.basicDataSection {
+  composes: settingsSection;
+  flex-grow: 4;
+}
+
+.title {
+  padding-bottom: calc(2 * gridCellSize);
+  font-family: fontFamilyTwo;
+  font-size: mediumFontSize;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+}
+
+.subTitle {
+  color: blueGreyColor;
+  padding: gridCellSize 0;
+  font-weight: regularFontWeight;
+  font-family: fontFamilyTwo;
+}
+
+.field {
+  padding: calc(2 * gridCellSize) 0;
+  display: flex;
+  flex-flow: column;
+  max-width: 25rem;
+  color: darkGreyBlueColor;
+}
+
+.dropdown {
+  composes: field;
+  width: calc(47 * gridCellSize);
+  margin-top: gridCellSize;
+}
+
+.dropdownField {
+  composes: field;
+  margin-right: calc(6 * gridCellSize);
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  padding-left: gridCellSize;
+  width: 100%;
+}
+
+.avatar {
+  composes: Component from 'components/settings/userProfile/UserAvatar/styles.css';
+  width: calc(24 * gridCellSize);
+  height: calc(24 * gridCellSize);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 50%;
+  box-shadow: inset 0 -2px 3px black55Color;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.avatarController {
+  composes: Component from 'components/settings/userProfile/UserAvatarController/styles.css';
+  margin: calc(5 * gridCellSize) 0 0 0;
+  width: calc(42 * gridCellSize);
+  align-self: center;
+}
+
+.firstDeleteConfirmation {
+  composes: settingsSection;
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+}
+
+.buttons {
+  display: flex;
+  margin-left: auto;
+  margin-top: calc(11 * gridCellSize);
+}
+
+.question {
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  padding-bottom: gridCellSize;
+}
+
+.list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.text {
+  padding: gridCellSize 0;
+}
+
+.boldText {
+  font-weight: boldFontWeight;
+}
+
+.listItem {
+  composes: text;
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+
+.listItem::before {
+  content: '•   ';
+  color: wisteriaColor;
+  font-size: largeFontSize;
+}
+
+.deleteAccountButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: inline-block;
+  margin-right: auto;
+}
+
+.navlink {
+  color: wisteriaColor;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.input {
+  max-width: calc(69 * gridCellSize);
+}
+
+.languageSelector {
+  width: calc(gridCellSize * 20);
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  z-index: 10;
+}
+
+.leftAligned {
+  margin-right: auto;
+}
+
+.ownerWarning {
+  composes: text;
+  font-weight: boldFontWeight;
+  padding-top: calc(gridCellSize * 2);
+  display: flex;
+  flex-flow: column;
+}
+
+.error {
+  color: #e54b4b;
+
+  div {
+    overflow: visible !important;
+    text-overflow: unset !important;
+    line-clamp: unset !important;
+    display: inline !important;
+  }
+}

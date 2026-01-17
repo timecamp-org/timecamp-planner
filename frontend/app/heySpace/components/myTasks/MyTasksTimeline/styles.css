@@ -1,0 +1,17 @@
+@import 'colors.css';
+@import 'common.css';
+
+.skeletonWrapper {
+  margin: 0 calc(4 * gridCellSize);
+}
+
+.timeline {
+  composes: spaceTimeline from 'components/overwatch/timeline/SpaceTimeline/styles.css';
+  height: 100%;
+}
+
+.timelineContainer {
+  composes: timelineContainer from 'components/overwatch/timeline/SpaceTimeline/styles.css';
+  max-height: calc(100% - calc(gridCellSize * 5));
+  background: whiteTwoColor;
+}

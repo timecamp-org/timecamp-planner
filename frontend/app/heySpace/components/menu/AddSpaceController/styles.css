@@ -1,0 +1,154 @@
+@import 'common.css';
+@import 'colors.css';
+
+@value colorDotWidth: 1.6rem;
+
+.Component {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+}
+
+.colorOptions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.colorDot {
+  composes: ring from 'components/projects/ProjectColorDot/styles.css';
+  margin: calc(2 * gridCellSize);
+  width: colorDotWidth;
+  height: colorDotWidth;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.colorDot:hover {
+  cursor: pointer;
+  margin: calc(2 * gridCellSize);
+  width: colorDotWidth;
+  height: colorDotWidth;
+}
+
+.projectSettingsButton {
+  display: flex;
+  width: 2.8rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.4rem;
+
+  &:hover {
+    background-color: var(--color-gray-50);
+    cursor: pointer;
+  }
+}
+
+.selectedSettingsButton {
+  border-radius: 4px;
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+
+  &:hover {
+    background-color: var(--color-gray-100);
+  }
+}
+
+.innerDot {
+  composes: innerRing from 'components/projects/ProjectColorDot/styles.css';
+  width: colorDotWidth;
+  height: colorDotWidth;
+}
+
+.radioButton {
+  margin-top: calc(3 * gridCellSize);
+  margin-bottom: gridCellSize;
+  margin-left: calc(2 * gridCellSize);
+  display: flex;
+  align-items: flex-start;
+}
+
+.description {
+  color: var(--color-gray-500);
+  font-weight: var(--fontWeight-regular);
+  margin-left: 1.4rem;
+}
+
+.title {
+  font-size: largeFontSize;
+  font-weight: boldFontWeight;
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.textareaSwitch {
+  margin: gridCellSize 0;
+  cursor: pointer;
+  color: emerald;
+}
+
+.textarea {
+  min-height: 9rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+
+  &:focus {
+    border-color: var(--color-primary-500);
+  }
+
+  &:placeholder {
+    color: var(--color-gray-500);
+  }
+}
+
+.radioButton {
+  line-height: 1.43;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2.4rem;
+  padding: 0;
+}
+
+.purposeButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-bottom: calc(2 * gridCellSize);
+}
+
+.cancelButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-right: gridCellSize;
+}
+
+.userInput {
+  margin-left: 2rem;
+}
+
+.margin {
+  margin: 2rem 2.4rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pickerSection {
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  margin-top: 2.4rem;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+}
+
+.propertyName {
+  min-width: 11rem;
+}
+
+.icon {
+  color: var(--color-gray-900);
+}

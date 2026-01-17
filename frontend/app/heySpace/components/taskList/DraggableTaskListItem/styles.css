@@ -1,0 +1,38 @@
+@import "colors.css";
+@import "common.css";
+
+.draggableTasksListItem {
+  cursor: pointer;
+  width: 100%;
+  background-color: whiteTwoColor;
+  border-radius: largeBorderRadius;
+
+  &:hover {
+    background-color: lightGreyColor;
+  }
+}
+
+.isDragging {
+  opacity: 0.5;
+}
+
+.hoverItem {
+  background-color: lightGreyColor;
+}
+
+.hover {
+  background-color: gray;
+}
+
+.hoverTop {
+  padding-top: 36px;
+}
+
+.hoverBottom {
+  padding-bottom: 36px;
+}
+
+.hide {
+  opacity: 0;
+}
+

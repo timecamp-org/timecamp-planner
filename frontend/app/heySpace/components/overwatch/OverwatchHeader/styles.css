@@ -1,0 +1,50 @@
+@import 'colors.css';
+@import 'common.css';
+
+.component {
+  height: calc(14 * gridCellSize);
+  padding: calc(gridCellSize * 3) calc(gridCellSize * 6);
+  border-bottom: 1px solid paleGreyTwoColor;
+  display: flex;
+  align-items: center;
+  background-color: whiteTwoColor;
+
+  @media (max-width: mobileBreakpoint) {
+    padding: 1.5rem 3rem 1.5rem 2rem;
+  }
+}
+
+.icon {
+  width: calc(gridCellSize * 7);
+  height: calc(gridCellSize * 7);
+  margin-right: calc(gridCellSize * 4);
+}
+
+.titleWrapper {
+  font-family: fontFamilyThree;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: blueGreyColor;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: largeFontSize;
+  font-weight: boldFontWeight;
+  padding-bottom: gridCellSize;
+  text-transform: uppercase;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  font-size: var(--fontSize-base);
+}
+
+.workspaceName {
+  font-size: var(--fontSize-xs);
+  color: var(--color-gray-900);
+}
+
+.filterIcon {
+  composes: Component from 'components/tasks/taskFilters/FiltersButtonWithCounter/styles.css';
+  margin-left: auto;
+}

@@ -1,0 +1,80 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex: 0 0 auto;
+  background-color: blueGreyColor;
+  color: whiteTwoColor;
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+  font-size: microFontSize;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.leftAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 50%;
+  max-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mainAvatar {
+  composes: leftAvatar;
+  max-width: 100%;
+}
+
+.rightAvatars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border-left: 1px solid whiteTwoColor;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.separator {
+  height: 1px;
+  min-height: 1px;
+  background: whiteTwoColor;
+  width: 100%;
+}
+
+.initials,
+.avatar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  height: 100%;
+}
+
+.rightAvatar {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightAvatarFull {
+  height: 100%;
+}
+
+.personIcon {
+  composes: personIconWrapper from 'components/person/PersonIcon/styles.css';
+  width: calc(6 * gridCellSize);
+  height: calc(6 * gridCellSize);
+  margin-right: calc(2 * gridCellSize);
+}

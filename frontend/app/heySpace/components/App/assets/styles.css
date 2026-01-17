@@ -1,0 +1,66 @@
+@import 'colors.css';
+@import 'common.css';
+
+html {
+  /* 10px */
+  font-size: 62.5%;
+}
+
+.app {
+  flex-direction: column;
+  height: 100%;
+}
+
+.mainContent {
+  width: 100%;
+  height: 100%;
+  background-color: lightGreyColor;
+}
+
+.snail {
+  padding: 0 0 calc(3 * gridCellSize) 0;
+  width: calc(35 * gridCellSize);
+  height: calc(23 * gridCellSize);
+}
+
+.title {
+  padding: calc(2 * gridCellSize) 0;
+  font-size: largeFontSize;
+  font-family: defaultFontFamily;
+  width: calc(37 * gridCellSize);
+  text-align: center;
+}
+
+.subTitle {
+  padding: calc(2 * gridCellSize) 0;
+  font-size: normalFontSize;
+  font-family: defaultFontFamily;
+  color: black60Color;
+  text-align: center;
+  width: calc(37 * gridCellSize);
+}
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  justify-content: center;
+  padding: calc(6 * gridCellSize);
+}
+
+.modalContent {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalFooter {
+  composes: modalFooter from 'commonComponents/UniversalModal/styles.css';
+  justify-content: center;
+  padding-top: calc(2 * gridCellSize);
+}
+
+.saveButton {
+  composes: saveButton from 'commonComponents/UniversalModal/styles.css';
+  width: calc(36 * gridCellSize);
+  margin: 0;
+}

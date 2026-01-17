@@ -1,0 +1,136 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: rightMenuWidth;
+  height: 100%;
+  background: var(--color-gray-100);
+  color: darkGreyBlueColor;
+  padding-bottom: headerHeight;
+  border-radius: calc(2 * gridCellSize) 0 0 calc(2 * gridCellSize);
+}
+
+.settings {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.header {
+  padding-top: calc(5 * gridCellSize);
+  padding-bottom: calc(4 * gridCellSize);
+  padding-left: calc(4 * gridCellSize);
+  font-family: fontFamilyTwo;
+  height: calc(13 * gridCellSize);
+}
+
+.section {
+  border-radius: calc(2 * gridCellSize);
+  background-color: whiteTwoColor;
+  margin: calc(4 * gridCellSize);
+  padding: calc(3 * gridCellSize);
+  overflow: hidden;
+  min-width: calc(52 * gridCellSize);
+}
+
+.sectionNoTopMargin {
+  composes: section;
+  margin-top: 0;
+}
+
+.sectionClosed {
+  height: calc(10 * gridCellSize);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(3 * gridCellSize);
+  position: relative;
+  font-family: fontFamilyTwo;
+  color: blueGreyColor;
+}
+
+.sectionHeaderText {
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  margin-left: 1rem;
+}
+
+.chevron {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: calc(6 * 5px);
+  height: calc(5 * 5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: auto;
+}
+
+.input {
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.label {
+  padding-top: calc(4 * gridCellSize);
+  font-size: normalFontSize;
+}
+
+.projectColorEditor {
+  composes: Component from 'components/projects/ProjectColorEditor/styles.css';
+  margin-left: calc(gridCellSize / 2);
+  margin-right: calc(gridCellSize / 2);
+  margin-top: gridCellSize;
+  margin-bottom: 0;
+}
+
+.textarea {
+  composes: input from 'commonComponents/UserInput/styles.css';
+}
+
+.description {
+  margin-top: gridCellSize;
+  color: blueGreyColor;
+}
+
+.radioButton {
+  line-height: 1.43;
+}
+
+.marginBottom {
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+}
+
+.switchTitle {
+  color: blackColor;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.archive {
+  composes: Component from 'components/projects/ArchiveProjectController/styles.css';
+  margin-top: calc(2 * gridCellSize);
+}
+
+.permissionNote {
+  color: cloudyBlueColor;
+  margin: 0 calc(gridCellSize * 4);
+  padding: 0 calc(gridCellSize * 3) calc(gridCellSize * 3) calc(gridCellSize * 3);
+  overflow: hidden;
+}
+
+.projectIconEditor {
+  margin-top: 1rem;
+}
+
+.buttonFullWidth {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--borderRadius-sm);
+}

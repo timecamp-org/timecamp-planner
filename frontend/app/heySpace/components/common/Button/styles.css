@@ -1,0 +1,19 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+    display: flex;
+    height: calc(4 * gridCellSize);
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    background: whiteColor;
+    border: 1px solid;
+    border-radius: defaultBorderRadius;
+
+    text-decoration: none;
+    font-family: defaultFontFamily;
+    font-weight: regularFontWeight;
+}

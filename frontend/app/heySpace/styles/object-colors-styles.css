@@ -1,0 +1,325 @@
+@import "colors.css";
+@import "common.css";
+
+@define-mixin object-color-text $color, $defaultColor: cloudyBlueColor {
+  color: $color;
+}
+
+.object-color-text-clearBlueColor {
+@mixin object-color-text clearBlueColor;
+}
+
+.object-color-text-seafoamBlueColor {
+@mixin object-color-text seafoamBlueColor;
+}
+
+.object-color-text-macaroniAndCheeseColor {
+@mixin object-color-text macaroniAndCheeseColor;
+}
+
+.object-color-text-lipstickColor {
+@mixin object-color-text lipstickColor;
+}
+
+.object-color-text-softPinkColor {
+@mixin object-color-text softPinkColor;
+}
+
+.object-color-text-darkPeachColor {
+@mixin object-color-text darkPeachColor;
+}
+
+.object-color-text-lightBlueColor {
+@mixin object-color-text lightBlueColor;
+}
+
+.object-color-text-cornFlowerColor {
+@mixin object-color-text cornFlowerColor;
+}
+
+.object-color-text-mediumPinkColor {
+@mixin object-color-text mediumPinkColor;
+}
+
+.object-color-text-cloudyBlueColor {
+@mixin object-color-text cloudyBlueColor;
+}
+
+.object-color-text-wisteriaColor {
+@mixin object-color-text wisteriaColor;
+}
+
+.object-color-text-coralPinkColor {
+@mixin object-color-text coralPinkColor;
+}
+
+.object-color-text-whiteFourColor {
+@mixin object-color-text whiteFourColor;
+}
+
+
+/* ------   secondary-button    ------- */
+
+@define-mixin object-color-secondary-button $color, $defaultColor: cloudyBlueColor {
+  color: $defaultColor;
+
+  &.disabled {
+    background: cloudyBlue20Color;
+    color: $defaultColor;
+  }
+
+  &:focus {
+    color: $defaultColor
+  }
+
+  &:hover {
+   color: $color
+  }
+
+  &.active, &:active, &.fillWithColor {
+    color: $color !important;
+  }
+}
+
+.object-color-secondary-button-clearBlueColor {
+  @mixin object-color-secondary-button clearBlueColor;
+}
+
+.object-color-secondary-button-seafoamBlueColor {
+  @mixin object-color-secondary-button seafoamBlueColor;
+}
+
+.object-color-secondary-button-macaroniAndCheeseColor {
+  @mixin object-color-secondary-button macaroniAndCheeseColor;
+}
+
+.object-color-secondary-button-lipstickColor {
+  @mixin object-color-secondary-button lipstickColor;
+}
+
+.object-color-secondary-button-softPinkColor {
+  @mixin object-color-secondary-button softPinkColor;
+}
+
+.object-color-secondary-button-darkPeachColor {
+  @mixin object-color-secondary-button darkPeachColor;
+}
+
+.object-color-secondary-button-lightBlueColor {
+  @mixin object-color-secondary-button lightBlueColor;
+}
+
+.object-color-secondary-button-cornFlowerColor {
+  @mixin object-color-secondary-button cornFlowerColor;
+}
+
+.object-color-secondary-button-mediumPinkColor {
+  @mixin object-color-secondary-button mediumPinkColor;
+}
+
+.object-color-secondary-button-cloudyBlueColor {
+  @mixin object-color-secondary-button cloudyBlueColor;
+}
+
+.object-color-secondary-button-wisteriaColor {
+  @mixin object-color-secondary-button wisteriaColor;
+}
+
+.object-color-secondary-button-coralPinkColor {
+  @mixin object-color-secondary-button coralPinkColor;
+}
+
+.object-color-secondary-button-whiteFourColor {
+  @mixin object-color-secondary-button whiteFourColor;
+}
+
+.object-color-secondary-button-whiteTwoColor {
+  @mixin object-color-secondary-button whiteTwoColor;
+}
+
+.object-color-secondary-button-lightGreyColor {
+  @mixin object-color-secondary-button lightGreyColor;
+}
+
+/* ------   primary-button    ------- */
+
+@define-mixin object-color-primary-button $color, $defaultColor: cloudyBlueColor {
+  background: $color;
+}
+
+.object-color-primary-button-clearBlueColor {
+@mixin object-color-primary-button clearBlueColor;
+}
+
+.object-color-primary-button-seafoamBlueColor {
+@mixin object-color-primary-button seafoamBlueColor;
+}
+
+.object-color-primary-button-macaroniAndCheeseColor {
+@mixin object-color-primary-button macaroniAndCheeseColor;
+}
+
+.object-color-primary-button-lipstickColor {
+@mixin object-color-primary-button lipstickColor;
+}
+
+.object-color-primary-button-softPinkColor {
+@mixin object-color-primary-button softPinkColor;
+}
+
+.object-color-primary-button-darkPeachColor {
+@mixin object-color-primary-button darkPeachColor;
+}
+
+.object-color-primary-button-lightBlueColor {
+@mixin object-color-primary-button lightBlueColor;
+}
+
+.object-color-primary-button-cornFlowerColor {
+@mixin object-color-primary-button cornFlowerColor;
+}
+
+.object-color-primary-button-mediumPinkColor {
+@mixin object-color-primary-button mediumPinkColor;
+}
+
+.object-color-primary-button-cloudyBlueColor {
+@mixin object-color-primary-button cloudyBlueColor;
+}
+
+.object-color-primary-button-wisteriaColor {
+@mixin object-color-primary-button wisteriaColor;
+}
+
+.object-color-primary-button-coralPinkColor {
+@mixin object-color-primary-button coralPinkColor;
+}
+
+.object-color-primary-button-whiteFourColor {
+@mixin object-color-primary-button whiteFourColor;
+}
+
+/* ------   menu-button    ------- */
+
+@define-mixin object-color-menu-button $color, $defaultColor: cloudyBlueColor {
+  &:hover, &:active, &.active {
+    color: $color;
+  }
+}
+
+.object-color-menu-button-clearBlueColor {
+@mixin object-color-menu-button clearBlueColor;
+}
+
+.object-color-menu-button-seafoamBlueColor {
+@mixin object-color-menu-button seafoamBlueColor;
+}
+
+.object-color-menu-button-macaroniAndCheeseColor {
+@mixin object-color-menu-button macaroniAndCheeseColor;
+}
+
+.object-color-menu-button-lipstickColor {
+@mixin object-color-menu-button lipstickColor;
+}
+
+.object-color-menu-button-softPinkColor {
+@mixin object-color-menu-button softPinkColor;
+}
+
+.object-color-menu-button-darkPeachColor {
+@mixin object-color-menu-button darkPeachColor;
+}
+
+.object-color-menu-button-lightBlueColor {
+@mixin object-color-menu-button lightBlueColor;
+}
+
+.object-color-menu-button-cornFlowerColor {
+@mixin object-color-menu-button cornFlowerColor;
+}
+
+.object-color-menu-button-mediumPinkColor {
+@mixin object-color-menu-button mediumPinkColor;
+}
+
+.object-color-menu-button-cloudyBlueColor {
+@mixin object-color-menu-button cloudyBlueColor;
+}
+
+.object-color-menu-button-wisteriaColor {
+@mixin object-color-menu-button wisteriaColor;
+}
+
+.object-color-menu-button-coralPinkColor {
+@mixin object-color-menu-button coralPinkColor;
+}
+
+.object-color-menu-button-whiteFourColor {
+@mixin object-color-menu-button whiteFourColor;
+
+}
+
+
+/* ------   calendar box-shadow   ------- */
+
+@define-mixin object-color-box-shadow $color, $defaultColor: cloudyBlueColor {
+  box-shadow: 1px 1px 4px 0 $defaultColor;
+  transition: box-shadow defaultTransitionAnimation, opacity 150ms;
+  &:hover {
+    box-shadow: 1px 1px 3px 1px $color;
+  }
+}
+
+  .object-color-box-shadow-clearBlueColor {
+  @mixin object-color-box-shadow clearBlueColor;
+  }
+  
+  .object-color-box-shadow-seafoamBlueColor {
+  @mixin object-color-box-shadow seafoamBlueColor;
+  }
+  
+  .object-color-box-shadow-macaroniAndCheeseColor {
+  @mixin object-color-box-shadow macaroniAndCheeseColor;
+  }
+  
+  .object-color-box-shadow-lipstickColor {
+  @mixin object-color-box-shadow lipstickColor;
+  }
+  
+  .object-color-box-shadow-softPinkColor {
+  @mixin object-color-box-shadow softPinkColor;
+  }
+  
+  .object-color-box-shadow-darkPeachColor {
+  @mixin object-color-box-shadow darkPeachColor;
+  }
+  
+  .object-color-box-shadow-lightBlueColor {
+  @mixin object-color-box-shadow lightBlueColor;
+  }
+  
+  .object-color-box-shadow-cornFlowerColor {
+  @mixin object-color-box-shadow cornFlowerColor;
+  }
+  
+  .object-color-box-shadow-mediumPinkColor {
+  @mixin object-color-box-shadow mediumPinkColor;
+  }
+  
+  .object-color-box-shadow-cloudyBlueColor {
+  @mixin object-color-box-shadow cloudyBlueColor;
+  }
+  
+  .object-color-box-shadow-wisteriaColor {
+  @mixin object-color-box-shadow wisteriaColor;
+  }
+  
+  .object-color-box-shadow-coralPinkColor {
+  @mixin object-color-box-shadow coralPinkColor;
+  }
+  
+  .object-color-box-shadow-whiteFourColor {
+  @mixin object-color-box-shadow whiteFourColor;
+  
+  }

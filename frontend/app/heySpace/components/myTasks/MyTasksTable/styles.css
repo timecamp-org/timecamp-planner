@@ -1,0 +1,121 @@
+@import 'colors.css';
+@import 'common.css';
+
+.lastColumn {
+}
+
+.headerRow {
+  background-color: whiteTwoColor;
+  border-top-left-radius: largeBorderRadius;
+  border-top-right-radius: largeBorderRadius;
+}
+
+.evenRow {
+  background-color: paleGreyThreeColor;
+}
+
+.oddRow {
+  background-color: paleGreyFourColor;
+}
+
+.tagList {
+  composes: component from 'components/tags/TagList/styles.css';
+  display: flex;
+  color: whiteTwoColor;
+}
+
+.tag {
+  composes: tag from 'components/tags/TagList/styles.css';
+  height: calc(gridCellSize * 4);
+  font-family: fontFamilyThree;
+  font-weight: regularFontWeight;
+  font-size: smallerFontSize;
+  line-height: calc(gridCellSize * 4);
+}
+
+.columnHeader {
+  color: warmGreyFourColor;
+  text-transform: none;
+  font-size: smallFontSize;
+  font-weight: regularFontWeight;
+  font-family: fontFamilyThree;
+  display: flex;
+  align-items: center;
+}
+
+.rowItem {
+  color: darkSixColor;
+  font-family: fontFamilyThree;
+  font-weight: regularFontWeight;
+  font-size: smallFontSize;
+}
+
+.taskName {
+  composes: Component from 'components/tasks/taskName/TaskNameOutput/styles.css';
+  composes: rowItem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.taskNameButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: left;
+}
+
+.dateRange {
+  composes: button from 'components/tasks/CardStartAndDueDateController/styles.css';
+  composes: rowItem;
+}
+
+.taskProgress {
+  composes: taskProgress from 'components/tasks/taskProgress/TaskProgressWithPopover/styles.css';
+  composes: rowItem;
+  width: 34px;
+  height: 34px;
+  background-color: whiteTwoColor;
+}
+
+.checkmarkWrapper {
+  composes: checkmarkWrapper from 'components/tasks/taskProgress/TaskProgressWithPopover/styles.css';
+  width: 34px;
+  height: 34px;
+}
+
+.breadcrumbItem {
+  composes: item from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  composes: rowItem;
+}
+
+.innerScroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.breadcrumb {
+  composes: Component from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  max-width: 100%;
+}
+
+.breadcrumbSeparator {
+  composes: rowItem;
+  width: calc(gridCellSize * 2);
+  height: calc(gridCellSize * 2);
+  flex: 1 0 auto;
+}
+
+.breadcrumbButton {
+  composes: target from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  width: 100%;
+  min-width: 0;
+}
+
+.taskSortController {
+  composes: Component from 'components/tasks/taskFilters/TaskSortController/styles.css';
+  margin-left: gridCellSize;
+  width: calc(gridCellSize * 4);
+  height: calc(gridCellSize * 4);
+}

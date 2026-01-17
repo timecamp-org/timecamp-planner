@@ -1,0 +1,42 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  font-size: smallFontSize;
+  color: blueGreyColor;
+  padding-bottom: calc(gridCellSize * 2);
+}
+
+.cell {
+  width: calc(gridCellSize * 20);
+  padding-right: calc(gridCellSize * 2);
+}
+
+.longCell {
+  composes: cell;
+  width: calc(gridCellSize * 30);
+}
+
+.invoice {
+  composes: Component from 'components/subscription/Invoice/styles.css';
+  padding-bottom: calc(gridCellSize * 2);
+}
+
+.loaderWrapper {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+  color: wisteriaColor;
+}

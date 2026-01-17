@@ -1,0 +1,115 @@
+@import 'common.css';
+@import 'colors.css';
+
+@value tagHeight: 17px;
+
+.component {
+  position: relative;
+}
+
+.hiddenTagsCounter {
+  margin-top: calc(2 * gridCellSize);
+  width: calc(5 * gridCellSize);
+  height: calc(5 * gridCellSize);
+  border-radius: largerBorderRadius;
+  background-color: var(--color-gray-50);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tag {
+  composes: tag from 'components/tags/Tag/styles.css';
+  margin-top: gridCellSize;
+  margin-right: gridCellSize;
+  line-height: tagHeight;
+  height: tagHeight;
+  margin-bottom: 0;
+  padding: 0 calc(gridCellSize * 2);
+  font-weight: var(--fontWeight-regular);
+}
+
+.showMoreTag {
+  background-color: var(--color-gray-400);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 100%;
+  width: 2rem;
+  padding: 0;
+}
+
+.taskTags {
+  display: flex;
+  width: calc(gridCellSize * 70);
+  min-height: calc(gridCellSize * 12);
+  transform: translateZ(0);
+  border-radius: largeBorderRadius;
+  padding: 0 calc(2 * gridCellSize);
+  border: 1px solid transparent;
+
+  span {
+    display: flex;
+    flex-flow: wrap;
+    padding-left: gridCellSize;
+    width: 100%;
+
+    input {
+      flex: 1;
+      height: calc(4 * gridCellSize);
+      margin-bottom: 0;
+      padding: gridCellSize;
+      font-family: fontFamilyTwo;
+      height: 100%;
+    }
+  }
+}
+
+.taskTags:hover {
+  border-color: whiteColor;
+}
+
+.taskTags.taskTagsFocused {
+  border-color: transparent;
+}
+
+.button {
+  min-width: calc(gridCellSize * 12);
+  font-size: smallFontSize;
+}
+
+.header {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(10 * gridCellSize);
+  margin-top: calc(-2 * gridCellSize);
+}
+
+.headerTitle {
+  font-size: normalFontSize;
+  text-transform: uppercase;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  padding: 1rem 1rem 0 1rem;
+}
+
+.popoverWrapper {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+  opacity: 1 !important;
+}
+
+.headerXMark {
+  color: var(--color-gray-900);
+}

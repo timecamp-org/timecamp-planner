@@ -1,0 +1,27 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  color: blueGreyColor;
+}
+
+.header {
+  font-size: mediumFontSize;
+  padding: gridCellSize;
+  align-items: center;
+  text-align: center;
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+}
+
+.featureList {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.feature {
+  display: flex;
+  padding: calc(2 * gridCellSize);
+  text-align: center;
+}

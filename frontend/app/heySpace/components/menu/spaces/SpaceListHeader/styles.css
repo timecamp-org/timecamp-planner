@@ -1,0 +1,76 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  align-items: center;
+}
+
+.modalDialogSmallPadding {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+
+  padding: calc(3 * gridCellSize) calc(4 * gridCellSize);
+}
+
+.modalDialogBigPadding {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  padding: calc(9 * gridCellSize) calc(10 * gridCellSize);
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  font-size: normalFontSize;
+  margin-bottom: calc(3 * gridCellSize);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  composes: Component from 'components/buttons/MenuButton/styles.css';
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-regular);
+  padding: calc(2 * gridCellSize);
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+}
+
+.openModalButton {
+  composes: Component from 'components/buttons/MenuButton/styles.css';
+  padding: gridCellSize;
+  margin-left: auto;
+}
+
+.addButton {
+  width: calc(4 * gridCellSize);
+  height: calc(4 * gridCellSize);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots {
+  font-size: calc(5 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+  color: cloudyBlueColor;
+}
+
+.header {
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-800);
+
+  display: flex;
+  width: 100%;
+}
+
+.headerText {
+  margin-left: 1.2rem;
+}
+
+.modalBody {
+  padding: 0;
+}

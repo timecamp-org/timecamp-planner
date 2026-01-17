@@ -1,0 +1,38 @@
+@import "colors.css";
+@import "common.css";
+
+.emoji {
+  display: inline-flex;
+  vertical-align: bottom;
+  width: 24px;
+  height: 24px;
+}
+
+
+.codeBlock {
+  white-space: pre-wrap;
+  background: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: defaultBorderRadius;
+  padding: calc(2 * gridCellSize);
+  margin: 0;
+}
+
+.inlineCode {
+  composes: codeBlock;
+  font-size: smallFontSize;
+  white-space: normal;
+  padding: gridCellSize;
+  color: #d72b3f;
+  line-height: calc(6 * gridCellSize);
+}
+
+.link, .link:visited {
+  text-decoration: none;
+  color: #0576b9;
+}
+
+.link:focus, .link:hover {
+  color: #005e99;
+  text-decoration: underline;
+}

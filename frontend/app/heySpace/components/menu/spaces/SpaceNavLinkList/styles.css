@@ -1,0 +1,23 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  margin: calc(2 * gridCellSize) 0 calc(2 * gridCellSize) 0;
+}
+
+.skeletonWrapper {
+  margin: 0 calc(4 * gridCellSize);
+}
+
+.noSpacesHint {
+  font-weight: boldFontWeight;
+  color: metallicBlueColor;
+  padding-left: calc(gridCellSize * 4);
+  white-space: nowrap;
+}
+
+.ungroupedSpaces {
+  width: 100%;
+  margin: gridCellSize 0 0 0;
+  padding: 2px 0 0 0;
+}

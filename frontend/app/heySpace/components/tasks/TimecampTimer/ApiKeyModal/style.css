@@ -1,0 +1,10 @@
+.footer {
+  padding: 2.4rem 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalBody {
+  padding: 0 1.6rem;
+}

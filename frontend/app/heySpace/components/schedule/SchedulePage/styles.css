@@ -1,0 +1,23 @@
+@import 'common.css';
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  /* overflow: auto; */
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content auto min-content;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: calc(5 * gridCellSize) calc(6 * gridCellSize) 0;
+}
+
+footer {
+  display: block;
+  margin: unset;
+  margin-left: auto;
+  padding: 0 calc(9 * gridCellSize) 0 calc(5 * gridCellSize);
+}

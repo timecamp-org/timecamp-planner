@@ -1,0 +1,15 @@
+@import "colors.css";
+@import "common.css";
+
+.alertIcon {
+  margin-left: gridCellSize;
+  color: cloudyBlueColor;
+  width: 12px;
+  height: 12px;
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: calc(gridCellSize * 30);
+  z-index: 1000;
+}

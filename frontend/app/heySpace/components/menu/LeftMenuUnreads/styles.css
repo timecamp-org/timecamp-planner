@@ -1,0 +1,43 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--color-primary-500);
+  color: var(--color-white);
+  height: calc(6 * gridCellSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.top {
+  top: 0;
+  border-bottom-left-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+}
+
+.topWithoutUpgradeButton {
+  top: 0; /* UserNavInfo height + jump to button height */
+  border-bottom-left-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+}
+
+.topWithUpgradeButton {
+  composes: topWithoutUpgradeButton;
+  top: calc(32 * gridCellSize); /* UserNavInfo height + jump to button height + upgrade button */
+}
+
+.bottom {
+  bottom: 0;
+  border-top-left-radius: largeBorderRadius;
+  border-top-right-radius: largeBorderRadius;
+}
+
+.text {
+  margin-right: calc(2 * gridCellSize);
+}

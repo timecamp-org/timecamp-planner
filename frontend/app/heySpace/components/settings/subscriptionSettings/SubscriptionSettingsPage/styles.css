@@ -1,0 +1,156 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  color: blackColor;
+  font-family: defaultFontFamily;
+  margin-bottom: calc(2 * gridCellSize);
+  padding: gridCellSize;
+  width: 100%;
+  overflow: hidden;
+  flex: 1 1 auto;
+  position: relative;
+  padding: calc(gridCellSize * 3);
+}
+
+.settingsRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.settingsSection {
+  @mixin WhiteBox;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  margin: gridCellSize 0;
+}
+
+.title {
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  padding-bottom: gridCellSize;
+}
+
+.currentPlanWrapper {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.planText {
+  font-family: fontFamilyTwo;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  font-size: mediumFontSize;
+}
+
+.updateButton {
+  white-space: nowrap;
+  margin-right: auto;
+  margin-top: calc(3 * gridCellSize);
+}
+
+.cancelButton {
+  color: var(--color-gray-400);
+  white-space: nowrap;
+  margin-left: auto;
+  padding: 0 calc(gridCellSize * 2);
+}
+
+.planActionButton {
+  margin-left: auto;
+}
+
+.subTitle {
+  color: darkGreyBlueColor;
+  padding-bottom: calc(2 * gridCellSize);
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 100;
+}
+
+.targetWrapperClassName {
+  margin-left: auto;
+}
+
+.row {
+  color: darkGreyBlueColor;
+  padding: calc(2 * gridCellSize) 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  padding: 0 calc(2 * gridCellSize) 0 0;
+  width: calc(15 * gridCellSize);
+}
+
+.loaderWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+  color: wisteriaColor;
+}
+
+.label {
+  width: calc(30 * gridCellSize);
+}
+
+.value {
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  flex: 1;
+}
+
+.hint {
+  color: cloudyBlueColor;
+}
+
+.description {
+  composes: settingsSection;
+}
+
+.trialInfo {
+  color: var(--color-primary-400);
+  padding-left: gridCellSize;
+  font-size: smallFontSize;
+}
+
+.guestsRow {
+  padding-top: calc(gridCellSize * 3);
+}
+
+.guestsDescription {
+  font-size: smallFontSize;
+  padding-top: gridCellSize;
+}
+
+.labelGuests {
+  white-space: nowrap;
+}
+
+.valueGuests {
+  composes: value;
+  padding-left: calc(3 * gridCellSize);
+}

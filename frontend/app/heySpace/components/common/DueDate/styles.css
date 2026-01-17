@@ -1,0 +1,6 @@
+@import 'colors.css';
+@import 'common.css';
+
+.dueDate {
+  padding: gridCellSize 0;
+}

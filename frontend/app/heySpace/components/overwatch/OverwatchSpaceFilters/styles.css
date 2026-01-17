@@ -1,0 +1,44 @@
+@import 'colors.css';
+@import 'common.css';
+
+.popperContentWrapperClassName {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  background-color: porcelainColor;
+}
+
+.popperArrowFillClassName {
+  background: porcelainColor;
+}
+
+.filtersPanel {
+  composes: Component from 'components/tasks/taskFilters/TaskFilters/styles.css';
+  background-color: porcelainColor;
+  overflow-y: auto;
+  width: calc(gridCellSize * 62);
+  max-height: calc(gridCellSize * 92);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
+}
+
+.spaceIcon {
+  width: 18px;
+  height: 12px;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.chevronIcon {
+  width: calc(2 * gridCellSize);
+  height: calc(2 * gridCellSize);
+  margin-left: calc(gridCellSize * 3);
+}
+
+.chevronIconUp {
+  composes: chevronIcon;
+  transform: rotateZ(180deg);
+}
+
+.button {
+  white-space: nowrap;
+}

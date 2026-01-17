@@ -1,0 +1,61 @@
+@import 'colors.css';
+@import 'common.css';
+
+/* TODO: przegadać z Karoliną kolory */
+
+.materialSwitch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 2.5rem;
+  height: 1rem;
+  padding-right: 3rem;
+}
+
+.materialSwitchDisabled {
+  composes: materialSwitch;
+}
+
+.track {
+  height: calc(2 * gridCellSize);
+  width: 100%;
+  border-radius: gridCellSize;
+  background-color: var(--color-gray-200);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.knob {
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-out, background-color 0.2s;
+  background-color: var(--color-gray-300);
+  cursor: pointer;
+}
+
+.trackChecked {
+  composes: track;
+  opacity: 0.5;
+  background-color: var(--color-primary-200);
+}
+
+.knobChecked {
+  composes: knob;
+  transform: translateX(calc(3 * gridCellSize)) translateY(-50%);
+  background-color: var(--color-primary-500);
+}
+
+.materialSwitchDisabled .knob {
+  cursor: initial;
+  background-color: var(--color-gray-100) !important;
+}
+
+.materialSwitchDisabled .track {
+  cursor: initial;
+  background-color: var(--color-gray-100) !important;
+}

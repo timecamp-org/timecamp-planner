@@ -1,0 +1,150 @@
+@import 'colors.css';
+@import 'common.css';
+
+.userListsWrapper {
+  max-height: calc(90 * 5px);
+  overflow-y: auto;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.listTitle {
+  font-weight: semiboldFontWeight;
+  color: darkGreyBlueColor;
+  margin-bottom: gridCellSize;
+}
+
+.userRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: darkGreyBlueColor;
+  padding: gridCellSize;
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+  height: calc(9 * gridCellSize);
+  min-width: 30rem;
+
+  &:hover {
+    background: lightGreyColor;
+  }
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+
+  &:hover button {
+    opacity: 1;
+  }
+}
+
+.userRow:hover .notAssignedUserRowLabel {
+  display: block;
+}
+
+.notAssignedUserRowLabel {
+  white-space: nowrap;
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  color: wisteriaColor;
+  margin-right: gridCellSize;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.notAssignedUserRowLabelButton {
+  opacity: 0;
+  transition: color 0.3s;
+  border: 0.1rem solid var(--color-primary-500);
+  border-radius: 20rem;
+  padding: 0.1rem 1.5rem;
+  background: var(--color-primary-500);
+  color: var(--color-white);
+  cursor: pointer;
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    color: var(--color-white);
+  }
+  &:active {
+    color: var(--color-white);
+  }
+}
+
+.assignedUserRowLabel {
+  composes: notAssignedUserRowLabel;
+  display: block !important;
+}
+
+.userRowLeft {
+  display: flex;
+  align-items: center;
+}
+
+.searchRowPersonIcon {
+  margin-right: calc(2 * gridCellSize);
+  margin-left: gridCellSize;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.error {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  font-size: smallFontSize;
+  color: paleRedColor;
+  margin-bottom: 0;
+  margin-left: calc(2 * gridCellSize);
+  padding-bottom: 0;
+}
+
+.invite {
+  display: flex;
+  align-items: center;
+  height: calc(9 * gridCellSize);
+  width: calc(118 * gridCellSize);
+  padding: gridCellSize;
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+  margin-top: gridCellSize;
+
+  &:hover {
+    background: lightGreyColor;
+  }
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.inviteValue {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inviteLabel {
+  white-space: nowrap;
+  min-width: calc(7 * gridCellSize);
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  color: wisteriaColor;
+  margin-right: gridCellSize;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.usersAssigned {
+  display: flex;
+}
+
+.listLabel {
+  margin-right: 1rem;
+}
+
+.assigneeSearchItemsWrapper {
+  padding: 0 1rem 1rem 1rem;
+}

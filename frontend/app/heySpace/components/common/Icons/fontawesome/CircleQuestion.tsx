@@ -1,0 +1,5 @@
+import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
+
+import { generateIconComponent } from './helpers';
+
+export const CircleQuestion = generateIconComponent(faCircleQuestion);

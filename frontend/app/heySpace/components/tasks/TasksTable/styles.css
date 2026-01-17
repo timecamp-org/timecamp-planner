@@ -1,0 +1,209 @@
+@import 'colors.css';
+@import 'common.css';
+
+.nameRow {
+  flex: 1;
+}
+
+.progressRow {
+  display: flex;
+}
+
+.headerRow {
+  background-color: whiteTwoColor;
+  border-top-left-radius: largeBorderRadius;
+  border-top-right-radius: largeBorderRadius;
+  color: var(--color-gray-900);
+  font-weight: 100;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 98%;
+    height: 0.1rem;
+    background: var(--color-primary-500);
+  }
+}
+
+.row {
+  display: flex;
+  position: relative;
+  background-color: var(--color-white);
+  &:hover {
+    background-color: var(--color-gray-100);
+  }
+}
+
+.underlinedRow {
+  display: flex;
+  position: relative;
+  background-color: var(--color-white);
+  &:hover {
+    background-color: var(--color-gray-100);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 98%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 0.1rem;
+    background: var(--color-gray-200);
+  }
+}
+
+.evenRow {
+  compose: row;
+}
+
+.oddRow {
+  compose: row;
+  background-color: var(--color-white);
+}
+
+.tagList {
+  composes: component from 'components/tags/TagList/styles.css';
+  display: flex;
+  color: whiteTwoColor;
+}
+
+.tag {
+  composes: tag from 'components/tags/TagList/styles.css';
+  height: calc(gridCellSize * 4);
+  font-family: fontFamilyThree;
+  font-weight: regularFontWeight;
+  font-size: smallFontSize;
+  line-height: calc(gridCellSize * 4);
+}
+
+.columnHeader {
+  color: var(--color-gray-900);
+  text-transform: none;
+  font-size: var(--fontSize-md);
+  font-weight: var(--fontWeight-semibold);
+  font-family: fontFamilyThree;
+  display: flex;
+  align-items: center;
+  padding-left: calc(gridCellSize * 2);
+  text-transform: uppercase;
+}
+
+.rowItem {
+  color: darkSixColor;
+  font-family: fontFamilyThree;
+  font-weight: var(--fontWeight-regular);
+  font-size: smallFontSize;
+}
+
+.taskName {
+  composes: Component from 'components/tasks/taskName/TaskNameOutput/styles.css';
+  composes: rowItem;
+}
+
+.taskNameButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: left;
+  flex: 1;
+}
+
+.dueDate {
+  font-weight: var(--fontWeight-regular);
+}
+
+.taskProgress {
+  composes: taskProgress from 'components/tasks/taskProgress/TaskProgressWithPopover/styles.css';
+  composes: rowItem;
+  width: 34px;
+  height: 34px;
+  background-color: whiteTwoColor;
+  display: flex;
+  justify-content: center;
+  &:hover * {
+    color: var(--color-primary-500);
+  }
+  &:active {
+    color: var(--color-primary-500);
+  }
+}
+
+.checkmarkWrapper {
+  composes: checkmarkWrapper from 'components/tasks/taskProgress/TaskProgressWithPopover/styles.css';
+  width: 34px;
+  height: 34px;
+  & * {
+    color: var(--color-success-600);
+  }
+}
+
+.breadcrumbItem {
+  composes: item from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  composes: rowItem;
+  text-transform: unset;
+  background: transparent;
+  justify-content: flex-start;
+  padding: unset;
+}
+
+.innerScroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.breadcrumb {
+  composes: Component from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  composes: rowItem;
+  max-width: 100%;
+}
+
+.breadcrumbButton {
+  composes: target from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  composes: rowItem;
+  width: 100%;
+  min-width: 0;
+  &:hover * {
+    background: transparent;
+    color: var(--color-primary-500);
+  }
+  &:focus {
+    color: var(--color-primary-500);
+  }
+}
+
+.nameLabelWrapper {
+  text-transform: uppercase;
+}
+.nameLabelCard {
+  font-weight: var(--fontWeight-semibold);
+  margin-right: 0.5rem;
+}
+.nameLabelTaskCount {
+  font-weight: var(--fontWeight-regular);
+}
+
+.tagListClassName {
+  background: transparent;
+  padding: unset;
+  border: unset;
+  color: var(--color-gray-900);
+  &:hover {
+    color: var(--color-primary-500);
+    background: transparent;
+    border: unset;
+  }
+  &:active {
+    color: var(--color-primary-500);
+    background: transparent;
+  }
+}
+
+.headCell {
+  display: flex;
+}

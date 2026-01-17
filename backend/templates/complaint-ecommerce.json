@@ -1,0 +1,27 @@
+{
+  "name": "Complaint ecommerce",
+  "description": "Efficiently manage and resolve customer complaints, ensuring a smooth process from initial reporting to the successful resolution and shipping of products back to the client. Streamline your customer service workflow for enhanced satisfaction and efficient complaint resolution.",
+  "order": 12,
+  "taskListTemplates": [
+    {
+      "name": "Report complaint",
+      "order": 1
+    },
+    {
+      "name": "Client sent delivery",
+      "order": 2
+    },
+    {
+      "name": "In progress",
+      "order": 3
+    },
+    {
+      "name": "Resolved",
+      "order": 4
+    },
+    {
+      "name": "Shipping to client",
+      "order": 5
+    }
+  ]
+}

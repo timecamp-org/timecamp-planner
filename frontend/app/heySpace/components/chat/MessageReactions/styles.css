@@ -1,0 +1,11 @@
+@import 'common.css';
+
+@value messageReactionsMinHeight: calc(4 * gridCellSize);
+@value messageReactionsTopMargin: calc(2 * gridCellSize);
+@value messageReactionsMinHeightWithMargin: calc(messageReactionsMinHeight + messageReactionsTopMargin);
+
+.Component {
+  display: flex;
+  margin-top: messageReactionsTopMargin;
+  min-height: messageReactionsMinHeight;
+}

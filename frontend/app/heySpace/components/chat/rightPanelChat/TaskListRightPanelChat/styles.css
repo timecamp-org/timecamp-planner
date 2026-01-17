@@ -1,0 +1,165 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: rightMenuWidth;
+  height: 100%;
+  background-color: lightGreyColor;
+  display: flex;
+  flex-flow: column;
+  border-radius: calc(2 * gridCellSize) 0 0 calc(2 * gridCellSize);
+}
+
+.KanbanComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.header {
+  height: headerHeight;
+  flex: 0 0 auto;
+  display: flex;
+  padding: calc(3 * gridCellSize) calc(6 * gridCellSize) 0 calc(4 * gridCellSize);
+  align-items: center;
+}
+
+.headerText {
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  color: wisteriaColor;
+  display: flex;
+  padding-left: calc(gridCellSize * 3);
+  align-items: center;
+}
+
+.listIcon {
+  margin-right: gridCellSize;
+}
+
+.taskList {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.footer {
+}
+
+.taskSearch {
+  composes: Component from 'components/tasks/taskFilters/TaskSearch/styles.css';
+  width: 100%;
+}
+
+.taskSearchInput {
+  height: calc(8 * gridCellSize);
+  font-size: smallFontSize;
+  border: 3px solid whiteColor;
+  border-radius: calc(5 * gridCellSize);
+  background-color: whiteTwoColor;
+  color: slateColor;
+  padding-left: calc(3 * gridCellSize);
+  padding-right: calc(6 * gridCellSize);
+}
+
+.taskSearchInput:focus {
+  border: 3px solid cloudyBlueColor !important;
+}
+
+.taskSectionInput {
+  composes: Component from 'components/taskList/TaskSectionInput/styles.css';
+  font-size: smallFontSize;
+}
+
+.rightActions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.leftActions {
+  width: 100%;
+}
+
+.addButton {
+  display: flex;
+}
+
+.searchButton {
+  display: flex;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.icon {
+  width: calc(8 * gridCellSize);
+  height: calc(8 * gridCellSize);
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  border-radius: calc(2 * gridCellSize);
+  border: none;
+  position: relative;
+  background: lightGreyColor;
+  color: cloudyBlueColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: whiteColor;
+  }
+
+  &:active {
+    background: whiteColor;
+  }
+}
+
+.kanban {
+  composes: Component from 'components/taskList/SectionList/styles.css';
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  color: var(--color-gray-900);
+  white-space: nowrap;
+  font-weight: boldFontWeight;
+  font-family: defaultFontFamily;
+
+  overflow-x: scroll;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    height: 12px;
+  }
+}
+
+.section {
+  cursor: pointer;
+  background-color: whiteColor;
+  border-radius: 8px;
+  margin: calc(1 * gridCellSize);
+  width: calc(54 * gridCellSize);
+  min-width: calc(54 * gridCellSize);
+  max-height: calc(100% - 2 * gridCellSize);
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+}
+
+.kanbanWrapper {
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
+  user-select: none;
+}
+
+:global(html.reset-all-cursors *) {
+  cursor: inherit !important;
+}

@@ -1,0 +1,83 @@
+@import 'colors.css';
+@import 'common.css';
+
+@value paragraphMinHeight: calc(4 * gridCellSize);
+
+.messageText {
+  display: block;
+  word-break: break-word;
+  white-space: pre-line;
+  font-weight: regularFontWeight;
+  width: 100%;
+  line-height: messageTextLineHeight;
+  overflow-y: hidden;
+}
+
+.messageText::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.messageExpand {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: calc(2 * gridCellSize);
+  height: 100px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+}
+
+.messageExpandHovered {
+  composes: messageExpand;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    lightGreyColor
+  );
+}
+
+.messageExpandTextExpanded {
+  background: transparent;
+}
+
+.expanderButton {
+  display: none;
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  width: calc(28 * gridCellSize);
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+.messageText:hover .expanderButton {
+  display: block;
+}
+
+.error {
+  font-size: smallFontSize;
+  color: paleRedColor;
+  margin-top: calc(2 * gridCellSize);
+  display: flex;
+  align-items: center;
+}
+
+.errorIcon {
+  width: smallFontSize;
+  height: smallFontSize;
+  margin-right: gridCellSize;
+}
+
+.paragraph {
+  min-height: paragraphMinHeight;
+}

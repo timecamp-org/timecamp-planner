@@ -1,0 +1,71 @@
+# 
+node_modules
+
+# 
+npm-debug.log*
+
+# yarn
+yarn-error.log*
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore build directory
+build
+
+# Ignore local dev config.js
+web.config.js
+mobile.config.js
+
+# Ignore webpack stats file
+stats.json
+
+
+# Ignore MacOS folder attributes file
+.DS_Store
+
+# Ignore Intellij IDE project specific settings
+.idea
+
+# ?
+.env
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs
+*.log
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# developer local scripts
+dev-*
+
+gradle.properties
+
+dist
+
+# IDEs
+/.idea
+/.vscode
+
+# PouchDB for node.js
+*.ldb
+CURRENT
+LOCK
+LOG
+LOG.old
+MANIFEST-*
+
+app/HeySpaceMobile/android/app/src/main/res/drawable-*
+
+# Android bundle files (generated)
+app/HeySpaceMobile/android/app/src/main/assets/*.bundle
+

@@ -1,0 +1,314 @@
+@import 'colors.css';
+@import 'common.css';
+
+$dividerBorder: 1px solid whiteColor;
+@value cardDetailsHeaderHeight: calc(14 * gridCellSize);
+
+.universalModal {
+  composes: Component from 'commonComponents/UniversalModal/styles.css';
+  z-index: 900;
+  overflow: hidden;
+}
+
+.modalBody {
+  padding: 0;
+}
+
+.innerModalDialogClassName {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  padding: 0;
+}
+
+.cardDetailsWrapper {
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
+  display: flex;
+  background: whiteTwoColor;
+  border-radius: var(--borderRadius-sm);
+  flex-flow: column;
+}
+
+.leftWidth {
+  width: 60%;
+}
+
+.rightWidth {
+  width: 40%;
+}
+
+.left,
+.right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right .header {
+  position: relative;
+  height: calc(headerHeight + 1px);
+  align-items: center;
+  padding-right: calc(6 * gridCellSize);
+}
+
+.right {
+  border-left: $dividerBorder;
+}
+
+.header {
+  flex: 0 0 auto;
+  display: flex;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  font-family: defaultFontFamily;
+  border-bottom: $dividerBorder;
+  min-height: cardDetailsHeaderHeight;
+}
+
+@media (max-width: tabletBreakpointWidth) {
+  .header {
+    padding-bottom: calc(1 * gridCellSize);
+  }
+}
+
+.gap {
+  & > *:not(:last-child) {
+    margin-right: 2.4rem;
+  }
+}
+
+.headerLeft {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  composes: gap;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  composes: gap;
+}
+
+.content {
+  width: 100%;
+  flex: 1 1 auto;
+  border-bottom: $dividerBorder;
+  padding: 1.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.footer {
+  width: 100%;
+  height: 8.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.footerContent {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-gray-500);
+  border: 1px dashed var(--color-gray-300);
+  border-radius: 2px;
+  width: 90%;
+  height: 90%;
+}
+
+.listSettings {
+  display: flex;
+  height: 2.4rem;
+}
+
+.taskName {
+  width: 100%;
+  font-size: var(--fontSize-sm);
+  font-weight: var(--fontWeight-semibold);
+  color: var(--color-gray-900);
+  border: 1px solid transparent;
+  resize: none;
+  padding: 1rem 0;
+  border-radius: largeBorderRadius;
+}
+
+.taskName:focus,
+.taskName:hover {
+  border-color: whiteColor;
+}
+
+.controllerSectionWrapper {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  align-items: flex-start;
+}
+
+.descriptionSectionWrapper {
+  composese: controllerSectionWrapper;
+  margin: 2rem 0;
+  display: block;
+}
+
+.controllerSectionRight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.controllerSectionTitle {
+  font-size: normalFontSize;
+  color: cloudyBlueColor;
+  margin-bottom: gridCellSize;
+  font-family: fontFamilyTwo;
+}
+
+.followTaskController {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.followTaskControllerWrapper {
+  margin-left: auto;
+}
+
+.moreOption {
+  margin-left: auto;
+}
+
+.popperContentWrapperClassName {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+}
+
+.dropzone {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.browse {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.browse:hover {
+  opacity: 0.6;
+}
+
+.moveToNextSectionButton {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 2.4rem;
+}
+
+.skeletonWrapper {
+  padding: calc(gridCellSize * 3);
+}
+
+.forbiddenContent {
+  composes: Component from 'components/pages/ForbiddenPage/styles.css';
+  background-color: transparent;
+}
+
+.innerContent {
+  display: flex;
+  height: calc(100% - cardDetailsHeaderHeight);
+  min-height: 0;
+}
+
+.listPicker {
+  composes: Component from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  overflow: hidden;
+}
+
+.listPicker button {
+  border-radius: 0;
+}
+
+.spacePicker {
+  width: min-content;
+  text-decoration: underline;
+  color: var(--color-gray-500);
+}
+
+.withRightBorder {
+  border-right: 1px solid var(--color-primary-500);
+  border-radius: 99rem;
+}
+
+.rightMenu {
+  display: flex;
+  align-content: center;
+  composes: gap;
+
+  & div {
+    display: flex;
+  }
+}
+
+.tag {
+  position: relative;
+  width: fit-content;
+  height: 1.5rem;
+  padding: 0 1.5rem;
+  border-radius: 99rem;
+  font-size: var(--fontSize-xxs);
+  display: flex;
+  justify-content: center;
+}
+
+.inlineList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+
+  & > * {
+    margin-right: 0.4rem;
+    margin-top: 0.4rem;
+  }
+}
+
+.accordionHead {
+  composes: inlineList;
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+  width: 100%;
+
+  & > *:not(:first-child) {
+    margin-left: 0.8rem;
+  }
+}
+
+.projectName {
+  display: block;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.downloadAll {
+  display: block;
+  margin-left: auto !important;
+  margin-right: 2rem;
+}
+
+.assigneeAvatar {
+  width: 2.4rem;
+  height: 2.4rem;
+}

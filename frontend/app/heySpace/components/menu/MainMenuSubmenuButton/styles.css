@@ -1,0 +1,18 @@
+@import "common.css";
+
+.MainMenuSubmenuButton {
+  display: flex;
+  align-items: center;
+  height: calc(3 * gridCellSize);
+  user-select: none;
+  cursor: pointer;
+}
+
+.icon {
+  margin-left: calc(2 * gridCellSize);
+  margin-right: calc(2 * gridCellSize);
+}
+
+.text {
+  line-height: calc(3 * gridCellSize);
+}

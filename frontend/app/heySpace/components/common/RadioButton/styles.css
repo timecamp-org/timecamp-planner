@@ -1,0 +1,62 @@
+@import 'colors.css';
+@import 'common.css';
+.component {
+  display: flex;
+  align-items: flex-start;
+}
+
+.component input {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.component input:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border: defaultBorderWidth solid;
+  border-radius: 100%;
+  background: var(--color-white);
+  border-color: var(--color-gray-300);
+}
+
+.component input:checked:before {
+  border-color: var(--color-primary-500);
+}
+
+.component input:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  background: inherit;
+  border-radius: 100%;
+}
+
+.component input:checked:after {
+  background-color: var(--color-primary-500);
+}
+
+.labelText {
+  margin-left: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: var(--fontWeight-regular);
+}
+
+.disabledLabel {
+  composes: labelText;
+}
+
+.disabled {
+  pointer-events: none;
+}

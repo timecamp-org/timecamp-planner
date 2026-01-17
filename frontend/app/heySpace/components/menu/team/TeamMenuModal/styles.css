@@ -1,0 +1,432 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.subtitle {
+  font-size: var(--fontSize-sm);
+  font-weight: var(--fontWeight-regular);
+  margin-top: 2rem;
+}
+
+.openModalButton {
+  composes: Component from 'components/buttons/MenuButton/styles.css';
+  padding: gridCellSize;
+  margin-left: auto;
+}
+
+.openDirectMessagesModalButton {
+  composes: Component from 'components/buttons/MenuButton/styles.css';
+  margin-left: calc(2 * gridCellSize);
+  border: 0;
+  width: 100%;
+  display: flex;
+  padding: calc(2 * gridCellSize);
+  cursor: pointer;
+  border-radius: largeBorderRadius;
+  height: calc(7 * gridCellSize);
+  color: blueGreyColor;
+}
+
+.addButton {
+  width: calc(4 * gridCellSize);
+  height: calc(4 * gridCellSize);
+  border-radius: 100%;
+  background: currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smallLoadingDots {
+  font-size: calc(5 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: calc(-3 * gridCellSize);
+  color: cloudyBlueColor;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  background: whiteTwoColor;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+  color: wisteriaColor;
+}
+
+.inviteModalBody {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 35rem;
+}
+
+.modalBody {
+  padding: 0;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  color: darkGreyBlueColor;
+  padding: gridCellSize;
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+  height: calc(9 * gridCellSize);
+  margin: gridCellSize defaultBorderWidth;
+  border: defaultBorderWidth solid transparent;
+
+  &:hover {
+    background: lightGreyColor;
+  }
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.searchRow:hover .searchRowLabel {
+  display: block;
+}
+
+.searchRowPersonIcon {
+  margin-right: calc(2 * gridCellSize);
+  width: 3rem;
+  height: 3rem;
+}
+
+.searchRowPersonFirstItem {
+  white-space: nowrap;
+  margin-right: calc(2 * gridCellSize);
+  overflow: hidden;
+}
+
+.searchRowPersonSecondItem {
+  white-space: nowrap;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: calc(3 * gridCellSize);
+  color: cloudyBlueColor;
+}
+
+.searchRowLabel {
+  display: none;
+  white-space: nowrap;
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  color: wisteriaColor;
+  margin-right: gridCellSize;
+}
+
+.searchFooterWrapper {
+  color: blueGreyColor;
+  background: whiteTwoColor;
+  height: calc(12 * gridCellSize);
+  margin-top: calc(-4 * gridCellSize);
+  border-radius: largeBorderRadius;
+}
+
+.searchFooterWrapperEmptyList {
+}
+
+.searchFooter {
+  display: flex;
+  align-items: center;
+  height: calc(9 * gridCellSize);
+  width: calc(118 * gridCellSize);
+  padding: gridCellSize;
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+  margin-top: gridCellSize;
+
+  &:hover {
+    background: lightGreyColor;
+  }
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.searchFooterValue {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchFooterLabel {
+  white-space: nowrap;
+  min-width: calc(7 * gridCellSize);
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+  margin-right: gridCellSize;
+}
+
+.input,
+.inviteInput {
+  width: calc(118 * gridCellSize);
+  min-height: 4.8rem;
+  cursor: text;
+  padding: 0 1.6rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-gray-100);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1.6rem;
+    width: calc(100% - 3.2rem);
+    border: solid 1px var(--color-gray-400);
+  }
+
+  &:focus-within::after {
+    border: solid 1px var(--color-primary-500);
+  }
+}
+
+.input span {
+  flex: 1;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.input input {
+  padding: calc(2 * gridCellSize);
+  margin: 0;
+  flex: 1;
+  height: calc(8 * gridCellSize);
+}
+
+.inviteInput {
+  padding: calc(2 * gridCellSize);
+  height: calc(11 * gridCellSize);
+}
+
+.inputWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  position: relative;
+}
+
+.inputWrapper span {
+  max-width: 90%;
+}
+
+.goButton {
+  position: absolute;
+  top: 1rem;
+  right: 1.6rem;
+}
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  background: whiteTwoColor;
+  width: 55rem;
+  display: flex;
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  padding-left: 2.4rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.listSearch {
+  composes: Component from 'commonComponents/ListSearch/styles.css';
+  height: calc(90 * gridCellSize);
+}
+
+.listSearchHeader {
+}
+
+.listSearchList {
+  composes: list from 'commonComponents/ListSearch/styles.css';
+  margin: calc(2 * gridCellSize) 0;
+  padding: 0 1.2rem;
+}
+
+.selectedUser {
+  border: defaultBorderWidth solid warmGreyColor;
+}
+
+.selectedUserTag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: largeBorderRadius;
+  padding: gridCellSize;
+  margin: gridCellSize;
+  cursor: pointer;
+  height: calc(6 * gridCellSize);
+}
+
+.disableButton,
+.button {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: calc(2 * gridCellSize);
+  height: calc(11 * gridCellSize);
+}
+
+.disableButton {
+  background: warmGreyColor !important;
+  pointer-events: none;
+}
+
+.deleteIcon {
+  height: calc(2 * gridCellSize);
+  margin-left: gridCellSize;
+}
+
+.invitePeople {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  border: 0;
+  padding: calc(2 * gridCellSize);
+  border-radius: largeBorderRadius;
+}
+
+.inviteError {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  position: absolute;
+  bottom: calc(-3 * gridCellSize);
+  left: calc(2 * gridCellSize);
+  font-size: smallFontSize;
+}
+
+.emptyListPlaceholder {
+  height: calc(70 * gridCellSize);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: calc(3 * gridCellSize);
+}
+
+.inviteMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(80 * gridCellSize);
+}
+
+.mascot {
+  background: url('commonAssets/emptyState/Empty_State_29.png') no-repeat center center;
+  background-size: contain;
+  width: calc(40 * gridCellSize);
+  height: calc(40 * gridCellSize);
+  flex: 1;
+}
+
+.inviteMessageTitle {
+  padding-bottom: calc(3 * gridCellSize);
+  font-family: fontFamilyTwo;
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  text-align: center;
+  max-width: calc(70 * gridCellSize);
+  white-space: pre-wrap;
+}
+
+.inviteMessageSubtitle {
+  text-align: center;
+  padding-bottom: calc(3 * gridCellSize);
+  font-size: normalFontSize;
+  font-weight: regularFontWeight;
+  max-width: calc(80 * gridCellSize);
+  white-space: pre-wrap;
+}
+
+.guestCheckbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 2.4rem;
+
+  & > * {
+    margin: 0 0.8rem;
+  }
+}
+
+.checkbox {
+  font-size: 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 0;
+}
+
+.toggleDisabledWrapper {
+  flex-basis: 100%;
+  display: flex;
+  cursor: pointer;
+  margin-top: calc(gridCellSize * 6);
+  align-items: center;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.toggleDisabledText {
+  padding-left: calc(gridCellSize * 2);
+  overflow: hidden;
+}
+
+.guestBar {
+  padding-top: calc(gridCellSize * 3);
+  display: flex;
+  align-items: center;
+  height: calc(gridCellSize * 12);
+}
+
+.spacePicker {
+  composes: Component from 'components/projects/SpacePicker/styles.css';
+  margin-left: auto;
+  padding-right: calc(gridCellSize * 3);
+}
+
+.inviteText {
+  margin-right: 1.2rem;
+  color: var(--color-gray-900);
+}
+
+.footer {
+  margin-top: auto;
+  padding: 2.4rem;
+}
+
+.closeButton {
+  margin-left: auto;
+}
+
+.settingsLink {
+  text-decoration: none;
+  border: none;
+}

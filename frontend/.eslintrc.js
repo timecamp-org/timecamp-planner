@@ -1,0 +1,268 @@
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    jest: true,
+    commonjs: true,
+  },
+  extends: [
+    'airbnb-base',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
+  globals: {
+    APP_VERSION: false,
+    i18n: true,
+  },
+  ignorePatterns: [
+    'node_modules/',
+    '.eslintrc.js',
+    // TODO: remove those modules in time and fix linter
+    'app/common/**/*.ts',
+    'app/SentryClient/**/*.ts',
+    'app/PushNotificationClient/**/*.ts',
+    'app/GoogleApiClientFactory/**/*.ts',
+    'app/LocalStorageFactory/**/*.ts',
+    'app/CustomerMessagingPlatform/**/*.ts',
+  ],
+  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['prettier', 'babel', 'react', 'import', 'react-hooks'],
+  overrides: [
+    {
+      files: ['**/*.{ts,tsx}'],
+      plugins: [
+        'prettier',
+        'babel',
+        '@typescript-eslint',
+        '@typescript-eslint/tslint',
+        'react',
+        'import',
+        'react-hooks',
+      ],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ['./tsconfig.json'], // Specify it only for TypeScript files,
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      rules: {
+        '@typescript-eslint/array-type': 'error',
+        '@typescript-eslint/naming-convention': [
+          'error',
+          { selector: 'default', format: ['camelCase'] },
+
+          { selector: 'variableLike', format: ['camelCase', 'PascalCase'] },
+          {
+            selector: 'variable',
+            format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+          },
+          {
+            selector: 'parameter',
+            format: ['camelCase', 'PascalCase'],
+            leadingUnderscore: 'allow',
+          },
+
+          { selector: 'memberLike', format: ['camelCase', 'UPPER_CASE'] },
+          {
+            selector: 'memberLike',
+            modifiers: ['private'],
+            format: ['camelCase'],
+            leadingUnderscore: 'forbid',
+          },
+
+          { selector: 'typeLike', format: ['PascalCase'] },
+          { selector: 'typeParameter', format: ['PascalCase'], prefix: ['T'] },
+
+          {
+            selector: 'interface',
+            format: ['PascalCase'],
+            custom: { regex: '^I[A-Z]', match: false },
+          },
+        ],
+        '@typescript-eslint/unbound-method': 'warn',
+        '@typescript-eslint/ban-ts-comment': 'warn',
+        '@typescript-eslint/consistent-type-definitions': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-inferrable-types': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/prefer-regexp-exec': 'off',
+        '@typescript-eslint/restrict-template-expressions': 'off',
+        '@typescript-eslint/no-empty-function': [
+          'error',
+          {
+            allow: ['arrowFunctions', 'functions', 'methods'],
+          },
+        ],
+        '@typescript-eslint/member-delimiter-style': [
+          'off',
+          {
+            multiline: {
+              delimiter: 'none',
+              requireLast: true,
+            },
+            singleline: {
+              delimiter: 'semi',
+              requireLast: false,
+            },
+          },
+        ],
+        '@typescript-eslint/no-explicit-any': 'error',
+        '@typescript-eslint/explicit-module-boundary-types':'off',
+        '@typescript-eslint/no-parameter-properties': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/prefer-for-of': 'error',
+        '@typescript-eslint/prefer-function-type': 'error',
+        '@typescript-eslint/semi': ['off', null],
+        '@typescript-eslint/unified-signatures': 'error',
+        '@typescript-eslint/tslint/config': [
+          'error',
+          {
+            rules: {
+              'jsdoc-format': true,
+              'no-reference-import': true,
+              'one-line': [true, 'check-open-brace', 'check-whitespace'],
+              whitespace: [
+                true,
+                'check-branch',
+                'check-decl',
+                'check-operator',
+                'check-separator',
+                'check-type',
+                'check-module',
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+  rules: {
+    'prettier/prettier': ['error', { singleQuote: true }],
+    'import/extensions': ['error', { ignore: ['ts', 'tsx'] }],
+    'import/order': [
+      'error',
+      {
+        pathGroups: [
+          { pattern: 'react', group: 'external', position: 'before' },
+          { pattern: './styles', group: 'sibling', position: 'after' },
+        ],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        pathGroupsExcludedImportTypes: ['react'],
+        'newlines-between': 'always',
+        alphabetize: { order: 'asc', caseInsensitive: true },
+      },
+    ],
+    quotes: [
+      'warn',
+      'single',
+      {
+        allowTemplateLiterals: true,
+      },
+    ],
+    indent: [
+      'off', // TODO: it's clashing with prettier
+      2,
+      {
+        SwitchCase: 1,
+        flatTernaryExpressions: false,
+        ignoreComments: false,
+      },
+    ],
+    'no-unused-vars': [
+      'warn',
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
+    ],
+    'import/no-extraneous-dependencies': ['off'],
+    'import/prefer-default-export': ['off'],
+    'import/first': ['off'],
+    'no-use-before-define': ['off', { functions: true, classes: true }],
+    'no-var': ['off'],
+    'global-require': ['off'],
+    'no-else-return': ['off'],
+    'no-underscore-dangle': ['off'],
+    'object-shorthand': ['off'],
+    radix: ['off'],
+    'no-plusplus': ['off'],
+    'guard-for-in': ['off'],
+    'prefer-arrow-callback': ['off'],
+    'no-new-object': ['off'],
+    'vars-on-top': ['off'],
+    'max-len': ['error', { comments: 1000, code: 200 }],
+    'no-restricted-syntax': ['off'],
+    'no-param-reassign': ['off'],
+    'func-names': ['off'],
+    'no-continue': ['off'],
+    'no-nested-ternary': ['off'],
+    'no-multi-assign': ['off'],
+    'prefer-rest-params': ['off'],
+    'arrow-parens': ['off'],
+    'no-bitwise': ['off'],
+    'no-lonely-if': ['off'],
+    'no-prototype-builtins': ['off'],
+    semi: ['off'],
+    'padded-blocks': [
+      'error',
+      { blocks: 'never', classes: 'always', switches: 'never' },
+    ],
+    'class-methods-use-this': ['off'],
+    'no-unneeded-ternary': ['off'],
+    'no-return-await': ['off'],
+    'import/extensions': ['off'],
+    'implicit-arrow-linebreak': ['off'],
+    'operator-linebreak': ['off'],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/prop-types': ['off'],
+    'react/display-name': ['off'],
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'no-multiple-empty-lines': 'warn',
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'never',
+        exports: 'never',
+        functions: 'never',
+      },
+    ],
+    'padding-line-between-statements': [
+      'warn',
+      {
+        blankLine: 'always',
+        prev: ['const', 'let', 'var', 'export', 'expression'],
+        next: ['return'],
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': 'webpack',
+    // 'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
+    'import/core-modules': [],
+    'import/ignore': [
+      'node_modules',
+      '\\.(coffee|scss|css|less|hbs|svg|json)$',
+    ],
+  },
+};

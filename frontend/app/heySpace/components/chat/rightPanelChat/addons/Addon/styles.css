@@ -1,0 +1,48 @@
+@import 'colors.css';
+@import 'common.css';
+
+.addon {
+  padding: calc(3 * gridCellSize);
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+.addonThumbnail {
+  height: calc(5 * gridCellSize);
+  align-self: center;
+}
+
+.title {
+  font-weight: bold;
+  color: blueGreyColor;
+}
+
+.description {
+  margin-top: calc(2 * gridCellSize);
+  color: blueGreyColor;
+  flex: 1;
+}
+
+.imagePlaceholder {
+  composes: addonThumbnail;
+  background: defaultGreyBrightness1;
+  background-color: cloudyBlueColor;
+  border-radius: defaultBorderRadius;
+}
+
+.imageWrapper {
+  background: whiteTwoColor;
+}
+
+.switchWrapper {
+  margin-top: calc(2 * gridCellSize);
+  display: flex;
+  align-items: center;
+
+  > span {
+    margin-left: calc(2 * gridCellSize);
+    color: blueGreyColor;
+    font-size: smallFontSize;
+  }
+}

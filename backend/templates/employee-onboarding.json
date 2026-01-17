@@ -1,0 +1,19 @@
+{
+  "name": "Employee onboarding",
+  "description": "Revamp your employee onboarding with our template, ensuring a seamless transition during preonboarding, a positive first day experience, and a comprehensive introduction to company culture and policies. Streamline the onboarding process for engagement, efficiency, and a positive start to your employees' journey within the organization.",
+  "order": 8,
+  "taskListTemplates": [
+    {
+      "name": "Preonboarding",
+      "order": 1
+    },
+    {
+      "name": "First day",
+      "order": 2
+    },
+    {
+      "name": "Introduction",
+      "order": 3
+    }
+  ]
+}

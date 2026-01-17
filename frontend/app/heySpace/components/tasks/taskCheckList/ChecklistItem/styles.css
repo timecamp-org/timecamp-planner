@@ -1,0 +1,78 @@
+@import 'colors.css';
+@import 'common.css';
+
+.checklistItem {
+  min-height: 4rem;
+  position: relative;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  color: var(--color-gray-900);
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--color-gray-100);
+  }
+}
+
+.checklistItemText {
+  flex-grow: 1;
+  margin: -1px 0 0 1rem;
+  padding: 0 0.5rem;
+  border: none;
+  border-bottom: 1px solid transparent;
+  resize: none;
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-regular);
+  background-color: transparent;
+}
+
+.checklistItemText:focus,
+.checklistItem:hover .checklistItemText {
+  transition: border-color 0.2s;
+  border-color: var(--color-primary-500);
+}
+
+.moveIcon {
+  padding-right: 0.8rem;
+  margin-left: -1.2rem;
+  visibility: hidden;
+
+  &:hover {
+    visibility: visible;
+  }
+}
+
+.checklistItem:hover .moveIcon,
+.checklistItem:active .moveIcon {
+  visibility: visible;
+}
+
+.assigneesController {
+  composes: Component from 'commonComponents/AssigneesController/styles.css';
+  margin: 0 2rem;
+}
+
+.assigneesControllerHovered {
+  composes: assigneesController;
+  margin-right: 0;
+}
+
+.checkbox {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.moreOptions {
+  margin-left: 0.5rem;
+}

@@ -1,0 +1,20 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  padding: calc(gridCellSize * 4);
+  background-color: var(--color-gray-50);
+}
+
+.agendaEvent {
+  cursor: pointer;
+}
+
+.emptyCalendar {
+  height: 0;
+}
+
+.weekEvent {
+  height: 100%;
+  width: 100%;
+}

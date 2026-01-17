@@ -1,0 +1,127 @@
+@import 'colors.css';
+@import 'common.css';
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  right: gridCellSize;
+  margin-left: auto;
+  background-color: var(--color-accent-500);
+}
+
+.hover:hover .iconWrapper {
+  opacity: 1;
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 50;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--color-gray-500);
+  background-color: transparent;
+  border-radius: var(--borderRadius-sm);
+}
+
+.iconWrapper:hover svg {
+  color: var(--color-primary-500);
+}
+
+.conversationIcon {
+  composes: Component from 'components/projects/ProjectIcon/styles.css';
+}
+
+.longText {
+  overflow-x: hidden;
+  white-space: nowrap;
+  line-height: normal;
+  line-height: normal;
+}
+
+.personFullNameWithHint {
+  composes: longText;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.personFullNameWithStatusEmoji {
+  display: flex;
+  align-items: baseline;
+  line-height: normal;
+}
+
+.personFullName {
+  composes: personFullName from 'components/person/PersonFullName/styles.css';
+  composes: longText;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: var(--fontSize-xs);
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.unreadMessages {
+  composes: personFullName;
+  font-weight: var(--fontWeight-semibold);
+  position: relative;
+  width: min-content;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent-500);
+  }
+}
+
+.deactivated {
+  composes: personFullName;
+  color: duskColor;
+}
+
+.userStatusEmoji {
+  composes: Component from 'commonComponents/UserStatusEmoji/styles.css';
+  margin-left: calc(gridCellSize * 2);
+  height: min-content;
+}
+
+.userStatusEmoji > button {
+  top: 0;
+}
+
+.userLabel {
+  composes: longText;
+  display: inline-block;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.wrapper {
+  display: flex;
+  flex-grow: 1;
+  min-width: 0;
+  align-items: center;
+  position: relative;
+  line-height: normal;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+}

@@ -1,0 +1,18 @@
+@import "colors.css";
+@import "common.css";
+
+@value fileMessageMinHeight: calc(8 * gridCellSize);
+
+.Component {
+  padding: calc(2 * gridCellSize);
+  padding-left: 0;
+  min-height: fileMessageMinHeight;
+}
+
+.file{
+  display: inline-flex;
+}
+
+.fileName {
+  margin-left: gridCellSize;
+}

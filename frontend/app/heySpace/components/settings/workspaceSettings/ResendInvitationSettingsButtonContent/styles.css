@@ -1,0 +1,5 @@
+@import 'common.css';
+
+.icon {
+  margin-right: calc(2 * gridCellSize);
+}

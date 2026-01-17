@@ -1,0 +1,99 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  color: black;
+  position: relative;
+  align-items: center;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.row {
+  display: flex;
+  margin: calc(2 * gridCellSize);
+  position: relative;
+}
+
+.row div {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: gridCellSize;
+  margin-right: calc(2 * gridCellSize);
+  margin-top: 2rem;
+}
+
+.dropdownButton {
+  position: relative;
+  width: calc(100% - (2 * gridCellSize));
+  cursor: pointer;
+  height: calc(gridCellSize * 8);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: calc(2 * gridCellSize);
+  padding-right: calc(5 * gridCellSize);
+  border-radius: largeBorderRadius;
+  font-weight: boldFontWeight;
+  color: cloudyBlueColor;
+  border: 1px solid whiteColor;
+  margin: gridCellSize calc(2 * gridCellSize);
+}
+
+.dropdownButtonIcon {
+  position: absolute;
+  right: calc(3 * gridCellSize);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(8 * gridCellSize);
+  left: 0;
+  width: calc(100% - (4 * gridCellSize));
+  border-left: 1px solid whiteColor;
+  border-right: 1px solid whiteColor;
+  border-bottom: 1px solid whiteColor;
+  border-bottom-left-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  z-index: 10;
+}
+
+.dropdownItem {
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  margin: gridCellSize;
+  padding: gridCellSize;
+  padding-left: calc(2 * gridCellSize);
+  cursor: pointer;
+  border-radius: defaultBorderRadius;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  border: 0;
+  width: calc(100% - (2 * gridCellSize));
+
+  &:hover {
+    background: lightGreyColor;
+  }
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.positionInput {
+  flex: 1;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.listName {
+  composes: Component from 'components/taskList/ListNameOutput/styles.css';
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

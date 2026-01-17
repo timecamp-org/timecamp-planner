@@ -1,0 +1,33 @@
+@import 'colors.css';
+@import 'common.css';
+
+.messageUndeliveredActionButtons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  z-index: 20;
+  transform: translateY(-50%);
+}
+.customButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border-radius: calc((7 * gridCellSize) / 2);
+  padding: 0;
+  color: warmGreyColor;
+  height: calc(5 * gridCellSize);
+  width: calc(7 * gridCellSize);
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    opacity: 0.8;
+    background-color: transparent;
+  }
+}
+
+.buttonShadeClassName {
+  composes: Component from 'components/buttons/ButtonShade/styles.css';
+  border-radius: calc((7 * gridCellSize) / 2);
+}

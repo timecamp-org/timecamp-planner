@@ -1,0 +1,95 @@
+@import 'colors.css';
+@import 'common.css';
+
+.frame {
+  border-radius: gridCellSize;
+  height: calc(8 * gridCellSize);
+  border: defaultBorderWidth solid var(--borderColor);
+  transition: all defaultTransitionAnimation;
+  width: 100%;
+}
+
+.locked {
+  background-color: greyishColor;
+  display: flex;
+  flex-direction: row;
+}
+
+.locked:hover {
+  cursor: not-allowed;
+}
+
+.selected::after {
+  box-sizing: content-box;
+  width: 7px;
+  height: calc(100% - 4px);
+  border-right: 2px solid var(--borderColor);
+  border-radius: defaultBorderWidth 0 0 defaultBorderWidth;
+  content: '';
+  position: absolute;
+  background-color: whiteTwoColor;
+  left: defaultBorderWidth;
+  top: defaultBorderWidth;
+  z-index: 10;
+}
+
+.selected::before {
+  width: 7px;
+  height: calc(100% - 4px);
+  border-left: 2px solid var(--borderColor);
+  border-radius: 0 defaultBorderWidth defaultBorderWidth 0;
+  content: '';
+  position: absolute;
+  background-color: whiteTwoColor;
+  right: defaultBorderWidth;
+  z-index: 10;
+}
+
+.content {
+  position: sticky;
+  left: calc(gridCellSize * 2);
+  overflow: hidden;
+  max-width: 100%;
+  color: var(--color-decorative-wine-800);
+}
+
+.contentWrapper {
+  position: relative;
+  height: calc(8 * gridCellSize);
+  padding: 0 calc(3 * gridCellSize);
+  line-height: calc(4 * gridCellSize);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-weight: var(--fontWeight-regular);
+}
+
+.name {
+  font-size: var(--fontSize-xs);
+}
+
+.timeInfo {
+  font-size: var(--fontSize-xss);
+}
+
+.lockIcon {
+  fill: redRibbonColor;
+  font-size: largerFontSize;
+  padding-right: gridCellSize;
+  align-self: center;
+}
+
+.lockedContent {
+  position: sticky;
+  height: calc(8 * gridCellSize);
+  line-height: calc(4 * gridCellSize);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  left: calc(gridCellSize * 2);
+  overflow: hidden;
+}
+
+.ellipsized {
+  @mixin EllipsizeTextOverflow;
+}

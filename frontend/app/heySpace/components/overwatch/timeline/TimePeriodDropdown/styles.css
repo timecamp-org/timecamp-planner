@@ -1,0 +1,55 @@
+@import 'common.css';
+@import 'colors.css';
+
+.chevronIconWrapper {
+  margin-left: auto;
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  font-family: fontFamilyThree;
+  font-size: normalFontSize;
+}
+
+.popperContent {
+  width: calc(26 * gridCellSize);
+  border-radius: gridCellSize;
+  background: whiteSevenColor;
+  border: 1px solid whiteFiveColor;app/heySpace/components/overwatch/timeline/TimePeriodDropdown/styles.css
+}
+
+.dropdownButton {
+  color: warmGreyColor;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdownButton:hover {
+  color: blackColor;
+  background: whiteFiveColor;
+}
+
+.dropdownButton:active {
+  color: blackColor;
+  background: whiteTwoColor;
+}
+
+.popperArrowFillClassName {
+  z-index: -1;
+  background: whiteSevenColor;
+  border: 1px solid whiteFiveColor;
+}
+
+.chevronIcon {
+  width: calc(2 * gridCellSize);
+  height: calc(2 * gridCellSize);
+  margin-left: auto;
+}
+
+.chevronIconUp {
+  composes: chevronIcon;
+  transform: rotateZ(180deg);
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Simple",
+  "description": "Introducing the Simple Kanban Template: a hassle-free approach to tasks tracking. Swiftly move tasks through three concise columns—To Do, In Progress, and Done. Streamline your workflow and easily visualize your work progress from start to finish.",
+  "order": 2,
+  "taskListTemplates": [
+    {
+      "name": "To do",
+      "order": 1
+    },
+    {
+      "name": "In progress",
+      "order": 2
+    },
+    {
+      "name": "Done",
+      "order": 3
+    }
+  ]
+}

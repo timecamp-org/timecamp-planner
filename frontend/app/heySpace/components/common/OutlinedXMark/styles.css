@@ -1,0 +1,20 @@
+.xMarkWrapper {
+  background: var(--color-gray-400);
+  border-radius: 50%;
+  height: 17px;
+  width: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.7rem;
+  &:hover {
+    background: var(--color-gray-700);
+  }
+  cursor: pointer;
+}
+
+.xMarkIcon {
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+}

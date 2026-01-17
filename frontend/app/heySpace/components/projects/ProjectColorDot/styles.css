@@ -1,0 +1,26 @@
+@import 'colors.css';
+@import 'common.css';
+
+.ring {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerRing {
+  composes: ring;
+}
+
+.disabled {
+  background-color: darkerGreyOnClick;
+  cursor: default;
+}
+
+.tick {
+  color: whiteTwoColor;
+  width: calc(3 * gridCellSize);
+  height: calc(2 * gridCellSize);
+}

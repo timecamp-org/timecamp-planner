@@ -1,0 +1,71 @@
+@import 'common.css';
+@import 'colors.css';
+
+.wrapper {
+  position: relative;
+  width: calc(gridCellSize * 62);
+  transition: width 0.3s ease-in-out;
+  margin-top: calc(3 * gridCellSize);
+}
+
+.wrapperInKanban {
+  height: 100%;
+}
+
+.wrapperInstantOpened {
+  composes: wrapper;
+  transition: none;
+}
+
+.wrapperClosed {
+  composes: wrapper;
+  width: 0;
+}
+
+.wrapperInstantClosed {
+  composes: wrapper;
+  width: 0;
+  transition: none;
+}
+
+.toggleButton {
+  position: absolute;
+  top: calc(3 * gridCellSize);
+  left: calc(-4 * gridCellSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(4 * gridCellSize);
+  height: calc(8 * gridCellSize);
+  background-color: lightGreyColor;
+  border-radius: largeBorderRadius 0 0 largeBorderRadius;
+  cursor: pointer;
+}
+
+.chevronIcon {
+  width: calc(2 * gridCellSize);
+  height: 17px;
+  color: cloudyBlueColor;
+  transition: transform 0.3s ease-in-out;
+}
+
+.chevronIconPanelClosed {
+  composes: chevronIcon;
+  transform: rotate(180deg);
+}
+
+.dotsLoader {
+  width: calc(gridCellSize * 62);
+  background-color: lightGreyColor;
+  border-radius: calc(2 * gridCellSize);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dotsLoaderWide {
+  width: 100%;
+  height: 100%;
+  margin: 0 calc(gridCellSize * 5);
+}

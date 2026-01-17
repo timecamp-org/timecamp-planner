@@ -1,0 +1,91 @@
+@import 'colors.css';
+@import 'common.css';
+
+.messageActionButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border-radius: calc((7 * gridCellSize) / 2);
+  width: calc(7 * gridCellSize);
+  height: calc(5 * gridCellSize);
+  cursor: pointer;
+  color: warmGreyColor;
+  padding: 0;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    opacity: 0.8;
+    background-color: transparent;
+  }
+}
+
+.customButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border-radius: calc((7 * gridCellSize) / 2);
+  padding: 0;
+  color: warmGreyColor;
+  height: calc(5 * gridCellSize);
+  width: calc(7 * gridCellSize);
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    opacity: 0.8;
+    background-color: transparent;
+  }
+}
+
+.customIcon {
+  height: 18px;
+  width: 18px;
+}
+
+.popoverButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  padding: gridCellSize;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.popoverIcon {
+  width: calc(gridCellSize * 5);
+  padding-right: calc(gridCellSize * 2);
+}
+
+.buttonShadeClassName {
+  composes: Component from 'components/buttons/ButtonShade/styles.css';
+  border-radius: calc((7 * gridCellSize) / 2);
+}
+
+.actionButtons {
+  display: flex;
+  position: absolute;
+  z-index: 300;
+  top: calc(-2 * gridCellSize);
+  right: 0;
+  border-radius: calc((7 * gridCellSize) / 2);
+  padding-left: gridCellSize;
+  padding-right: gridCellSize;
+  border: 2px solid pinkishGreyColor;
+  background: whiteTwoColor;
+  height: calc(6 * gridCellSize);
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 1000;
+}
+
+.ownUserButtons {
+  display: flex;
+}
+
+.moreOptions {
+  display: flex;
+  flex-flow: column;
+}

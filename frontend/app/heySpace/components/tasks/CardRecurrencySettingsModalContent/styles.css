@@ -1,0 +1,213 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  width: calc(gridCellSize * 70);
+  padding: calc(gridCellSize * 2);
+}
+
+.title {
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  color: blueGreyColor;
+  margin-left: gridCellSize;
+  margin-bottom: calc(2 * gridCellSize);
+}
+
+.buttons {
+  display: flex;
+  margin-top: calc(2 * gridCellSize);
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.dropdown {
+  composes: Component from 'commonComponents/Dropdown/styles.css';
+  position: relative;
+  width: 100%;
+}
+
+.dropdownContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  position: absolute;
+  top: calc(gridCellSize * 6);
+  min-width: calc(gridCellSize * 18);
+  overflow-y: auto;
+}
+
+.dropdownItem {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  color: blueGreyColor;
+  font-size: smallFontSize;
+  padding: gridCellSize;
+}
+
+.dropdownButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  color: blueGreyColor;
+  margin-left: gridCellSize;
+  width: 100%;
+}
+
+.chevron {
+  margin-left: auto;
+}
+
+.radioWithInputRow {
+  display: flex;
+  align-items: center;
+  margin: gridCellSize 0;
+}
+
+.radioButton {
+  composes: component from 'commonComponents/RadioButton/styles.css';
+  white-space: nowrap;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  padding-top: calc(gridCellSize * 2);
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+}
+
+.intervalInput {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  width: calc(gridCellSize * 13);
+  margin-left: gridCellSize;
+}
+
+.dayOfMonthInput {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  width: calc(gridCellSize * 13);
+  margin-right: gridCellSize;
+}
+
+.recurrenceTimesInput {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  width: calc(gridCellSize * 10);
+  margin: 0 calc(gridCellSize * 2);
+}
+
+.recurrenceDueDateOffsetInput {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  width: calc(gridCellSize * 10);
+  margin-left: calc(gridCellSize * 2);
+}
+
+.dayOfMonthInputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.periodDropdown {
+  composes: dropdown from 'commonComponents/PeriodDropdown/styles.css';
+  width: calc(gridCellSize * 18);
+  padding-right: calc(gridCellSize * 2);
+}
+
+.monthsShortDropdown {
+  composes: dropdown from 'commonComponents/MonthsShortDropdown/styles.css';
+  width: calc(gridCellSize * 15);
+}
+
+.weekDaysForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: gridCellSize;
+}
+
+.weekDay {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: calc(gridCellSize * 7);
+  height: calc(gridCellSize * 7);
+  border-radius: defaultBorderRadius;
+  box-shadow: 1px 1px 4px 0 paleGreyTwoColor;
+  background-color: whiteTwoColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: calc(gridCellSize * 2);
+  transition:
+    color defaultTransitionAnimation,
+    background-color defaultTransitionAnimation;
+}
+
+.label {
+  padding: calc(gridCellSize * 2) 0;
+  color: darkGreyBlueColor;
+}
+
+.dateInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  margin-left: calc(gridCellSize * 2);
+  width: calc(gridCellSize * 22);
+}
+
+.recurrenceEndsForm {
+  padding: calc(gridCellSize * 2) 0 calc(gridCellSize * 1) 0;
+}
+
+.recurrenceDueDateForm {
+  padding: calc(gridCellSize * 1) 0 calc(gridCellSize * 1) 0;
+}
+
+.greyedText {
+  color: cloudyBlueColor;
+  white-space: nowrap;
+}
+
+.actionButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-right: gridCellSize;
+  margin-left: auto;
+}
+
+.leftButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-right: auto;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: calc(gridCellSize * 2) 0;
+}
+
+.dropdownButton {
+  composes: dropdownButton from 'components/taskList/ListsDropdown/styles.css';
+  width: calc(gridCellSize * 30);
+}
+
+.dropdownLabel {
+  color: darkGreyBlueColor;
+  margin-right: calc(gridCellSize * 2);
+}
+
+.positionDropdown {
+  flex: 0 1 0;
+}
+
+.nextRecurrenceInfo {
+  display: flex;
+  align-items: center;
+  padding: calc(gridCellSize * 1) 0 calc(gridCellSize * 0) 0;
+}
+
+.dateOutput {
+  margin-left: calc(gridCellSize * 2);
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+}
+
+.listDropdownWrapper {
+  width: 24rem;
+}

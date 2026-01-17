@@ -1,0 +1,6 @@
+@import 'colors.css';
+@import 'common.css';
+
+.skeletonWrapper {
+  margin: 0 calc(4 * gridCellSize);
+}

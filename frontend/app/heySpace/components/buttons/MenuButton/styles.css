@@ -1,0 +1,56 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  margin: 0 2.4rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 3.2rem;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 20.5rem;
+  min-width: 0px;
+  border-radius: 0.2rem;
+  padding: 1rem 1rem;
+}
+
+.Component:focus {
+  background: var(--color-gray-200);
+}
+
+.Component:hover {
+  background: var(--color-gray-100);
+}
+
+.Component:active {
+  background: var(--color-gray-200);
+}
+
+.Component.selected {
+  background: var(--color-gray-200);
+}
+
+.Component.selected:focus {
+  background: var(--color-gray-200);
+}
+
+.Component:focus:hover {
+  background: var(--color-gray-200);
+}
+
+.Component.selected:hover {
+  background: var(--color-gray-200);
+}
+
+.Component.selected:active {
+  background: var(--color-gray-200);
+}
+
+.disabled {
+  pointer-events: none;
+}

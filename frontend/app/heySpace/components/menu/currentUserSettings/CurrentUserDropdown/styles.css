@@ -1,0 +1,172 @@
+@import 'colors.css';
+@import 'common.css';
+
+.personIconWrapper {
+  composes: personIconWrapper from 'components/person/PersonIcon/styles.css';
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.personIcon {
+  composes: personIcon from 'components/person/PersonIcon/styles.css';
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: var(--fontSize-xs);
+}
+
+.dropdownContent {
+  color: var(--color-black);
+  display: flex;
+  flex-flow: column;
+  padding: 0.5rem;
+}
+
+.userStatusButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-top: 0.5rem;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  font-family: inherit;
+}
+
+.userDetails {
+  padding-left: 2.1rem;
+  padding-bottom: 1rem;
+}
+
+.userNameWrapper {
+  margin-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.popperContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  min-width: calc(47 * gridCellSize);
+  padding: 1rem 0 0 0;
+  border-radius: defaultBorderRadius;
+}
+
+.divider {
+  composes: horizontalDivider from 'commonComponents/HorizontalDivider/styles.css';
+  width: 100%;
+  background: whiteColor;
+  margin: 0.5rem 0;
+}
+
+.icon {
+  width: 1.4rem;
+  margin-right: 0.5rem;
+}
+
+.checkmark {
+  width: 1.5rem;
+  margin-left: auto;
+}
+
+.addNewOrganizationButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+  white-space: nowrap;
+  align-items: center;
+  font-family: inherit;
+}
+
+.workspacesPanelToggle {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: flex-start;
+  width: 100%;
+  font-family: inherit;
+}
+
+.toggleWorkspacesTitle {
+  color: var(--color-gray-200);
+  margin-right: 1rem;
+}
+
+.dropdownContent {
+  color: var(--color-black);
+  display: flex;
+  flex-flow: column;
+  padding: 0.5rem;
+}
+.dividerWrapper {
+  display: flex;
+  justify-content: center;
+}
+.emptyItem {
+  height: 1rem;
+  width: 100%;
+}
+
+.menuItem {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border-radius: 0;
+  display: flex;
+  color: var(--color-black);
+  font-weight: var(--fontWeight-regular);
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  justify-content: flex-start;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--color-gray-100);
+    color: var(--color-black);
+  }
+
+  &:active * {
+    color: var(--color-primary-500);
+  }
+}
+
+.menuItemIcon {
+}
+
+.logoutMenuItem {
+  composes: menuItem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.xMark {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.iconPlaceholder {
+  margin-right: 1rem;
+  visibility: hidden;
+}
+
+.anchor {
+  text-decoration: none !important;
+}
+
+.buttonIsSubscribed {
+  composes: menuItem;
+  color: var(--color-primary-500);
+
+  &:hover {
+    color: var(--color-primary-500);
+  }
+}
+
+.iconWrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1.2rem;
+  display: flex;
+  align-items: center;
+}

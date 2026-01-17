@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TaskProgressEstimate /> should render 1`] = `
+<div
+  className="component"
+>
+  <Component
+    message="Team members can mark percentage progress of a task completion"
+    popperModifiers={
+      Object {
+        "offset": Object {
+          "offset": "0, gridCellSize",
+        },
+      }
+    }
+    popperPlacement="top"
+    popperTransitionStyles={
+      Object {
+        "entered": Object {
+          "opacity": 1,
+        },
+        "entering": Object {
+          "opacity": 0,
+        },
+        "exited": Object {
+          "opacity": 0,
+        },
+        "exiting": Object {
+          "opacity": 0,
+        },
+      }
+    }
+    shouldRenderArrow={true}
+    shouldRenderInfoTooltip={true}
+    targetComponent={
+      <Connect(EnhancedComponent)
+        className={undefined}
+        onChangeTaskProgressCallback={[Function]}
+        onMouseEnterProgressBar={undefined}
+        onMouseLeaveProgressBar={undefined}
+        taskId="test"
+      />
+    }
+    title="Task progress"
+    transitionDuration={300}
+    transitionProperty="opacity"
+  />
+</div>
+`;

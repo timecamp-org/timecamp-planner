@@ -1,0 +1,5 @@
+@import 'colors.css';
+
+.selectedDay {
+  background-color: var(--color-gray-100);
+}

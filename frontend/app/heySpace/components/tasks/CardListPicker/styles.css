@@ -1,0 +1,129 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  max-width: 60%;
+  z-index: 20;
+  align-items: center;
+  color: cloudyBlueColor;
+  font-family: fontFamilyTwo;
+  font-size: smallFontSize;
+}
+
+.target {
+  min-width: 0;
+}
+
+.section {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+  opacity: 1 !important;
+}
+
+.item {
+  margin-left: gridCellSize;
+  margin-right: gridCellSize;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0;
+  border-radius: largeBorderRadius;
+  padding: gridCellSize;
+  font-size: smallFontSize;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  width: 100%;
+  text-align: left;
+}
+
+.separator {
+  flex: 1 0 auto;
+  width: calc(gridCellSize * 3);
+  height: calc(gridCellSize * 3);
+  margin: gridCellSize;
+}
+
+.picker {
+  cursor: default;
+  background: whiteTwoColor;
+  width: calc(45 * gridCellSize);
+  z-index: 10;
+  padding: calc(2 * gridCellSize);
+  border-radius: largeBorderRadius;
+  color: cloudyBlueColor;
+  box-shadow: defaultPopoverShadow;
+  text-align: center;
+}
+
+.line {
+  margin-top: calc(2 * gridCellSize);
+  margin-bottom: calc(2 * gridCellSize);
+  height: 1px;
+  background-color: cloudyBlueColor;
+}
+
+.pickerTitle {
+  font-weight: boldFontWeight;
+}
+
+.pickerList {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(50 * gridCellSize);
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+.listItem {
+  padding: gridCellSize;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.listItemButton {
+  composes: item;
+  height: calc(6 * gridCellSize);
+  min-height: calc(6 * gridCellSize);
+  text-align: left;
+  position: relative;
+}
+
+.loadingDots {
+  font-size: calc(8 * gridCellSize);
+  margin-top: calc(-4 * gridCellSize);
+}
+
+.poperWrapper {
+}
+
+.header {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(10 * gridCellSize);
+  margin-top: calc(-2 * gridCellSize);
+}
+
+.headerTitle {
+  font-size: normalFontSize;
+  text-transform: uppercase;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  padding: 1rem 1rem 0 1rem;
+}
+
+.contentWrapper {
+  max-width: 32rem;
+}

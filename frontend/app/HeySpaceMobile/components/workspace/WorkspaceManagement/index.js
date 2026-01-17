@@ -1,0 +1,7 @@
+import Component from './component'
+
+import EnhancerWorkspaceManagement from './enhancers/EnhancerWorkspaceManagement'
+import RedirectToNewWorkspacePageIfCurrentUserHasNoWorkspaces from 'enhancers/RedirectToNewWorkspacePageIfCurrentUserHasNoWorkspaces'
+import RedirectToSignInPageIfCurrentUserIsDeauthenticated from 'enhancers/RedirectToSignInPageIfCurrentUserIsDeauthenticated'
+
+export default RedirectToSignInPageIfCurrentUserIsDeauthenticated(RedirectToNewWorkspacePageIfCurrentUserHasNoWorkspaces((EnhancerWorkspaceManagement(Component))))

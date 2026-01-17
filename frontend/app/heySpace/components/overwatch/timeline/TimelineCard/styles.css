@@ -1,0 +1,120 @@
+@import 'common.css';
+@import 'colors.css';
+
+.component {
+  height: 4.8rem;
+  width: 100%;
+  overflow: hidden;
+  font-size: var(--fontSize-xs);
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  justify-content: flex-start;
+}
+
+.selected::after {
+  width: 7px;
+  height: 100%;
+  border: 2px solid;
+  content: '';
+  position: absolute;
+  background-color: whiteTwoColor;
+  left: 0;
+  z-index: 10;
+}
+
+.selected::before {
+  width: 7px;
+  height: 100%;
+  border: 2px solid;
+  content: '';
+  position: absolute;
+  background-color: whiteTwoColor;
+  right: 0;
+  z-index: 10;
+}
+
+.itemLeft {
+  position: relative;
+  padding: 0 0.8rem;
+  color: var(--color-gray-800);
+  transition: padding defaultTransitionAnimation;
+  display: flex;
+  height: 100%;
+}
+
+.flexRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.itemRight {
+  position: relative;
+
+  transition: padding defaultTransitionAnimation;
+}
+
+.overflowBlur {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: calc(6 * gridCellSize);
+  border-radius: gridCellSize;
+  background-color: transparent;
+}
+
+.checklistProgress {
+  composes: component from 'commonComponents/ChecklistProgress/styles.css';
+  margin-right: 1.5rem;
+  padding: 0;
+  color: var(--color-gray-800);
+  display: flex;
+  align-items: center;
+}
+
+.taskProgress {
+  margin-right: calc(3 * gridCellSize);
+  color: var(--color-gray-800);
+  background-color: transparent;
+  border-radius: var(--borderRadius-xs);
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-semibold);
+  height: min-content;
+  min-height: unset;
+  padding: 0;
+  align-items: flex-start;
+  line-height: var(--fontSize-xs);
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.sticky {
+  position: sticky;
+  left: 1rem;
+}
+
+.overflow {
+  width: 100%;
+}
+
+.noPadding {
+  padding: 0;
+}

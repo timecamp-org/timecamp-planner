@@ -1,0 +1,79 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tagsControllerSectionRight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+}
+
+.tagsWrapperClassName {
+  flex: 1 1 auto;
+}
+
+.taskTags {
+  display: flex;
+  width: 100%;
+  min-height: 56px;
+  transform: translateZ(0);
+  border-radius: largeBorderRadius;
+  padding: 0 calc(2 * gridCellSize);
+  border: 1px solid transparent;
+
+  span {
+    display: flex;
+    flex-flow: wrap;
+    padding-left: gridCellSize;
+    width: 100%;
+
+    input {
+      flex: 1;
+      height: calc(4 * gridCellSize);
+      margin-bottom: 0;
+      padding: gridCellSize;
+      font-family: fontFamilyTwo;
+    }
+  }
+}
+
+.taskTags:hover {
+  border-color: whiteColor;
+}
+
+.taskTags.taskTagsFocused {
+  border-color: transparent;
+}
+
+.tagIcon {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+.button {
+  border: 1px dashed var(--color-gray-500);
+  border-radius: 50%;
+  color: var(--color-gray-500);
+  padding: 0.4rem;
+}
+
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: whiteTwoColor;
+  opacity: 0.5;
+  top: 0;
+}
+
+.noAccessWrapper {
+  position: relative;
+}

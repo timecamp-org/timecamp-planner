@@ -1,0 +1,87 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: 50rem;
+  margin: 0 auto calc(24 * gridCellSize);
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .Component {
+    width: calc(100% - (gridCellSize * 4));
+  }
+}
+
+.header {
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  font-size: 4.2rem;
+  text-align: center;
+  margin-bottom: 8.8rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoText {
+  margin-top: calc(3 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.alert {
+  composes: Component from 'components/alerts/Alert/styles.css';
+  margin-top: calc(2 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.passwordUserInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  color: blackColor;
+}
+
+.forgotPassword {
+  margin-top: calc(3 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.link {
+  font-size: smallFontSize;
+}
+
+.submitButton {
+  padding: 1.5rem 4rem;
+  text-transform: none;
+  font-size: var(--fontSize-base);
+  margin-top: 2.5rem;
+}
+
+.input {
+  width: 100%;
+  height: 5.2rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  font-size: var(--fontSize-base);
+  display: flex;
+  position: relative;
+
+  &:focus-within {
+    border-color: var(--color-primary-500);
+  }
+
+  & > input {
+    background-color: transparent;
+    height: 100%;
+    padding-left: 3.5rem;
+    border: none !important;
+  }
+
+  & > div {
+    position: absolute;
+    bottom: 0;
+    left: 2.4rem;
+    transform: translateY(50%);
+  }
+}

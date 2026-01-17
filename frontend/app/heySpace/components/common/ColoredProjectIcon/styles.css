@@ -1,0 +1,9 @@
+.wrapper {
+  position: relative;
+}
+
+.lock {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

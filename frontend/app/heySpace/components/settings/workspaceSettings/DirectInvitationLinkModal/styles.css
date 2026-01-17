@@ -1,0 +1,27 @@
+@import 'common.css';
+
+.modal {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(120 * gridCellSize);
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  color: blueGreyColor;
+}
+
+.inputWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.invitationUrlInput {
+  width: 100%;
+}
+
+.copyButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-left: calc(gridCellSize * 2);
+}

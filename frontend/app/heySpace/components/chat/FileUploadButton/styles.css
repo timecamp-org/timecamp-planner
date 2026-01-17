@@ -1,0 +1,79 @@
+@import 'colors.css';
+@import 'common.css';
+
+.toolbar {
+  position: absolute;
+  bottom: calc(3 * gridCellSize);
+  right: calc(4 * gridCellSize);
+  display: flex;
+}
+
+.toolbarIcon {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: calc(6 * gridCellSize);
+  height: calc(5 * gridCellSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  color: var(--color-gray-900);
+
+  &:hover {
+    color: var(--color-primary-500);
+  }
+  &:active * {
+    color: var(--color-primary-500);
+  }
+}
+
+.toolbarIconActive {
+  composes: toolbarIcon;
+  color: var(--color-primary-500);
+
+  & * {
+    color: var(--color-primary-500);
+  }
+}
+
+.uploadOption {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border-radius: 0;
+  display: flex;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+  justify-content: flex-start;
+  width: 100%;
+  & > svg {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    background-color: var(--color-gray-100);
+    color: var(--color-primary-500);
+    & > svg {
+      color: var(--color-primary-500);
+    }
+  }
+
+  &:active {
+    color: var(--color-primary-500);
+    & > svg {
+      color: var(--color-primary-500);
+    }
+  }
+}
+
+.backdrop {
+  composes: backdrop from 'commonComponents/UniversalModal/styles.css';
+  filter: blur(gridCellSize);
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 1000;
+}
+
+.icon {
+  margin-right: 1rem;
+}

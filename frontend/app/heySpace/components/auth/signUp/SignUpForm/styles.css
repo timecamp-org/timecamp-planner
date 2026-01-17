@@ -1,0 +1,185 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  max-width: 60rem;
+  width: 100%;
+  padding: 3.2rem;
+  padding-top: 5rem;
+  border-radius: 3.2rem;
+  border: 1px solid var(--color-primary-500);
+  background: linear-gradient(113deg, rgba(234, 242, 253, 0.12) 10.29%, rgba(234, 242, 253, 0) 100.35%);
+  box-shadow: 2px 4px 32px 2px rgba(36, 102, 188, 0.12);
+  backdrop-filter: blur(37.5px);
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .Component {
+    width: calc(100% - (gridCellSize * 4));
+  }
+}
+
+.header {
+  color: var(--color-gray-900);
+  font-size: 4.2rem;
+  font-weight: var(--fontWeight-bold);
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.subheader {
+  font-size: var(--fontSize-lg);
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-500);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  & > * {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.GoogleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: largeBorderRadius;
+  border: 0;
+  height: calc(7 * gridCellSize);
+  width: 100%;
+  background-color: lightGreyColor;
+  cursor: pointer;
+  font-weight: boldFontWeight;
+
+  &:hover {
+    background-color: whiteColor;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.horizontalSeparator {
+  height: calc(2 * gridCellSize);
+  display: flex;
+  align-items: center;
+  margin-top: calc(6 * gridCellSize);
+  margin-bottom: calc(6 * gridCellSize);
+}
+
+.emailUserInput,
+.fullNameInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.passwordUserInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  padding-bottom: calc(3 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.forgotPassword {
+  margin-top: calc(3 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.submitButton,
+.submitButtonLoading {
+  composes: ButtonFull from 'commonComponents/SubmitButton/styles.css';
+  margin-bottom: calc(2 * gridCellSize);
+  width: 100%;
+}
+
+.submitButtonLoading {
+  opacity: 0.6;
+}
+
+.googleError {
+  font-size: smallFontSize;
+  margin-top: gridCellSize;
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  color: paleRedColor;
+  width: calc(72 * gridCellSize);
+  white-space: nowrap;
+}
+
+.extraField {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+
+.input {
+  width: 100%;
+  height: 5.2rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  font-size: var(--fontSize-base);
+  display: flex;
+  position: relative;
+
+  &:focus-within {
+    border-color: var(--color-primary-500);
+  }
+
+  & > input {
+    background-color: transparent;
+    height: 100%;
+    padding-left: 2.7rem;
+    border: none !important;
+  }
+
+  & > div {
+    position: absolute;
+    bottom: 0;
+    left: 2.4rem;
+    transform: translateY(50%);
+  }
+}
+
+.submitButton {
+  padding: 1.5rem 4rem;
+  text-transform: none;
+  height: 5.2rem;
+  max-width: 100%;
+  border-radius: 99rem;
+  font-size: var(--fontSize-lg);
+  font-weight: var(--fontWeight-bold);
+  background: linear-gradient(110.94deg, var(--color-primary-500) 36.16%, var(--color-primary-600) 88.93%);
+  margin-bottom: 0;
+}
+
+.inputWrapper {
+  display: grid;
+  grid-template-columns: 10rem auto;
+  row-gap: 1.8rem;
+  align-items: center;
+  width: 100%;
+
+  & > label {
+    font-size: var(--fontSize-lg);
+    color: var(--color-gray-800);
+    margin-left: 0;
+  }
+}
+
+.termsWrapper {
+  grid-column-start: 2;
+}
+
+.divider {
+  margin: 1.8rem 0;
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-base);
+}

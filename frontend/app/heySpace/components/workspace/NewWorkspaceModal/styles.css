@@ -1,0 +1,32 @@
+@import 'common.css';
+@import 'colors.css';
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  background: whiteTwoColor;
+  padding-left: 0;
+  padding-right: 0;
+  width: calc(124 * gridCellSize);
+}
+
+.form {
+  composes: Component from 'components/workspace/NewWorkspaceForm/styles.css';
+  width: 100%;
+  margin: 0;
+}
+
+.submitButtonClassName {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.submitButtonInnerClassName {
+  composes: submitButton from 'components/workspace/NewWorkspaceForm/styles.css';
+  width: auto;
+}
+
+.modalBody {
+  padding: 0;
+  padding-bottom: 1.6rem;
+}

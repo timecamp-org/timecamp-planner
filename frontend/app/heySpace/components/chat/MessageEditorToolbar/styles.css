@@ -1,0 +1,32 @@
+@import 'colors.css';
+@import 'common.css';
+
+.toolbar {
+  position: absolute;
+  bottom: calc(3 * gridCellSize);
+  right: calc(4 * gridCellSize);
+  display: flex;
+}
+
+.toolbarIcon {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: calc(6 * gridCellSize);
+  height: calc(5 * gridCellSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-gray-900);
+  &:hover {
+    color: var(--color-primary-500);
+  }
+  &:active * {
+    color: var(--color-primary-500);
+  }
+}
+
+.emojiButton {
+  border: none;
+  height: calc(3 * gridCellSize);
+  padding: 0;
+  cursor: pointer;
+}

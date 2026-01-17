@@ -1,0 +1,62 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Send push to online",
+      "program": "${workspaceFolder}/src/console.ts",
+      "args": ["system:notification", "online", "Hey there", "Restart incoming!"],
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch API",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/run.ts",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Feed",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/process/feed.ts",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Link Scraper",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/process/linkScraper.ts",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Import Worker",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/process/dataImportWorker.ts",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Cron",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/process/cron.ts",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Notifications Worker",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/process/notificationsWorker.ts",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    }
+  ]
+}

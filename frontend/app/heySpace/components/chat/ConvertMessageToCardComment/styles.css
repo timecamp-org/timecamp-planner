@@ -1,0 +1,7 @@
+@import 'common.css';
+@import 'colors.css';
+
+.popperContentWrapperClassName {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  width: calc(64 * gridCellSize);
+}

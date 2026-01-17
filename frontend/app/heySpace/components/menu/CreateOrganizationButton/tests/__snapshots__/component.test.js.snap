@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateOrganizationButton /> should render correctly 1`] = `
+<Component
+  className="button"
+  icon={[Function]}
+  iconClassName=""
+  iconSize={24}
+  onClick={[Function]}
+  text="Create workspace"
+/>
+`;

@@ -1,0 +1,56 @@
+@import 'common.css';
+@import 'colors.css';
+
+.bar {
+  position: absolute;
+  top: 0;
+  background-repeat: repeat;
+  margin-top: gridCellSize;
+  left: calc(3 * gridCellSize);
+  right: calc(3 * gridCellSize);
+  border-radius: calc(2 * gridCellSize);
+  height: calc(5 * gridCellSize);
+  background: jetStreamColor;
+  z-index: 10000;
+}
+
+.progress {
+  background-repeat: repeat;
+  border-radius: calc(2 * gridCellSize);
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      jungleGreenColor,
+      jungleGreenColor calc(2 * gridCellSize),
+      gossamerColor calc(2 * gridCellSize),
+      gossamerColor calc(4 * gridCellSize) /* determines size */
+    );
+  background-size: calc(6 * gridCellSize) calc(6 * gridCellSize);
+  animation: move .5s linear infinite;
+  height: calc(5 * gridCellSize);
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: calc(6 * gridCellSize) 0;
+  }
+}
+
+.text{
+  color:whiteTwoColor;
+  margin-left: calc(3 * gridCellSize);
+  text-overflow: ellipsis;
+  max-width: 100%;
+  height: calc(5 * gridCellSize);
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: calc(3 * gridCellSize);
+}
+
+.textContainer{
+  position: absolute;
+  top: 0;
+}

@@ -1,0 +1,39 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  margin-top: gridCellSize;
+  max-height: calc(80 * gridCellSize);
+  overflow-y: auto;
+  padding: gridCellSize;
+}
+
+.organizationButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumbnail {
+  composes: Component from 'components/settings/workspaceSettings/WorkspaceThumbnail/styles.css';
+  min-width: calc(gridCellSize * 7);
+  height: calc(gridCellSize * 7);
+  padding: 0;
+  margin: 0;
+  margin-right: calc(gridCellSize * 2);
+}
+
+.organizationName {
+  margin-right: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+}
+
+.tickIcon {
+  color: var(--color-gray-900);
+}

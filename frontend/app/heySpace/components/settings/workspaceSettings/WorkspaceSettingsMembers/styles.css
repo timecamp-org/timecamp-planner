@@ -1,0 +1,200 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  color: blackColor;
+  font-family: defaultFontFamily;
+  margin-bottom: calc(2 * gridCellSize);
+  width: 100%;
+  overflow: hidden;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.field {
+  padding: calc(2 * gridCellSize) 0;
+  display: flex;
+  flex-flow: column;
+  max-width: calc(47 * gridCellSize);
+  color: darkGreyBlueColor;
+}
+
+.title {
+  font-weight: var(--fontWeight-semibold);
+  font-size: var(--fontSize-lg);
+  color: var(--color-gray-900);
+  text-transform: uppercase;
+  padding-left: 2.5rem;
+  padding-right: 1.5rem;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 1.5rem;
+}
+
+.multiInviteInput {
+  composes: Component from 'components/common/MultiInviteInput/styles.css';
+  padding: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.inviteRow {
+  display: flex;
+  margin-top: calc(3 * gridCellSize);
+
+  padding: 0;
+  position: relative;
+  background: var(--color-gray-100);
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    width: calc(100% - 3rem);
+    height: 1px;
+    background: var(--color-gray-900);
+    transform: translateX(-50%);
+  }
+
+  &:focus-within {
+    &:after {
+      background: var(--color-primary-500);
+    }
+  }
+}
+
+.inviteButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  padding: gridCellSize calc(5 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  white-space: nowrap;
+}
+
+.rowRight {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.userRowWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: calc(gridCellSize * 2);
+  margin-top: calc(3 * gridCellSize);
+}
+
+.userRowWrapper:hover .disableButton {
+  display: flex;
+}
+
+.userList {
+  margin-top: calc(2 * gridCellSize);
+}
+
+.personData {
+  display: flex;
+  flex-direction: column;
+  margin-left: calc(2 * gridCellSize);
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.personName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.personEmail {
+  color: blueGreyColor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.disableButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  height: calc(gridCellSize * 5);
+  padding: 0 calc(gridCellSize * 4);
+  margin-left: calc(gridCellSize * 2);
+  background-color: warmGrey5Color;
+  display: none;
+  font-size: smallFontSize;
+  margin-left: auto;
+}
+
+.usersListSwitcher {
+  cursor: pointer;
+  margin-top: calc(gridCellSize * 4);
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  user-select: none;
+}
+
+.chevronIcon {
+  margin-right: gridCellSize;
+}
+
+.disabledUserRow {
+}
+
+.usersCount {
+  padding-left: calc(gridCellSize * 2);
+}
+
+.guestListSwitcherWithInfo {
+  margin-top: calc(gridCellSize * 4);
+  display: flex;
+  align-items: center;
+}
+
+.guestListSwitcher {
+  composes: usersListSwitcher;
+  margin: 0;
+}
+
+.inviteGuestButton {
+  margin-left: auto;
+}
+
+.guestSpacesButton {
+  margin-right: auto;
+  margin-left: calc(gridCellSize * 18);
+}
+
+.circleQuestion {
+  margin-left: 1rem;
+}
+
+.userRowInner {
+  composes: userLabel from 'commonComponents/UserLabel/styles.css';
+  padding: 0;
+  &:hover {
+    background: transparent;
+  }
+}
+
+.userRow {
+}
+
+.guestSpacesButton {
+  margin: 0;
+}
+
+.rowRight {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}

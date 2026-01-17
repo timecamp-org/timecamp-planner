@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GlobalErrorBoundary /> renders children correctly 1`] = `
+<div>
+  Test
+</div>
+`;
+
+exports[`<GlobalErrorBoundary /> should react to hasError state change should render fallback component 1`] = `
+<div
+  className="component"
+>
+  <div
+    className="top"
+  >
+    <div
+      className="background"
+    >
+      500
+    </div>
+    <div
+      className="mascot"
+    />
+  </div>
+  <div
+    className="title"
+  >
+    Houston, we have a problem!
+  </div>
+  <div
+    className="description"
+  >
+    Sorry, the page you are looking for is temporaily not available. Our team is working on it. 
+Meanwile take a tour through our website.
+  </div>
+  <Memo(PrimaryButton)
+    onClick={[Function]}
+  >
+    Go to main page
+  </Memo(PrimaryButton)>
+</div>
+`;

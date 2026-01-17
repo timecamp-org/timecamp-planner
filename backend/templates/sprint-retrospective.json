@@ -1,0 +1,27 @@
+{
+  "name": "Sprint retrospective",
+  "description": "Elevate your Sprint Retrospective sessions with our structured template. Navigate through key discussion points seamlessly:  Agenda ➔ What Worked Well? ➔ What Did We Learn? ➔ What Could Be Improved? ➔ hat Should Start Doing? Efficiently guide your team through a reflective process, fostering continuous improvement and collaborative insights for future sprints.",
+  "order": 7,
+  "taskListTemplates": [
+    {
+      "name": "Agenda",
+      "order": 1
+    },
+    {
+      "name": "What did work well?",
+      "order": 2
+    },
+    {
+      "name": "What did we learn?",
+      "order": 3
+    },
+    {
+      "name": "What could be improved",
+      "order": 4
+    },
+    {
+      "name": "What should we start doing",
+      "order": 5
+    }
+  ]
+}

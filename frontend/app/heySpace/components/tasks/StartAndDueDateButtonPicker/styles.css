@@ -1,0 +1,133 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+}
+
+.buttonWrapper {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  align-items: center;
+}
+
+.placeholder {
+  padding-right: gridCellSize;
+}
+
+.divider {
+  padding: 0 gridCellSize;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: calc(gridCellSize * 2);
+  padding-left: 0.5rem;
+}
+.footerLabel {
+  &:hover {
+    color: var(--color-primary-500);
+  }
+  &:active {
+    color: var(--color-primary-500);
+  }
+}
+
+.footerSaveButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  padding: 0.5rem 3rem;
+  border-radius: 3rem;
+}
+
+.footerClearButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+
+  padding: 0.5rem 3rem;
+  border-radius: 3rem;
+  color: var(--color-primary-500);
+  & * {
+    color: var(--color-primary-500);
+  }
+  &:hover * {
+    color: var(--color-primary-500);
+  }
+  &:active * {
+    color: var(--color-primary-500);
+  }
+}
+.inputGroups {
+  display: flex;
+  flex-flow: column;
+  padding: gridCellSize calc(gridCellSize * 2) 0 calc(gridCellSize * 2);
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  color: darkGreyBlueColor;
+  margin-top: gridCellSize;
+}
+
+.label {
+  width: calc(gridCellSize * 7);
+  transform: color defaultTransitionAnimation;
+  cursor: pointer;
+}
+
+.dateInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  margin-left: calc(gridCellSize * 3);
+  width: calc(gridCellSize * 22);
+}
+
+.timeInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  margin-left: calc(gridCellSize * 1);
+  width: calc(gridCellSize * 18);
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.timeButton {
+  margin-left: auto;
+}
+
+.date {
+  padding: 0;
+  margin-left: 0.4rem;
+}
+
+.popoverWrapper {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+  opacity: 1 !important;
+}
+
+.datepickerWrapper {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.placeholderIcon {
+  margin-right: 1rem;
+}

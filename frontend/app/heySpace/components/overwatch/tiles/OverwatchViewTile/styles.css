@@ -1,0 +1,13 @@
+@import 'common.css';
+@import 'colors.css';
+@import 'overwatch.css';
+
+.component {
+  border-radius: gridCellSize;
+  background-color: whiteTwoColor;
+  overflow: hidden;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: calc(gridCellSize * 3);
+  position: relative;
+  margin-right: containerMarginRight;
+}

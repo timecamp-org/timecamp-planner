@@ -1,0 +1,49 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: blueGreyColor;
+  position: relative;
+  box-shadow: 0 0 0 0;
+  padding: calc(6 * gridCellSize);
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .Component {
+    padding: 0;
+  }
+}
+
+.title {
+  font-size: largerFontSize;
+  margin-top: calc(5 * gridCellSize);
+  text-align: center;
+  font-weight: boldFontWeight;
+  font-family: defaultFontFamily;
+}
+
+.character {
+  width: calc(40 * gridCellSize);
+}
+
+.message {
+  font-size: normalFontSize;
+  margin-top: calc(3 * gridCellSize);
+  text-align: center;
+  width: calc(56 * gridCellSize);
+}
+
+.navLink {
+  margin-top: calc(3 * gridCellSize);
+  width: 100%;
+  text-decoration: none;
+}
+
+.button {
+  composes: ButtonFull from 'commonComponents/SubmitButton/styles.css';
+  padding: gridCellSize;
+}

@@ -1,0 +1,95 @@
+@import 'colors.css';
+@import 'common.css';
+
+.title {
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  color: cloudyBlueColor;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.optionsList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.optionsListItem {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border-radius: largeBorderRadius;
+  cursor: pointer;
+}
+
+.optionButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  color: var(--color-gray-900);
+}
+
+.taskFollowingOption {
+  composes: optionsListItem;
+  padding: 1rem;
+  cursor: initial;
+}
+
+.buttonCaption {
+  color: var(--color-gray-900);
+  font-weight: ;
+  white-space: nowrap;
+}
+
+.icon {
+  margin-right: 1rem;
+  color: var(--color-gray-900);
+}
+
+.followingSwitch {
+  margin-left: auto;
+}
+
+.followingControllerInfoTooltipWrapperClassName {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(2 * gridCellSize);
+  margin-bottom: gridCellSize;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.sectionInput {
+  flex: 1;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.sectionInput input {
+  width: calc(100% - (2 * gridCellSize));
+  height: calc(8 * gridCellSize);
+}
+
+.sectionInput label {
+  color: cloudyBlueColor;
+}
+
+.checkboxRow {
+  display: flex;
+  cursor: pointer;
+  padding: calc(gridCellSize * 2);
+}
+
+.checkbox {
+  composes: Component from 'commonComponents/Checkbox/styles.css';
+  margin-right: calc(gridCellSize * 2);
+}
+
+.confirmationDialogBody {
+  margin-bottom: calc(gridCellSize * 2);
+}

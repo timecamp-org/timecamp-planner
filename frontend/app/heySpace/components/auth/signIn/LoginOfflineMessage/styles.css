@@ -1,0 +1,41 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: blueGreyColor;
+  overflow-y: auto;
+  transform: translateZ(0);
+  color: black60Color;
+  background-color: whiteTwoColor;
+}
+
+.title {
+  padding: calc(3 * gridCellSize);
+  font-family: defaultFontFamily;
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  text-align: center;
+}
+
+.subTitle {
+  text-align: center;
+  padding: calc(3 * gridCellSize);
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: regularFontWeight;
+  width: calc(70 * gridCellSize);
+}
+
+.mascot {
+  background: url('commonAssets/emptyState/Empty_State_36.png') no-repeat center center;
+  background-size: contain;
+  height: 184px;
+  width: 150px;
+}

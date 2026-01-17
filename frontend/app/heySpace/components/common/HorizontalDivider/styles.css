@@ -1,0 +1,10 @@
+@import "colors.css";
+@import "common.css";
+
+.horizontalDivider {
+  height: 1px;
+  width: calc(100% - (2 * gridCellSize));
+  margin: calc(2 * gridCellSize) auto;
+  background-color: cloudyBlueColor;
+}
+

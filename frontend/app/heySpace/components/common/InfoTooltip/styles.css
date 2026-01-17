@@ -1,0 +1,64 @@
+@import 'colors.css';
+@import 'common.css';
+
+.infoTooltipBody {
+  z-index: 1000;
+  width: calc(21 * gridCellSize);
+  background-color: outerSpaceColor90;
+  padding: gridCellSize;
+  border-radius: defaultBorderRadius;
+  color: whiteColor;
+  font-size: smallerFontSize;
+  pointer-events: none;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.infoTooltipTitle {
+  font-weight: bold;
+  white-space: nowrap;
+  margin-bottom: gridCellSize;
+}
+
+.infoTooltipMessage {
+}
+
+.infoTooltipBody .popoverArrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid outerSpaceColor90;
+}
+
+.infoTooltipBody[data-popper-placement^='top'] > .popoverArrow {
+  bottom: -6px;
+  left: calc(50% - gridCellSize);
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: rotate(180deg);
+}
+
+.infoTooltipBody[data-popper-placement^='bottom'] > .popoverArrow {
+  top: -6px;
+  left: calc(50% - gridCellSize);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.infoTooltipBody[data-popper-placement^='right'] > .popoverArrow {
+  left: -9px;
+  top: calc(50% - gridCellSize);
+  margin-left: 0;
+  margin-right: 0;
+  transform: rotate(270deg);
+}
+
+.infoTooltipBody[data-popper-placement^='left'] > .popoverArrow {
+  right: -9px;
+  top: calc(50% - gridCellSize);
+  margin-left: 0;
+  margin-right: 0;
+  transform: rotate(90deg);
+}

@@ -1,0 +1,22 @@
+@import 'colors.css';
+@import 'common.css';
+
+.icon {
+  width: calc(3 * gridCellSize);
+  color: cloudyBlueColor;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.title {
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+}
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  padding: gridCellSize;
+  margin: 0;
+}

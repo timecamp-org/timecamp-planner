@@ -1,0 +1,35 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  position: absolute;
+  z-index: 999;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 calc(4 * gridCellSize);
+  margin: 0 calc(2 * gridCellSize);
+  width: calc(100% - (11 * gridCellSize));
+  border-radius: calc((5 * gridCellSize) / 2);
+  font-size: smallFontSize;
+  font-weight: bold;
+  color: whiteTwoColor;
+  top: calc(6 * gridCellSize);
+}
+
+.text {
+  margin-left: calc(10 * gridCellSize);
+  padding: gridCellSize 0;
+}
+
+.close {
+  position: absolute;
+  right: calc(2 * gridCellSize);
+}
+
+.visible {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}

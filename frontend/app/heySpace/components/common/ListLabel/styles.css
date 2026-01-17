@@ -1,0 +1,11 @@
+.assignableLabel {
+  background: var(--color-gray-100);
+  padding: 0.2rem 1.3rem;
+  display: flex;
+  border-radius: 2rem;
+  align-items: center;
+}
+
+.label {
+  margin-left: 0.3rem;
+}

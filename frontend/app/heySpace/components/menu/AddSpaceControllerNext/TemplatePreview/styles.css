@@ -1,0 +1,242 @@
+.appTheme {
+  --fontFamily: Poppins;
+  --color-white: #ffffff;
+  --color-gray-50: #fafafa;
+  --light-gray-100: #f3f3f3;
+  --color-gray-400: #a7a6a7;
+  --color-gray-500: #8a8a8;
+  --color-gray-700: #4f4f4f;
+  --color-primary-500: #2d80eb;
+  --borderRadius-sm: 4px;
+}
+
+.preview {
+  font-family: var(--fontFamily);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--borderRadius-sm);
+  overflow: hidden;
+  font-size: 7px;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2em;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--light-gray-100);
+}
+
+.projectNameContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.2em;
+  margin-top: 1em;
+  padding-bottom: 0.4rem;
+}
+
+.projectName {
+  font-size: 1.6em;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.projectDescription {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--color-gray-500);
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.description {
+  color: var(--color-gray-500);
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featureIcon {
+  width: 10px;
+  height: auto;
+}
+
+.board {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4em;
+  margin-top: 0.2em;
+  padding: 0.5em 1em 1.5em;
+  background-color: var(--color-gray-50);
+  flex-grow: 1;
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 16.5em;
+  flex: 0 0 16.5em;
+  background: var(--color-gray-100);
+  border-radius: var(--borderRadius-sm);
+  padding: 0.4em;
+  height: min-content;
+  max-height: 100%;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  flex-grow: 1;
+  min-height: 0;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.4em 0;
+}
+
+.taskList::-webkit-scrollbar {
+  width: 4px;
+}
+
+.listHeader {
+  display: flex;
+  padding: 0.6em;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-gray-100);
+}
+
+.listName {
+  font-weight: 600;
+  font-size: 1.4em;
+  color: var(--color-gray-700);
+}
+
+.addCard {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.4em;
+  color: var(--color-gray-700);
+  fill: var(--color-gray-700);
+  margin-top: 1em;
+}
+
+.addCardIcon {
+  width: 0.8em;
+  height: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+  background-color: var(--color-white);
+  border-radius: var(--borderRadius-sm);
+  padding: 0.8em 0.8em 0.6em;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.taskName {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.progress {
+  margin-left: auto;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.blue {
+  color: var(--color-primary-500);
+  font-weight: 500;
+}
+
+.tag {
+  padding: 0.1em 0.8em;
+  border-radius: 100vw;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.moreTags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-50);
+  border-radius: 50%;
+  background-color: var(--color-gray-400);
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.roundButton {
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px dashed var(--color-gray-700);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checklist {
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+  justify-content: start;
+}
+
+.empty {
+  color: var(--color-gray-500);
+  fill: var(--color-gray-500);
+}
+
+.addListWrapper {
+  width: 23em;
+  padding: 0.8em 3em 1em 1em;
+  border: 1px dashed var(--color-gray-500);
+  color: var(--color-gray-500);
+  fill: var(--color-gray-500);
+  font-size: 1.4em;
+  border-radius: var(--borderRadius-sm);
+  height: min-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  white-space: nowrap;
+  font-weight: 1.4rem;
+}
+
+.assigneePhoto {
+  width: 1.4em;
+  height: 1.4em;
+}

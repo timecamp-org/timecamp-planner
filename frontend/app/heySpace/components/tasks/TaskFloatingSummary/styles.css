@@ -1,0 +1,15 @@
+@import 'common.css';
+
+.floatingTooltip {
+  position: fixed !important;
+  z-index: 999999999999 !important;
+  max-width: 25rem;
+  min-width: 22rem;
+  min-height: 30px;
+  transition: 0.1s linear;
+  background-color: transparent;
+}
+
+.loading {
+  cursor: wait;
+}

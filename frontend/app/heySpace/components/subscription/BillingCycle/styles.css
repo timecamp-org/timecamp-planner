@@ -1,0 +1,68 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin-top: gridCellSize;
+  padding: gridCellSize 0 0;
+  color: darkGreyBlueColor;
+}
+
+.billingCycleHeaderColumn {
+  box-sizing: border-box;
+  margin: gridCellSize 0;
+}
+
+.billingCyclePeriod {
+  flex-grow: 1;
+  margin: gridCellSize 0;
+  box-sizing: border-box;
+  text-align: right;
+  cursor: pointer;
+}
+
+.cell {
+  padding: calc(2 * gridCellSize) gridCellSize calc(2 * gridCellSize) 0;
+  height: calc(5 * gridCellSize);
+}
+
+.cellLabel {
+  composes: cell;
+  color: blueGreyColor;
+  white-space: nowrap;
+}
+
+.radioWithLabel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.radio {
+  composes: component from 'commonComponents/RadioButton/styles.css';
+  margin-right: calc(5 * gridCellSize);
+  width: calc(3 * gridCellSize);
+  height: calc(3 * gridCellSize);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.discountLabel {
+  color: wisteriaColor;
+  font-size: smallFontSize;
+  margin-left: gridCellSize;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  white-space: nowrap;
+}
+
+.totalCost {
+  margin-top: calc(3 * gridCellSize);
+}

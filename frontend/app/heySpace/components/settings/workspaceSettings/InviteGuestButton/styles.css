@@ -1,0 +1,121 @@
+@import 'common.css';
+@import 'colors.css';
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  background: whiteTwoColor;
+  padding: calc(9 * gridCellSize) calc(10 * gridCellSize);
+  width: calc(154 * gridCellSize);
+  height: calc(116 * gridCellSize);
+}
+
+.modalBody {
+  composes: modalBody from 'commonComponents/UniversalModal/styles.css';
+  display: flex;
+  flex-flow: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  font-size: normalFontSize;
+  margin-bottom: calc(3 * gridCellSize);
+  position: relative;
+}
+
+.backdrop {
+  composes: backdrop from 'commonComponents/UniversalModal/styles.css';
+  filter: blur(gridCellSize);
+}
+
+.inputWithPicker {
+  display: flex;
+  align-content: center;
+}
+
+.spacePicker {
+  composes: Component from 'components/projects/SpacePicker/styles.css';
+  margin-left: calc(gridCellSize * 3);
+  align-self: center;
+}
+
+.mascot {
+  /* background: url('commonComponents/Mascot/assets/character_20.png') no-repeat center center; */
+  background-size: contain;
+  width: calc(33 * gridCellSize);
+  height: calc(35 * gridCellSize);
+}
+
+.inviteMessage {
+  padding-bottom: calc(3 * gridCellSize);
+  text-align: center;
+  white-space: pre-wrap;
+  color: blueGreyColor;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.guestHint {
+  display: flex;
+  flex-flow: column;
+  padding-top: calc(gridCellSize * 5);
+}
+
+.hintHeader {
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+  color: cloudyBlueColor;
+}
+
+.hintText {
+  color: cloudyBlueColor;
+  padding-top: calc(gridCellSize * 2);
+  font-size: smallFontSize;
+}
+
+.submitButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: auto;
+}
+
+.buttonRight {
+  margin-left: auto;
+}
+
+.inviteError {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  bottom: calc(-3 * gridCellSize);
+  left: calc(2 * gridCellSize);
+  font-size: smallFontSize;
+  color: paleRedColor;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  background: whiteTwoColor;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+  color: wisteriaColor;
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 10;
+}
+
+.buttonWrapper {
+  position: relative;
+}

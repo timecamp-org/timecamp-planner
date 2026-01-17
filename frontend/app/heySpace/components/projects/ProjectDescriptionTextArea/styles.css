@@ -1,0 +1,17 @@
+@import 'common.css';
+@import 'colors.css';
+
+.label {
+  padding-bottom: calc(2 * gridCellSize);
+  font-size: normalFontSize;
+}
+
+.optional {
+	font-size: smallerFontSize;
+	color: cloudyBlueColor;
+}
+
+.inputDisabled {
+  background-color: cloudyBlue20Color;
+  color: blueGreyColor;
+}

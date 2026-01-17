@@ -1,0 +1,6 @@
+RULE Component is ONLY for simple, dumb rendering (NO data formatting, just strings, numbers, etc)
+RULE keep business logic in Enhancers
+RULE select simple entities from state, simple = primitives only
+RULE selectors are stupid
+RULE logic that drives ifs inside component is in the component itself, props (business logic) are set in Enhancer
+RULE Enhancer always render <ComposedComponent

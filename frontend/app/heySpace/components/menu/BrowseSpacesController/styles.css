@@ -1,0 +1,31 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: 50rem;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.searchResults {
+  height: 40rem;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
+  margin-top: 1rem;
+}
+
+.subTitle {
+  margin: calc(2 * gridCellSize) 0;
+  font-weight: semiboldFontWeight;
+}
+
+.input {
+  padding-left: 1.4rem;
+}
+
+.inputWrapper {
+  margin-bottom: 1.6rem;
+}

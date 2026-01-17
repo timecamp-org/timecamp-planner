@@ -1,0 +1,61 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: calc(4 * gridCellSize);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  color: black60Color;
+  background-color: whiteTwoColor;
+}
+
+.title {
+  padding: calc(3 * gridCellSize);
+  font-family: fontFamilyTwo;
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  text-align: center;
+}
+
+.subTitle {
+  text-align: center;
+  padding: calc(3 * gridCellSize);
+  font-size: normalFontSize;
+  font-weight: regularFontWeight;
+  width: calc(71 * gridCellSize);
+}
+
+.mascot {
+  background: url('commonAssets/emptyState/Empty_State_23.png') no-repeat center center;
+  background-size: contain;
+  width: 278px;
+  height: 182px;
+  z-index: 10;
+}
+
+.top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: calc(36 * gridCellSize);
+  justify-content: center;
+}
+
+.background {
+  font-size: 200px;
+  font-family: fontFamilyTwo;
+  font-weight: blackFontWeight;
+  color: lightGreyColor;
+  z-index: 0;
+  position: absolute;
+  top: calc(-15 * gridCellSize);
+}

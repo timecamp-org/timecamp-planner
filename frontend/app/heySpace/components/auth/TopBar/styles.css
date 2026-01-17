@@ -1,0 +1,30 @@
+@import "common.css";
+@import "colors.css";
+
+.signIn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: blueGreyColor;
+  padding-top: calc(10 * gridCellSize);
+  padding-right: calc(9 * gridCellSize);
+  margin-bottom: calc(6 * gridCellSize);
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .signIn {
+    padding-right: calc(2 * gridCellSize);
+  }
+}
+
+.signInButton {
+  border: solid defaultBorderWidth wisteriaColor; 
+  color: wisteriaColor !important;
+  border-radius: largeBorderRadius;
+  height: 36px;
+  width: calc(21 * gridCellSize);
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  position: relative;
+  margin-left: calc(2 * gridCellSize);
+}

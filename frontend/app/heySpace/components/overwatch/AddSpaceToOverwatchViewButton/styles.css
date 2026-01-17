@@ -1,0 +1,53 @@
+@import 'common.css';
+@import 'colors.css';
+@import 'overwatch.css';
+
+.Component {
+  margin: calc(3 * gridCellSize) 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: calc(3 * gridCellSize) calc(4 * gridCellSize);
+  background: whiteTwoColor;
+  border-radius: gridCellSize;
+  border: 1px dashed warmGreyThreeColor;
+  cursor: pointer;
+  color: warmGreyThreeColor;
+  transition: background-color 0.3s defaultTransitionEasing, color 0.3s defaultTransitionEasing, border-color 0.3s defaultTransitionEasing;
+  margin-right: containerMarginRight;
+}
+
+.Component:hover {
+  border-color: currentColor;
+  background: whiteFiveColor;
+}
+
+.Component:active {
+  border-color: warmGreyThreeColor;
+  background: pinkishGreyThree;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: calc(3 * gridCellSize);
+  background: currentColor;
+  width: calc(4 * gridCellSize);
+  height: calc(4 * gridCellSize);
+  border-radius: 50%;
+}
+
+.plusIcon {
+  color: whiteTwoColor;
+  transform: rotateZ(45deg);
+  width: calc(2 * gridCellSize);
+  height: calc(2 * gridCellSize);
+}
+
+.buttonText {
+  color: currentColor;
+  font-size: normalFontSize;
+  font-family: fontFamilyTwo;
+  text-transform: uppercase;
+}

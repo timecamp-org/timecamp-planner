@@ -1,0 +1,107 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: calc(90 * gridCellSize);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .Component {
+    width: calc(100% - (gridCellSize * 4));
+  }
+}
+
+.header {
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  color: blueGreyColor;
+  text-align: center;
+  margin: calc(3 * gridCellSize) 0;
+}
+
+.form {
+  padding-bottom: calc(5 * gridCellSize);
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontalSeparator {
+  height: calc(2 * gridCellSize);
+  display: flex;
+  align-items: center;
+  margin-top: calc(6 * gridCellSize);
+  margin-bottom: calc(6 * gridCellSize);
+}
+
+.emailUserInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  flex: 1;
+  padding-right: calc(2 * gridCellSize);
+}
+
+.submitButton,
+.submitButtonLoading {
+  composes: ButtonFull from 'commonComponents/SubmitButton/styles.css';
+  margin-bottom: calc(2 * gridCellSize);
+  width: 100%;
+}
+
+.submitButtonLoading {
+  opacity: 0.6;
+}
+
+.tip {
+  padding: 0 2.4rem 2.4rem;
+}
+
+.emailInputWithButton {
+  margin-bottom: calc(3 * gridCellSize);
+  display: flex;
+  align-items: center;
+}
+
+.userPendingInvitations {
+  flex-flow: column;
+  overflow-y: auto;
+  overflow-y: auto;
+  max-height: 34rem;
+  min-height: 10rem;
+}
+
+.userLabel {
+  composes: Component from 'commonComponents/UserLabel/styles.css';
+  padding: 0 1.6rem;
+  margin-bottom: calc(3 * gridCellSize);
+  &:hover {
+    cursor: default;
+    background-color: inherit;
+  }
+}
+
+.userLabelInner {
+  composes: userLabel from 'commonComponents/UserLabel/styles.css';
+  padding: 0;
+}
+
+.submitButtonClassName {
+  margin-left: auto;
+}
+
+.multiInviteInput {
+  composes: Component from 'commonComponents/MultiInviteInput/styles.css';
+  margin-bottom: calc(4 * gridCellSize);
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 0 2.4rem;
+}
+
+.listHeader {
+  font-weight: var(--fontWeight-semibold);
+  margin: 1rem 2.4rem;
+}

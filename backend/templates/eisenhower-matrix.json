@@ -1,0 +1,23 @@
+{
+  "name": "Eisenhower matrix",
+  "description": "Refine your task management with our Eisenhower Matrix template, effortlessly guiding you through strategic decision points for optimal productivity and balance. Effectively manage tasks without overwhelming complexity, streamlining your workflow for enhanced efficiency and focused execution.",
+  "order": 13,
+  "taskListTemplates": [
+    {
+      "name": "Do",
+      "order": 1
+    },
+    {
+      "name": "Schedule",
+      "order": 2
+    },
+    {
+      "name": "Delegate",
+      "order": 3
+    },
+    {
+      "name": "Delete",
+      "order": 4
+    }
+  ]
+}

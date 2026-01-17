@@ -1,0 +1,41 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: defaultFontFamily;
+}
+
+.billingPeriodSwitcher {
+  display: flex;
+  align-items: center;
+  padding: calc(gridCellSize * 3) 0;
+}
+
+.switchButton {
+  composes: materialSwitch from 'commonComponents/MaterialSwitch/styles.css';
+  margin: 0 calc(gridCellSize * 2);
+}
+
+.label {
+}
+
+.hint {
+  font-family: fontFamilyTwo;
+  color: jungleGreenColor;
+  margin-left: gridCellSize;
+}
+
+.plans {
+  display: flex;
+
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.subscriptionPlan {
+  composes: Component from '../SubscriptionPlan/styles.css';
+  margin: calc(6 * gridCellSize);
+}

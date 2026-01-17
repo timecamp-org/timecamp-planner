@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TaskChecklist /> should render list 1`] = `
+<Connect(Droppable)
+  direction="vertical"
+  droppableId="task::001"
+  getContainerForClone={[Function]}
+  ignoreContainerClipping={false}
+  isCombineEnabled={false}
+  isDropDisabled={false}
+  mode="standard"
+  renderClone={null}
+  type="CHECKLIST"
+>
+  <Component />
+</Connect(Droppable)>
+`;
+
+exports[`<TaskChecklist /> should render when list is empty 1`] = `
+<Connect(Droppable)
+  direction="vertical"
+  droppableId="task::001"
+  getContainerForClone={[Function]}
+  ignoreContainerClipping={false}
+  isCombineEnabled={false}
+  isDropDisabled={false}
+  mode="standard"
+  renderClone={null}
+  type="CHECKLIST"
+>
+  <Component />
+</Connect(Droppable)>
+`;

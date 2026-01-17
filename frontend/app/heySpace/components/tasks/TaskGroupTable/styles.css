@@ -1,0 +1,252 @@
+@import 'common.css';
+
+.headCell {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4rem;
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-semibold);
+  color: var(--color-gray-900);
+}
+
+.hoverChild {
+  transform: opacity 0.1s;
+  opacity: 0;
+}
+
+.hoverParent {
+  &:hover .hoverChild {
+    opacity: 1;
+  }
+}
+
+.cellContent {
+  display: flex;
+  height: 4rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.handle {
+  padding: 0 0.9rem;
+}
+
+.nameColumn {
+  composes: headCell;
+  gap: 1.6rem;
+}
+
+.openButton {
+  margin-right: -1rem;
+}
+
+.itemsTotal {
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+}
+
+.dueDate {
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+}
+
+.tagList {
+  composes: component from 'components/tags/TagList/styles.css';
+  display: flex;
+  align-items: flex-end;
+  color: var(--color-white);
+  padding-left: 0.4rem;
+}
+
+.nameRow {
+  flex: 1;
+}
+
+.progressRow {
+  display: flex;
+}
+
+.cell {
+  border: none;
+  padding: 0;
+  max-width: 10rem;
+  min-width: 5rem;
+  overflow: hidden;
+}
+
+.tag {
+  composes: tag from 'components/tags/TagList/styles.css';
+  height: 2.4rem;
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+  line-height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+}
+
+.columnHeader {
+  color: var(--color-gray-900);
+  text-transform: none;
+  font-size: var(--fontSize-md);
+  font-weight: var(--fontWeight-semibold);
+  font-family: fontFamilyThree;
+  display: flex;
+  align-items: center;
+  padding-left: calc(gridCellSize * 2);
+  text-transform: uppercase;
+}
+
+.taskNameButton {
+  justify-content: left;
+  flex: 1;
+}
+
+.taskProgress {
+  composes: taskProgress from 'components/tasks/taskProgress/TaskProgressWithPopover/styles.css';
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-regular);
+
+  &:hover * {
+    color: var(--color-primary-500);
+  }
+
+  &:active {
+    color: var(--color-primary-500);
+  }
+}
+
+.checkmarkWrapper {
+  composes: checkmarkWrapper from 'components/tasks/taskProgress/TaskProgressWithPopover/styles.css';
+  width: 1.6rem;
+  height: 1.6rem;
+
+  & * {
+    color: var(--color-success-600);
+  }
+}
+
+.innerScroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: min-content;
+  flex: 1;
+  min-height: 0;
+}
+
+.nameLabelWrapper {
+  text-transform: uppercase;
+}
+
+.nameLabelCard {
+  font-weight: var(--fontWeight-semibold);
+  margin-right: 0.5rem;
+}
+
+.nameLabelTaskCount {
+  font-weight: var(--fontWeight-regular);
+}
+
+.tagListClassName {
+  background: transparent;
+  padding: unset;
+  border: unset;
+  color: var(--color-gray-900);
+
+  &:hover {
+    color: var(--color-primary-500);
+    background: transparent;
+    border: unset;
+  }
+
+  &:active {
+    color: var(--color-primary-500);
+    background: transparent;
+  }
+}
+
+.personIcon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.personName {
+  font-size: var(--fontSize-sm);
+  font-weight: var(--fontWeight-semibold);
+}
+
+.center {
+  justify-content: center;
+}
+
+.addTagButton {
+  width: 2rem;
+  height: 2rem;
+}
+
+.propertyButtonSize {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.breadcrumbItem {
+  composes: item from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+  padding: 0;
+  border-radius: 0;
+}
+
+.breadcrumbButton {
+  composes: target from 'components/tasks/CardDetailsBreadcrumbs/styles.css';
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  padding-right: 0.8rem;
+
+  & > button {
+    border-radius: 0;
+    padding: 1rem;
+    padding-left: 0.2rem;
+  }
+
+  &:hover * {
+    background: transparent;
+    color: var(--color-primary-500);
+  }
+
+  &:focus {
+    color: var(--color-primary-500);
+  }
+}
+
+.listHeader {
+  padding-left: 1rem;
+}
+
+.personIcon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.nameCell {
+  font-size: var(--fontSize-xs);
+  width: 100%;
+  height: 100%;
+  padding-right: 1.5rem;
+  border-radius: var(--borderRadius-xs);
+  justify-items: flex-start;
+  justify-content: flex-start;
+}

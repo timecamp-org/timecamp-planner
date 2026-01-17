@@ -1,0 +1,75 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  text-align: center;
+  font-family: defaultFontFamily;
+  font-size: normalFontSize;
+  position: relative;
+  height: 100%;
+  width: calc(gridCellSize * 100);
+  display: flex;
+  flex-flow: column;
+}
+
+.summaryWrapper {
+  background-color: whiteTwoColor;
+  border-radius: largeBorderRadius;
+  padding: calc(gridCellSize * 4);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+}
+
+.header {
+  font-family: fontFamilyTwo;
+  font-size: largerFontSize;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  white-space: pre-line;
+}
+
+.boldedText, .subHeader {
+  font-family: fontFamilyTwo;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  padding: calc(8 * gridCellSize) 0 calc(2 * gridCellSize) 0;
+}
+
+.smallText {
+  font-family: defaultFontFamily;
+  font-size: smallFontSize;
+  color: blueGreyColor;
+  white-space: pre-line;
+}
+
+.footer {
+  composes: subHeader;
+  margin-top: calc(gridCellSize * 2);
+  padding: 0;
+}
+
+.mascot {
+  background-size: contain;
+  width: 193px;
+  height: 205px;
+}
+
+.contactWrapper {
+  display: flex;
+  align-items: center;
+  padding-top: calc(gridCellSize * 2);
+}
+
+.mailto {
+  composes: smallText;
+  font-weight: boldFontWeight;
+  padding-left: gridCellSize;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+}

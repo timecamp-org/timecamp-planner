@@ -1,0 +1,11 @@
+@import 'common.css';
+
+.icon {
+  margin-right: calc(2 * gridCellSize);
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 1000;
+}

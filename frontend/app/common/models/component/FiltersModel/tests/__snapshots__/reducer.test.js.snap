@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FiltersModelReducer initialState 1`] = `
+Immutable.Map {
+  "filtersData": Immutable.Map {},
+}
+`;
+
+exports[`FiltersModelReducer onClearFiltersSuccess 1`] = `
+Immutable.Map {
+  "filtersData": Immutable.Map {
+    "filter::001": Immutable.Record {
+      "id": undefined,
+      "groupByField": null,
+      "sortByField": null,
+      "filterByField": null,
+    },
+  },
+}
+`;
+
+exports[`FiltersModelReducer onSetFilterBySuccess 1`] = `
+Immutable.Map {
+  "filtersData": Immutable.Map {
+    "filter::001": Immutable.Record {
+      "id": undefined,
+      "groupByField": null,
+      "sortByField": null,
+      "filterByField": null,
+    },
+  },
+}
+`;
+
+exports[`FiltersModelReducer onSetGroupBySuccess 1`] = `
+Immutable.Map {
+  "filtersData": Immutable.Map {
+    "filter::001": Immutable.Record {
+      "id": undefined,
+      "groupByField": null,
+      "sortByField": null,
+      "filterByField": null,
+    },
+  },
+}
+`;

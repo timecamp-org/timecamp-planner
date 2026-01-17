@@ -1,0 +1,31 @@
+{
+  "name": "Agile",
+  "description": "The Agile template is designed to optimize project management with a flexible and iterative approach. This template enhances collaboration, adaptability, and transparency, aligning with Agile principles to deliver value to stakeholders in a dynamic project environment.",
+  "order": 3,
+  "taskListTemplates": [
+    {
+      "name": "Sprint backlog",
+      "order": 1
+    },
+    {
+      "name": "In progress",
+      "order": 2
+    },
+    {
+      "name": "To review",
+      "order": 3
+    },
+    {
+      "name": "Review",
+      "order": 4
+    },
+    {
+      "name": "To deploy",
+      "order": 5
+    },
+    {
+      "name": "Deployed",
+      "order": 6
+    }
+  ]
+}

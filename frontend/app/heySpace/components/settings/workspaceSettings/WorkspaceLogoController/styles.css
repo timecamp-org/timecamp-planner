@@ -1,0 +1,47 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  position: relative;
+}
+
+.button {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: calc(7 * gridCellSize);
+  width: 100%;
+  white-space: nowrap;
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 1000;
+}
+
+.hoveredPen {
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-gray-900);
+}
+
+.initials {
+  user-select: none;
+  color: cloudyBlueColor;
+  height: 100%;
+  width: 100%;
+  background-color: blueGreyColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid cloudyBlueColor;
+  font-size: var(--fontSize-lg);
+}

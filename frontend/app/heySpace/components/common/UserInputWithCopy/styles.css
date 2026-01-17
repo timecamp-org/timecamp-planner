@@ -1,0 +1,35 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+}
+
+.copyButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  min-width: calc(gridCellSize * 8);
+  height: calc(gridCellSize * 8);
+  margin: 0;
+  padding: 0;
+  margin-left: gridCellSize;
+}
+
+.input {
+  width: 100%;
+}
+
+.inputInner {
+  height: calc(gridCellSize * 8);
+}
+
+.inputWithButton {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  display: block;
+  font-size: normalFontSize;
+  color: darkGreyBlueColor;
+  text-align: left;
+  margin-bottom: gridCellSize;
+}

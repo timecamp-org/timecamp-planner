@@ -1,0 +1,87 @@
+@import 'colors.css';
+@import 'common.css';
+.Component {
+}
+
+.modalBody {
+  composes: modalBody from 'commonComponents/UniversalModal/styles.css';
+  width: calc(150 * gridCellSize);
+}
+
+.columnHeader {
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  color: darkGreyBlueColor;
+  padding: calc(gridCellSize * 2) 0;
+}
+
+.modalContent {
+  display: flex;
+}
+
+.imagePlaceholder {
+  background: defaultGreyBrightness1;
+  background-color: cloudyBlueColor;
+  border-radius: defaultBorderRadius;
+  width: calc(12 * gridCellSize);
+  height: calc(12 * gridCellSize);
+}
+
+.image {
+  max-width: calc(12 * gridCellSize);
+  max-height: calc(12 * gridCellSize);
+  margin-right: calc(gridCellSize * 3);
+}
+
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 2.4rem;
+}
+
+.leftAlignButton {
+  margin-right: auto;
+}
+
+.confirmModalBody {
+  padding: calc(gridCellSize * 2) 0;
+  color: darkGreyColor;
+}
+
+.thumbnail {
+  composes: Component from 'components/settings/developerConsole/ClientThumbnail/styles.css';
+  padding: calc(gridCellSize * 2) 0;
+  margin-right: calc(gridCellSize * 2);
+}
+
+.input {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  padding: gridCellSize 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+.label {
+  padding: 0 gridCellSize;
+  color: darkGreyBlueColor;
+}
+
+.modalColumn {
+  composes: column;
+  padding: calc(gridCellSize * 2);
+}
+
+.modalColumn:not(:first-child) {
+  border-left: 1px solid whiteColor;
+}

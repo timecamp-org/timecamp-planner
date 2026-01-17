@@ -1,0 +1,32 @@
+
+import React from 'react'
+import {
+  Svg,
+  Path,
+} from 'react-native-svg'
+import PropTypes from 'prop-types'
+import { wisteriaColor } from 'common/commonStyles/colors'
+
+Bell.propTypes = {
+  color: PropTypes.string,
+  style: PropTypes.object,
+}
+
+Bell.defaultProps = {
+  color: wisteriaColor,
+  style: {
+    width: 17,
+    height: 18,
+  },
+}
+
+export default function Bell(props) {
+  return (
+    <Svg style={props.style} viewBox="0 0 18 19">
+      <Path
+        d="M12.3 16.15a2.85 2.85 0 0 1-5.7 0H1.85a.95.95 0 0 1 0-1.9h.95v-5.7a6.65 6.65 0 0 1 3.82-6.023 2.85 2.85 0 0 1 5.661 0A6.65 6.65 0 0 1 16.1 8.55v5.7h.95a.95.95 0 0 1 0 1.9H12.3zm-3.8 0a.95.95 0 0 0 1.9 0H8.5zm0-12.255A4.75 4.75 0 0 0 4.7 8.55v5.7h9.5v-5.7a4.75 4.75 0 0 0-3.8-4.655V2.85a.95.95 0 0 0-1.9 0v1.045z"
+        fill={props.color}
+        fillRule="nonzero" />
+    </Svg>
+  )
+}

@@ -1,0 +1,138 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  max-width: 60rem;
+  width: 100%;
+  padding: 3.2rem;
+  padding-top: 5rem;
+  border-radius: 3.2rem;
+  border: 1px solid var(--color-primary-500);
+  background: linear-gradient(113deg, rgba(234, 242, 253, 0.12) 10.29%, rgba(234, 242, 253, 0) 100.35%);
+  box-shadow: 2px 4px 32px 2px rgba(36, 102, 188, 0.12);
+  backdrop-filter: blur(37.5px);
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .Component {
+    width: calc(100% - (gridCellSize * 4));
+  }
+}
+
+.header {
+  color: var(--color-gray-900);
+  font-size: 4.2rem;
+  font-weight: var(--fontWeight-bold);
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .signUp {
+    margin-top: 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  width: 100%;
+}
+
+.inputWrapper {
+  display: grid;
+  grid-template-columns: 10rem auto;
+  align-items: center;
+  width: 100%;
+
+  & > label {
+    font-size: var(--fontSize-lg);
+    color: var(--color-gray-800);
+    margin-left: 0;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 5.2rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  font-size: var(--fontSize-base);
+  display: flex;
+  position: relative;
+
+  &:focus-within {
+    border-color: var(--color-primary-500);
+  }
+
+  & > input {
+    background-color: transparent;
+    height: 100%;
+    padding-left: 3.5rem;
+    border: none !important;
+  }
+
+  & > div {
+    position: absolute;
+    bottom: 0;
+    left: 2.4rem;
+    transform: translateY(50%);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-primary-500);
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-base);
+  grid-column-start: 2;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.forgottenPassword {
+  grid-column-start: 2;
+}
+
+.googleError {
+  font-size: smallFontSize;
+  margin-top: gridCellSize;
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  color: paleRedColor;
+  width: calc(72 * gridCellSize);
+  white-space: nowrap;
+}
+
+.submitButton {
+  padding: 1.5rem 4rem;
+  text-transform: none;
+  height: 5.2rem;
+  max-width: 100%;
+  border-radius: 99rem;
+  font-size: var(--fontSize-lg);
+  font-weight: var(--fontWeight-bold);
+  background: linear-gradient(110.94deg, var(--color-primary-500) 36.16%, var(--color-primary-600) 88.93%);
+  margin-bottom: 0;
+  margin-top: 2.4rem;
+}
+
+.divider {
+  margin: 1.8rem 0;
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-base);
+}
+
+.noAccount {
+  text-align: center;
+  margin-top: 1.8rem;
+}

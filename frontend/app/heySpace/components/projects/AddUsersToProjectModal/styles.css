@@ -1,0 +1,24 @@
+@import 'common.css';
+@import 'colors.css';
+
+.modal {
+  composes: modalBody from 'commonComponents/UniversalModal/styles.css';
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: calc(80 * gridCellSize);
+}
+
+.personFullName {
+  composes: personFullName from 'components/person/PersonFullName/styles.css';
+  font-weight: semiboldFontWeight;
+  padding-left: gridCellSize;
+}
+
+.colon {
+  font-weight: semiboldFontWeight;
+}
+
+.lastText {
+  padding-left: gridCellSize;
+}

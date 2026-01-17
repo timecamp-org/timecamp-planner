@@ -1,0 +1,16 @@
+@import 'common.css';
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: flex-start;
+  font-family: inherit;
+}
+
+.icon {
+  margin-right: gridCellSize;
+}
+
+.navLink {
+  text-decoration: none;
+}

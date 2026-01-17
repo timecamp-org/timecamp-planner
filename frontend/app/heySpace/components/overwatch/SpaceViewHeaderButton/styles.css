@@ -1,0 +1,15 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  border-width: 0;
+  min-width: auto;
+  padding: gridCellSize calc(2 * gridCellSize);
+  line-height: 100%;
+}
+
+.icon {
+  margin-right: calc(2 * gridCellSize);
+  width: calc(gridCellSize * 2);
+  height: calc(gridCellSize * 2);
+}

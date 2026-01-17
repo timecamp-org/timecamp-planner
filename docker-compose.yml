@@ -1,0 +1,237 @@
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:10.4-alpine
+    container_name: timecamp-planner-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-heyspace}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-heyspace}
+      POSTGRES_DB: ${POSTGRES_DB:-heyspace}
+      DB_USER: ${DB_USER:-heyspace}
+      DB_PASSWORD: ${DB_PASSWORD:-heyspace}
+      DB_NAME: ${DB_NAME:-heyspace}
+    ports:
+      - '5433:5432'
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./backend/bin/scripts/init-db.sh:/docker-entrypoint-initdb.d/00-init-db.sh:ro
+      - ./backend/db/__init__.sql:/docker-entrypoint-initdb.d/__init__.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-postgres} && PGPASSWORD=${POSTGRES_PASSWORD:-postgres} psql -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-postgres} -c 'SELECT 1'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: timecamp-planner-redis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+    command: >
+      sh -c '
+        if [ -n "${REDIS_PASSWORD}" ]; then
+          exec redis-server --requirepass "${REDIS_PASSWORD}"
+        else
+          exec redis-server
+        fi
+      '
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # RabbitMQ Message Queue
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: timecamp-planner-rabbitmq
+    restart: unless-stopped
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq/
+      - rabbitmq_log:/var/log/rabbitmq/
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Ntfy push notifications
+  ntfy:
+    image: binwiederhier/ntfy:latest
+    container_name: timecamp-planner-ntfy
+    restart: unless-stopped
+    ports:
+      - '8080:80'
+    volumes:
+      - ntfy_cache:/var/cache/ntfy
+      - ntfy_config:/etc/ntfy
+    command: serve
+
+  # MinIO (S3-compatible file storage)
+  minio:
+    image: minio/minio:latest
+    container_name: timecamp-planner-minio
+    restart: unless-stopped
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-heyspace}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-heyspace}
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+
+  minio-init:
+    image: minio/mc:latest
+    container_name: timecamp-planner-minio-init
+    depends_on:
+      - minio
+    entrypoint: >
+      sh -c "
+        until mc alias set local http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD}; do
+          sleep 1;
+        done;
+        mc mb -p local/planner-files || true;
+      "
+
+  # Mailpit (local SMTP)
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: timecamp-planner-mailpit
+    restart: unless-stopped
+    ports:
+      - '1025:1025'
+      - '8025:8025'
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: timecamp-planner-backend
+    restart: unless-stopped
+    ports:
+      - '3001:3001'
+      - '3003:3003'
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+      FEED_PORT: 3003
+      DB_HOST: db
+      DB_USER: ${DB_USER:-heyspace}
+      DB_PASSWORD: ${DB_PASSWORD:-heyspace}
+      DB_NAME: ${DB_NAME:-heyspace}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-heyspace}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+      RABBITMQ_HOSTNAME: rabbitmq
+      RABBITMQ_USERNAME: ${RABBITMQ_USERNAME:-heyspace}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-heyspace}
+      NTFY_BASE_URL: http://ntfy:80
+      NTFY_TOPIC_PREFIX: heyspace-
+      FILE_STORAGE_ENDPOINT: minio:9000
+      FILE_STORAGE_REGION: us-east-1
+      FILE_STORAGE_BUCKET: planner-files
+      FILE_STORAGE_REQUEST_EXPIRY: 180
+      FILE_STORAGE_ACCEPTABLE_RESIZE_SIZES: 20,95,360
+      FILE_STORAGE_ACCESS_KEY_ID: ${FILE_STORAGE_ACCESS_KEY_ID:-heyspace}
+      FILE_STORAGE_SECRET_ACCESS_KEY: ${FILE_STORAGE_SECRET_ACCESS_KEY:-heyspace}
+      FILE_STORAGE_SCHEME: http
+      FILE_STORAGE_USE_PATH_STYLE: 'true'
+      MAIL_HOST: mailpit
+      MAIL_PORT: 1025
+      JWT_SECRET: ${JWT_SECRET:-your-local-secret}
+    volumes:
+      - ./backend:/app
+      - backend_node_modules:/app/node_modules
+      - backend_dist:/app/dist
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    command: >
+      sh -c "
+        echo 'Waiting for database to be ready...' &&
+        until PGPASSWORD=${DB_PASSWORD} psql -h db -U ${DB_USER} -d ${DB_NAME} -c 'SELECT 1' > /dev/null 2>&1; do
+          sleep 1
+        done &&
+        echo 'Waiting for heyspace database to be ready...' &&
+        until PGPASSWORD=${DB_PASSWORD} psql -h db -U ${DB_USER} -d ${DB_NAME} -c 'SELECT 1' > /dev/null 2>&1; do
+          sleep 2
+        done &&
+        echo 'Building TypeScript...' &&
+        cd /app && yarn build &&
+        echo 'Initializing database schema...' &&
+        if [ -f /app/db/__init__.sql ]; then
+          PGPASSWORD=${POSTGRES_PASSWORD} psql -h db -U postgres -d ${DB_NAME} -v APP_DB_USER=${DB_USER} -f /app/db/__init__.sql 2>&1 | grep -v 'already exists' || true
+        fi &&
+        echo 'Running database migrations...' &&
+        cd /app && PGPASSWORD=${POSTGRES_PASSWORD} psql -h db -U postgres -d ${DB_NAME} -c 'SELECT 1' > /dev/null && \
+        DB_HOST=db PGPASSWORD=${DB_PASSWORD} yarn migrate 2>&1 | tail -5 || echo 'Migrations completed' &&
+        echo 'Starting backend server...' &&
+        node dist/run.js
+      "
+
+  # Frontend Application
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: timecamp-planner-frontend
+    restart: unless-stopped
+    ports:
+      - '3002:3000'
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      HOST: 0.0.0.0
+    volumes:
+      - ./frontend:/app
+      - frontend_node_modules:/app/node_modules
+      - ./.git:/app/.git:ro
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
+    driver: local
+  redis_data:
+    driver: local
+  rabbitmq_data:
+    driver: local
+  rabbitmq_log:
+    driver: local
+  ntfy_cache:
+    driver: local
+  ntfy_config:
+    driver: local
+  minio_data:
+    driver: local
+  frontend_node_modules:
+    driver: local
+  backend_dist:
+    driver: local
+  backend_node_modules:
+    driver: local
+
+networks:
+  default:
+    name: timecamp-planner-network

@@ -1,0 +1,332 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  position: relative;
+}
+
+.moreButtonIcon {
+  height: 1.5rem;
+}
+
+.card {
+  min-height: 2rem;
+  border-radius: var(--borderRadius-sm);
+  padding: 0.8rem;
+  margin-bottom: calc(2 * gridCellSize);
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white);
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.07);
+}
+
+.cardNameWrapper {
+  position: relative;
+}
+
+.moreIcon {
+  composes: threeDotsIcon from 'components/tasks/CardDetailsMoreOptions/styles.css';
+  height: calc(gridCellSize * 4);
+}
+
+.moreButton {
+  opacity: 0.85;
+  padding: 0.2rem;
+
+  &:hover {
+  }
+}
+
+.taskName {
+  white-space: pre-wrap;
+  padding: 0.5rem 0;
+  font-size: var(--fontSize-xs);
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+}
+
+.taskColor {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .taskColor {
+  opacity: 1;
+}
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  margin-left: auto;
+  color: whiteTwoColor;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 20;
+}
+
+.cardDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.detailsSpacing {
+  margin-bottom: 0.8rem;
+}
+
+.cardExtensions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  max-height: cardDetailsHeight;
+  margin: gridCellSize 0;
+}
+
+.taskAssignee {
+  max-width: calc(20 * gridCellSize);
+  min-width: cardDetailsHeight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskDueDate {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  height: cardDetailsHeight;
+  padding: gridCellSize;
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-regular);
+}
+
+.hidden {
+  display: none;
+}
+
+.tagList {
+  composes: component from 'components/tags/TagList/styles.css';
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  composes: tag from 'components/tags/TagList/styles.css';
+  margin-top: 0;
+}
+
+.addTagButton {
+  border: none;
+  width: 1.6rem !important;
+  height: 1.6rem !important;
+  padding: 0;
+  border-radius: 50%;
+  min-width: unset;
+  min-height: unset;
+}
+
+.taskEstimatedEffort {
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  color: var(--color-gray-900);
+  font-size: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-regular);
+
+  & svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  & > div {
+    margin-right: 0.4rem;
+  }
+}
+
+.emptyAssignees {
+  min-width: calc(7 * gridCellSize);
+}
+
+.dueDate {
+  composes: dueDate from 'commonComponents/DueDate/styles.css';
+  padding: 0;
+}
+
+.popoverButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.popoverIcon {
+  margin-right: calc(gridCellSize * 2);
+}
+
+.checklistProgress {
+  composes: component from 'commonComponents/ChecklistProgress/styles.css';
+  font-size: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-900);
+  padding: 0.4rem;
+
+  & > svg {
+    width: 1rem;
+    margin-right: 0.3rem;
+  }
+}
+
+.checklistProgressEmpty {
+  composes: checklistProgress;
+  color: var(--color-gray-500);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+.rowLeft {
+  justify-self: start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.rowRight {
+  width: max-content;
+  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.emptyRowLeft {
+  justify-self: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.emptyRowRight {
+  width: max-content;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.emptyRow {
+  margin-top: 0;
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.estimateButton {
+  font-size: var(--fontSize-xxs);
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-900);
+
+  & span {
+    margin-left: 0;
+  }
+
+  & svg {
+    width: 1rem !important;
+  }
+
+  & div {
+    margin-right: 0.4rem;
+  }
+}
+
+.emptyProperty {
+  color: var(--color-gray-500);
+}
+
+.emptyPropertyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  visibility: hidden;
+  gap: 0.8rem;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.emptyPropertyButtonSize {
+  width: 1.6rem !important;
+  height: 1.6rem !important;
+  max-width: unset;
+  max-height: unset;
+  min-width: unset;
+  min-height: unset;
+  padding: 0 !important;
+}
+
+.icon {
+  width: 1rem !important;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 1.6rem;
+  height: 1.6rem;
+  box-sizing: content-box;
+  max-width: unset;
+  max-height: unset;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.emptyRowSpacing {
+  margin-top: 1.5rem;
+}
+
+.priorityButton {
+  width: 1.6rem;
+  height: 1.6rem;
+}

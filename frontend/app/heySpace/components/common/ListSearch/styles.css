@@ -1,0 +1,85 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  height: calc(6 * gridCellSize);
+  padding: 0px calc(2 * gridCellSize);
+}
+
+.headerWithError {
+  height: calc(10 * gridCellSize + 4px);
+}
+
+.title {
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  height: calc(8 * gridCellSize);
+  min-height: calc(8 * gridCellSize);
+  width: 100%;
+  border: solid 3px whiteColor;
+  border-radius: calc(5 * gridCellSize);
+  background: var(--color-gray-100);
+  position: relative;
+  margin-bottom: calc(2 * gridCellSize);
+
+  &:focus-within {
+    border: solid 3px cloudyBlueColor;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 0px calc(2 * gridCellSize);
+  border: 0px;
+  color: darkGreyBlueColor;
+}
+
+.delete {
+  padding: calc(3 * gridCellSize);
+  height: calc(8 * gridCellSize);
+  width: calc(8 * gridCellSize);
+  cursor: pointer;
+  color: cloudyBlueColor;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.list {
+  background: whiteTwoColor;
+  border-radius: largeBorderRadius;
+  margin: gridCellSize calc(4 * gridCellSize);
+  min-height: calc(2 * gridCellSize);
+  overflow-y: auto;
+  padding: calc(2 * gridCellSize) 0px;
+}
+
+.footer {
+  padding-top: gridCellSize;
+}
+
+.error {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  font-size: smallFontSize;
+  color: paleRedColor;
+  margin-bottom: 0;
+  margin-left: calc(2 * gridCellSize);
+  padding-bottom: 0;
+}

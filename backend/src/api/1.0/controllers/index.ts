@@ -1,0 +1,59 @@
+import { ModuleLoaderType } from '../../../ModuleLoaderType'
+import { ProjectController } from './ProjectController'
+import { ControllersModule } from './ControllersModule'
+import { InternalController } from './InternalController';
+import { ExportController } from './ExportController';
+import { OAuth2ProviderController } from './OAuth2ProviderController';
+import { OAuth1ClientController } from './OAuth1ClientController';
+import { UserStatusController } from './UserStatusController';
+import { OrganizationController } from './OrganizationController';
+import { ChatWithMeController } from './ChatWithMeController';
+import { AnalyticsController } from './AnalyticsController'
+import { AuthenticationController } from './AuthenticationController';
+import { UserController } from './UserController';
+import { ExtensionController } from './ExtensionController';
+import { IntegrationController } from './IntegrationController';
+import { CustomFieldController } from './CustomFieldController';
+import { ListController } from './ListController';
+import { TaskController } from './TaskController';
+import { NotificationController } from './NotificationController';
+import { FileController } from './FileController';
+import { DeauthenticationController } from './DeauthenticationController';
+import { TagController } from './TagController';
+import { MessageController } from './MessageController';
+import { ActivityController } from './ActivityController';
+import { UsageTrackerController } from './UsageTrackerController';
+import { UserAppsController } from './UserAppsController';
+import { ChecklistController } from './ChecklistController'
+import { ViewSettingsController } from './ViewSettingsController';
+import { ProjectPersonalStructureController } from './ProjectPersonalStructureController';
+
+export const controllersModule : ModuleLoaderType = (kernel, config) => {
+  kernel.bind<AuthenticationController>(ControllersModule.AuthenticationController).to(AuthenticationController);
+  kernel.bind<UserController>(ControllersModule.UserController).to(UserController);
+  kernel.bind<ProjectController>(ControllersModule.ProjectController).to(ProjectController);
+  kernel.bind<ListController>(ControllersModule.ListController).to(ListController);
+  kernel.bind<TaskController>(ControllersModule.TaskController).to(TaskController);
+  kernel.bind<TagController>(ControllersModule.TagController).to(TagController);
+  kernel.bind<InternalController>(ControllersModule.InternalController).to(InternalController);
+  kernel.bind<ExportController>(ControllersModule.ExportController).to(ExportController);
+  kernel.bind<OAuth2ProviderController>(ControllersModule.OAuth2ProviderController).to(OAuth2ProviderController);
+  kernel.bind<OAuth1ClientController>(ControllersModule.OAuth1ClientController).to(OAuth1ClientController);
+  kernel.bind<UserStatusController>(ControllersModule.UserStatusController).to(UserStatusController);
+  kernel.bind<OrganizationController>(ControllersModule.OrganizationController).to(OrganizationController);
+  kernel.bind<ChatWithMeController>(ControllersModule.ChatWithMeController).to(ChatWithMeController);
+  kernel.bind<AnalyticsController>(ControllersModule.AnalyticsController).to(AnalyticsController);
+  kernel.bind<ExtensionController>(ControllersModule.ExtensionController).to(ExtensionController);
+  kernel.bind<IntegrationController>(ControllersModule.IntegrationController).to(IntegrationController);
+  kernel.bind<CustomFieldController>(ControllersModule.CustomFieldController).to(CustomFieldController);
+  kernel.bind<NotificationController>(ControllersModule.NotificationController).to(NotificationController);
+  kernel.bind<FileController>(ControllersModule.FileController).to(FileController);
+  kernel.bind<DeauthenticationController>(ControllersModule.DeauthenticationController).to(DeauthenticationController);
+  kernel.bind<MessageController>(ControllersModule.MessageController).to(MessageController);
+  kernel.bind<ActivityController>(ControllersModule.ActivityController).to(ActivityController);
+  kernel.bind<UsageTrackerController>(ControllersModule.UsageTrackerController).to(UsageTrackerController);
+  kernel.bind<UserAppsController>(ControllersModule.UserAppsController).to(UserAppsController);
+  kernel.bind<ChecklistController>(ControllersModule.ChecklistController).to(ChecklistController);
+  kernel.bind<ViewSettingsController>(ControllersModule.ViewSettingsController).to(ViewSettingsController);
+  kernel.bind<ProjectPersonalStructureController>(ControllersModule.ProjectPersonalStructureController).to(ProjectPersonalStructureController);
+}

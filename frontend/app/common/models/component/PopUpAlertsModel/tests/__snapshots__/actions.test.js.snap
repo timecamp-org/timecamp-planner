@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`models/component/PopUpAlertsModel/actions onAddAlert 1`] = `
+Object {
+  "id": Object {
+    "test": "test",
+  },
+  "type": "PopUpAlertsModel/onRemoveAlert",
+}
+`;
+
+exports[`models/component/PopUpAlertsModel/actions onRemoveAlert 1`] = `
+Object {
+  "id": "alert::1",
+  "type": "PopUpAlertsModel/onRemoveAlert",
+}
+`;

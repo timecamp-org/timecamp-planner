@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TaskProgressEstimateEditable /> should render 1`] = `
+<div
+  className="progressBar"
+  onMouseEnter={[Function]}
+  onMouseLeave={[MockFunction]}
+>
+  <TaskProgressEstimateEditableOptionButton
+    key="0"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    optionThreshold={0}
+    progressEstimate={0}
+    spaceColor="dodgerBlueColor"
+    tempProgressEstimate={0}
+  />
+  <TaskProgressEstimateEditableOptionButton
+    key="25"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    optionThreshold={25}
+    progressEstimate={0}
+    spaceColor="dodgerBlueColor"
+    tempProgressEstimate={0}
+  />
+  <TaskProgressEstimateEditableOptionButton
+    key="50"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    optionThreshold={50}
+    progressEstimate={0}
+    spaceColor="dodgerBlueColor"
+    tempProgressEstimate={0}
+  />
+  <TaskProgressEstimateEditableOptionButton
+    key="75"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    optionThreshold={75}
+    progressEstimate={0}
+    spaceColor="dodgerBlueColor"
+    tempProgressEstimate={0}
+  />
+  <TaskProgressEstimateEditableOptionButton
+    key="100"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    optionThreshold={100}
+    progressEstimate={0}
+    spaceColor="dodgerBlueColor"
+    tempProgressEstimate={0}
+  />
+</div>
+`;

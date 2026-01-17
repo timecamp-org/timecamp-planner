@@ -1,0 +1,52 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  height: 100%;
+  z-index: 20;
+}
+
+.ComponentWithoutChat {
+  composes: Component;
+  position: absolute;
+  right: 0;
+  top: calc(14 * gridCellSize);
+  height: calc(100% - 14 * gridCellSize);
+  z-index: 2000;
+}
+
+.ComponentWithChat {
+  height: 100%;
+}
+
+.closeIcon {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  background: transparent !important;
+}
+
+.dotsLoader {
+  background-color: lightGreyColor;
+  border-radius: calc(2 * gridCellSize);
+  width: 100%;
+  height: 100%;
+}
+
+.loadingDots {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10 * gridCellSize);
+  color: wisteriaColor;
+}
+
+.background {
+  background-color: var(--color-gray-50);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

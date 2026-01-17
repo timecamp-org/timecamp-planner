@@ -1,0 +1,26 @@
+@import 'common.css';
+@import 'colors.css';
+
+.section {
+  @mixin WhiteBox;
+  padding: calc(3 * gridCellSize);
+  margin: calc(4 * gridCellSize) 0;
+}
+
+.subHeader {
+  padding: gridCellSize;
+  font-family: defaultFontFamily;
+  font-weight: boldFontWeight;
+}
+
+.optionList {
+  display: flex;
+  flex-flow: column;
+}
+
+.expanded {
+}
+
+.chevron {
+  margin-left: gridCellSize;
+}

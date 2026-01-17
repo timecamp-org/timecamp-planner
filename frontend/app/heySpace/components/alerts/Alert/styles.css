@@ -1,0 +1,56 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  padding: calc(2 * gridCellSize) 30px calc(2 * gridCellSize)
+    calc(2 * gridCellSize);
+  z-index: 1000;
+  min-height: calc(10 * gridCellSize);
+  align-items: center;
+}
+
+.icon {
+  margin-right: gridCellSize;
+  color: lightGreyColor;
+}
+
+.alert {
+  color: lightGreyColor;
+  border-radius: largeBorderRadius;
+  padding-left: calc(gridCellSize * 5);
+  padding-right: calc(gridCellSize * 5);
+}
+
+.error {
+  composes: error from 'commonComponents/HumanMessage/styles.css';
+  composes: alert;
+  background-color: coralPinkTwoColor;
+}
+
+.warning {
+  composes: warning from 'commonComponents/HumanMessage/styles.css';
+  composes: alert;
+  background-color: mangoColor;
+}
+
+.success {
+  composes: success from 'commonComponents/HumanMessage/styles.css';
+  composes: alert;
+  background-color: darkMintColor;
+}
+
+.information {
+  composes: error from 'commonComponents/HumanMessage/styles.css';
+  composes: alert;
+  background-color: dodgerBlueTwoColor;
+}
+
+.humanMessage {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  padding: 0 0 0 calc(gridCellSize * 2);
+  margin-bottom: 0;
+  min-height: 0;
+  color: lightGreyColor;
+  overflow: auto;
+}

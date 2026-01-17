@@ -1,0 +1,65 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  cursor: pointer;
+  flex-flow: column;
+  min-width: 10rem;
+  position: relative;
+}
+
+.nameWithIcon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.name {
+}
+
+.borderHidden {
+  border-width: 0 !important;
+  display: none;
+}
+
+.dropdownIcon {
+  margin-left: auto;
+}
+
+.options {
+  display: flex;
+  flex-flow: column;
+}
+
+.focusedItem {
+  background-color: var(--color-gray-100);
+}
+
+.item {
+  width: 100%;
+  padding: 0.4rem 1.6rem;
+  font-size: var(--fontWeight-regular);
+  font-size: var(--fontSize-sm);
+
+  &:hover {
+    background-color: var(--color-gray-50);
+  }
+}
+
+.dropdownItemFocused {
+  background-color: var(--color-gray-100);
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  background-color: var(--color-white);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
+  border-radius: 0.4rem;
+  padding: 1rem 0;
+}

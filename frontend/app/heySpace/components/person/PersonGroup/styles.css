@@ -1,0 +1,8 @@
+@import 'colors.css';
+@import 'common.css';
+
+.userGroup {
+  font-size: smallFontSize;
+  color: blueGreyColor;
+  line-height: normal;
+}

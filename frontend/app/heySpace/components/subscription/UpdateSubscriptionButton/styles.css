@@ -1,0 +1,6 @@
+@import 'common.css';
+
+.backdrop {
+  composes: backdrop from 'commonComponents/UniversalModal/styles.css';
+  filter: blur(gridCellSize);
+}

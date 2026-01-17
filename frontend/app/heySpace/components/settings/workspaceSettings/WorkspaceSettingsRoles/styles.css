@@ -1,0 +1,67 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  /* padding: calc(gridCellSize * 3); */
+  border-radius: defaultBorderRadius;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  & > div {
+    padding-right: calc(2 * gridCellSize);
+  }
+}
+
+.header {
+  font-weight: var(--fontWeight-semibold);
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: var(--fontSize-lg);
+  gap: 2rem;
+  & > div {
+    margin-right: gridCellSize;
+  }
+}
+
+.cellHeader {
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-medium);
+  font-size: var(--fontSize-base);
+  text-transform: uppercase;
+}
+
+.actionsCell {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: unset;
+  margin: unset;
+  gap: 0.7rem;
+  & svg {
+    color: var(--color-gray-900);
+  }
+}
+
+.jobDescription {
+  font-size: var(--fontSize-xs);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.editedInput {
+  padding: unset;
+  margin: unset;
+  height: unset;
+  line-height: unset;
+}

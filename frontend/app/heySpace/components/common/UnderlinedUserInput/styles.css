@@ -1,0 +1,74 @@
+@import 'colors.css';
+@import 'common.css';
+
+.label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.optional {
+}
+
+.helperMessage {
+  color: var(--color-gray-500);
+  font-size: var(--fontSize-xxs);
+  margin-top: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  height: 3rem;
+  border-radius: var(--borderRadius-xs);
+  background-color: transparent;
+  border: none;
+  color: var(--color-gray-900);
+  padding: 0.5rem;
+  padding-left: 1rem;
+  transition: border defaultTransitionAnimation;
+  padding-left: 2.4rem;
+
+  &::placeholder {
+    color: var(--color-gray-500);
+  }
+}
+
+.inputError {
+  &::after {
+    border-color: var(--color-critical-500);
+  }
+
+  &:focus-within::after {
+    border-color: var(--color-critical-500);
+  }
+}
+
+.inputDisabled {
+  background-color: var(--color-gray-200);
+  color: blueGreyColor;
+
+  &:focus {
+    border: solid 1px var(--color-white);
+  }
+}
+
+.humanMessage {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  display: block;
+  color: var(--color-critical-500);
+  margin-left: calc(3.2rem / 2);
+}
+
+.requiredStar {
+  color: var(--color-primary-500);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageHeight {
+  height: 2.6rem;
+}

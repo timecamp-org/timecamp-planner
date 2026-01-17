@@ -1,0 +1,20 @@
+@import 'colors.css';
+@import 'common.css';
+
+.buttonCollapsed {
+  & > svg {
+    margin: 0;
+  }
+}
+
+.disabledButton {
+  margin: 0;
+}
+
+.buttonWrapper {
+  margin: 0 calc(2 * gridCellSize);
+}
+
+.icon {
+  margin-right: calc(gridCellSize * 2);
+}

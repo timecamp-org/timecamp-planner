@@ -1,0 +1,122 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  position: relative;
+  min-height: calc(82 * gridCellSize);
+  color: blueGreyColor;
+  background-color: whiteTwoColor;
+  overflow-y: auto;
+}
+
+.left {
+  width: calc(91 * gridCellSize);
+  background-image: url('styles/assets/planets-background.png');
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: calc(150 * gridCellSize);
+}
+
+.right {
+  flex: 1;
+  display: flex;
+}
+
+.logIn {
+  text-decoration: none;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-medium);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .signIn {
+    padding-right: calc(2 * gridCellSize);
+  }
+}
+
+.signUpPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  padding-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  flex: 1 100%;
+  min-height: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.footer {
+  height: calc(20 * gridCellSize);
+}
+
+.signInButton {
+  border: solid defaultBorderWidth wisteriaColor;
+  color: wisteriaColor !important;
+  border-radius: largeBorderRadius;
+  height: 36px;
+  width: calc(21 * gridCellSize);
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  position: relative;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.footerHeader {
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  text-align: center;
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.footerContent {
+  margin: 0px calc(11 * gridCellSize);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(12 * gridCellSize);
+}
+
+.tcBand,
+.rcBand {
+  width: calc(20 * gridCellSize);
+}
+
+.tcBand {
+  height: 27.4px;
+}
+
+.rcBand {
+  height: 18.7px;
+}
+
+.topSection {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 4.8rem 11rem;
+
+  @media (max-width: tabletBreakpointWidth) {
+    margin: 1.5rem 2rem;
+    margin-bottom: 3rem;
+  }
+}

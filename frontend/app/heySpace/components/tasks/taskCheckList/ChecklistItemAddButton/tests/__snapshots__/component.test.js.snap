@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChecklistItemAddButton /> should render 1`] = `
+<Component
+  className="button"
+  innerRef={[Function]}
+  isDisabled={false}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Add item to checklist
+</Component>
+`;

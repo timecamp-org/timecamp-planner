@@ -1,0 +1,44 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  padding: calc(2 * gridCellSize) calc(5 * gridCellSize);
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  border-radius: calc(2 * gridCellSize);
+  border: none;
+  position: relative;
+  color: whiteFourColor;
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.Component::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: whiteTwoColor;
+  opacity: 0;
+  border-radius: calc(2 * gridCellSize);
+}
+
+.Component.brightButtonShade:hover::after {
+  opacity: 0.1;
+}
+
+.Component.brightButtonShade.active::after,
+.Component.brightButtonShade:active::after {
+  opacity: 0.2;
+}
+
+.disabled {
+  cursor: default;
+  pointer-events: none;
+}

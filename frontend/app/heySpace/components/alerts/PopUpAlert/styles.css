@@ -1,0 +1,77 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  display: flex;
+  padding: calc(2 * gridCellSize) 30px calc(2 * gridCellSize) calc(2 * gridCellSize);
+  position: absolute;
+  left: calc(2 * gridCellSize);
+  right: calc(2 * gridCellSize);
+  z-index: 1000;
+  height: calc(10 * gridCellSize);
+  align-items: center;
+}
+
+.leftOffset {
+  margin-left: calc(62 * gridCellSize);
+  right: gridCellSize;
+}
+
+.error {
+  background-color: coralPinkTwoColor;
+  color: lightGreyColor;
+  border-radius: largeBorderRadius;
+}
+
+.warning {
+  background-color: mangoColor;
+  color: lightGreyColor;
+  border-radius: largeBorderRadius;
+}
+
+.success {
+  background-color: darkMintColor;
+  color: lightGreyColor;
+  border-radius: largeBorderRadius;
+}
+
+.information {
+  background-color: dodgerBlueTwoColor;
+  color: lightGreyColor;
+  border-radius: largeBorderRadius;
+}
+
+.icon {
+  margin-right: gridCellSize;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.text {
+  display: flex;
+  color: lightGreyColor;
+}
+
+.close, .refreshPage {
+  right: calc(4 * gridCellSize);
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.refreshPage {
+  font-weight: boldFontWeight;
+  text-decoration: underline;
+}
+
+.refreshPageIcon {
+  margin-right: gridCellSize;
+}

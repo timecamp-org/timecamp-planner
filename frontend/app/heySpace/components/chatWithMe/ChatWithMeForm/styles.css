@@ -1,0 +1,111 @@
+@import 'common.css';
+
+.Component {
+  padding: calc(gridCellSize * 4);
+  width: calc(gridCellSize * 120);
+  color: darkGreyBlueColor;
+  display: flex;
+  flex-flow: column;
+}
+
+.headerWithLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mascot {
+  background: url('commonAssets/emptyState/Empty_State_30.png') no-repeat center center;
+  background-size: contain;
+  height: calc(gridCellSize * 40);
+  width: calc(gridCellSize * 60);
+  transform: scaleX(-1);
+}
+
+.header {
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  white-space: pre-wrap;
+  text-align: center;
+  padding: calc(gridCellSize * 6) 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  padding: calc(gridCellSize * 2) 0;
+  width: calc(gridCellSize * 53);
+}
+
+.inputWithIcon {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+}
+
+.inputInner {
+  height: calc(gridCellSize * 8);
+}
+
+.copyButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  min-width: calc(gridCellSize * 8);
+  height: calc(gridCellSize * 8);
+  margin: 0;
+  padding: 0;
+  margin-left: gridCellSize;
+}
+
+.reloadLink {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-left: auto;
+  margin-top: gridCellSize;
+}
+
+.hints {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  padding-top: calc(gridCellSize * 2);
+  font-size: smallFontSize;
+}
+
+.subHints {
+  padding: calc(gridCellSize * 2) 0;
+}
+
+.subHint {
+  composes: hint;
+  padding-left: calc(gridCellSize * 6);
+}
+
+.counter {
+  margin-right: calc(gridCellSize * 2);
+  border-radius: 50%;
+  background-color: whiteColor;
+  color: blueGreyColor;
+  font-family: fontFamilyTwo;
+  width: calc(gridCellSize * 4);
+  height: calc(gridCellSize * 4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: smallFontSize;
+}
+
+.arrow {
+  margin-right: calc(gridCellSize * 3);
+  height: 12px;
+}

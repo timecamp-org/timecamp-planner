@@ -1,0 +1,7 @@
+@import "colors.css";
+@import "common.css";
+
+.calendar {
+  composes: Component from 'commonComponents/FullCalendar/assets/styles.css';
+  height: calc(100vh - (gridCellSize * 45));
+}

@@ -1,0 +1,8 @@
+.spinnerWrapper {
+  position: relative;
+}
+
+.spinnerBackground {
+  position: absolute;
+  color: var(--color-primary-200);
+}

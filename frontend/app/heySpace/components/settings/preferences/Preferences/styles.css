@@ -1,0 +1,82 @@
+@import 'colors.css';
+@import 'common.css';
+
+.container {
+  display: flex;
+  flex-flow: column;
+}
+
+.box {
+  @mixin WhiteBox;
+  display: flex;
+  flex-flow: column;
+  color: blackColor;
+  font-family: defaultFontFamily;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.title {
+  margin-bottom: calc(2 * gridCellSize);
+  font-family: fontFamilyTwo;
+  font-size: mediumFontSize;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+}
+
+.label {
+  margin-left: calc(4 * gridCellSize);
+  margin-top: 3px;
+}
+
+.fieldLabel {
+  margin: calc(2 * gridCellSize) 0;
+}
+
+.description {
+  font-weight: regularFontWeight;
+  margin-top: calc(2 * gridCellSize);
+  margin-left: calc(9 * gridCellSize);
+  color: blueGreyColor;
+}
+
+.fieldDescription {
+  composes: description;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  margin-top: calc(2 * gridCellSize);
+  font-size: normalFontSize;
+}
+
+.field {
+  display: flex;
+  flex-flow: column;
+  margin-top: calc(2 * gridCellSize);
+  font-size: normalFontSize;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+  color: wisteriaColor;
+}
+
+.numberInput {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  width: calc(gridCellSize * 15);
+  margin-right: gridCellSize;
+}

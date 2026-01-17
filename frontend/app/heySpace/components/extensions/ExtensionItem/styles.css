@@ -1,0 +1,88 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: calc(45 * gridCellSize);
+  height: calc(63 * gridCellSize);
+  border-radius: largerBorderRadius;
+  border: solid 1px warmGrey5Color;
+  background-color: lightGreyColor;
+  margin-right: calc(2 * gridCellSize);
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.extensionInfo {
+  padding: calc(3 * gridCellSize);
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+.extensionThumbnail {
+  height: calc(26 * gridCellSize);
+  align-self: center;
+}
+
+.extensionName {
+  font-weight: bold;
+  text-align: center;
+  color: blueGreyColor;
+  padding: 0 calc(gridCellSize * 2);
+}
+
+.extensionDescription {
+  margin-top: calc(3 * gridCellSize);
+  text-align: center;
+  color: blueGreyColor;
+  flex: 1;
+  max-height: calc(gridCellSize * 10);
+  overflow-y: auto;
+}
+
+.extensionEnableButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  width: 100%;
+  margin-top: auto;
+}
+
+.extensionDisableButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  margin-top: auto;
+}
+
+.imagePlacegolder {
+  composes: extensionThumbnail;
+  background: defaultGreyBrightness1;
+  background-color: cloudyBlueColor;
+  border-radius: defaultBorderRadius;
+}
+
+.extensionSettings {
+  position: absolute;
+  top: gridCellSize;
+  right: gridCellSize;
+}
+
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: whiteTwoColor;
+  opacity: 0.5;
+  top: 0;
+}
+
+.noAccessWrapper {
+  position: relative;
+}
+
+.imageWrapper {
+  background: whiteTwoColor;
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Roadmap",
+  "description": "Refine your strategic planning with our Roadmap template, effortlessly moving through key quarters: Q1, Q2, Q3, Q4, and seamlessly transitioning into the Next Year. Simplify your visualization of goals and initiatives for clear, concise, and successful long-term planning. ",
+  "order": 18,
+  "taskListTemplates": [
+    {
+      "name": "Q1",
+      "order": 1
+    },
+    {
+      "name": "Q2",
+      "order": 2
+    },
+    {
+      "name": "Q3",
+      "order": 3
+    },
+    {
+      "name": "Q4",
+      "order": 4
+    },
+    {
+      "name": "Next year",
+      "order": 5
+    }
+  ]
+}

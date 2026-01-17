@@ -1,0 +1,7 @@
+@import "colors.css";
+@import "common.css";
+
+.placeholder {
+	color: cloudyBlueColor;
+	width: 100%;
+}

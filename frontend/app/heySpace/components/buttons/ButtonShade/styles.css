@@ -1,0 +1,12 @@
+@import "colors.css";
+@import "common.css";
+
+.Component{
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: calc(2 * gridCellSize);
+}

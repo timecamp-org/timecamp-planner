@@ -1,0 +1,1 @@
+export { ActivityInChat } from './component';

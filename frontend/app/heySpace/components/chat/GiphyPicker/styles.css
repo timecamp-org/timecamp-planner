@@ -1,0 +1,86 @@
+@import 'common.css';
+
+.popoverContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  width: calc(gridCellSize * 134);
+}
+
+.gifButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: calc(6 * gridCellSize);
+  height: calc(5 * gridCellSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  color: var(--color-gray-900);
+  &:hover {
+    color: var(--color-primary-500);
+  }
+  &:active * {
+    color: var(--color-primary-500);
+  }
+}
+
+.giphySelect {
+  background-color: whiteTwoColor;
+  border-radius: defaultBorderRadius;
+  display: flex;
+  flex-flow: column;
+  width: calc(gridCellSize * 130);
+  align-items: center;
+}
+
+.giphyInput {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  min-height: calc(gridCellSize * 8);
+  margin: calc(gridCellSize * 2);
+}
+
+.giphyInputOpen {
+  color: var(--color-primary-500);
+  
+  & *{
+    color: var(--color-primary-500);
+  }
+}
+
+.giphyAttribution {
+  display: none;
+}
+
+.picker {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.giphyList {
+  width: calc(gridCellSize * 130);
+  height: calc(gridCellSize * 60);
+  margin-left: gridCellSize;
+  margin-right: gridCellSize;
+  margin-bottom: calc(gridCellSize * 3);
+  position: relative;
+}
+
+.giphyListMasonry {
+  margin-left: calc(gridCellSize * 2);
+  width: calc(gridCellSize * 127);
+}
+
+.giphyListItem {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: calc(gridCellSize * 40);
+  height: auto;
+  background-color: #ccc;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.giphyListEntryImage {
+  display: block;
+  width: calc(gridCellSize * 40);
+  height: auto;
+}

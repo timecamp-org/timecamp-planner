@@ -1,0 +1,11 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  font-size: smallFontSize;
+  color: slate60Color;
+}
+
+.typingUser {
+  font-weight: boldFontWeight;
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+        <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+            <circle cx="8" cy="8" r="8"/>
+            <path d="M7.53 5v3.2"/>
+        </g>
+        <ellipse cx="7.529" cy="11" fill="currentColor" rx="1" ry="1"/>
+    </g>
+</svg>

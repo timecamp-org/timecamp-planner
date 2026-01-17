@@ -1,0 +1,88 @@
+@import 'common.css';
+@import 'colors.css';
+
+.innerModalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  background: whiteTwoColor;
+  padding: calc(6 * gridCellSize) calc(7 * gridCellSize);
+  width: calc(156 * gridCellSize);
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.paragraph {
+  font-size: mediumFontSize;
+  color: darkTwoColor;
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.saveButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  padding: calc(2 * gridCellSize) calc(8 * gridCellSize);
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.mascot {
+  /* background: url('commonComponents/Mascot/assets/character_1.png') no-repeat center center; */
+  background-size: contain;
+  height: 184px;
+  width: 100%;
+}
+
+.mainText {
+  font-weight: semiboldFontWeight;
+  white-space: pre-wrap;
+  color: darkGreyBlueColor;
+}
+
+.text {
+  color: darkGreyBlueColor;
+  text-align: center;
+}
+
+.textWithList {
+  display: flex;
+  flex-flow: column;
+}
+
+.column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: gridCellSize;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  margin: calc(gridCellSize * 2) 0 0 calc(gridCellSize * 6);
+}
+
+.listHeader {
+  composes: text;
+  padding-bottom: gridCellSize;
+}
+
+.listItem {
+  composes: mainText;
+  text-indent: -0.7em;
+  padding-bottom: gridCellSize;
+}

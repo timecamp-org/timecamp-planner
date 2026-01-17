@@ -1,0 +1,36 @@
+@import 'colors.css';
+@import 'common.css';
+
+@value activityMinHeight: 2rem;
+@value activityHeightMargin: .4rem;
+@value activityMinHeightWithMargins: calc(activityMinHeight + 2 * activityHeightMargin);
+
+.activity {
+  color: var(--color-gray-500);
+  font-size: var(--fontSize-xs);
+  margin-top: activityHeightMargin;
+  margin-bottom: activityHeightMargin;
+  display: flex;
+  justify-content: space-between;
+}
+.activityBody {
+  max-width: 40rem;
+}
+
+.activityTime {
+  font-size: var(--fontSize-xxs);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.activityBoldText {
+  font-weight: var(--fontWeight-semibold);
+}
+
+.personFullName {
+  composes: personFullName from 'components/person/PersonFullName/styles.css';
+  vertical-align: inherit;
+  color: var(--color-gray-500);
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+}

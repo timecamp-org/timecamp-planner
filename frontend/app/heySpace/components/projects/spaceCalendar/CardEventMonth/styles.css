@@ -1,0 +1,58 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  align-items: center;
+  font-family: defaultFontFamily;
+  font-size: smallFontSize;
+  transition: box-shadow defaultTransition;
+  border-radius: largeBorderRadius;
+  overflow: hidden;
+  height: 32px;
+  position: relative;
+}
+
+.cardAssignees {
+  margin-left: gridCellSize;
+  opacity: 0;
+}
+
+.title {
+  margin-left: 8px;
+  font-size: smallerFontSize;
+  transition: color defaultTransitionAnimation, font-weight defaultTransitionAnimation,
+    opacity defaultTransitionAnimation;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-gray-900);
+}
+
+.taskProgress {
+  background-color: transparent;
+  transition: margin-left defaultTransitionAnimation;
+  padding: 0;
+  margin: 0;
+}
+
+.taskProgressButton {
+  background-color: transparent;
+  padding: unset;
+  margin: unset;
+  font-size: var(--fontSize-xs);
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.hovered {
+  .cardAssignees {
+    opacity: 1;
+  }
+}
+
+.taskProgressCheckmark {
+  font-size: var(--fontSize-xs);
+  color: var(--color-primary-500);
+}

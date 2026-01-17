@@ -1,0 +1,76 @@
+@import 'colors.css';
+@import 'common.css';
+
+.innerModalDialogClassName {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(105 * gridCellSize);
+}
+
+.modalbodyClassName {
+  padding: 0;
+}
+
+.spaceItem {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  cursor: pointer;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  align-items: center;
+  padding: gridCellSize;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: calc(gridCellSize * 2);
+  gap: 1rem;
+
+  &:hover {
+    opacity: 0.8;
+    background: whiteColor;
+    color: wisteriaColor;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 defaultOutlineWidth silverColor;
+    background: whiteColor;
+  }
+
+  &:active {
+    box-shadow: none;
+    opacity: 0.6;
+    background: lightGreyColor;
+  }
+}
+
+.spaceLabel {
+  padding-left: calc(2 * gridCellSize);
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-medium);
+}
+
+.planetIcon {
+  composes: icon from 'commonComponents/ColoredProjectIcon/styles.css';
+  margin-left: 2rem;
+}
+
+.options {
+  padding: 1.5rem 2rem 0rem 2rem;
+  height: 30rem;
+  overflow-y: auto;
+}
+
+.empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: blueGreyColor;
+}
+
+.optionCheckbox {
+  composes: Component from 'components/common/Checkbox/styles.css';
+  margin-right: 1rem;
+}

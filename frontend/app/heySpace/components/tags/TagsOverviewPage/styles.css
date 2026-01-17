@@ -1,0 +1,182 @@
+@import 'colors.css';
+@import 'common.css';
+
+@value colorDotWidth: calc(4 * gridCellSize);
+@value selectedColorDotWidth: calc(6 * gridCellSize);
+
+.settingsRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field {
+  padding: calc(2 * gridCellSize) 0;
+  display: flex;
+  flex-flow: column;
+  max-width: calc(47 * gridCellSize);
+  color: darkGreyBlueColor;
+}
+
+.settingsSection {
+  @mixin WhiteBox;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  color: cloudyBlueColor;
+  display: flex;
+  padding-bottom: calc(gridCellSize * 4);
+}
+
+.column {
+  min-width: calc(50 * gridCellSize);
+  display: flex;
+  align-items: center;
+}
+
+.tagsGroup {
+  margin-bottom: calc(4 * gridCellSize);
+}
+
+.horizontalDivider {
+  composes: horizontalDivider from 'commonComponents/HorizontalDivider/styles.css';
+  background-color: cloudyBlueColor;
+  width: calc(60 * gridCellSize);
+  height: 1px;
+  margin: 0;
+}
+
+.tagFirstLetter {
+  color: blueGreyColor;
+  text-transform: capitalize;
+}
+
+.tagOverview {
+  display: flex;
+  height: calc(6 * gridCellSize);
+  align-items: center;
+  margin: gridCellSize 0;
+}
+
+.iconBig {
+  width: calc(8 * gridCellSize);
+  margin-right: calc(3 * gridCellSize);
+  color: blueGreyColor;
+}
+
+.actionIcons {
+  display: flex;
+  opacity: 0;
+}
+
+.icon {
+  width: calc(3 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  color: cloudyBlueColor;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover,
+.icon.selected {
+  transform: scale(1.3);
+}
+
+.tagOverview:hover .actionIcons {
+  opacity: 1;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+}
+
+.tag {
+  composes: tag from 'components/tags/Tag/styles.css';
+  max-width: calc(gridCellSize * 30);
+}
+
+.createTagButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: calc(gridCellSize * 4);
+}
+
+.separator {
+  width: calc(100% - (4 * gridCellSize));
+  height: 1px;
+  background: cloudyBlueColor;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+}
+
+.popoverHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(8 * gridCellSize);
+  color: cloudyBlueColor;
+  /* margin-bottom: calc(gridCellSize * 2); */
+}
+
+.colorPicker {
+  display: flex;
+  height: calc(8 * gridCellSize);
+  align-items: center;
+}
+
+.colorDot {
+  composes: ring from 'components/projects/ProjectColorDot/styles.css';
+  margin: calc(2 * gridCellSize);
+  width: colorDotWidth;
+  height: colorDotWidth;
+  cursor: pointer;
+}
+
+.selectedColorDot {
+  transform: scale(1.5);
+}
+
+.innerDot {
+  composes: innerRing from 'components/projects/ProjectColorDot/styles.css';
+  width: colorDotWidth;
+  height: colorDotWidth;
+}
+
+.label {
+  font-family: fontFamilyTwo;
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  margin-top: calc(gridCellSize * 3);
+  padding-bottom: gridCellSize;
+}

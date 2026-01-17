@@ -1,0 +1,94 @@
+body {
+  overflow-y: hidden;
+  margin: 0;
+  background-color: rgb(243, 243, 244);
+}
+
+#app {
+  opacity: 0;
+  height: 100%;
+}
+
+.app--visible {
+  -webkit-animation: showApp 0.3s 1s forwards ease-out;
+  animation: showApp 0.3s 1s forwards ease-out;
+}
+
+@-webkit-keyframes showApp {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showApp {
+  100% {
+    opacity: 1;
+  }
+}
+
+.loader-wrapper {
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(243, 243, 244);
+  opacity: 1;
+  transition: opacity 0s;
+}
+
+.app--loaded {
+  display: none;
+  transition: opacity 1s;
+  transition-delay: 1s;
+}
+
+.logo {
+  position: relative;
+  height: 40px;
+}
+
+.loader-logo {
+  fill: #2d80eb;
+}
+
+#loader {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 2px solid transparent;
+  border-bottom-color: #2d80eb;
+  border-left-color: #2d80eb;
+  border-radius: 50%;
+  margin-top: 16px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load 0.5s infinite linear;
+  animation: load 0.5s infinite linear;
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,32 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  display: flex;
+  align-items: center;
+  font-family: defaultFontFamily;
+  font-size: normalFontSize;
+  transition: box-shadow defaultTransitionAnimation;
+  padding: 2px;
+  border-radius: largeBorderRadius;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.Component:hover {
+  .title {
+    font-weight: boldFontWeight;
+  }
+}
+
+.cardAssignees {
+  margin-left: auto;
+}
+
+.title {
+  margin-left: gridCellSize;
+  transition: color defaultTransitionAnimation, font-weight defaultTransitionAnimation, opacity defaultTransitionAnimation;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

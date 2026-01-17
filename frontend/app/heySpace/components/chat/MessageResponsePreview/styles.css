@@ -1,0 +1,17 @@
+@import 'common.css';
+
+.response {
+  composes: freshMessage from 'components/chat/Message/styles.css';
+  @mixin DefaultBoxShadow;
+  padding: calc(gridCellSize * 2);
+  border-radius: defaultBorderRadius;
+  position: relative;
+  margin-bottom: calc(gridCellSize * 2);
+}
+
+.closeButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  position: absolute;
+  right: gridCellSize;
+  top: gridCellSize;
+}

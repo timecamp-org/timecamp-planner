@@ -1,0 +1,46 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: blueGreyColor;
+  position: relative;
+  box-shadow: 0 0 0 0;
+  padding: calc(6 * gridCellSize);
+}
+
+.title {
+  font-size: largerFontSize;
+  margin-top: calc(5 * gridCellSize);
+  text-align: center;
+  font-family: defaultFontFamily;
+}
+
+.character {
+  width: calc(40 * gridCellSize);
+}
+
+.message {
+  font-size: normalFontSize;
+  margin-top: calc(3 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+  text-align: center;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.button {
+  width: calc(21 * gridCellSize);
+  height: 36px;
+  color: whiteTwoColor;
+  border: 0;
+  border-radius: largeBorderRadius;
+  position: relative;
+  cursor: pointer;
+  font-weight: boldFontWeight;
+}

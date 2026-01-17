@@ -1,0 +1,29 @@
+export { default as ArrowLeft } from '-!svg-react-loader?name=ArrowLeft!commonComponents/Icons/arrow-left-icon-NEW.svg';
+export { default as ArrowRight } from '-!svg-react-loader?name=ArrowRight!commonComponents/Icons/arrow-right-icon-NEW.svg';
+export { default as Board } from '-!svg-react-loader?name=Board!commonComponents/Icons/board.svg';
+export { default as Chat } from '-!svg-react-loader?name=Chat!commonComponents/Icons/chat.svg';
+export { default as DropdownChevron } from '-!svg-react-loader?name=DropdownChevron!commonComponents/Icons/dropdown-icon-NEW.svg';
+export { default as Lock } from '-!svg-react-loader?name=Lock!commonComponents/Icons/lock.svg';
+export { default as MyTasks } from '-!svg-react-loader?name=MyTasks!commonComponents/Icons/mytasks.svg';
+export { default as MyTasksDashboard } from '-!svg-react-loader?name=MyTasksDashboard!commonComponents/Icons/mytasks-dashboard.svg';
+export { default as Overwatch } from '-!svg-react-loader?name=Overwatch!commonComponents/Icons/overwatch.svg';
+export { default as OverwatchDashboard } from '-!svg-react-loader?name=OverwatchDashboard!commonComponents/Icons/overwatch-dashboard.svg';
+export { default as Space } from '-!svg-react-loader?name=Space!commonComponents/Icons/space-icon-NEW.svg';
+export { default as AppLogo } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/app-logo.svg';
+export { default as Schedule } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/schedule.svg';
+export { default as Timeline } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/timeline.svg';
+
+//  Template
+export { default as TemplateAssigneePickerIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/assigneePickerIcon.svg';
+export { default as TemplateAssigneePlaceholderIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/assigneePlaceholderIcon.svg';
+export { default as TemplateCameraIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/cameraIcon.svg';
+export { default as TemplateChecklistIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/checklistIcon.svg';
+export { default as TemplateCollapseIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/collapseIcon.svg';
+export { default as TemplateFiltersIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/filtersIcon.svg';
+export { default as TemplateInfoIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/infoIcon.svg';
+export { default as TemplateMoreIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/moreIcon.svg';
+export { default as TemplatePlusIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/plusIcon.svg';
+export { default as TemplatePointsIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/pointsIcon.svg';
+export { default as TemplateProjectIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/projectIcon.svg';
+export { default as TemplateSearchIcon } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/searchIcon.svg';
+export { default as TemplateTag } from '-!svg-react-loader?name=Timeline!commonComponents/Icons/templateIcons/tag.svg';

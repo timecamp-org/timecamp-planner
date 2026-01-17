@@ -1,0 +1,68 @@
+@import 'colors.css';
+@import 'common.css';
+
+.userLabel,
+.Component {
+  display: flex;
+  align-items: center;
+  height: calc(6 * gridCellSize);
+
+  border-radius: defaultBorderWidth;
+  width: 100%;
+}
+
+.componentOnHover:hover {
+  cursor: pointer;
+  background: var(--color-gray-100);
+}
+
+.nameAndEmailWrapper {
+  margin-left: calc(2 * gridCellSize);
+  margin-right: auto;
+  width: calc(
+    100% - (6 * gridCellSize)
+  ); /* 6 * gridCellSize is equal to user icon with 8px right margin width + x icon width. This is needed for ellipsize to work */
+}
+
+.userName {
+  @mixin EllipsizeTextOverflow;
+}
+
+.userEmail {
+  display: flex;
+  flex-flow: column;
+  @mixin EllipsizeTextOverflow;
+  color: var(--color-gray-500);
+  font-size: var(--fontSize-xs);
+}
+
+.userNameText {
+  padding-right: gridCellSize;
+}
+
+.hint {
+  color: blueGreyColor;
+  font-size: smallFontSize;
+}
+
+.pendingInvitation {
+  display: flex;
+  color: blueGreyColor;
+  width: 100%;
+  font-size: normalFontSize;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.pendingInvitationLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.deactivated {
+  composes: userLabel;
+  opacity: deactivatedOpacity;
+  color: blueGreyTwoColor;
+}

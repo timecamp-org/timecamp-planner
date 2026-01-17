@@ -1,0 +1,28 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  font-size: smallFontSize;
+  color: blueGreyColor;
+  padding-bottom: calc(gridCellSize * 2);
+}
+
+.cell {
+  width: calc(gridCellSize * 25);
+  padding-right: calc(gridCellSize * 2);
+}
+
+.longCell {
+  composes: cell;
+  width: calc(gridCellSize * 30);
+}
+
+.coupon {
+  composes: Component from 'components/subscription/Invoice/styles.css';
+  padding-bottom: calc(gridCellSize * 2);
+}

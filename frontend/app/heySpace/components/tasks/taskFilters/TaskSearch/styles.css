@@ -1,0 +1,79 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  position: relative;
+  cursor: text;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 30rem;
+  width: 100%;
+}
+
+.focused {
+  padding: gridCellSize;
+}
+
+.taskNameInput {
+  padding: 0;
+  flex: 1;
+  width: 100%;
+  resize: none;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: translateZ(0);
+
+  &::after {
+    bottom: 0;
+    left: 0.8rem;
+    width: calc(100% - 1.6rem);
+    transform: translateY(-100%);
+  }
+}
+
+.taskNameInputInner {
+  cursor: text;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  padding-left: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+.button {
+  composes: Component from 'commonComponents/Button/styles.css';
+  flex: 0;
+  padding: gridCellSize;
+  white-space: nowrap;
+  margin-right: gridCellSize;
+}
+
+.cancelButton {
+  composes: button;
+}
+
+.saveButton {
+  composes: button;
+}
+
+.cancelIcon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  color: var(--color-gray-800);
+
+  &:hover {
+    color: var(--color-primary-500);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

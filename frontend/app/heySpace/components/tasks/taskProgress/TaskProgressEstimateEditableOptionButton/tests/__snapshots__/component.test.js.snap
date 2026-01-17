@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TaskProgressEstimateEditableOptionButton /> should render 1`] = `
+<div
+  className="optionButton--progress-50"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  style={Object {}}
+>
+  <div
+    className="optionThreshold"
+  >
+    50%
+  </div>
+</div>
+`;

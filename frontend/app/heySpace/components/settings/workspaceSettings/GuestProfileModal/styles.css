@@ -1,0 +1,153 @@
+@import 'common.css';
+@import 'colors.css';
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  background: whiteTwoColor;
+  padding: calc(3 * gridCellSize);
+  width: calc(154 * gridCellSize);
+  max-height: calc(100% - (gridCellSize * 2));
+}
+
+.modalBody {
+  composes: modalBody from 'commonComponents/UniversalModal/styles.css';
+  display: flex;
+  flex-flow: column;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  composes: modalHeader from 'commonComponents/UniversalModal/styles.css';
+  font-size: normalFontSize;
+  margin-bottom: calc(3 * gridCellSize);
+  position: relative;
+}
+
+.backdrop {
+  composes: backdrop from 'commonComponents/UniversalModal/styles.css';
+  filter: blur(gridCellSize);
+}
+
+.modalContent {
+  display: flex;
+  flex-flow: column;
+  min-height: calc(gridCellSize * 100);
+}
+
+.modalDeactivationgContent {
+  composes: modalContent;
+  min-height: auto;
+}
+
+.personInfo {
+  display: flex;
+  padding-bottom: calc(gridCellSize * 5);
+}
+
+.avatar {
+  composes: Component from 'components/settings/userProfile/UserAvatar/styles.css';
+  width: calc(24 * gridCellSize);
+  height: calc(24 * gridCellSize);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 50%;
+  box-shadow: inset 0 -2px 3px black55Color;
+  margin: 0 calc(gridCellSize * 5);
+}
+
+.fullName {
+  color: blueGreyColor;
+  font-size: largeFontSize;
+  font-weight: boldFontWeight;
+  padding-bottom: calc(gridCellSize * 2);
+}
+
+.email {
+  color: blueGreyColor;
+  padding-bottom: calc(gridCellSize * 2);
+}
+
+.infoWithButton {
+  display: flex;
+  flex-flow: column;
+}
+
+.actionButtons {
+  display: flex;
+  margin-top: auto;
+}
+
+.spaceList {
+  display: flex;
+  flex-flow: column;
+  max-height: calc(gridCellSize * 50);
+  overflow-y: auto;
+  padding: 0 calc(gridCellSize * 3) calc(gridCellSize * 3)
+    calc(gridCellSize * 3);
+}
+
+.spaceItem {
+  display: flex;
+  color: blueGreyColor;
+  padding-top: calc(gridCellSize * 2);
+  align-items: center;
+}
+
+.title {
+  color: blueGreyColor;
+  font-size: mediumFontSize;
+  font-weight: boldFontWeight;
+  padding-bottom: calc(gridCellSize * 3);
+}
+
+.rightSecondaryButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-left: auto;
+}
+
+.leftSecondaryButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-right: auto;
+}
+
+.rightPrimaryButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: auto;
+}
+
+.leftPrimaryButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.addToNewSpaceRow {
+  display: flex;
+  align-items: center;
+  padding: 0 calc(gridCellSize * 3) 0 gridCellSize;
+}
+
+.deactivateText {
+  margin: gridCellSize 0 calc(gridCellSize * 5) 0;
+  font-family: fontFamilyTwo;
+  color: cloudyBlueColor;
+  font-size: mediumFontSize;
+  align-self: center;
+  text-align: center;
+  width: calc(gridCellSize * 70);
+}
+
+.footer {
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+}

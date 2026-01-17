@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MaterialSwitch /> render 1`] = `
+<div
+  className="materialSwitch "
+  onClick={[Function]}
+>
+  <div
+    className="track"
+    style={null}
+  />
+  <div
+    className="knob"
+    style={null}
+  />
+</div>
+`;

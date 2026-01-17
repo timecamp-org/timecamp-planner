@@ -1,0 +1,15 @@
+@import "colors.css";
+@import "common.css";
+
+.taskProgressWrapper {
+  display: flex;
+  align-items: center;
+  margin-left: calc(6 * gridCellSize);
+}
+
+.controllerTitle {
+  font-size: normalFontSize;
+  font-family: fontFamilyTwo;
+  color: cloudyBlueColor;
+  margin-right: 8px;
+}

@@ -1,0 +1,22 @@
+.projectHeaderTabs{
+  display: flex;
+  position: relative;
+}
+
+.projectHeaderTabItem{
+  display: flex;
+  justify-content: center;
+}
+
+.projectHeaderUnderline{  
+  position: absolute;
+  top: 100%;
+  transform: translateY(200%);
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary-500);
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+

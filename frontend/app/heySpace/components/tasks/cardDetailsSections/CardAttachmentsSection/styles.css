@@ -1,0 +1,14 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  align-items: center;
+  display: flex;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: calc(5 * gridCellSize);
+}

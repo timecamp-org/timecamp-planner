@@ -1,0 +1,143 @@
+@import 'colors.css';
+@import 'common.css';
+
+@value controllerHeight: calc(gridCellSize * 8);
+
+.Component {
+  display: flex;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: normalFontSize;
+  color: cloudyBlueColor;
+  padding-right: gridCellSize;
+  margin-left: 0.4rem;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+}
+
+.personIcon {
+  composes: personIconWrapper from 'components/person/PersonIcon/styles.css';
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.assigneeIconWrapper {
+  margin-left: -20%;
+}
+
+.extraAssigneesNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -1.5rem;
+  border-radius: 50%;
+  background-color: whiteColor;
+  font-size: smallFontSize;
+  font-weight: boldFontWeight;
+  z-index: 1;
+}
+
+.assigneesPickerController {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  align-items: center;
+  height: controllerHeight;
+  padding: gridCellSize;
+  font-weight: var(--fontWeight-regular);
+
+  &:active {
+    color: var(--color-primary-500);
+  }
+}
+
+.assigneesPickerController:hover {
+  filter: brightness(97%);
+}
+
+.assigneePicked {
+  padding-right: 0;
+  border-radius: 50%;
+}
+
+.assigneesPickerControllerIcon {
+  width: cardDetailsHeight;
+  height: cardDetailsHeight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whiteTwoColor;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: -1.5rem;
+  z-index: 10;
+}
+
+.assigneesPickerControllerIconTransparent {
+  composes: assigneesPickerControllerIcon;
+  background: transparent;
+  margin-left: 0;
+  z-index: unset;
+}
+
+.buttonShadeClassName {
+  composes: Component from 'components/buttons/ButtonShade/styles.css';
+  border-radius: 50%;
+}
+
+.header {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(10 * gridCellSize);
+  margin-top: calc(-2 * gridCellSize);
+}
+
+.headerTitle {
+  font-size: normalFontSize;
+  text-transform: uppercase;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  padding: 1rem 1rem 0 1rem;
+}
+
+.popoverWrapper {
+  max-width: 42rem;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.assigneeSearchWrapper {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.assigneesMenu {
+  display: flex;
+  align-items: center;
+}
+
+.assigneeList {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.iconMinimized {
+  margin-left: 0;
+  max-width: 1.8rem;
+  max-height: 1.8rem;
+  min-width: unset;
+  min-height: unset;
+  border-width: 1px;
+  border-radius: 100%;
+}

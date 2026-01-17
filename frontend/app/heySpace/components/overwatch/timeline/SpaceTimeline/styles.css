@@ -1,0 +1,82 @@
+@import 'colors.css';
+@import 'common.css';
+
+.spaceTimeline {
+  font-family: fontFamilyThree;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 2rem);
+}
+
+.timelineHeader {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr auto 1fr;
+  padding: gridCellSize 0;
+  color: midnightColor;
+  flex-wrap: wrap;
+  background-color: whiteTwoColor;
+  height: min-content;
+  flex-grow: 0;
+}
+
+.monthAndYear {
+  grid-column: 2 / 3;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-semibold);
+  text-transform: uppercase;
+}
+
+.timelineContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-right: calc(5 * gridCellSize);
+  min-height: 0;
+}
+
+.leftOffset {
+  padding-left: calc(3 * gridCellSize);
+}
+
+.resizeHandler {
+  width: 7px !important;
+  cursor: ew-resize !important;
+}
+
+.goToTodayButton {
+  margin: 0;
+  max-height: calc(5 * gridCellSize);
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-row: 1;
+  grid-column: 3/4;
+  padding-right: calc(gridCellSize * 3);
+  gap: 1.5rem;
+}
+
+.itemWithBadge {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  a {
+    margin: 0;
+  }
+}
+
+.badge {
+  margin-left: gridCellSize;
+  height: 16px;
+  margin-right: calc(gridCellSize * 6);
+  margin-top: calc(gridCellSize * -4);
+}

@@ -1,0 +1,42 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  cursor: pointer;
+  background-color: whiteColor;
+  border-radius: 8px;
+  margin-bottom: calc(2 * gridCellSize);
+  display: inline-block;
+  width: 100%;
+  color: blueGreyColor;
+}
+
+.children {
+  padding: calc(2 * gridCellSize);
+}
+
+.childrenKanban {
+  composes: children;
+  min-height: calc(15 * gridCellSize);
+  max-height: calc(100% - (22 * gridCellSize));
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.overflow {
+  background-color: coralPinkColor;
+  border-radius: largeBorderRadius;
+}
+
+.moreVertical {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.cardClone {
+  width: 100%;
+  background-color: whiteTwoColor;
+  border-radius: largeBorderRadius;
+}

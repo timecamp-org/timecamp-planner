@@ -1,0 +1,23 @@
+@import 'common.css';
+@import 'colors.css';
+
+.spaceLink {
+  composes: Component from 'components/buttons/MenuButton/styles.css';
+  width: 100%;
+  text-align: left;
+}
+
+.linkContents {
+  display: flex;
+  width: 100%;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.icon {
+  margin-right: gridCellSize;
+  width: calc(3 * gridCellSize);
+  height: calc(3 * gridCellSize);
+}

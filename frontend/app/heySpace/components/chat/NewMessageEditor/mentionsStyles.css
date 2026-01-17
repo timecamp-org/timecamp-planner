@@ -1,0 +1,64 @@
+@import 'colors.css';
+@import 'common.css';
+
+.ql-mention-active-item {
+  background: var(--color-gray-100);
+  color: var(--color-gray-900);
+}
+
+.ql-mention-list-container {
+  position: absolute;
+  list-style: none;
+  z-index: 1000;
+  overflow-y: auto;
+  transform: translateZ(0);
+  color: var(--color-primary-500);
+  border-radius: calc(2 * gridCellSize);
+  background: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+  padding: gridCellSize;
+  margin: 0;
+}
+
+.ql-mention-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ql-mention-list-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+}
+
+.name {
+  margin-left: gridCellSize;
+}
+
+.ql-mention-at-sign {
+  color: var(--color-primary-500);
+}
+
+.mention {
+  color: var(--color-primary-500);
+  font-weight: var(--fontWeight-regular);
+  & * {
+    color: var(--color-primary-500);
+  }
+}
+
+.mentionSuggestion {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  justify-content: left;
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-900);
+
+  &:hover {
+    color: var(--color-gray-900) !important;
+  }
+}

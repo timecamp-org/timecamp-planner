@@ -1,0 +1,15 @@
+@import "common.css";
+@import "colors.css";
+
+.component {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: calc(gridCellSize * 4) 10;
+  width: calc(gridCellSize * 100);
+}
+
+.image {
+  padding-bottom: calc(gridCellSize * 4);
+  width: 90%;
+}

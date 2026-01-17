@@ -1,0 +1,7 @@
+import Component from './component'
+
+import EnhanceTeamMembersManagement from './enhancers/EnhanceTeamMembersManagement'
+import RedirectToNewWorkspacePageIfCurrentUserHasNoWorkspaces from 'enhancers/RedirectToNewWorkspacePageIfCurrentUserHasNoWorkspaces'
+import RedirectToSignInPageIfCurrentUserIsDeauthenticated from 'enhancers/RedirectToSignInPageIfCurrentUserIsDeauthenticated'
+
+export default RedirectToSignInPageIfCurrentUserIsDeauthenticated(RedirectToNewWorkspacePageIfCurrentUserHasNoWorkspaces((EnhanceTeamMembersManagement(Component))))

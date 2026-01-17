@@ -1,0 +1,30 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  padding: 0 gridCellSize;
+}
+
+.Component label {
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+.input {
+  padding: calc(2 * gridCellSize) 0;
+  color: var(--color-gray-900);
+
+  & > input {
+    border: 1px solid var(--color-gray-200);
+  }
+}
+
+.cityContainer,
+.postalContainer {
+  display: inline-block;
+  width: calc(50% - gridCellSize);
+}
+
+.cityContainer {
+  margin-right: calc(gridCellSize * 2);
+}

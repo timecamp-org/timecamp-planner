@@ -1,0 +1,17 @@
+@import 'colors.css';
+@import 'common.css';
+
+.personFullName {
+  vertical-align: middle;
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-900);
+}
+
+.currentUserIndicator {
+  font-size: smallFontSize;
+}
+
+.deactivated {
+  opacity: deactivatedOpacity;
+}

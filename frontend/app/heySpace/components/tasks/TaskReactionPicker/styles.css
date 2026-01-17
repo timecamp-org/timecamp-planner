@@ -1,0 +1,22 @@
+@import 'colors.css';
+@import 'common.css';
+
+.reactionPickerButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  padding: gridCellSize;
+  display: inline-flex;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 1px dashed var(--color-gray-500);
+  color: var(--color-gray-500);
+}
+
+.emotIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.reactionsWrapper {
+  display: flex;
+}

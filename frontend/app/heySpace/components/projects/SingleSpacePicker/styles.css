@@ -1,0 +1,52 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  composes: Component from 'commonComponents/Dropdown/styles.css';
+  position: relative;
+  left: 1px;
+}
+
+.dropdownContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  position: absolute;
+  top: calc(7 * gridCellSize);
+  width: calc(gridCellSize * 40);
+  z-index: 100;
+  max-height: calc(gridCellSize * 50);
+  overflow-y: auto;
+  padding: 0;
+}
+
+.dropdownItem {
+  height: calc(6 * gridCellSize);
+  padding: calc(gridCellSize * 2);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-top: gridCellSize;
+  cursor: pointer;
+  border-radius: defaultBorderRadius;
+  color: cloudyBlueColor;
+  font-size: smallFontSize;
+  border: 0;
+  &:hover {
+    background-color: black05Color;
+  }
+}
+
+.projectName {
+  padding-left: calc(gridCellSize * 2);
+}
+
+.dropdownButtonIcon {
+  margin-right: calc(gridCellSize * 2);
+}
+
+.emptySpaces {
+  color: blueGreyColor;
+}
+
+/* It clears default focused style from dropdownitem  */
+.focusedItemClassName {
+}

@@ -1,0 +1,94 @@
+@import 'colors.css';
+@import 'common.css';
+
+.component {
+  height: calc(14 * gridCellSize);
+  padding: calc(gridCellSize * 3) calc(gridCellSize * 6);
+  border-bottom: 1px solid paleGreyTwoColor;
+  display: flex;
+  align-items: center;
+  background-color: whiteTwoColor;
+
+  @media (max-width: mobileBreakpoint) {
+    padding: 1.5rem 3rem 1.5rem 2rem;
+  }
+}
+
+.icon {
+  width: calc(gridCellSize * 7);
+  margin-right: calc(gridCellSize * 4);
+}
+
+.titleWrapper {
+  font-family: fontFamilyThree;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: blueGreyColor;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: largeFontSize;
+  font-weight: boldFontWeight;
+  padding-bottom: gridCellSize;
+}
+
+.workspaceName {
+  font-size: smallFontSize;
+}
+
+.filterIcon {
+  composes: Component from 'components/tasks/taskFilters/FiltersButtonWithCounter/styles.css';
+  margin-left: auto;
+}
+
+.taskSearch {
+  composes: Component from 'components/tasks/taskFilters/TaskSearch/styles.css';
+  width: calc(60 * gridCellSize);
+}
+
+.taskSearchInput {
+  composes: input from 'components/tasks/taskFilters/TaskSearch/styles.css';
+  background-color: var(--color-gray-50);
+  color: slateColor;
+  padding-left: calc(3 * gridCellSize);
+  padding-right: calc(6 * gridCellSize);
+}
+
+.link {
+  composes: link from 'components/projects/ProjectViewHeader/styles.css';
+}
+
+.oldLink {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  border: 0px;
+  cursor: pointer;
+  border-radius: largeBorderRadius;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  font-family: fontFamilyTwo;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: calc(2 * gridCellSize);
+  margin-right: gridCellSize;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.headerRight {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 201;
+  color: var(--color-gray-900);
+}

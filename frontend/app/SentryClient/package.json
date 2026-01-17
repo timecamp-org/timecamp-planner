@@ -1,0 +1,9 @@
+{
+  "name": "SentryClient",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@sentry/react": "^7.47.0",
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,114 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-flow: column;
+  overflow-x: hidden;
+  background-color: var(--color-white);
+  width: 0;
+  transition: width defaultTransition;
+  padding: gridCellSize 0;
+  border-right: 1px solid var(--color-gray-100);
+
+  &:hover {
+    overflow-y: auto;
+  }
+}
+
+.visible {
+  width: calc(gridCellSize * 10);
+  padding: gridCellSize;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: gridCellSize;
+  width: 4rem;
+  height: 4rem;
+  border-radius: defaultBorderRadius;
+  border: 1px solid var(--color-gray-200);
+  transition: defaultTransition;
+  color: var(--color-gray-900);
+  opacity: 0.4;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.activeTile {
+  composes: tile;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.activeTile::before {
+  content: '';
+  width: 2px;
+  position: absolute;
+  left: calc((-1) * gridCellSize);
+  top: calc(gridCellSize * 2);
+  bottom: calc(gridCellSize * 2);
+  background-color: cloudyBlueColor;
+  border-radius: defaultBorderRadius;
+}
+
+.initialsClassName {
+  background-color: transparent;
+  color: var(--color-gray-900);
+}
+
+.thumbnail {
+  opacity: 0.5;
+  background-color: transparent;
+}
+
+.activeThumbnail {
+  composes: thumbnail;
+  opacity: 1;
+}
+
+.image {
+  width: 100%;
+}
+
+.badge {
+  composes: defaultStyle from 'commonComponents/Badge/styles.css';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-width: calc(gridCellSize * 2);
+  width: calc(gridCellSize * 2);
+  height: calc(gridCellSize * 2);
+}
+
+.addWorkspaceButton {
+  composes: tile;
+  opacity: 1;
+  background-color: var(--color-white);
+  border: 2px dotted var(--color-gray-500);
+  color: var(--color-gray-500);
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  margin-top: 2.5rem;
+
+  &:hover {
+    opacity: 1;
+    color: var(--color-primary-400);
+    cursor: pointer;
+  }
+}

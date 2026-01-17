@@ -1,0 +1,64 @@
+@import 'colors.css';
+@import 'common.css';
+
+.label {
+  display: block;
+  font-size: normalFontSize;
+  color: darkGreyBlueColor;
+  text-align: left;
+  margin-bottom: gridCellSize;
+}
+
+.optional {
+}
+
+.helperMessage {
+  color: blueGreyColor;
+  font-size: smallFontSize;
+  margin-top: gridCellSize;
+}
+
+.input {
+  width: 100%;
+  height: 2.4rem;
+  border-radius: calc(2 * gridCellSize);
+  background-color: transparent;
+  border: none;
+  color: darkGreyBlueColor;
+  padding: gridCellSize;
+  padding-left: calc(2 * gridCellSize);
+  transition: border defaultTransitionAnimation;
+
+  &::placeholder {
+    color: slate60Color;
+  }
+}
+
+.inputError {
+  composes: input;
+  border: solid 1px paleRedColor;
+
+  &:focus {
+    border: solid 1px paleRedColor;
+  }
+}
+
+.inputDisabled {
+  background-color: cloudyBlue20Color;
+  color: blueGreyColor;
+
+  &:focus {
+    border: solid 1px whiteColor;
+  }
+}
+
+.humanMessage {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  font-size: smallFontSize;
+  color: paleRedColor;
+  position: absolute;
+}
+
+.requiredStar {
+  color: var(--color-primary-500);
+}

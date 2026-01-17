@@ -1,0 +1,109 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  position: relative;
+  min-height: calc(82 * gridCellSize);
+  color: blueGreyColor;
+  background-color: whiteTwoColor;
+  overflow-y: auto;
+}
+
+.signUp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--color-gray-500);
+  font-weight: var(--fontWeight-medium);
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .signUp {
+    padding-right: calc(2 * gridCellSize);
+  }
+}
+
+.topSection {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 4.8rem 11rem;
+
+  @media (max-width: tabletBreakpointWidth) {
+    margin: 1.5rem 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.signInPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+  background-color: var(--color-white);
+}
+
+.content {
+  justify-self: center;
+
+  min-height: 0;
+  flex-grow: 1;
+  display: flex;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: calc(110 * gridCellSize);
+}
+
+.link {
+  text-decoration: none;
+  margin-left: 0.8rem;
+  font-weight: var(--fontWeight-medium);
+  color: var(--color-gray-900);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.signUpButton {
+  border: solid defaultBorderWidth wisteriaColor;
+  color: wisteriaColor !important;
+  border-radius: largeBorderRadius;
+  height: 36px;
+  width: calc(21 * gridCellSize);
+  font-weight: boldFontWeight;
+  cursor: pointer;
+  position: relative;
+  margin-left: calc(2 * gridCellSize);
+  z-index: 1000;
+}
+
+.input {
+  width: 100%;
+  height: 5.2rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  font-size: var(--fontSize-base);
+  display: flex;
+
+  &:focus-within {
+    border-color: var(--color-primary-500);
+  }
+
+  & > input {
+    height: 100%;
+    padding-left: 3.5rem;
+  }
+}

@@ -1,0 +1,63 @@
+@import 'common.css';
+@import 'colors.css';
+
+.dropdownContent {
+  position: absolute;
+  top: calc(11 * gridCellSize);
+  left: calc(2 * gridCellSize);
+  width: calc(100% - (2 * gridCellSize));
+  border-left: 1px solid whiteColor;
+  border-right: 1px solid whiteColor;
+  border-bottom: 1px solid whiteColor;
+  border-bottom-left-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.dropdownButton {
+  position: relative;
+  width: calc(100% - (2 * gridCellSize));
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: calc(2 * gridCellSize);
+  padding-right: calc(5 * gridCellSize);
+  border-radius: largeBorderRadius;
+  font-weight: boldFontWeight;
+  color: cloudyBlueColor;
+  border: 1px solid whiteColor;
+}
+
+.dropdownButtonIcon {
+  position: absolute;
+  right: calc(3 * gridCellSize);
+  top: calc(3 * gridCellSize);
+}
+
+.dropdownItem {
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: gridCellSize;
+  padding: gridCellSize;
+  cursor: pointer;
+  border-radius: defaultBorderRadius;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  border: 0;
+  width: calc(100% - (2 * gridCellSize));
+}
+
+.dropdownItem:hover {
+  background: lightGreyColor;
+}
+
+.dropdownItem:active {
+  background: lightGreyColor;
+  opacity: 0.8;
+}

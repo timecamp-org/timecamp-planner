@@ -1,0 +1,40 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  position: relative;
+  align-items: center;
+  margin-top: calc(2 * gridCellSize);
+  z-index: 17010001 !important;
+}
+
+.row {
+  display: flex;
+  margin-bottom: calc(4 * gridCellSize);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: gridCellSize;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.nameInput {
+  flex: 1;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.nameInput input {
+  width: calc(100% - (2 * gridCellSize));
+  height: calc(8 * gridCellSize);
+}
+
+.nameInput label {
+  color: cloudyBlueColor;
+}
+
+.cancelButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-right: calc(2 * gridCellSize);
+}

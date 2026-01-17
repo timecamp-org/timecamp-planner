@@ -1,0 +1,88 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  color: blackColor;
+  font-family: defaultFontFamily;
+  margin-bottom: calc(2 * gridCellSize);
+  padding: gridCellSize;
+  width: 100%;
+  overflow-y: hidden;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.settingsRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.settingsSection {
+  @mixin WhiteBox;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.workspaceListSwitcher {
+  cursor: pointer;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  user-select: none;
+  margin-bottom: calc(gridCellSize * 2);
+}
+
+.workspaceList {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: calc(gridCellSize * 4);
+}
+
+.chevronIcon {
+  margin-right: gridCellSize;
+}
+
+.workspaceRow {
+  display: flex;
+  align-items: center;
+  margin-top: calc(gridCellSize * 2);
+}
+
+.rowRight {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.workspaceThumbnail {
+  composes: Component from 'components/settings/workspaceSettings/WorkspaceThumbnail/styles.css';
+  width: calc(gridCellSize * 8);
+  height: calc(gridCellSize * 8);
+  border: 1px solid cloudyBlueColor;
+  margin-right: gridCellSize;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 100000;
+  background: whiteTwoColor;
+}
+
+.loadingDots {
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+}
+
+.newWorkspaceButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: auto;
+  margin-bottom: gridCellSize;
+}

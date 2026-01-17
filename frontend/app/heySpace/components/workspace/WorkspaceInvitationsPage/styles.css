@@ -1,0 +1,56 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  height: 100%;
+  display: flex;
+  position: relative;
+  min-height: calc(82 * gridCellSize);
+  color: blueGreyColor;
+  background-color: whiteTwoColor;
+  overflow-y: auto;
+}
+
+.left {
+  width: calc(91 * gridCellSize);
+  background-image: url('styles/assets/planets-background.png');
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: calc(150 * gridCellSize);
+}
+
+.right {
+  flex: 1;
+  display: flex;
+}
+
+.workspaceInvitationPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: whiteTwoColor;
+}
+
+.content {
+  max-width: 65rem;
+  width: auto;
+  flex: 1 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: calc(110 * gridCellSize);
+
+  & footer {
+    padding: 0;
+  }
+}

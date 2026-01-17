@@ -1,0 +1,30 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: 225;
+  position: absolute;
+  bottom: -7px;
+  right: 0;
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 100;
+}
+
+.userReadBall {
+  margin-right: gridCellSize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+}

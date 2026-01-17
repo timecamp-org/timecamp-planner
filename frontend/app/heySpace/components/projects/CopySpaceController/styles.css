@@ -1,0 +1,7 @@
+@import 'common.css';
+@import 'colors.css';
+
+.copySpaceController {
+  display: flex;
+  z-index: 17011 !important;
+}

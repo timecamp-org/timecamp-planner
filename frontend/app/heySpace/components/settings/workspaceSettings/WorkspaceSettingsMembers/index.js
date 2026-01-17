@@ -1,0 +1,6 @@
+import Component from './component'
+
+import RedirectToSignInPageIfCurrentUserIsDeauthenticated from 'enhancers/auth/RedirectToSignInPageIfCurrentUserIsDeauthenticated'
+import EnhanceWorkspaceSettingsMembers from './enhancers/EnhanceWorkspaceSettingsMembers'
+
+export default RedirectToSignInPageIfCurrentUserIsDeauthenticated(EnhanceWorkspaceSettingsMembers(Component))

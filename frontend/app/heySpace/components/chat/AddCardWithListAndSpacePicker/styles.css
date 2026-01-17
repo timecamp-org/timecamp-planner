@@ -1,0 +1,136 @@
+@import 'common.css';
+@import 'colors.css';
+
+.focused {
+  background: whiteTwoColor;
+  padding: calc(2 * gridCellSize);
+  border-radius: calc(2 * gridCellSize);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  font-weight: boldFontWeight;
+}
+
+.content {
+  margin-top: gridCellSize;
+}
+
+.dropdownLabel {
+  color: cloudyBlueColor;
+  margin-left: calc(2 * gridCellSize);
+  margin-top: gridCellSize;
+  color: darkGreyBlueColor;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: calc(11 * gridCellSize);
+  left: calc(2 * gridCellSize);
+  width: calc(100% - (2 * gridCellSize));
+  border-left: 1px solid whiteColor;
+  border-right: 1px solid whiteColor;
+  border-bottom: 1px solid whiteColor;
+  border-bottom-left-radius: largeBorderRadius;
+  border-bottom-right-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.buttons {
+  margin-top: calc(3 * gridCellSize);
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: gridCellSize;
+  margin-right: calc(2 * gridCellSize);
+}
+
+.row {
+  position: relative;
+}
+
+.dropdownButton {
+  position: relative;
+  width: calc(100% - (2 * gridCellSize));
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: calc(2 * gridCellSize);
+  padding-right: calc(5 * gridCellSize);
+  border-radius: largeBorderRadius;
+  font-weight: boldFontWeight;
+  color: cloudyBlueColor;
+  border: 1px solid whiteColor;
+  margin: gridCellSize calc(2 * gridCellSize);
+}
+
+.dropdownButtonIcon {
+  position: absolute;
+  right: calc(3 * gridCellSize);
+  top: calc(3 * gridCellSize);
+}
+
+.dropdownItem {
+  height: calc(6 * gridCellSize);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: gridCellSize;
+  padding: gridCellSize;
+  cursor: pointer;
+  border-radius: defaultBorderRadius;
+  color: cloudyBlueColor;
+  font-weight: boldFontWeight;
+  border: 0;
+  width: calc(100% - (2 * gridCellSize));
+}
+
+.dropdownItem:hover {
+  background: lightGreyColor;
+}
+
+.dropdownItem:active {
+  background: lightGreyColor;
+  opacity: 0.8;
+}
+
+.addIcon {
+  margin-right: gridCellSize;
+}
+
+.notFocused {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: whiteColor;
+  border-radius: largeBorderRadius;
+  margin: calc(1 * gridCellSize);
+  min-width: calc(52 * gridCellSize);
+  z-index: 20;
+  position: relative;
+  cursor: pointer;
+  min-height: calc(8 * gridCellSize);
+  padding: calc(2 * gridCellSize);
+
+  &:hover {
+    background-color: silverColor;
+  }
+}
+
+.label {
+  composes: label from 'commonComponents/UserInput/styles.css';
+  margin-top: calc(2 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+}
+
+.textarea {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  height: auto;
+  margin-left: calc(2 * gridCellSize);
+}

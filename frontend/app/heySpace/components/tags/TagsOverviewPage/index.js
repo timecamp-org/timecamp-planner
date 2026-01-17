@@ -1,0 +1,7 @@
+import Component from './component'
+
+import EnhanceTagsOverviewPage from './enhancers/EnhanceTagsOverviewPage'
+import RedirectToSignInPageIfCurrentUserIsDeauthenticated from 'enhancers/auth/RedirectToSignInPageIfCurrentUserIsDeauthenticated'
+import RedirectToSubscriptionSettingsIfMembersNotValid from 'enhancers/auth/RedirectToSubscriptionSettingsIfMembersNotValid'
+
+export default RedirectToSignInPageIfCurrentUserIsDeauthenticated(RedirectToSubscriptionSettingsIfMembersNotValid(EnhanceTagsOverviewPage(Component)))

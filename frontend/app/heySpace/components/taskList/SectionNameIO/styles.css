@@ -1,0 +1,74 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  cursor: pointer;
+  padding: gridCellSize;
+  flex: 1;
+  width: calc(100% - (6 * gridCellSize));
+  font-family: fontFamilyTwo;
+}
+
+.focused {
+  width: 100%;
+  border-radius: calc(2 * gridCellSize);
+  background-color: whiteTwoColor;
+  border: solid 1px whiteColor;
+  color: darkGreyBlueColor;
+  padding: gridCellSize;
+
+  &:focus-within {
+    border: solid 1px babyBlueColor;
+  }
+
+  &::placeholder {
+    color: slate60Color;
+  }
+}
+
+.sectionName {
+  max-height: calc(10 * gridCellSize);
+  padding-right: 2px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: var(--color-gray-700);
+  font-weight: var(--fontWeight-semibold);
+}
+
+.sectionNameInput {
+  max-height: calc(10 * gridCellSize);
+  padding-right: 2px;
+  flex: 1;
+  width: 100%;
+  resize: none;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sectionNameInput:focus {
+  border: none;
+}
+
+.buttons {
+  display: flex;
+}
+
+.button {
+  composes: Component from 'commonComponents/Button/styles.css';
+  flex: 0;
+  padding: gridCellSize;
+  white-space: nowrap;
+  margin-right: gridCellSize;
+}
+
+.cancelButton {
+  composes: button;
+}
+
+.saveButton {
+  composes: button;
+}

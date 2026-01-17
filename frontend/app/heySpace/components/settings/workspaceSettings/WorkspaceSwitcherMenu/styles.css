@@ -1,0 +1,29 @@
+@import 'common.css';
+@import 'colors.css';
+
+.component {
+  border-radius: 0 calc(2 * gridCellSize) calc(2 * gridCellSize) 0;
+  background-color: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+}
+
+.divider {
+  composes: horizontalDivider from 'commonComponents/HorizontalDivider/styles.css';
+  width: 100%;
+  background: whiteColor;
+  margin: gridCellSize 0;
+}
+
+.plusIcon {
+  margin-right: gridCellSize;
+}
+
+.addNewOrganizationButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  justify-content: left;
+  display: flex;
+  justify-content: space-between;
+  margin: gridCellSize;
+  white-space: nowrap;
+  align-items: center;
+}

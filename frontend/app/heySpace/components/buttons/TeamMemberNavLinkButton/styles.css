@@ -1,0 +1,43 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  padding: gridCellSize gridCellSize gridCellSize calc(2 * gridCellSize);
+  cursor: pointer;
+  border-radius: 0.2rem;
+  border: none;
+  position: relative;
+  background: transparent;
+  border: 0.2rem solid transparent;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+}
+
+.Component:focus {
+  background-color: var(--color-gray-200);
+}
+
+.Component:hover {
+  background: var(--color-gray-100);
+}
+
+.Component:active {
+  background-color: var(--color-gray-200);
+}
+
+.Component.selected {
+  background-color: var(--color-gray-200);
+}
+
+.Component.selected:focus {
+}
+
+.Component.selected:hover {
+  background: var(--color-gray-100);
+}
+
+.Component.selected:active {
+  background-color: var(--color-gray-200);
+}

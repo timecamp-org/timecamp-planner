@@ -1,0 +1,26 @@
+node_modules
+dist
+npm-debug.log
+.idea
+.DS_Store
+config/local
+config/*.local.ts
+config.local
+config.local/*.ts
+
+dev-*
+
+.env*
+# Logs
+
+logs
+*.log
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+.clinic
+

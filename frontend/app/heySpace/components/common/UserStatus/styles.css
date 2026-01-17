@@ -1,0 +1,20 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-500);
+  font-size: smallFontSize;
+}
+
+.emoji {
+  margin-right: gridCellSize;
+}
+
+.title {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

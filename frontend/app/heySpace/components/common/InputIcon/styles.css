@@ -1,0 +1,94 @@
+@import 'colors.css';
+@import 'common.css';
+
+.label {
+  display: flex;
+  text-align: left;
+  margin-bottom: gridCellSize;
+}
+
+.helperMessage {
+  color: blueGreyColor;
+  font-size: smallFontSize;
+  margin-top: gridCellSize;
+}
+
+.input {
+  width: 100%;
+  height: calc(6 * gridCellSize);
+
+  background-color: var(--color-gray-50);
+  border: solid 1px transparent;
+  color: darkGreyBlueColor;
+  padding: gridCellSize;
+  padding-left: calc(2 * gridCellSize);
+  transition: border defaultTransitionAnimation;
+
+  &::placeholder {
+    color: slate60Color;
+  }
+}
+
+.inputError {
+  composes: input;
+  border: solid 1px paleRedColor;
+
+  &:focus {
+    border: solid 1px paleRedColor;
+  }
+}
+
+.inputDisabled {
+  background-color: cloudyBlue20Color;
+  color: blueGreyColor;
+
+  &:focus {
+    border: solid 1px whiteColor;
+  }
+}
+
+.humanMessage {
+  composes: Component from 'commonComponents/HumanMessage/styles.css';
+  font-size: smallFontSize;
+  color: paleRedColor;
+}
+
+.requiredStar {
+  color: wisteriaColor;
+}
+
+.inputLabelWrapper {
+  display: block;
+  position: relative;
+  height: 3rem;
+
+  &:focus-within inputSearchIcon,
+  inputPlaceholder {
+    display: none;
+  }
+}
+
+.inputSearchIcon {
+  color: var(--color-gray-400);
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.inputPlaceholder {
+  position: absolute;
+  left: 4rem;
+  color: var(--color-gray-400);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.xMark {
+  position: absolute;
+  right: 2rem;
+  color: var(--color-gray-400);
+  cursor: pointer;
+}

@@ -1,0 +1,68 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  background-color: whiteTwoColor;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: calc(99 * gridCellSize);
+  overflow: hidden;
+  color: blackColor;
+}
+
+@media (max-width: phoneBreakpointWidth) {
+  .Component {
+    padding: gridCellSize;
+  }
+}
+
+.notificationList {
+  composes: Component from 'components/notifications/NotificationsList/styles.css';
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  position: relative;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+}
+
+.title {
+  font-size: normalFontSize;
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+}
+
+.archiveAllButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  font-family: inherit;
+  width: auto;
+  height: auto;
+  padding: calc(2 * gridCellSize);
+}
+
+.rightButtons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  size: var(--fontSize-regular);
+}
+
+.markAllAsReadButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: auto;
+  height: auto;
+  padding: calc(2 * gridCellSize);
+  margin-left: gridCellSize;
+}
+
+.emptyNotifications {
+  composes: Component from 'components/notifications/EmptyNotificationsList/styles.css';
+  padding: calc(3 * gridCellSize) 0;
+}

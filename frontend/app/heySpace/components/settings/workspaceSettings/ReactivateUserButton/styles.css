@@ -1,0 +1,13 @@
+@import 'common.css';
+@import 'colors.css';
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  height: calc(gridCellSize * 5);
+  padding: 0 calc(gridCellSize * 4);
+  margin-top: calc(gridCellSize * 3);
+  margin-left: calc(gridCellSize * 2);
+  background-color: warmGrey5Color;
+  display: none;
+  font-size: smallFontSize;
+}

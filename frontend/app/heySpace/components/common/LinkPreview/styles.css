@@ -1,0 +1,122 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: gridCellSize;
+}
+
+.link,
+.link:visited {
+  text-decoration: none;
+  color: lochmaraColor;
+}
+
+.link:focus,
+.link:hover {
+  color: bahamaBlueColor;
+  text-decoration: underline;
+}
+
+.imagePlaceholder {
+  margin-top: calc(3 * gridCellSize);
+  background: defaultGreyBrightness1;
+  background-color: cloudyBlueColor;
+  border-radius: defaultBorderRadius;
+  width: calc(72 * gridCellSize);
+  height: calc(40 * gridCellSize);
+}
+
+.image {
+  margin-top: calc(3 * gridCellSize);
+  cursor: pointer;
+  max-width: calc(72 * gridCellSize);
+  max-height: calc(40 * gridCellSize);
+}
+
+.title {
+  composes: link;
+  font-weight: boldFontWeight;
+  padding-bottom: gridCellSize;
+}
+
+.description {
+}
+
+.previewContainer {
+  margin-top: calc(3 * gridCellSize);
+  padding-left: calc(3 * gridCellSize);
+  border-left: solid 4px cloudyBlue30Color;
+}
+
+.previewContainer::before {
+  content: '';
+  width: calc(gridCellSize * 5);
+  position: absolute;
+  left: calc(5px * 6);
+  top: 0;
+  bottom: 0;
+}
+
+.logo {
+  width: calc(3 * gridCellSize);
+  height: calc(3 * gridCellSize);
+  margin-right: gridCellSize;
+}
+
+.publisher {
+  display: flex;
+  align-items: center;
+  padding: gridCellSize 0;
+  color: blueGreyColor;
+}
+
+.errorImageWrapper {
+  text-align: center;
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+  color: darkGreyBlueColor;
+  width: calc(72 * gridCellSize);
+  height: calc(40 * gridCellSize);
+  display: flex;
+  flex-flow: column;
+  border-radius: defaultBorderRadius;
+  margin-top: calc(3 * gridCellSize);
+  background-color: whiteColor;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorImage {
+  /* background-image: url('commonComponents/Mascot/assets/character_17.png'); */
+  background-size: contain;
+  background-position: center;
+  width: calc(16 * gridCellSize);
+  height: calc(17 * gridCellSize);
+  margin-bottom: calc(4 * gridCellSize);
+}
+
+.deleteIconWrapper {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  position: absolute;
+  left: calc(gridCellSize * 3);
+  height: calc(gridCellSize * 10);
+  width: calc(gridCellSize * 10);
+  padding-left: calc(gridCellSize * 3);
+  padding-right: calc(gridCellSize * 3);
+  background: transparent;
+}
+
+.deleteIconWrapper:hover {
+  background: transparent;
+}
+
+.deleteIconWrapper:active {
+  background: transparent;
+}
+
+.player {
+  margin-top: calc(3 * gridCellSize);
+}

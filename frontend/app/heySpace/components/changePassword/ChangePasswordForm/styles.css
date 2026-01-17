@@ -1,0 +1,52 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: calc(72 * gridCellSize);
+  margin: 0 auto calc(24 * gridCellSize);
+}
+
+.header {
+  font-size: largerFontSize;
+  font-weight: boldFontWeight;
+  font-family: defaultFontFamily;
+  text-align: center;
+  margin-bottom: calc(11 * gridCellSize);
+}
+
+.form {
+}
+
+.infoText {
+  margin-top: calc(3 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.alert {
+  composes: Component from 'components/alerts/Alert/styles.css';
+  margin-top: calc(2 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.passwordUserInput {
+  composes: Component from 'commonComponents/UserInput/styles.css';
+  margin-bottom: calc(3 * gridCellSize);
+}
+
+.submitButton,
+.submitButtonDisabled {
+  composes: ButtonFull from 'commonComponents/SubmitButton/styles.css';
+  margin-top: calc(3 * gridCellSize);
+  margin-bottom: calc(5 * gridCellSize);
+  width: 100%;
+}
+
+.submitButtonDisabled,
+.submitButtonDisabled:hover {
+  cursor: default;
+  pointer-events: none;
+}
+
+.activeSubmitButton {
+  opacity: 0.6;
+}

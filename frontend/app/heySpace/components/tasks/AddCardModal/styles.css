@@ -1,0 +1,18 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(gridCellSize * 100);
+  width: 32rem;
+  border-radius: var(--borderRadius-sm);
+}
+
+.modalBody {
+  /* removes default styles */
+}
+
+.modalHeader {
+  padding: 1.6rem 1.2rem;
+  font-weight: var(--fontWeight-semibold);
+}

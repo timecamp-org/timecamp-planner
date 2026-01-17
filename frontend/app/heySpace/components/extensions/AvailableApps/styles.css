@@ -1,0 +1,79 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app {
+  position: relative;
+  width: calc(45 * gridCellSize);
+  height: calc(63 * gridCellSize);
+  border-radius: largerBorderRadius;
+  border: solid 1px warmGrey5Color;
+  background-color: lightGreyColor;
+  margin-right: calc(2 * gridCellSize);
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  padding: calc(gridCellSize * 3);
+  margin-top: calc(2 * gridCellSize);
+}
+
+.title {
+  font-weight: boldFontWeight;
+  text-align: center;
+  color: blueGreyColor;
+  padding-bottom: calc(gridCellSize * 2);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(2 * gridCellSize);
+}
+
+.extensionThumbnail {
+  max-width: calc(40 * gridCellSize);
+  max-height: calc(20 * gridCellSize);
+  align-self: center;
+}
+
+.description {
+  white-space: pre-line;
+  color: blueGreyColor;
+  text-align: center;
+  max-height: calc(gridCellSize * 30);
+  flex: 1;
+  overflow-y: auto;
+  margin: calc(gridCellSize * 3) 0;
+}
+
+.imageWrapper {
+  height: calc(15 * gridCellSize);
+  width: calc(15 * gridCellSize);
+  margin-bottom: calc(gridCellSize * 6);
+  display: flex;
+  align-items: center;
+}
+
+.iconImage {
+  width: calc(15 * gridCellSize);
+  object-fit: contain;
+}
+
+.button {
+  border-radius: 8px;
+}
+
+.nameRow {
+  position: relative;
+  width: 100%;
+}
+
+.timecampTimerSettings {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-25%);
+}

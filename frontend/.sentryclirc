@@ -1,0 +1,11 @@
+[defaults]
+url = https://sentry.heyspace.info
+org=heyspace
+project=tc3fe
+
+[auth]
+api_key = https://95ccadbda2704c1a872379d277a25689@sentry.heyspace.info/2
+token = 6605cbc5821a40fa9e5ac4410d0d4e9203d059e895304932adc1f75a800e8221
+
+[log]
+level = ERROR

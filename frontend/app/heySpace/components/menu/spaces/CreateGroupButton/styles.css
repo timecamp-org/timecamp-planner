@@ -1,0 +1,26 @@
+@import 'colors.css';
+@import 'common.css';
+
+.button {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+  align-self: flex-start;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: unset;
+  max-width: 20.5rem;
+  padding: 0.7rem 1rem;
+
+  &:hover {
+    color: var(--color-gray-900);
+  }
+}
+
+.icon {
+  margin-right: calc(gridCellSize * 2);
+}

@@ -1,0 +1,48 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--color-gray-900);
+}
+
+.checkWrapper {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid var(--color-gray-300);
+  border-radius: 2px;
+  cursor: pointer;
+
+  & > .checkIcon {
+    display: none;
+  }
+}
+
+.checkIcon {
+  color: var(--color-white);
+  width: 12px;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.checked {
+  background-color: var(--color-primary-500);
+  border-color: transparent;
+
+  & > .checkIcon {
+    display: block;
+  }
+}
+
+label {
+  margin-left: 0.8rem;
+}

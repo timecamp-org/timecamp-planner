@@ -1,0 +1,55 @@
+@import 'colors.css';
+@import 'common.css';
+
+.messageBoard {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0; /* hack for firefox; without this firefox ignores flex and stretches messageList to it's 100% height causing messageBoard to overflow whole page */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.4rem;
+}
+
+.editorMargin {
+  margin: calc(3 * gridCellSize) calc(7 * gridCellSize) 0 calc(7 * gridCellSize);
+}
+
+.editorMarginRightPanelHidden {
+  composes: editorMargin;
+  margin-right: calc(17 * gridCellSize);
+
+  @media only screen and (max-width: mobileBreakpoint) {
+    padding: 0.4rem;
+    margin: 0;
+  }
+}
+
+.dropzone {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+  background: var(--color-gray-50);
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ownConversationMascot {
+  /* background: url('commonComponents/Mascot/assets/character_34.png') no-repeat center center; */
+  background-size: contain;
+  height: 150px;
+}

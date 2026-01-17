@@ -1,0 +1,30 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+}
+
+.confirmationDialogBody {
+  padding: calc(gridCellSize * 2) 0;
+  color: darkGreyColor;
+}
+
+.modal {
+  composes: Component from 'commonComponents/UniversalModal/styles.css';
+  cursor: initial;
+}
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(111 * gridCellSize);
+}
+
+.guestWarn {
+  color: darkGreyColor;
+  font-size: smallFontSize;
+}
+
+.divider {
+  composes: horizontalDivider from 'commonComponents/HorizontalDivider/styles.css';
+  margin: calc(gridCellSize * 4) 0;
+}

@@ -1,0 +1,12 @@
+@import 'common.css';
+
+.marker {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fontSize-xs);
+  font-weight: var(--fontWeight-regular);
+  height: 2.4rem;
+  border-bottom: 1px dashed var(--color-gray-200);
+}

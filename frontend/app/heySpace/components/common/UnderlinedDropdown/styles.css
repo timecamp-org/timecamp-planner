@@ -1,0 +1,13 @@
+@import 'common.css';
+@import 'colors.css';
+
+.dropdownContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  padding: 0;
+}
+
+.dropdownButtonIcon {
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+  font-weight: var(--fontWeight-regular);
+}

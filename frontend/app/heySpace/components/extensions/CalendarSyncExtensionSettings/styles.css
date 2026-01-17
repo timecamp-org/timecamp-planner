@@ -1,0 +1,93 @@
+@import 'common.css';
+@import 'colors.css';
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(gridCellSize * 134);
+}
+
+.extensionEnableButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  width: 100%;
+  margin-top: calc(4 * gridCellSize);
+}
+
+.extensionDisableButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  margin-top: calc(4 * gridCellSize);
+}
+
+.header {
+  font-size: mediumFontSize;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  margin-top: calc(gridCellSize * 2);
+  margin-bottom: calc(gridCellSize * 2);
+  text-align: center;
+}
+
+.coloredHeader {
+  composes: header;
+  color: wisteriaColor;
+  align-self: flex-start;
+}
+
+.text {
+  font-size: normalFontSize;
+  color: blueGreyColor;
+  align-self: flex-start;
+}
+
+.link,
+.link:visited {
+  text-decoration: none;
+  color: lochmaraColor;
+  align-self: flex-start;
+  padding: calc(gridCellSize * 2) 0;
+  cursor: pointer;
+}
+
+.link:focus,
+.link:hover {
+  color: bahamaBlueColor;
+  text-decoration: underline;
+}
+
+.resetLink {
+  composes: link;
+  align-self: center;
+}
+
+.dropdown {
+  width: calc(41 * gridCellSize);
+  display: flex;
+  flex-flow: column;
+}
+
+.extensionSettings {
+  position: absolute;
+  top: gridCellSize;
+  right: gridCellSize;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.syncUrlInput {
+  width: 100%;
+}
+
+.inputInnter {
+  height: calc(gridCellSize * 8);
+}
+
+.button {
+  border-radius: 8px;
+}

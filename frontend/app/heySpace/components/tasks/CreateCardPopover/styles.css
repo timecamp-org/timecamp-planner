@@ -1,0 +1,26 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: calc(gridCellSize * 50);
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: var(--fontWeight-semibold);
+  font-size: var(--fontSize-base);
+  color: var(--color-gray-900) !important;
+}
+
+.cardColor {
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popoverContent {
+  composes: popoverContent from 'components/common/UniversalPopover/styles.css';
+  padding: 0;
+}

@@ -1,0 +1,6 @@
+export const notSet = 'notSet'
+export const ok = 'ok'
+export const information = 'information'
+export const warning = 'warning'
+export const error = 'error'
+export const success = 'success'

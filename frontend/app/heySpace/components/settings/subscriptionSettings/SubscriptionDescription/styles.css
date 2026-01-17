@@ -1,0 +1,63 @@
+@import 'common.css';
+@import 'colors.css';
+
+.title {
+  font-weight: boldFontWeight;
+  color: blueGreyColor;
+  padding-bottom: gridCellSize;
+}
+
+.button {
+  margin-left: auto;
+}
+
+.description {
+  color: blueGreyColor;
+  text-align: center;
+  font-size: smallFontSize;
+  padding-top: calc(gridCellSize * 2);
+}
+
+.mascotWithFeatures {
+  display: flex;
+  padding-top: calc(gridCellSize * 9);
+  justify-content: center;
+}
+
+.mascot {
+  transform: scaleX(-1);
+  width: calc(gridCellSize * 28);
+  height: calc(gridCellSize * 30);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: calc(gridCellSize * 3);
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  padding-left: calc(gridCellSize * 10);
+}
+
+.feature {
+  padding-bottom: calc(gridCellSize * 3);
+}
+
+.checkmark {
+  margin-right: calc(gridCellSize * 5);
+}
+
+.upgradeButton {
+  display: flex;
+  width: 100%;
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+  z-index: 100;
+}
+
+.targetWrapperClassName {
+  margin-left: auto;
+}

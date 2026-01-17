@@ -1,0 +1,29 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeletonWrapper {
+  margin: 0 calc(4 * gridCellSize);
+}
+
+.noSpacesHint {
+  font-weight: var(--fontWeight-regular);
+  color: var(--color-gray-900);
+  padding-left: 2rem;
+  white-space: nowrap;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ungroupedSpaces {
+  width: 100%;
+  margin: gridCellSize 0 0 0;
+  padding: 2px 0 0 0;
+}

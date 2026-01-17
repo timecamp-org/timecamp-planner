@@ -1,0 +1,92 @@
+@import "colors.css";
+@import "common.css";
+
+.imageGallery {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 0;
+  z-index: 1000;
+  transition: visibility 0s linear modalTransitionDuration;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateZ(0);
+  color: blackColor;
+}
+
+.images {
+  position: relative;
+  width: auto;
+  margin: auto;
+  z-index: 1001;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 0;
+  opacity: backdropOpacity;
+  background-color: black60Color;
+  transition: opacity modalTransitionDuration linear;
+}
+
+.loaderWrapper {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots {
+  color:whiteTwoColor;
+  font-size: calc(10 * gridCellSize);
+  margin-left: calc(2 * gridCellSize);
+  margin-top: -12px;
+}
+
+.leftNav,
+.rightNav {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  z-index: 4;
+  color: whiteTwoColor;
+  font-size: 5em;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: currentColor;
+  width: calc(10 * gridCellSize);
+  height: calc(10 * gridCellSize);
+
+  &:hover {
+    color: silverColor;
+  }
+}
+
+.leftNav {
+  left: calc(4 * gridCellSize);
+}
+
+.rightNav {
+  right: calc(4 * gridCellSize);
+}
+
+.x {
+  position: absolute;
+  right: calc(10 * gridCellSize);
+  top: calc(10 * gridCellSize);
+  width: calc(6 * gridCellSize);
+  height: calc(6 * gridCellSize);
+  color: whiteTwoColor;
+  cursor: pointer;
+}

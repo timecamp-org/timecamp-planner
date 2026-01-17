@@ -1,0 +1,22 @@
+.editor {
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  border-bottom: 1px solid var(--color-gray-200);
+  max-height: 50rem;
+  overflow-y: auto;
+  position: relative;
+
+  &:hover {
+    border-bottom: 1px solid var(--color-primary-500);
+  }
+}
+
+.editorActive {
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--borderRadius-sm);
+
+  &:hover {
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+}

@@ -1,0 +1,59 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  cursor: pointer;
+  width: 100%;
+  min-height: calc(8 * gridCellSize);
+  display: flex;
+  align-items: center;
+  padding: calc(2 * gridCellSize);
+  background-color: transparent;
+  border: 1px dashed var(--color-gray-500);
+  border-radius: var(--borderRadius-sm);
+}
+
+.Component div {
+  width: 100%;
+}
+
+.focused {
+  cursor: default;
+}
+
+.sectionNameInput {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  margin: gridCellSize;
+  margin-bottom: calc(2 * gridCellSize);
+  margin-left: 0;
+  height: auto;
+  color: var(--color-gray-900);
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+
+  &::placeholder {
+    color: var(--color-gray-500);
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.createSectionButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: gridCellSize;
+}
+
+.addIcon {
+  margin-right: gridCellSize;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-500);
+  font-weight: var(--fontWeight-regular);
+  font-size: var(--fontSize-xs);
+}

@@ -1,0 +1,31 @@
+@import "colors.css";
+@import "common.css";
+
+$progressBarHeight: calc(3 * gridCellSize);
+
+.component {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(23 * gridCellSize);
+  height: $progressBarHeight;
+  border-radius: calc($progressBarHeight / 2);
+  background-color: galleryColor;
+  overflow: hidden;
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: transform 0.3s ease-out;
+  transform-origin: left center;
+}
+
+.progressValue {
+  z-index: 1;
+}

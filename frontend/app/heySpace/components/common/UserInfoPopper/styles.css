@@ -1,0 +1,59 @@
+@import 'colors.css';
+@import 'common.css';
+
+.popoverContent {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 100%;
+  border-radius: largeBorderRadius;
+  background: whiteTwoColor;
+  opacity: 1 !important;
+  font-family: defaultFontFamily;
+}
+
+.personIcon {
+  composes: Component from 'components/person/PersonIcon/styles.css';
+  align-self: center;
+}
+
+.avatar {
+  composes: personIconWrapper from 'components/person/PersonIcon/styles.css';
+  width: calc(16 * gridCellSize);
+  height: calc(16 * gridCellSize);
+  margin-bottom: calc(3 * gridCellSize);
+  font-size: 32px;
+  align-self: center;
+}
+
+.name {
+  @mixin EllipsizeTextOverflow;
+  width: 100%;
+  font-size: normalFontSize;
+  font-family: defaultFontFamily;
+  color: blueGreyColor;
+  text-align: center;
+  margin-bottom: gridCellSize;
+}
+
+.nickname {
+  @mixin EllipsizeTextOverflow;
+  width: 100%;
+  font-size: normalFontSize;
+  text-align: center;
+  color: blueGreyColor;
+  font-family: defaultFontFamily;
+}
+
+.group {
+  composes: nickname;
+  padding-top: calc(gridCellSize * 2);
+}
+
+.directMessageButton {
+  margin-top: 1.5rem;
+}
+
+.directMessageLink {
+  text-decoration: none;
+}

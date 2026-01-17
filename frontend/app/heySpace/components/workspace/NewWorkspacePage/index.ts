@@ -1,0 +1,8 @@
+import Component from './NewWorkspacePage';
+
+import RedirectToSignInPageIfCurrentUserIsDeauthenticated from 'enhancers/auth/RedirectToSignInPageIfCurrentUserIsDeauthenticated';
+import RedirectToWorkspaceInvitationsIfCurrentUserHasWorkspaces from 'enhancers/auth/RedirectToWorkspaceInvitationsIfCurrentUserHasWorkspaces';
+
+export default RedirectToSignInPageIfCurrentUserIsDeauthenticated(
+  RedirectToWorkspaceInvitationsIfCurrentUserHasWorkspaces(Component)
+);

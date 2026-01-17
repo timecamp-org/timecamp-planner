@@ -1,0 +1,104 @@
+@import 'colors.css';
+@value gridCellSize: 5px;
+
+/* 2020 StyleGuide */
+@value headerFontSize: 18px;
+@value fontFamilyThree: "Poppins", sans-serif;
+@value topMenuHeight: calc(10 * gridCellSize);
+/* -------------- */
+
+@value microFontSize: 9px;
+@value smallerFontSize: 10px;
+@value mediumSmallFontSize: 11px;
+@value smallFontSize: 12px;
+@value normalFontSize: 14px;
+@value mediumFontSize: 16px;
+@value headingFontSize: 19px;
+@value largeFontSize: 20px;
+@value largerFontSize: 24px;
+
+@value thinFontWeight: 100;
+@value lightFontWeight: 300;
+@value regularFontWeight: 400;
+@value mediumFontWeight: 500;
+@value semiboldFontWeight: 600;
+@value boldFontWeight: 700;
+@value blackFontWeight: 900;
+
+@value modalTransitionDuration: 90ms;
+
+@value backdropEnteredOpacity: 0.33;
+@value backdropOpacity: 0.9;
+@value deactivatedOpacity: 0.85;
+
+/* FONTS */
+@value defaultFontFamily: "Poppins", sans-serif;
+@value fontFamilyTwo: "Poppins", sans-serif;
+
+@value defaultBorderWidth: 2px;
+@value defaultOutlineWidth: 2px;
+
+@value defaultBorderRadius: 4px;
+@value largeBorderRadius: 8px;
+@value largerBorderRadius: 18px;
+
+@value defaultOutline: 0 0 0 defaultOutlineWidth warmGrey15Color;
+@value defaultPopoverShadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+
+@value headerHeight: calc(11 * gridCellSize);
+@value rightMenuWidth: calc(62 * gridCellSize);
+@value messageTextLineHeight: calc(4 * gridCellSize);
+
+@value leftMenuWidth: calc(60 * gridCellSize);
+@value cardDetailsHeight: calc((6 * gridCellSize) - 2px);
+
+@value defaultTransition: 0.2s;
+@value defaultTransitionAnimation: 0.5s cubic-bezier(0.2,1,0.1,1);
+@value defaultTransitionEasing: cubic-bezier(0.2,1,0.1,1);
+
+@value mainMenuWidth: calc(gridCellSize * 60);
+
+@value defaultIconWidth: 12;
+
+@define-mixin WhiteBox {
+  margin: calc((3 * gridCellSize) / 2);
+  padding: calc(3 * gridCellSize);
+  border-radius: largeBorderRadius;
+  background-color: whiteTwoColor;
+}
+
+@define-mixin EllipsizeTextOverflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@define-mixin Tooltip {
+  composes: tooltip from 'Tooltip/styles.css';
+  font-size: smallerFontSize;
+  color: whiteTwoColor;
+  background-color: black60Color;
+  padding: calc(2 * gridCellSize);
+  border-radius: defaultBorderRadius;
+  border: none;
+  transition: all 0.15s;
+  transition-delay: 1.5s;
+  opacity: 1;
+  pointer-events: none;
+
+  &:after {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    background-color: black60Color;
+  }
+}
+
+@define-mixin DefaultBoxShadow {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+@value phoneBreakpointWidth: 425px;
+@value tabletBreakpointWidth: 915px;
+@value largeDesktop: 1600px;
+@value mobileBreakpoint: 1050px;

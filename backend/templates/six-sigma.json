@@ -1,0 +1,27 @@
+{
+  "name": "Six sigma",
+  "description": "Refine your process improvement strategy with our Six Sigma template. Effortlessly transition through key phases, ensuring a systematic and data-driven approach for optimal results in continuous enhancement. Streamline your processes and drive excellence in your improvement initiatives.",
+  "order": 14,
+  "taskListTemplates": [
+    {
+      "name": "Define",
+      "order": 1
+    },
+    {
+      "name": "Measure",
+      "order": 2
+    },
+    {
+      "name": "Analyze",
+      "order": 3
+    },
+    {
+      "name": "Improve",
+      "order": 4
+    },
+    {
+      "name": "Control",
+      "order": 5
+    }
+  ]
+}

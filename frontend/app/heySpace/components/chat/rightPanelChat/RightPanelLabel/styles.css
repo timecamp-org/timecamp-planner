@@ -1,0 +1,12 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  font-weight: boldFontWeight;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: gridCellSize;
+}

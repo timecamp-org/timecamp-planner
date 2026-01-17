@@ -1,0 +1,26 @@
+@import "colors.css";
+@import "common.css";
+
+.Component {
+  @mixin DefaultBoxShadow;
+  display: flex;
+  align-items: center;
+  margin: calc(gridCellSize * 3);
+  cursor: pointer;
+  width: calc(gridCellSize * 40);
+  height: calc(gridCellSize * 20);
+  transition: box-shadow defaultTransitionAnimation;
+  border-radius: largeBorderRadius;
+  padding: calc(gridCellSize * 3);
+  &:hover {
+    box-shadow: defaultPopoverShadow;
+  }
+} 
+
+.title {
+  font-weight: boldFontWeight;
+  text-align: center;
+  color: blueGreyColor;
+  padding-left: calc(gridCellSize * 2);
+  font-size: mediumFontSize;
+}

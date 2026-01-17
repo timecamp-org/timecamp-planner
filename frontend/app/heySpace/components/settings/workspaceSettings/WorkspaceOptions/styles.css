@@ -1,0 +1,20 @@
+@import 'common.css';
+@import 'colors.css';
+
+.popoverContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  padding: gridCellSize;
+}
+
+.popoverButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.modalDialog {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(gridCellSize * 124);
+  color: blueGreyColor;
+}

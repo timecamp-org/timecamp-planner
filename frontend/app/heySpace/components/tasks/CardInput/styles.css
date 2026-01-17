@@ -1,0 +1,57 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  cursor: pointer;
+}
+
+.focused {
+  cursor: default;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.taskNameInput {
+  composes: input from 'commonComponents/UserInput/styles.css';
+  margin-bottom: calc(2 * gridCellSize);
+  height: auto;
+  padding: calc(3 * gridCellSize);
+  font-weight: regularFontWeight;
+  background-color: var(--color-white);
+  border-top: 4px solid;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.createTaskButton {
+  composes: Component from 'components/buttons/PrimaryButton/styles.css';
+  margin-left: gridCellSize;
+}
+
+.notFocused {
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-700);
+  font-size: var(--fontSize-xxs);
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.plusIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: gridCellSize;
+}
+
+.assigneesControllerViewWrapper {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}

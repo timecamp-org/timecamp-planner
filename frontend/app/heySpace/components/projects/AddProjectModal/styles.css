@@ -1,0 +1,15 @@
+.modalBody {
+  padding: 0;
+  overflow: hidden;
+}
+
+.headerCollapsed {
+  height: 0;
+  margin-bottom: 0;
+}
+
+.innerModalDialogClassName {
+  border-radius: var(--borderRadius-sm);
+  background-color: var(--color-white);
+  overflow: hidden;
+}

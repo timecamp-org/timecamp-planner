@@ -1,0 +1,19 @@
+{
+  "name": "To do list",
+  "description": "Optimize your task management with our To-Do List template. Effortlessly move through these essential stages: To Do ➔ Doing ➔ Done Experience a simplified and organized workflow, ensuring tasks are efficiently tracked and completed. Streamline your to-do list management for increased productivity and task accomplishment.",
+  "order": 1,
+  "taskListTemplates": [
+    {
+      "name": "To do",
+      "order": 1
+    },
+    {
+      "name": "Doing",
+      "order": 2
+    },
+    {
+      "name": "Done",
+      "order": 3
+    }
+  ]
+}

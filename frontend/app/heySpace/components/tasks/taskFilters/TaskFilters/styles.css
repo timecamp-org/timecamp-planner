@@ -1,0 +1,121 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  font-family: fontFamilyTwo;
+  color: blueGreyColor;
+  flex-wrap: wrap;
+}
+
+.filtersContainer {
+  overflow-y: auto;
+  transform: translateZ(0);
+}
+
+.field {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: gridCellSize 0;
+  padding: gridCellSize;
+  width: 100%;
+  justify-content: flex-start;
+
+  &:hover {
+    opacity: 0.8;
+    background: whiteColor;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 defaultOutlineWidth silverColor;
+    background: whiteColor;
+  }
+
+  &:active {
+    box-shadow: none;
+    opacity: 0.6;
+    background: lightGreyColor;
+  }
+}
+
+.radioOption {
+  composes: component from 'commonComponents/RadioButton/styles.css';
+  height: calc(4 * gridCellSize);
+  display: flex;
+  cursor: pointer;
+}
+
+.groupByOption {
+  composes: radioOption;
+}
+
+.option {
+  composes: field;
+  cursor: pointer;
+  margin-bottom: gridCellSize;
+}
+
+.checkbox {
+  composes: Component from 'commonComponents/Checkbox/styles.css';
+  margin-right: calc(2 * gridCellSize);
+}
+
+.userLabel {
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+
+.nameAndEmailWrapper {
+  composes: nameAndEmailWrapper from 'commonComponents/UserLabel/styles.css';
+  width: auto;
+  margin: 0 gridCellSize;
+}
+
+.tag {
+  composes: tag from 'components/tags/Tag/styles.css';
+  margin: 0 gridCellSize 0 0;
+}
+
+.showMore {
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  font-size: smallFontSize;
+  cursor: pointer;
+  margin: 0 gridCellSize;
+}
+
+.header {
+  margin: gridCellSize;
+  display: flex;
+  align-items: center;
+  height: calc(gridCellSize * 7);
+}
+
+.clearFiltersLink {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-left: auto;
+  margin-right: gridCellSize;
+}
+
+.closeIcon {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent !important;
+}
+
+.statusSection {
+  composes: section from '../TaskFiltersSection/styles.css';
+  padding: 0 calc(3 * gridCellSize) calc(3 * gridCellSize) calc(3 * gridCellSize);
+  margin: 0 0 calc(4 * gridCellSize) 0;
+}

@@ -1,0 +1,6 @@
+@import 'colors.css';
+@import 'common.css';
+
+.startDate {
+  padding: 0.5rem 0;
+}

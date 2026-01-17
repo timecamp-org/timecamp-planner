@@ -1,0 +1,36 @@
+@import 'colors.css';
+@import 'common.css';
+
+.dropdown {
+  composes: Component from 'commonComponents/Dropdown/styles.css';
+  position: relative;
+  width: 100%;
+}
+
+.dropdownContent {
+  composes: popoverContent from 'commonComponents/UniversalPopover/styles.css';
+  position: absolute;
+  top: calc(gridCellSize * 6);
+  min-width: calc(gridCellSize * 18);
+  overflow-y: auto;
+}
+
+.dropdownItem {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  color: blueGreyColor;
+  font-size: smallFontSize;
+  padding: gridCellSize;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.dropdownButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  color: blueGreyColor;
+  margin-left: gridCellSize;
+  width: 100%;
+}
+
+.chevron {
+  margin-left: auto;
+}

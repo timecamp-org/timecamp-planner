@@ -1,0 +1,23 @@
+{
+  "name": "1:1 Meeting agenda",
+  "description": "Explore seamless 1:1 discussions with our agenda template. Prepare topics for a one-on-one meeting and write down thoughts after the meeting in four colums: To Discuss, Arrangements, Next Steps, and Goals. This will provide a structured and productive meeting experience.",
+  "order": 6,
+  "taskListTemplates": [
+    {
+      "name": "To discuss",
+      "order": 1
+    },
+    {
+      "name": "Arrangements",
+      "order": 2
+    },
+    {
+      "name": "Next steps",
+      "order": 3
+    },
+    {
+      "name": "Goals",
+      "order": 4
+    }
+  ]
+}

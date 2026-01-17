@@ -1,0 +1,15 @@
+@import 'common.css';
+@import 'colors.css';
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: calc(gridCellSize * 30);
+  z-index: 10;
+}
+
+.spaceScount {
+  color: blueGreyColor;
+  white-space: nowrap;
+  margin-right: auto;
+  margin-left: calc(gridCellSize * 18);
+}

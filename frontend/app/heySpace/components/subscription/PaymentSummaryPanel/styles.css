@@ -1,0 +1,49 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+}
+
+.seatsInputContainer {
+  margin-top: calc(2 * gridCellSize);
+}
+
+.billingCycle {
+  composes: Component from 'components/subscription/BillingCycle/styles.css';
+  padding: calc(2 * gridCellSize);
+  display: flex;
+}
+
+.features {
+  composes: Component from '../SubscriptionFeatures/styles.css';
+  background-color: var(--color-primary-500);
+  color: whiteTwoColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(2 * gridCellSize);
+  border-radius: largeBorderRadius;
+}
+
+.numberOfSeats {
+  padding: calc(2 * gridCellSize);
+  width: calc(30 * gridCellSize);
+  & > input {
+    border: 1px solid var(--color-gray-200);
+  }
+}
+
+.numberOfSeatsLabel {
+  padding: calc(2 * gridCellSize);
+  color: blueGreyColor;
+  display: flex;
+}
+
+.numberOfSeatsValue {
+  margin-left: auto;
+  margin-right: gridCellSize;
+  color: darkBlueGreyColor;
+}

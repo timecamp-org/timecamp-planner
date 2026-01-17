@@ -1,0 +1,24 @@
+@import 'colors.css';
+@import 'common.css';
+
+.component {
+  margin-bottom: calc(2 * gridCellSize);
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  composes: Component from 'commonComponents/Checkbox/styles.css';
+  margin-right: calc(2 * gridCellSize);
+}
+
+.label {
+  cursor: pointer;
+}
+
+.input {
+  margin-top: calc(2 * gridCellSize);
+}

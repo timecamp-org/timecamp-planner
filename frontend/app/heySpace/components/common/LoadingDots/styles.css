@@ -1,0 +1,45 @@
+@import 'common.css';
+@import 'colors.css';
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  animation-name: blink;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  background-color: var(--color-primary-500);
+  border-radius: 50%;
+
+  &:not(:first-of-type) {
+    margin-left: 5px;
+  }
+}
+
+.second {
+  animation-delay: 0.2s;
+}
+
+.third {
+  animation-delay: 0.4s;
+}
+
+.loadingDots {
+  width: calc(8 * gridCellSize);
+  height: calc(8 * gridCellSize);
+  background-size: cover;
+  background-image: url('./assets/loadingDots.gif');
+}

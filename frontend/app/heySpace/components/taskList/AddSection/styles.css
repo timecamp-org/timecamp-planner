@@ -1,0 +1,58 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  color: black;
+  position: relative;
+  align-items: center;
+  width: calc(55 * gridCellSize);
+  border-radius: calc(2 * gridCellSize);
+  background: whiteTwoColor;
+  box-shadow: defaultPopoverShadow;
+  padding: calc(2 * gridCellSize);
+}
+
+.row {
+  display: flex;
+}
+
+.dropdownButton {
+  height: calc(4 * gridCellSize);
+  flex: 3;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(4 * gridCellSize);
+  background-color: white;
+  border: 1px solid black;
+  width: calc(15 * gridCellSize);
+}
+
+.dropdownItem {
+  height: calc(4 * gridCellSize);
+  display: flex;
+  align-items: center;
+}
+
+.positionInput {
+  flex: 1;
+  margin-left: calc(2 * gridCellSize);
+}
+
+.nameInput {
+  flex: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(2 * gridCellSize);
+}
+
+.cancelButton {
+  composes: Component from 'components/buttons/SecondaryButton/styles.css';
+  margin-right: gridCellSize;
+}

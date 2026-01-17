@@ -1,0 +1,12 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  display: flex;
+}
+
+.reaction {
+  composes: Component from 'commonComponents/Reaction/styles.css';
+  border-radius: largeBorderRadius;
+  height: 1.8rem;
+}

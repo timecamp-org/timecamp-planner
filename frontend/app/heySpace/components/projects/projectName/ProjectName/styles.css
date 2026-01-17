@@ -1,0 +1,18 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  font-size: var(--fontSize-xs);
+}
+
+.archived {
+  color: var(--color-gray-500);
+}
+
+.placeholder {
+  color: black60Color;
+}
+
+.ellipsized {
+  @mixin EllipsizeTextOverflow;
+}

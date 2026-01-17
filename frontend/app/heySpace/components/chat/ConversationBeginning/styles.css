@@ -1,0 +1,73 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  color: darkGreyBlueColor;
+  padding-left: calc(2 * gridCellSize);
+  margin-top: calc(4 * gridCellSize);
+}
+
+.personInfo {
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  display: flex;
+  padding-left: calc(2 * gridCellSize);
+}
+
+.messageText {
+  padding-left: calc(2 * gridCellSize);
+}
+
+.text {
+  padding-right: gridCellSize;
+  padding-left: calc(2 * gridCellSize);
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.textUserOwnConversation {
+  padding-right: gridCellSize;
+  padding-left: calc(2 * gridCellSize);
+}
+
+.personIcon {
+  composes: personIconWrapper from 'components/person/PersonIcon/styles.css';
+  margin-right: calc(3 * gridCellSize);
+  overflow: hidden;
+  width: 4rem;
+  height: 4rem;
+}
+
+.personName {
+  composes: personFullName from 'components/person/PersonFullName/styles.css';
+  font-weight: boldFontWeight;
+}
+
+.projectName,
+.conversationName {
+  composes: Component from 'components/projects/projectName/ProjectName/styles.css';
+  font-weight: boldFontWeight;
+}
+
+.conversationName {
+  margin-left: gridCellSize;
+}
+
+.bold {
+  font-weight: boldFontWeight;
+}
+
+.marginLeft {
+  padding-left: calc(8 * gridCellSize);
+}
+
+.usersName {
+  margin-left: gridCellSize;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

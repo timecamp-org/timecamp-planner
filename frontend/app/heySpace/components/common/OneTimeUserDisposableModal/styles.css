@@ -1,0 +1,6 @@
+@import 'common.css';
+
+.innerModalDialogClassName {
+  composes: whiteModalBox from 'commonComponents/UniversalModal/styles.css';
+  width: calc(105 * gridCellSize);
+}

@@ -1,0 +1,9 @@
+{
+  "name": "PushNotificationClient",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "immutable": "5.0.0-beta.4",
+    "query-string": "^8.1.0"
+  }
+}

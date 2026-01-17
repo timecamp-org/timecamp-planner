@@ -1,0 +1,41 @@
+@import "common.css";
+@import "colors.css";
+
+.modalContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(gridCellSize * 134);
+}
+
+.header {
+  font-size: mediumFontSize;
+  color: blueGreyColor;
+  font-weight: boldFontWeight;
+  margin-top: calc(gridCellSize * 2);
+  margin-bottom: calc(gridCellSize * 2);
+  text-align: center;
+}
+
+.text {
+  font-size: normalFontSize;
+  color: blueGreyColor;
+  align-self: flex-start;
+}
+
+.completeButtonWrapper {
+  margin-top: calc(gridCellSize * 2);
+  align-self: flex-end;
+}
+
+.errorMessage{
+  color: paleRedColor;
+  margin: calc(gridCellSize * 3);
+}
+
+.loadingDots {
+  font-size: calc(gridCellSize * 12);
+  color: wisteriaColor;
+  margin-bottom: calc(gridCellSize * 4);
+}

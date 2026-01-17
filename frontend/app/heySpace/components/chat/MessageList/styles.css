@@ -1,0 +1,115 @@
+@import 'colors.css';
+@import 'common.css';
+
+.Component {
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-gray-50);
+
+  @media only screen and (max-width: mobileBreakpoint) {
+    padding: 0.4rem;
+  }
+}
+
+.listWrapper {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: translateZ(0);
+  padding: 1rem 1.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 100%;
+}
+
+.virtualizedList {
+  align-items: flex-end;
+  transform: scaleY(-1);
+}
+
+.virtualizedList > div {
+  width: 100% !important;
+  transform: translateZ(0);
+}
+
+.row {
+  transform: scaleY(-1);
+}
+
+.messagesList {
+  margin-top: auto;
+  overflow-x: hidden;
+  padding: 0 calc(4 * gridCellSize);
+}
+
+.messages {
+  margin-top: auto;
+}
+
+.loadMoreButton {
+  composes: Component from 'commonComponents/Button/styles.css';
+  box-sizing: border-box;
+  display: block;
+  width: auto;
+  justify-content: center;
+  padding: gridCellSize 0;
+  min-height: calc(5 * gridCellSize);
+  margin: 0 auto;
+  border: none;
+  font-size: normalFontSize;
+  cursor: pointer;
+}
+
+.changesList {
+  list-style: none;
+}
+
+.changesList li {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+.loadingMore {
+  width: 100%;
+  height: calc(20 * gridCellSize);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: cloudyBlueColor;
+}
+
+.loaderWrapper {
+  background: whiteTwoColor;
+  bottom: calc(16 * gridCellSize);
+  margin: calc(gridCellSize * 5);
+  margin-top: auto;
+}
+
+.loadingBottom {
+  height: calc(2 * gridCellSize);
+  width: 100%;
+}
+
+.messageWrapper {
+  position: relative;
+}
+
+.failureMessage {
+  color: paleRedColor;
+  text-align: center;
+}
+
+.failureMessageIcon {
+  margin-right: gridCellSize;
+}
+
+.failureMessageAction {
+  text-decoration: underline;
+  cursor: pointer;
+}

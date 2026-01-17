@@ -1,0 +1,44 @@
+@import "common.css";
+@import "colors.css";
+
+.Component {
+  display: flex;
+  color: darkGreyBlueColor;
+  align-items: center;
+}
+
+.cell {
+  width: calc(gridCellSize * 25);
+  padding-right: calc(gridCellSize * 2);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.longCell {
+  composes: cell;
+  width: calc(gridCellSize * 30);
+}
+
+.status {
+  border-radius: largerBorderRadius;
+  color: whiteTwoColor;
+  font-size: smallFontSize;
+  display: flex;
+  justify-content: center;
+  padding: gridCellSize;
+}
+
+.successfull {
+  composes: status;
+  background-color: tealishColor;
+}
+
+.warn {
+  composes: status;
+  background-color: mangoColor;
+}
+
+.failed {
+  composes: status;
+  background-color: paleRedColor;
+}

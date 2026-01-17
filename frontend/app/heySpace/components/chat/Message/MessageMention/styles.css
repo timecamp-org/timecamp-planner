@@ -1,0 +1,14 @@
+.mention {
+  cursor: pointer;
+  font-weight: var(--fontWeight-semibold);
+  color: var(--color-primary-500);
+}
+
+.mentionActive {
+  composes: mention;
+}
+
+.hailMention {
+  composes: mention;
+  cursor: unset;
+}

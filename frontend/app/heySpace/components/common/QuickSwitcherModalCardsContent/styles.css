@@ -1,0 +1,64 @@
+@import 'common.css';
+@import 'colors.css';
+
+.Component {
+  width: calc(118 * gridCellSize);
+}
+
+.searchResults {
+  margin-top: calc(2 * gridCellSize);
+  max-height: calc(90 * gridCellSize);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.taskName {
+  height: 100%;
+  line-height: 33px;
+  width: calc(76 * gridCellSize);
+  padding-right: calc(2 * gridCellSize);
+  font-size: normalFontSize;
+  font-family: defaultFontFamily;
+  color: darkGreyBlueColor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.projectName {
+  color: var(--color-gray-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.right {
+  width: calc(40 * gridCellSize);
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 3.2rem;
+  cursor: pointer;
+  height: 5.6rem;
+  width: 100%;
+
+  &:active {
+    background: lightGreyColor;
+    opacity: 0.8;
+  }
+}
+
+.highlightedItem {
+  background: lightGreyColor;
+}
+
+.description {
+  margin-left: 1.6rem;
+}

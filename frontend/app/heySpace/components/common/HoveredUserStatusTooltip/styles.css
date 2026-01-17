@@ -1,0 +1,57 @@
+@import "colors.css";
+@import "common.css";
+
+
+
+.userStatus {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.title {
+  color: lightGreyColor;
+  font-size: smallerFontSize;
+  font-family: fontFamilyTwo;
+  font-weight: boldFontWeight;
+  overflow: overlay;
+  word-break: break-word;
+  max-width: calc(gridCellSize * 25);
+  text-align: center;
+  line-height: calc(gridCellSize * 3);
+}
+
+.emoji {
+  margin-right: gridCellSize;
+  display: inline-block;
+}
+
+.singleEmoji {
+  margin-right: gridCellSize;
+  display: inline-block;
+}
+
+.emoji > button {
+  top: 3px;
+}
+
+.resetAt {
+  padding-left: gridCellSize;
+}
+
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: gridCellSize;
+  padding-left: gridCellSize;
+  font-size: smallerFontSize;
+  color: cloudyBlueColor;
+  margin-right: auto;
+}
+
+.infoTooltip {
+  composes: infoTooltipBody from 'commonComponents/InfoTooltip/styles.css';
+  width: auto;
+}

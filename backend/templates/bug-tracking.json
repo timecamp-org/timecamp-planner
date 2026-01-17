@@ -1,0 +1,43 @@
+{
+  "name": "Bug tracking",
+  "description": "Enhance your bug tracking process with our template, ensuring a streamlined workflow from issue identification to resolution. Efficiently log and organize bug reports, prioritize critical issues, and track resolution progress. Facilitate systematic reviews and seamless deployments, promoting collaboration and delivering high-quality software. Experience a comprehensive bug tracking solution that optimizes efficiency and ensures the successful resolution of issues.",
+  "order": 10,
+  "taskListTemplates": [
+    {
+      "name": "Reports",
+      "order": 1
+    },
+    {
+      "name": "Verification",
+      "order": 2
+    },
+    {
+      "name": "Inbox",
+      "order": 3
+    },
+    {
+      "name": "Critical",
+      "order": 4
+    },
+    {
+      "name": "In progress",
+      "order": 5
+    },
+    {
+      "name": "To review",
+      "order": 6
+    },
+    {
+      "name": "In review",
+      "order": 7
+    },
+    {
+      "name": "To deploy",
+      "order": 8
+    },
+    {
+      "name": "Deployed",
+      "order": 9
+    }
+  ]
+}
