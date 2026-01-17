@@ -1,5 +1,7 @@
 # TimeCamp Planner
 
+![Screenshot](docs/assets/screenshot.png)
+
 All-in-one project management and team chat for product teams that want speed without the bloat.  
 Plan work, track progress, and keep conversations close to the tasks.
 
