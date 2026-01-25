@@ -37,7 +37,7 @@ The easiest way to run the entire project is using Docker Compose.
 
 ### Running the Project ▶️
 
-1. **Start all services:**
+1. **Start all services (can take 5+ min to compile):**
    ```bash
    cp .env.sample .env
    docker-compose up
@@ -56,11 +56,6 @@ The easiest way to run the entire project is using Docker Compose.
 4. **Stop all services:**
    ```bash
    docker-compose down
-   ```
-
-5. **Stop and remove volumes (clean slate):**
-   ```bash
-   docker-compose down -v
    ```
 
 ### Accessing the Application 🌐
