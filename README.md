@@ -93,6 +93,11 @@ docker-compose down -v
 docker-compose up --build
 ```
 
+## Screenshots
+
+![Screenshot](docs/assets/screenshot-kanban.png)
+![Screenshot](docs/assets/screenshot.png)
+
 ## Roadmap 🛣️
 
 - One-command local setup
