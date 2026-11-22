@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const express = require('express');
+const { existsSync } = require('fs');
 const path = require('path');
 const compression = require('compression');
 
@@ -39,7 +40,10 @@ const addDevMiddlewares = (app, webpackConfig) => {
     if (req.path === '/config.js') {
       const rootDirectory = path.join(compiler.outputPath, '..');
       const configPath = path.join(rootDirectory, 'app', 'common', 'config', 'web.config.js');
-      res.sendFile(configPath);
+      // A fresh checkout has no local web.config.js (it is git-ignored). Serve the
+      // example so the app starts with the default local Docker addresses.
+      const examplePath = path.join(rootDirectory, 'config.example.js');
+      res.sendFile(existsSync(configPath) ? configPath : examplePath);
       return;
     }
 

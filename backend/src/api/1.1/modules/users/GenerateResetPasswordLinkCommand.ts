@@ -32,5 +32,8 @@ export class GenerateResetPasswordLinkCommand implements ConsoleCommandInterface
     }
 
     output.print(url);
+    // The kernel keeps database, Redis and RabbitMQ connections open, so the
+    // process would never end on its own (same as templates:load-templates).
+    process.exit(0);
   }
 }

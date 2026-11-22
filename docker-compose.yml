@@ -78,9 +78,10 @@ services:
       - ntfy_config:/etc/ntfy
     command: serve
 
-  # MinIO (S3-compatible file storage)
+  # MinIO (S3-compatible file storage). MinIO no longer publishes minio/minio and
+  # minio/mc images, so this uses the community-maintained pgsty builds.
   minio:
-    image: minio/minio:latest
+    image: pgsty/minio:RELEASE.2026-08-04T00-00-00Z
     container_name: timecamp-planner-minio
     restart: unless-stopped
     ports:
@@ -93,17 +94,20 @@ services:
       - minio_data:/data
     command: server /data --console-address ":9001"
 
+  # Creates the bucket. Planner stores direct file links, so browsers must be
+  # able to download objects without credentials (uploads stay signed).
   minio-init:
-    image: minio/mc:latest
+    image: pgsty/mc:RELEASE.2026-10-26T00-00-00Z
     container_name: timecamp-planner-minio-init
     depends_on:
       - minio
     entrypoint: >
       sh -c "
-        until mc alias set local http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD}; do
+        until mc alias set local http://minio:9000 ${MINIO_ROOT_USER:-heyspace} ${MINIO_ROOT_PASSWORD:-heyspace}; do
           sleep 1;
         done;
-        mc mb -p local/planner-files || true;
+        mc mb -p local/planner-files &&
+        mc anonymous set download local/planner-files
       "
 
   # Mailpit (local SMTP)
@@ -129,6 +133,8 @@ services:
       NODE_ENV: development
       PORT: 3001
       FEED_PORT: 3003
+      # Public address of the web app, used in e-mails and password links.
+      FRONTEND_BASE_URL: ${FRONTEND_BASE_URL:-http://localhost:3002}
       DB_HOST: db
       DB_USER: ${DB_USER:-heyspace}
       DB_PASSWORD: ${DB_PASSWORD:-heyspace}
@@ -147,9 +153,14 @@ services:
       FILE_STORAGE_BUCKET: planner-files
       FILE_STORAGE_REQUEST_EXPIRY: 180
       FILE_STORAGE_ACCEPTABLE_RESIZE_SIZES: 20,95,360
-      FILE_STORAGE_ACCESS_KEY_ID: ${FILE_STORAGE_ACCESS_KEY_ID:-heyspace}
-      FILE_STORAGE_SECRET_ACCESS_KEY: ${FILE_STORAGE_SECRET_ACCESS_KEY:-heyspace}
+      # Defaults to the MinIO root user, so uploads work without extra setup.
+      FILE_STORAGE_ACCESS_KEY_ID: ${FILE_STORAGE_ACCESS_KEY_ID:-${MINIO_ROOT_USER:-heyspace}}
+      FILE_STORAGE_SECRET_ACCESS_KEY: ${FILE_STORAGE_SECRET_ACCESS_KEY:-${MINIO_ROOT_PASSWORD:-heyspace}}
       FILE_STORAGE_SCHEME: http
+      # Address of MinIO for web browsers (uploads and file links). "minio:9000"
+      # only works inside Docker. With a domain, use for example files.example.com.
+      FILE_STORAGE_PUBLIC_ENDPOINT: ${FILE_STORAGE_PUBLIC_ENDPOINT:-localhost:9000}
+      FILE_STORAGE_PUBLIC_SCHEME: ${FILE_STORAGE_PUBLIC_SCHEME:-http}
       FILE_STORAGE_USE_PATH_STYLE: 'true'
       MAIL_HOST: mailpit
       MAIL_PORT: 1025

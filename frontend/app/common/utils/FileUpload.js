@@ -6,6 +6,12 @@ const guardedHeaders = [
   'User-Agent',
 ]
 
+// targetUri keeps the scheme and port of the storage (for example
+// http://localhost:9000 for a self-hosted MinIO).
+function getObjectUrl(authorizationResponse) {
+  return authorizationResponse.targetUri || `https://${authorizationResponse.host}${authorizationResponse.path}`
+}
+
 function FileUpload(timecampClient) {
   function createUploadFileChannel(file, organizationId) {
     return eventChannel(emitter => {
@@ -22,7 +28,7 @@ function FileUpload(timecampClient) {
             request.upload.onerror = (event) => onFailure(event, emitter)
             request.onreadystatechange = (event) => onUploadReadyStateChange(event, request, authorizationResponse, emitter)
 
-            request.open('PUT', `https://${authorizationResponse.host}${authorizationResponse.path}`, true)
+            request.open('PUT', getObjectUrl(authorizationResponse), true)
             const { headers } = authorizationResponse
 
             // these headers can only be set by the browser due to security reasons
@@ -60,7 +66,7 @@ function FileUpload(timecampClient) {
         emitter({ error: { request, event } })
         emitter(END)
       } else {
-        emitter({ url: `https://${authorizationResponse.host}${authorizationResponse.path}` })
+        emitter({ url: getObjectUrl(authorizationResponse) })
         emitter(END)
       }
     }

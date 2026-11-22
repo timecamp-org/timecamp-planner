@@ -32,6 +32,11 @@ export function getThumbnailUrl(
   if (!url) {
     return '';
   }
+  // Without a resize service (the default for self-hosted installations) there
+  // are no thumbnails, so the original file is the only valid image URL.
+  if (!Config.amazonResizeUrl) {
+    return url;
+  }
   const dimensions = getImageDimensions(size);
   const urlParts = url.split('/');
   return `${Config.amazonResizeUrl}${dimensions}${cropRule}/${urlParts[urlParts.length - 1]}`;

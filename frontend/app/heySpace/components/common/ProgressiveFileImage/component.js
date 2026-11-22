@@ -48,6 +48,7 @@ function renderProgressiveImage(props) {
   return (
     <ProgressiveImage
       imageUrl={props.thumbnailUrl}
+      fallbackImageUrl={props.fileUrl}
       tinyImageUrl={props.tinyThumbnailUrl}
       containerStyle={props.dimensionsAfterResize}
       imageStyle={props.dimensionsAfterResize}
