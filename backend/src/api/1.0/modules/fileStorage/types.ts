@@ -24,5 +24,9 @@ export interface AwsS3Options
   accessKeyId: string,
   secretAccessKey: string,
   scheme: 'http' | 'https',
+  // Address that web browsers use for uploads and file links. It differs from
+  // endpoint when the backend reaches storage on an internal network (Docker).
+  publicEndpoint?: string,
+  publicScheme?: 'http' | 'https',
   usePathStyleEndpoint: boolean,
 }

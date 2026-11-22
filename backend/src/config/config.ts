@@ -19,6 +19,9 @@ const parseNumberList = (value: string | undefined, fallback: number[]) => {
 };
 
 const fileStorageScheme = env.FILE_STORAGE_SCHEME === 'https' ? 'https' : 'http';
+const fileStoragePublicScheme = env.FILE_STORAGE_PUBLIC_SCHEME
+  ? (env.FILE_STORAGE_PUBLIC_SCHEME === 'https' ? 'https' : 'http')
+  : fileStorageScheme;
 const fileStorageUsePathStyleEndpoint = env.FILE_STORAGE_USE_PATH_STYLE
   ? env.FILE_STORAGE_USE_PATH_STYLE === 'true'
   : true;
@@ -64,6 +67,8 @@ export default {
       accessKeyId: env.FILE_STORAGE_ACCESS_KEY_ID || '',
       secretAccessKey: env.FILE_STORAGE_SECRET_ACCESS_KEY || '',
       scheme: fileStorageScheme,
+      publicEndpoint: env.FILE_STORAGE_PUBLIC_ENDPOINT || env.FILE_STORAGE_ENDPOINT || 'minio:9000',
+      publicScheme: fileStoragePublicScheme,
       usePathStyleEndpoint: fileStorageUsePathStyleEndpoint,
     },
   },

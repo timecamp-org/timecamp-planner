@@ -151,9 +151,14 @@ services:
       FILE_STORAGE_BUCKET: planner-files
       FILE_STORAGE_REQUEST_EXPIRY: 180
       FILE_STORAGE_ACCEPTABLE_RESIZE_SIZES: 20,95,360
-      FILE_STORAGE_ACCESS_KEY_ID: ${FILE_STORAGE_ACCESS_KEY_ID:-heyspace}
-      FILE_STORAGE_SECRET_ACCESS_KEY: ${FILE_STORAGE_SECRET_ACCESS_KEY:-heyspace}
+      # Defaults to the MinIO root user, so uploads work without extra setup.
+      FILE_STORAGE_ACCESS_KEY_ID: ${FILE_STORAGE_ACCESS_KEY_ID:-${MINIO_ROOT_USER:-heyspace}}
+      FILE_STORAGE_SECRET_ACCESS_KEY: ${FILE_STORAGE_SECRET_ACCESS_KEY:-${MINIO_ROOT_PASSWORD:-heyspace}}
       FILE_STORAGE_SCHEME: http
+      # Address of MinIO for web browsers (uploads and file links). "minio:9000"
+      # only works inside Docker. With a domain, use for example files.example.com.
+      FILE_STORAGE_PUBLIC_ENDPOINT: ${FILE_STORAGE_PUBLIC_ENDPOINT:-localhost:9000}
+      FILE_STORAGE_PUBLIC_SCHEME: ${FILE_STORAGE_PUBLIC_SCHEME:-http}
       FILE_STORAGE_USE_PATH_STYLE: 'true'
       MAIL_HOST: mailpit
       MAIL_PORT: 1025

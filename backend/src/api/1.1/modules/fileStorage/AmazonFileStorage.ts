@@ -7,7 +7,9 @@ import * as AmazonV4Signature from 'aws-sdk/lib/signers/v4';
 import { FileStorageInterface } from './FileStorageInterface';
 import { UploadRequest, SignedUploadRequest } from '../files/types';
 import { TimeServiceInterface } from '../common/time/TimeServiceInterface';
-import { AwsS3Options, AmzHeader, StandardHeaders, SERVICE_S3, AMAZON_UPLOAD_PROVIDER, UNSIGNED_PAYLOAD, HASH_ALG } from './types';
+import {
+  AwsS3Options, AmzHeader, StandardHeaders, SERVICE_S3, AMAZON_UPLOAD_PROVIDER, UNSIGNED_PAYLOAD, HASH_ALG,
+} from './types';
 import { injectable, inject } from 'inversify';
 import { CommonModule } from '../common/CommonModule';
 import { FileStorageModule } from './FileStorageModule';
@@ -40,7 +42,9 @@ export class AmazonFileStorage implements FileStorageInterface {
       secretAccessKey: opts.secretAccessKey,
       region: opts.region,
     });
-    this.endpoint = opts.endpoint;
+    // Signed uploads and file links go to the browser, so they use the public
+    // address. Server-side calls use the S3 client and its internal endpoint.
+    this.endpoint = opts.publicEndpoint || opts.endpoint;
     this.bucket = opts.bucket;
     this.region = opts.region;
     this.acceptableResizeSizes = opts.acceptableResizeSizes;
@@ -49,7 +53,7 @@ export class AmazonFileStorage implements FileStorageInterface {
     this.expiryTime = `${opts.requestExpiryTime}`;
     this.logger = logger
     this.amazonS3Service = amazonS3Service
-    this.scheme = opts.scheme;
+    this.scheme = opts.publicScheme || opts.scheme;
     this.usePathStyleEndpoint = opts.usePathStyleEndpoint;
   }
 
