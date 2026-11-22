@@ -78,9 +78,10 @@ services:
       - ntfy_config:/etc/ntfy
     command: serve
 
-  # MinIO (S3-compatible file storage)
+  # MinIO (S3-compatible file storage). MinIO no longer publishes minio/minio and
+  # minio/mc images, so this uses the community-maintained pgsty builds.
   minio:
-    image: minio/minio:latest
+    image: pgsty/minio:RELEASE.2026-08-04T00-00-00Z
     container_name: timecamp-planner-minio
     restart: unless-stopped
     ports:
@@ -93,17 +94,20 @@ services:
       - minio_data:/data
     command: server /data --console-address ":9001"
 
+  # Creates the bucket. Planner stores direct file links, so browsers must be
+  # able to download objects without credentials (uploads stay signed).
   minio-init:
-    image: minio/mc:latest
+    image: pgsty/mc:RELEASE.2026-10-26T00-00-00Z
     container_name: timecamp-planner-minio-init
     depends_on:
       - minio
     entrypoint: >
       sh -c "
-        until mc alias set local http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD}; do
+        until mc alias set local http://minio:9000 ${MINIO_ROOT_USER:-heyspace} ${MINIO_ROOT_PASSWORD:-heyspace}; do
           sleep 1;
         done;
-        mc mb -p local/planner-files || true;
+        mc mb -p local/planner-files &&
+        mc anonymous set download local/planner-files
       "
 
   # Mailpit (local SMTP)
