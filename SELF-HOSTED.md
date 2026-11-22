@@ -5,7 +5,7 @@ This guide walks you through running Timecamp planner on a Linux VPS using Docke
 ## Prerequisites
 
 - A Linux server (Ubuntu 22.04+ or Debian 12+ recommended)
-- A domain you control (A/AAAA records pointing to your server IP)
+- A domain you control, with A/AAAA records pointing to your server IP for the app (for example `app.example.com`) and for file storage (for example `files.example.com`)
 - SSH access with sudo
 
 ## 1) Install Docker + Compose
@@ -40,14 +40,26 @@ Update `.env` with strong secrets (at least):
 - `DB_PASSWORD`
 - `RABBITMQ_PASSWORD`
 - `JWT_SECRET`
-- `FILE_STORAGE_ACCESS_KEY_ID`
-- `FILE_STORAGE_SECRET_ACCESS_KEY`
 - `MINIO_ROOT_USER`
 - `MINIO_ROOT_PASSWORD`
 
+The backend uses the MinIO root user for file storage unless you set
+`FILE_STORAGE_ACCESS_KEY_ID` and `FILE_STORAGE_SECRET_ACCESS_KEY` to a separate
+MinIO access key.
+
+Set the public addresses:
+
+- `FRONTEND_BASE_URL=https://app.example.com` (used in e-mails and password links)
+- `FILE_STORAGE_PUBLIC_ENDPOINT=files.example.com` and
+  `FILE_STORAGE_PUBLIC_SCHEME=https`. Web browsers upload files directly to
+  MinIO and open file links there, so this must be an address they can reach
+  (Nginx below forwards it to MinIO).
+
 ## 3) Configure the frontend for your domain
 
-Edit `frontend/app/common/config/web.config.js` and set your public URLs:
+Copy `frontend/config.example.js` to `frontend/app/common/config/web.config.js`
+(without this file the frontend uses the example with local Docker addresses).
+Then set your public URLs in the copy:
 
 ```javascript
 var config = {
@@ -63,6 +75,9 @@ var config = {
 ```
 
 If you do not plan to expose ntfy, leave `pushNotifications.baseUrl` as-is or point it to a private URL.
+
+Keep `amazonResizeUrl: ''` unless you run an image resize service. With an empty
+value, Planner shows the original images.
 
 ## 4) Start the stack
 
@@ -125,10 +140,32 @@ server {
 }
 ```
 
+Add a second site for file storage at `/etc/nginx/sites-available/timecamp-planner-files`.
+MinIO checks the upload signature against the `Host` header, so Nginx must pass it unchanged:
+
+```nginx
+server {
+  listen 80;
+  server_name files.example.com;
+
+  client_max_body_size 50m;
+  proxy_request_buffering off;
+
+  location / {
+    proxy_pass http://127.0.0.1:9000;
+    proxy_set_header Host $http_host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+```
+
 Enable and reload:
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/timecamp-planner /etc/nginx/sites-enabled/timecamp-planner
+sudo ln -s /etc/nginx/sites-available/timecamp-planner-files /etc/nginx/sites-enabled/timecamp-planner-files
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -137,7 +174,7 @@ sudo systemctl reload nginx
 
 ```bash
 sudo apt-get install -y certbot python3-certbot-nginx
-sudo certbot --nginx -d app.example.com
+sudo certbot --nginx -d app.example.com -d files.example.com
 ```
 
 Certbot will set up HTTPS and renewal timers automatically.
@@ -151,13 +188,17 @@ sudo ufw allow 443
 sudo ufw enable
 ```
 
-This keeps internal service ports (Postgres, Redis, RabbitMQ) from being exposed publicly.
+Note: Docker publishes container ports past `ufw`. To keep Postgres, Redis,
+RabbitMQ and the MinIO console private, bind their ports to `127.0.0.1` in
+`docker-compose.yml` (for example `'127.0.0.1:5433:5432'`).
 
 ## Troubleshooting
 
 - **Frontend loads but API calls fail**: Confirm `restApiUri` and `webAppUrl` in `web.config.js` match your domain and HTTPS.
 - **Websocket errors**: Ensure Nginx `location /feed` is present and points to port `3003`.
 - **Containers restart**: Check `docker compose logs -f backend` for migration or config errors.
+- **File uploads fail**: Confirm `FILE_STORAGE_PUBLIC_ENDPOINT` is the files domain, the files site in Nginx passes `Host`, and `docker compose up -d backend` ran after you changed `.env`.
+- **Password links point to localhost**: Set `FRONTEND_BASE_URL` in `.env` and restart the backend.
 
 ## Optional: run the feed process separately
 
