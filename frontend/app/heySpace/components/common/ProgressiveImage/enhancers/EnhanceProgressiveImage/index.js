@@ -8,6 +8,8 @@ function Enhance(ComposedComponent) {
   class EnhanceProgressiveImage extends BaseComponent {
     static propTypes = {
       onClick: PropTypes.func,
+      // Shown when imageUrl cannot be loaded, for example a missing thumbnail.
+      fallbackImageUrl: PropTypes.string,
     };
 
     static defaultProps = {
@@ -19,6 +21,8 @@ function Enhance(ComposedComponent) {
       this.state = {
         isImageLoaded: false,
         isTinyImageLoaded: false,
+        hasImageFailed: false,
+        hasTinyImageFailed: false,
         prevImageUrl: props.imageUrl,
         prevTinyImageUrl: props.tinyImageUrl,
       };
@@ -27,8 +31,8 @@ function Enhance(ComposedComponent) {
     render() {
       return (
         <ComposedComponent
-          imageUrl={this.props.imageUrl}
-          tinyImageUrl={this.props.tinyImageUrl}
+          imageUrl={this.getImageUrl()}
+          tinyImageUrl={this.state.hasTinyImageFailed ? undefined : this.props.tinyImageUrl}
           isImageLoaded={this.state.isImageLoaded}
           isTinyImageLoaded={this.state.isTinyImageLoaded}
           containerStyle={this.props.containerStyle}
@@ -36,8 +40,27 @@ function Enhance(ComposedComponent) {
           onClick={this.props.onClick}
           onLoadImage={this.onLoadImage}
           onLoadTinyImage={this.onLoadTinyImage}
+          onErrorImage={this.onErrorImage}
+          onErrorTinyImage={this.onErrorTinyImage}
         />
       );
+    }
+
+    getImageUrl() {
+      if (this.state.hasImageFailed && this.props.fallbackImageUrl) {
+        return this.props.fallbackImageUrl;
+      }
+      return this.props.imageUrl;
+    }
+
+    onErrorImage() {
+      if (!this.state.hasImageFailed) {
+        this.setState({ hasImageFailed: true });
+      }
+    }
+
+    onErrorTinyImage() {
+      this.setState({ hasTinyImageFailed: true });
     }
 
     onLoadImage() {
@@ -53,11 +76,13 @@ function Enhance(ComposedComponent) {
 
       if (state.prevImageUrl !== props.imageUrl) {
         newState.isImageLoaded = false;
+        newState.hasImageFailed = false;
         newState.prevImageUrl = props.imageUrl;
       }
 
       if (state.prevTinyImageUrl !== props.tinyImageUrl) {
         newState.isTinyImageLoaded = false;
+        newState.hasTinyImageFailed = false;
         newState.prevTinyImageUrl = props.tinyImageUrl;
       }
 

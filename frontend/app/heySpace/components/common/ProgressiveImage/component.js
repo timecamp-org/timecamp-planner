@@ -15,6 +15,8 @@ ProgressiveImage.propTypes = {
   onClick: PropTypes.func,
   onLoadImage: PropTypes.func,
   onLoadTinyImage: PropTypes.func,
+  onErrorImage: PropTypes.func,
+  onErrorTinyImage: PropTypes.func,
 }
 
 ProgressiveImage.defaultProps = {
@@ -23,6 +25,8 @@ ProgressiveImage.defaultProps = {
   onClick: doNothing,
   onLoadImage: doNothing,
   onLoadTinyImage: doNothing,
+  onErrorImage: doNothing,
+  onErrorTinyImage: doNothing,
 }
 
 function ProgressiveImage(props) {
@@ -42,6 +46,7 @@ function renderImage(props) {
       style={props.imageStyle}
       onClick={props.onClick}
       onLoad={props.onLoadImage}
+      onError={props.onErrorImage}
     />
   )
 }
@@ -54,6 +59,7 @@ function renderTinyImage(props) {
       onClick={props.onClick}
       style={props.imageStyle}
       onLoad={props.onLoadTinyImage}
+      onError={props.onErrorTinyImage}
     />
   )
 }
