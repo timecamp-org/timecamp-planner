@@ -133,6 +133,8 @@ services:
       NODE_ENV: development
       PORT: 3001
       FEED_PORT: 3003
+      # Public address of the web app, used in e-mails and password links.
+      FRONTEND_BASE_URL: ${FRONTEND_BASE_URL:-http://localhost:3002}
       DB_HOST: db
       DB_USER: ${DB_USER:-heyspace}
       DB_PASSWORD: ${DB_PASSWORD:-heyspace}
